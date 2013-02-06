@@ -1,0 +1,30 @@
+html
+  style
+    td { text-align: center; width: #{90.0/(2*times.length)}% }
+    .EML {background-color:red}
+    .CDR {background-color:blue}
+    .ESL {background-color:green}
+  body
+    table(border=1)
+      tr
+        th(rowspan=2)
+        each item in times
+          th(colspan=2)= item
+      tr
+        each item in times
+          th E
+          th W
+      each day in days
+        tr
+          th= day
+          each t in times
+            if sched["adaE"][day]
+              td(class=sched["adaE"][day][t])= sched["adaE"][day][t]
+            else
+              td n/a
+            if sched["adaW"][day]
+              td(class=sched["adaW"][day][t])= sched["adaW"][day][t]
+            else
+              td n/a
+
+        

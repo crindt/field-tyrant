@@ -4,9 +4,19 @@ var fs = require('fs');
 var exec = require('child_process').exec,
     child;
 
+var jade = require('jade')
+
 prog
     .version('0.0.1')
+    .option('-f, --format <format>','Output Format')
     .parse(process.argv)
+
+var conf = JSON.parse(fs.readFileSync(prog.args[0],'utf8'));
+
+var fn = jade.compile(fs.readFileSync('fieldtable.jade','utf8'),{pretty:true});
+
+var teams = conf.teams;
+var fields = conf.fields;
 
 // automatically create nested assoc array if keys don't yet exist...ala perl
 function nested() {
@@ -58,10 +68,11 @@ function merge_times(arro,doit) {
     return int_time(used[0],doit) + "--" + int_time(used[used.length-1]+0.5,doit);
 }
 
-
 // spawn lp_solve
 child = exec('lp_solve',function(err,stdout,stderr) {
     var cnt = 0;
+    var times = {}
+    var wetimes = {}
     sched = {}
     teams = {}
     _.each(stdout.split(/\n/), function(line) {
@@ -80,45 +91,79 @@ child = exec('lp_solve',function(err,stdout,stderr) {
             }
         }
     });
-    console.log("FIELD SCHEDULES")
-    var dorder = { mo:1, tu:2, we:3, th:4, fr:5, sa:6, su:7 };
-    _.each(_.keys(sched),function(f) {
-        console.log("\t%s:",f);
-        _.each(_.sortBy(_.keys(sched[f]), function(k) { return dorder[k]; }), function(d) {
-            var tarr = _.keys(sched[f][d]).sort();
-            while( tarr.length > 0 ) {
-                t = tarr[0]
-                var ts = merge_times(tarr);
-                console.log("\t\t%s from %s is %j",d,ts,sched[f][d][t])
-            }
-        })
-    });
-    console.log("TEAM SCHEDULES")
-    _.each(_.keys(teams),function(tm) {
-        console.log("\t%s:",tm)
-        _.each(_.sortBy(_.keys(teams[tm]),function(k) { return dorder[k] }), function(d) {
-            var tarr = _.keys(teams[tm][d]).sort();
-            while( tarr.length > 0 ) {
-                t = tarr[0]
-                var ts = merge_times(tarr);
-                console.log("\t\t%s from %s @ %s",d,ts,teams[tm][d][t])
 
-            }
-/*
-            _.each(_.keys(teams[tm][d]).sort(), function(t) {
-                console.log("%s @ %d is %s",d,t,teams[tm][d][t])
+    // push in other leagues
+    _.each(_.keys(conf.others), function(tm) {
+        _.each(_.keys(conf.others[tm]), function(f) {
+            _.each(_.keys(conf.others[tm][f]),function(d) {
+                _.each(_.values(conf.others[tm][f][d]),function(t) {
+                    nested(sched,f,d,t,tm)
+                    nested(teams,tm,d,t,f)
+                    if ( d === "sa" || d === "su" ) {
+                        wetimes[t] = 1
+                    } else {
+                        times[t] = 1
+                    }
+                });
             })
-*/
-        })
-    })
+        });
+    });
+
+    if ( prog.format === "field" ) {
+        console.log("FIELD SCHEDULES")
+        var dorder = { mo:1, tu:2, we:3, th:4, fr:5, sa:6, su:7 };
+        _.each(_.keys(sched),function(f) {
+            console.log("\t%s:",f);
+            _.each(_.sortBy(_.keys(sched[f]), function(k) { return dorder[k]; }), function(d) {
+                var tarr = _.sortBy(_.keys(sched[f][d]),function(t) { return parseInt(t); })
+                while( tarr.length > 0 ) {
+                    t = tarr[0]
+                    var ts = merge_times(tarr);
+                    console.log("\t\t%s from %s is %j",d,ts,sched[f][d][t])
+                    if ( d === "sa" || d === "su" ) {
+                        wetimes[t] = 1
+                    } else {
+                        times[t] = 1
+                    }
+                }
+            });
+        });
+    } else if ( prog.format === "team" ) {
+        console.log("TEAM SCHEDULES")
+        _.each(_.keys(teams),function(tm) {
+            console.log("\t%s:",tm)
+            _.each(_.sortBy(_.keys(teams[tm]),function(k) { return dorder[k] }), function(d) {
+                var tarr = _.sortBy(_.keys(teams[tm][d]),function(t) {return parseInt(t);})
+                while( tarr.length > 0 ) {
+                    t = tarr[0]
+                    var ts = merge_times(tarr);
+                    console.log("\t\t%s from %s @ %s",d,ts,teams[tm][d][t])
+                    if ( d === "sa" || d === "su" ) {
+                        wetimes[t] = 1
+                    } else {
+                        times[t] = 1
+                    }
+                }
+                /*
+                  _.each(_.keys(teams[tm][d]).sort(), function(t) {
+                  console.log("%s @ %d is %s",d,t,teams[tm][d][t])
+                  })
+                */
+            });
+        });
+    } else if ( prog.format === "html" ) {
+
+        console.log(fn({times:_.keys(times), 
+                        days:["mo","tu","we","th","fr"], sched:sched}))
+        console.log(fn({times:_.keys(wetimes), 
+                        days:["sa","su"], sched:sched}))
+
+    } else {
+        console.log( "SOLVED, but no output format specified" );
+    }
     
 })
 
-
-var conf = JSON.parse(fs.readFileSync(prog.args[0],'utf8'));
-
-var teams = conf.teams;
-var fields = conf.fields;
 
 var bvars = {};
 
