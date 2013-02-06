@@ -58,11 +58,11 @@ foreach my $tm (keys %{$teams}) {
                 @times = @{$teams->{$tm}->[$pri-1]->{$d}};
                 $tot += scalar(@times);
                 push @slots, map{ bvar($tm,$f,$d,$_) } @times;
-                foreach $t ( @times ) {
+#                foreach $t ( @times ) {
                     push @invalid, map {
                         bvar($tm,$f,$d,$_)
-                    } grep { not field_is_avail( $f, $d, $t ) } @times;
-                }
+                    } grep { not field_is_avail( $f, $d, $_ ) } @times;
+#                }
                 
             }
             if ( $tot ) {
