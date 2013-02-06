@@ -1,54 +1,14 @@
 #!/usr/bin/perl
 
-$teams = {
-    bu12_martin => [
-        { w => [ 300, 330 ], f => [300, 330] },
-        { w => [ 400, 430 ], f => [400, 430] },
-        {}
-        ],
-    gu13_tbd => [
-        { w => [ 300, 330 ], f => [300, 330] },
-        { w => [ 500, 530 ], f => [500, 530] },
-        {}
-        ],
-    bu14_tbd => [
-        { w => [ 400, 430 ], f => [400, 430] },
-        { w => [ 500, 530 ], f => [500, 530] },
-        {}
-        ],
-    bu12_suarez => [
-        {}
-        ],
-    gu11_cardinale => [
-        {}
-        ],
-    bu11_anderson => [
-        {}
-        ],
-    bu10_suarez => [
-        {}
-        ],
-    bu9_serrano => [
-        {}
-        ],
-    gu9_tbd => [
-        {}
-        ],
-    bu8_perry => [
-        {}
-        ]
-};
+use JSON;
+use IO::All;
 
-$fields = {
-    adaE => {
-        w => [ 300, 330, 400, 430, 500, 530 ],
-        f => [ 300, 330, 400, 430, 500, 530 ]
-    },
-    adaW => {
-        w => [ 300, 330, 400, 430, 500, 530 ],
-        f => [ 300, 330, 400, 430, 500, 530 ]
-    }
-};
+my $confstr << io($ARGV[0] || "winter-2012.json");
+
+my $conf = decode_json( $confstr );
+
+my $teams = $conf->{teams};
+my $fields = $conf->{fields};
 
 my %bvars = ();
 sub bvar {
@@ -76,23 +36,37 @@ foreach my $t (keys %{$teams}) {
     print join(" + ", map { $pri++; bvar( $t, "o$pri") } @{$teams->{$t}} )." = 1;\n";
 }
 
+sub field_is_avail {
+    my ($f,$d,$t) = @_;
+
+    return grep { $_ eq $t } @{$fields->{$f}->{$d}};
+}
+
+@invalid = ();
 
 print "\n/* team options */";
-foreach my $t (keys %{$teams}) {
+foreach my $tm (keys %{$teams}) {
     my $pri = 1;
-    foreach my $o ( @{$teams->{$t}} ) {
-        print "\n".bvar($t,"o$pri")." = ".join('+',map { bvar($t,"o$pri", $_) } keys %${fields}).";\n";
+    foreach my $o ( @{$teams->{$tm}} ) {
+        print "\n".bvar($tm,"o$pri")." = ".join('+',map { bvar($tm,"o$pri", $_) } keys %${fields}).";\n";
 
         foreach my $f ( keys %{$fields}) {
-            @dd = keys %{$teams->{$t}->[$pri-1]};
+            @dd = keys %{$teams->{$tm}->[$pri-1]};
             my $tot = 0;
             @slots = ();
             foreach my $d ( @dd ) { 
-                $tot += scalar(@{$teams->{$t}->[$pri-1]->{$d}});
-                push @slots, map{ bvar($t,$f,$d,$_) } @{$teams->{$t}->[$pri-1]->{$d}};
+                @times = @{$teams->{$tm}->[$pri-1]->{$d}};
+                $tot += scalar(@times);
+                push @slots, map{ bvar($tm,$f,$d,$_) } @times;
+                foreach $t ( @times ) {
+                    push @invalid, map {
+                        bvar($tm,$f,$d,$_)
+                    } grep { not field_is_avail( $f, $d, $t ) } @times;
+                }
+                
             }
             if ( $tot ) {
-                print "$tot ".bvar($t,"o$pri",$f)." = ".join(" + ",@slots).";\n";
+                print "$tot ".bvar($tm,"o$pri",$f)." = ".join(" + ",@slots).";\n";
             }
         }
 
@@ -107,13 +81,17 @@ foreach my $f ( keys %{$fields} ) {
     foreach my $d ( keys %{$fields->{$f}} ) {
         foreach my $t ( @{$fields->{$f}->{$d}} ) {
             print "\n";
-            print bvar($f,$d,$t)." <= 1.5;\n";
+            print bvar($f,$d,$t)." <= ".(field_is_avail( $f, $d, $t )?1.5:0).";\n";
             print bvar($f,$d,$t)." = ";
             print join(" + ", map { bvar($_,$f,$d,$t) } keys %{$teams});
             print ";\n";
         }
     }
 }
+
+print "\n/* ZERO THE DISALLOWED TIMES */";
+print join( " + ", @invalid )." = 0;";
+
 
 # dump binary variables
 print "\n/* BINARY VARS */";
