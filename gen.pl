@@ -89,8 +89,10 @@ foreach my $f ( keys %{$fields} ) {
     }
 }
 
-print "\n/* ZERO THE DISALLOWED TIMES */";
-print join( " + ", @invalid )." = 0;";
+if ( @invalid ) {
+    print "\n/* ZERO THE DISALLOWED TIMES */\n";
+    print join( " + ", @invalid )." = 0;";
+}
 
 
 # dump binary variables
