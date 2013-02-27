@@ -3,6 +3,7 @@ var _ = require('underscore');
 var fs = require('fs');
 var exec = require('child_process').exec,
     child;
+var colors = require('colors');
 
 var jade = require('jade')
 
@@ -75,7 +76,15 @@ child = exec('lp_solve',function(err,stdout,stderr) {
     var wetimes = {}
     sched = {}
     teams = {}
+    if ( err ) {
+        throw new Error(err);
+    }
+    _.each(stderr.split("\n"), function(line) {
+        console.log("ERRORS".red)
+        console.log(line.red)
+    });
     _.each(stdout.split(/\n/), function(line) {
+        console.log(line)
         var m
         if ( m = line.match(/^\s*$/)) {}
         else if ( m = line.match(/Value of the objective function:/) ) {}
@@ -130,6 +139,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
         });
     } else if ( prog.format === "team" ) {
         console.log("TEAM SCHEDULES")
+        var dorder = { mo:1, tu:2, we:3, th:4, fr:5, sa:6, su:7 };
         _.each(_.keys(teams),function(tm) {
             console.log("\t%s:",tm)
             _.each(_.sortBy(_.keys(teams[tm]),function(k) { return dorder[k] }), function(d) {
@@ -153,10 +163,32 @@ child = exec('lp_solve',function(err,stdout,stderr) {
         });
     } else if ( prog.format === "html" ) {
 
+        colors = [ "red", "blue", "green", "orange", "cyan", "magenta" ]
+
+        ccnt = 0;
+        tt = _.map(_.keys(teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
         console.log(fn({times:_.keys(times), 
-                        days:["mo","tu","we","th","fr"], sched:sched}))
+                        days:["mo","tu","we","th","fr"], sched:sched,
+                        teams:tt,
+                        field:"adaE"
+                       }))
+        ccnt = 0;
         console.log(fn({times:_.keys(wetimes), 
-                        days:["sa","su"], sched:sched}))
+                        days:["sa","su"], sched:sched,
+                        teams:tt,
+                        field:"adaE"
+                        }))
+        console.log(fn({times:_.keys(times), 
+                        days:["mo","tu","we","th","fr"], sched:sched,
+                        teams:tt,
+                        field:"berkS"
+                       }))
+        ccnt = 0;
+        console.log(fn({times:_.keys(wetimes), 
+                        days:["sa","su"], sched:sched,
+                       teams:tt,
+                        field:"berkS"
+                        }))
 
     } else {
         console.log( "SOLVED, but no output format specified" );
@@ -168,28 +200,44 @@ child = exec('lp_solve',function(err,stdout,stderr) {
 var bvars = {};
 
 function bvar() {
-    var v = _.values(arguments).join("_")
-    bvars[v]++;
+    var args = _.values(arguments)
+    var tm = [args[0],args[1]].join("_")
+    var t = teams[tm]
+    var f = args[2]
+    var v = args.join("_")
+    var pri = -1
+    if ( t && t.fpref ) {
+        pri = t.fpref.indexOf(f.slice(0,-1)) 
+    }
+    if (pri<0) pri = 1;
+    bvars[v] = pri
     return v;
 }
 
+function emit(str) {
+    process.stdout.write(str);
+    child.stdin.write(str);
+}
+
 // objective
-child.stdin.write("min: 0\n");
+emit("min: 0.00001 bvarsum\n");
 _.each(_.keys(teams),function(tm) {
     var pri = 1;
-    _.each(_.keys(teams[tm]), function(o) {
-        child.stdin.write(" + "+pri+" "+bvar(tm,"o"+pri))
+    _.each(_.keys(teams[tm].req), function(o) {
+        var mult = 1;
+        if ( pri === teams[tm].req.length ) mult = 100;
+        emit(" + "+(mult*pri)+" "+bvar(tm,"o"+pri))
         pri++
     });
-    child.stdin.write("\n")
+    emit("\n")
 });
-child.stdin.write(";\n")
+emit(";\n")
 
 
-child.stdin.write("/* Must pick one option for each team */\n");
+emit("/* Must pick one option for each team */\n");
 _.each(_.keys(teams),function(tm) {
     var pri = 0
-    child.stdin.write(_.map(_.keys(teams[tm]),function(o) { 
+    emit(_.map(_.keys(teams[tm].req),function(o) { 
         pri++; return bvar(tm, "o"+pri)
     }).join(" + ")+" = 1;\n" );
 });
@@ -201,60 +249,74 @@ function field_is_avail(f,d,t) {
 }
 
 var invalid = []
+var unreq = []
 
-child.stdin.write( "\n/* team options */" );
+emit( "\n/* team options */" );
 _.each(_.keys(teams), function(tm) {
     var pri = 1
-    _.each(_.keys( teams[tm] ), function(o) {
-        child.stdin.write( "\n"+bvar(tm,"o"+pri)+" = "+_.map(_.keys(fields), function(f) {
+    _.each(_.keys( teams[tm].req ), function(o) {
+        // allow exactly one option to be chosen
+        emit( "\n"+bvar(tm,"o"+pri)+" = "+_.map(_.keys(fields), function(f) {
             return bvar(tm,"o"+pri,f)
         }).join("+")+";\n")
 
+        // require all slots for a particular option to be used if the option is selected
+        var gslots = []
         _.each(_.keys(fields), function(f) {
-            var dd = _.keys(teams[tm][pri-1])
+            var dd = _.keys(teams[tm].req[pri-1])
             var tot = 0
             var slots = []
             _.each(dd,function(d) {
-                var times = teams[tm][pri-1][d]
+                var times = teams[tm].req[pri-1][d]
                 tot += times.length
                 slots.push( _.map(times,function(t) { return bvar(tm,f,d,t) }) )
-                iv = _.map(_.filter(times,function(t) { return !field_is_avail( f, d, t ) }),
+                var iv = _.map(_.filter(times,function(t) { return !field_is_avail( f, d, t ) }),
                       function(t) {
                           return bvar(tm,f,d,t)
                       })
                 if (iv.length > 0) { invalid.push( iv ) }
+                                                      
             });
             if ( tot ) {
-                child.stdin.write(tot+" "+bvar(tm,"o"+pri,f)+" = "+_.flatten(slots).join(" + ")+";\n");
+                emit(tot+" "+bvar(tm,"o"+pri,f)+" = "+_.flatten(slots).join(" + ")+";\n");
             }
+
         });
+        
         pri++;
     })
 });
 
 
 
-child.stdin.write("\n/* DON'T OVERBOOK FIELDS */");
+emit("\n/* DON'T OVERBOOK FIELDS */");
 _.each(_.keys(fields), function(f) {
     _.each(_.keys(fields[f]), function(d) {
-        _.each(_.keys(fields[f][d]), function(t) {
-            child.stdin.write( "\n" )
-            child.stdin.write( bvar(f,d,t)+" <= "+(field_is_avail( f, d, t )?1.5:0)+";\n" )
-            child.stdin.write( bvar(f,d,t)+" = " )
-            child.stdin.write( _.map(_.keys(teams), function(tm) { return bvar(tm,f,d,t) } ).join(" + ") );
-            child.stdin.write( ";\n" )
+        _.each(fields[f][d], function(t) {
+            emit( "\n" )
+            emit( bvar(f,d,t)+" <= "+(field_is_avail( f, d, t )?1.5:0)+";\n" )
+            emit( bvar(f,d,t)+" = " )
+            emit( _.map(_.keys(teams), function(tm) { return bvar(tm,f,d,t) } ).join(" + ") );
+            emit( ";\n" )
         });
     });
 });
 
+emit("\n/* CREATE BVAR SUM */\n")
+emit("bvarsum = " + _.map(_.keys(bvars),function(v) { return bvars[v]+" "+v; }).join( " + " ) + ";")
+
 if ( invalid.length ) {
-    child.stdin.write( "\n/* ZERO THE DISALLOWED TIMES */\n" );
-    child.stdin.write( _.flatten(invalid).join(" + " )+" = 0;");
+    emit( "\n/* ZERO THE DISALLOWED TIMES */\n" );
+    emit( _.flatten(invalid).join(" + " )+" = 0;");
+}
+if ( unreq.length ) {
+    emit( "\n/* ZERO THE UNREQUESTED TIMES */\n" );
+    emit( _.flatten(unreq).join(" + " )+" = 0;");
 }
 
 
 // dump binary variables
-child.stdin.write( "\n/* BINARY VARS */" );
-child.stdin.write( "\nbin "+_.keys(bvars).join(", ")+";\n");
+emit( "\n/* BINARY VARS */" );
+emit( "\nbin "+_.keys(bvars).join(", ")+";\n");
 
 child.stdin.end();

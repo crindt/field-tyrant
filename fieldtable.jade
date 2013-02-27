@@ -1,15 +1,15 @@
 html
   style
-    td { text-align: center; width: #{90.0/(2*times.length)}% }
-    .EML {background-color:red}
-    .CDR {background-color:blue}
-    .ESL {background-color:green}
+    td { text-align: center; width: #{90.0/(2*times.length)}%; background-color:#aaaaaa}
+    .ESL { background-color: #ff0000 }
+    .CDR { background-color: #ffff00 }
+    .EML { background-color: #00ffff }
   body
     table(border=1)
       tr
         th(rowspan=2)
         each item in times
-          th(colspan=2)= item
+          th(colspan=2) #{Math.floor(item/100)}:#{(""+item).slice(-2)}
       tr
         each item in times
           th E
@@ -18,12 +18,12 @@ html
         tr
           th= day
           each t in times
-            if sched["adaE"][day]
-              td(class=sched["adaE"][day][t])= sched["adaE"][day][t]
+            if sched[field+"1"][day] || sched[field+"2"][day]
+              td(class="#{sched[field+'1'][day][t]}")= [sched[field+"1"][day][t],sched[field+"2"][day][t]].join(", ")
             else
               td n/a
-            if sched["adaW"][day]
-              td(class=sched["adaW"][day][t])= sched["adaW"][day][t]
+            if sched[field+"1"][day]
+              td(class="#{sched[field+'1'][day][t]}")= [sched[field+"1"][day][t],sched[field+"2"][day][t]].join(", ")
             else
               td n/a
 
