@@ -5,26 +5,26 @@ html
     .CDR { background-color: #ffff00 }
     .EML { background-color: #00ffff }
   body
+    h3 Schedule for #{field}
     table(border=1)
-      tr
-        th(rowspan=2)
-        each item in times
-          th(colspan=2) #{Math.floor(item/100)}:#{(""+item).slice(-2)}
-      tr
-        each item in times
-          th E
-          th W
-      each day in days
+      thead
         tr
-          th= day
-          each t in times
-            if sched[field+"1"][day] || sched[field+"2"][day]
-              td(class="#{sched[field+'1'][day][t]}")= [sched[field+"1"][day][t],sched[field+"2"][day][t]].join(", ")
-            else
-              td n/a
-            if sched[field+"1"][day]
-              td(class="#{sched[field+'1'][day][t]}")= [sched[field+"1"][day][t],sched[field+"2"][day][t]].join(", ")
-            else
-              td n/a
+          th(style="width:5%")
+            each item in times
+              th #{Math.floor(item/100)}:#{(""+item).slice(-2)}
+      tbody
+        each day in days
+          tr
+            th(style="width:5%")= day
+            each t in times
+              = console.log(t)
+              if sched[field][day]
+                td(class="#{sched[field][day][t]}")
+                  if sched[field][day][t]
+                    ul
+                    each tm in sched[field][day][t]
+                      li= format_team(tm)
+              else
+                td n/a
 
         
