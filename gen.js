@@ -30,6 +30,9 @@ logger.setLevels(winston.config.syslog.levels);
 
 logger.info("LOGLEVEL IS "+prog.loglevel);
 
+var workweek = ["mo", "tu", "we", "th", "fr"]
+var weekend = ["sa","su"]
+var week = _.union(workweek,weekend);
 
 var conf = JSON.parse(fs.readFileSync(prog.args[0],'utf8'));
 
@@ -114,6 +117,10 @@ function format_team(tm) {
         return tm.split("X").join("/").split("_").join(" ")
 }
 
+function format_field(f) {
+    return conf.fields && conf.fields[f] ? conf.fields[f].pretty : f;
+}
+
 // spawn lp_solve
 child = exec('lp_solve',function(err,stdout,stderr) {
     var cnt = 0;
@@ -156,7 +163,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 var t = det[4]
                 nested_push(sched,f,d,t, tm)
                 nested(teams,tm,d,t, f)
-                if ( d === "sa" || d === "su" ) {
+                if ( false && (d === "sa" || d === "su") ) {
                     wetimes[t] = 1
                 } else {
                     times[t] = 1
@@ -168,16 +175,18 @@ child = exec('lp_solve',function(err,stdout,stderr) {
 
     // fill out the times
     _.each(_.values(conf.fields),function(fd) {
-        _.each(["mo","tu","we","th","fr"],function(d) {
+        _.each(week,function(d) {
             _.each(fd.slots[d], function(t) {
                 times[t] = 1;
             });
         })
+/*
         _.each(["sa","su"],function(d) {
             _.each(fd.slots[d], function(t) {
                 wetimes[t] = 1;
             });
         })
+*/
     });
 
     // push in other leagues
@@ -202,7 +211,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
         var dorder = { mo:1, tu:2, we:3, th:4, fr:5, sa:6, su:7 };
         // loop over fields in the schedule
         _.each(_.keys(sched),function(f) { 
-            outstream.write(sprintf("\t%s:\n",f));
+            outstream.write(sprintf("\t%s:\n",format_field(f)));
 
             // loop over days in the schedule for the field (sorted by week order)
             _.each(_.sortBy(_.keys(sched[f]), function(k) { return dorder[k]; }), function(d) {
@@ -212,7 +221,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
 
                 _.each(tarr, function(t) {
                     outstream.write(sprintf("\t\t%s @ %s is %s\n", d, t, _.map(sched[f][d][t],function(c) { return format_team(c) }).join(", ")));
-                    if ( d === "sa" || d === "su" ) {
+                    if ( false && ( d === "sa" || d === "su") ) {
                         wetimes[t] = 1
                     } else {
                         times[t] = 1
@@ -230,8 +239,8 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 while( tarr.length > 0 ) {
                     t = tarr[0]
                     var ts = merge_times(tarr);
-                    outstream.write(sprintf("\t\t%s from %s @ %s\n",d,ts,teams[tm][d][t]))
-                    if ( d === "sa" || d === "su" ) {
+                    outstream.write(sprintf("\t\t%s from %s @ %s\n",d,ts,format_field(teams[tm][d][t])))
+                    if ( false && ( d === "sa" || d === "su" ) ) {
                         wetimes[t] = 1
                     } else {
                         times[t] = 1
@@ -239,65 +248,49 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 }
             });
         });
-        _.each(_.difference(_.keys(conf.teams),_.keys(teams)),function(tm){
-            logger.warning("%s is UNALLOCATED",format_team(tm));
-            var opts = conf.teams[tm].req.slice(0,-1)
-            if ( opts.length === 0 ) logger.warning("\tNO OPTIONS PROVIDED")
-            _.each(opts, function(opt,i) {
-                logger.warning("\toption "+(i+1)+": "+
-                               _.map(_.keys(opt), function(d) { return d+" "+merge_times(_.clone(opt[d])) }).join(", ")
-                              );
-                // look at other team allocations for conflicts
-                var conflicts = []
-                _.each(_.keys(teams),function(otm) {
-                    // loop over days in option
-                    _.each(_.keys(opt), function(d) {
-                        var dts = opt[d];
-                        if ( teams[otm][d] ) {
-                            var tarr = _.map( _.keys(teams[otm][d]), function( t ) { return parseInt(t) })
-                            var intr = _.intersection(tarr, opt[d])
-                            if ( intr.length > 0 ) conflicts.push( { team: otm, day: d, slot: merge_times(tarr), field: _.unique(_.values(teams[otm][d])).join(", ") } );
-                        }
-                    });
-                });
-                _.each(conflicts, function(c) {
-                    logger.warning("\t\tconflicts with: "+format_team(c.team)+" on "+c.day+" @ "+c.field+": "+c.slot);
-                });
-            })
-        })
     } else if ( prog.format === "html" ) {
 
         colors = [ "red", "blue", "green", "orange", "cyan", "magenta" ]
 
         ccnt = 0;
         tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
-        _.each(_.keys(conf.fields), function(f) {
-            console.log(conf.fields)
-            console.log(fields['berkS'].slots["mo"]["300"])
-            outstream.write(fn({times:_.keys(times), 
-                                days:["mo","tu","we","th","fr"], sched:sched,
-                                teams:tt,
-                                field:f,
-                                map: _.map,
-                                filter: _.filter,
-                                format_team: format_team,
-                                fields: conf.fields
-                               }))
-            ccnt = 0;
-            outstream.write(fn({times:_.keys(wetimes), 
-                                days:["sa","su"], sched:sched,
-                                teams:tt,
-                                field:f,
-                                map: _.map,
-                                filter: _.filter,
-                                format_team: format_team,
-                                fields: conf.fields
-                               }))
-        })
-
+        outstream.write(fn({times:_.keys(times), 
+                            days:week, sched:sched,
+                            teams:tt,
+                            fields:conf.fields,
+                            _: _,
+                            format_team: format_team,
+                            format_field: format_field
+                           }))
     } else {
         logger.warning( "SOLVED, but no output format specified" );
     }
+    _.each(_.difference(_.keys(conf.teams),_.keys(teams)),function(tm){
+        logger.warning("%s is UNALLOCATED",format_team(tm));
+        var opts = conf.teams[tm].req.slice(0,-1)
+        if ( opts.length === 0 ) logger.warning("\tNO OPTIONS PROVIDED")
+        _.each(opts, function(opt,i) {
+            logger.warning("\toption "+(i+1)+": "+
+                           _.map(_.keys(opt), function(d) { return d+" "+merge_times(_.clone(opt[d])) }).join(", ")
+                          );
+            // look at other team allocations for conflicts
+            var conflicts = []
+            _.each(_.keys(teams),function(otm) {
+                // loop over days in option
+                _.each(_.keys(opt), function(d) {
+                    var dts = opt[d];
+                    if ( teams[otm][d] ) {
+                        var tarr = _.map( _.keys(teams[otm][d]), function( t ) { return parseInt(t) })
+                        var intr = _.intersection(tarr, opt[d])
+                        if ( intr.length > 0 ) conflicts.push( { team: otm, day: d, slot: merge_times(tarr), field: _.unique(_.values(teams[otm][d])).join(", ") } );
+                    }
+                });
+            });
+            _.each(conflicts, function(c) {
+                logger.warning("\t\tconflicts with: "+format_team(c.team)+" on "+c.day+" @ "+format_field(c.field)+": "+c.slot);
+            });
+        })
+            })
     
 })
 
@@ -313,9 +306,9 @@ function bvar() {
     var v = args.join("_")
     var pri = -1
     if ( t && t.fpref ) {
-        pri = t.fpref.indexOf(f) 
+        pri = t.fpref.indexOf(f)+1
     }
-    if (pri<0) pri = t.fpref.length;
+    if (pri<1) pri = t.fpref.length;
     bvars[v] = pri
     return v;
 }

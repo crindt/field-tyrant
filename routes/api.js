@@ -3,7 +3,11 @@
  */
 
 exports.name = function (req, res) {
-  res.json({
+    res.json({
   	name: 'Bob'
-  });
+    });
+};
+
+exports.solution = function(req, res) {
+    
 };
