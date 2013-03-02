@@ -1,29 +1,33 @@
 extends layout
 
 block body
-  div(ng-controller='AppCtrl')
-    h2 Hello {{name}}
-    ul.menu
-      li
-        a(href='view1') view1
-      li
-        a(href='view2') view2
+  header.navbar.navbar-fixed-top
+    .navbar-inner
+      .container-fluid
+        a.brand(href="#") Cardiff Soccer Field Allocation (March 2013)
 
+  .container-fluid
     div(ng-view)
 
-    div
-      | Angular seed app: v
-      span(app-version)
-
+  // jquery and underscore
   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
   script(src="//code.jquery.com/ui/jquery-ui-git.js")
   script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js")
+  // boostrap
+  script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js")
+
+  // angular libraries
   script(src='js/lib/angular/angular.js')
   script(src='js/app.js')
   script(src='js/services.js')
   script(src='js/controllers.js')
   script(src='js/filters.js')
   script(src='js/directives.js')
-  script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js")
-  script(src="/js/lib/angular-ui/angular-ui-ieshiv.min.js")  
-  script(src="/js/lib/angular-ui/angular-ui.min.js")
+
+  // angular-ui and ui-bootstrap
+  script(src="https://raw.github.com/angular-ui/angular-ui/v0.4.0/build/angular-ui-ieshiv.min.js")  
+  script(src="https://raw.github.com/angular-ui/angular-ui/v0.4.0/build/angular-ui.min.js")
+  script(src="/js/lib/ui-bootstrap/ui-bootstrap-custom-0.1.1-SNAPSHOT.js")
+
+  script(src="https://raw.github.com/sterlingwes/RandomColor/master/rcolor.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js")

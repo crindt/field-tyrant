@@ -91,6 +91,18 @@ function int_time(t) {
     return hr*100+mn;
 }
 
+function fill_times(arro) {
+    var ltime = _.min(arro)
+    var htime = _.max(arro)
+    var ttimes = [];
+    console.log('BOUNDS: ',Math.floor(ltime/100)+(ltime%100)/60,Math.floor(htime/100)+(htime%100)/60)
+    for( t = Math.floor(ltime/100)+(ltime%100)/60; t <= Math.floor(htime/100)+(htime%100)/60; t += 0.5 ) {
+        ttimes.push(Math.floor(t)*100+(t%1)*60)
+    }
+    console.log('TIMES: ',ltime,htime)
+    console.log('TTIMES: ',ttimes)
+    return ttimes;
+}
 
 function merge_times(arro) {
     var arr = _.map(arro, function(t) { return float_time(t); });
@@ -120,6 +132,33 @@ function format_team(tm) {
 function format_field(f) {
     return conf.fields && conf.fields[f] ? conf.fields[f].pretty : f;
 }
+
+
+// SETUP
+
+// expand times for team requests
+_.each(_.values(conf.teams),function(tmo) { 
+    _.each(tmo.req, function(r) {
+        _.each(_.keys(r), function(d) {
+            r[d] = fill_times(r[d])
+        });
+    });
+});
+
+// expand times for field slots
+_.each(_.values(conf.fields),function(fo) {
+    _.each(_.keys(fo.slots), function(d) {
+        if ( fo.slots[d].length > 0 && fo.slots[d][0] instanceof Array ) {
+            fo.slots[d] = _.flatten(_.union(_.map(fo.slots[d], function (tt) { return fill_times(tt) })))
+        } else 
+            fo.slots[d] = fill_times(fo.slots[d]);
+    });
+});
+
+
+
+
+
 
 // spawn lp_solve
 child = exec('lp_solve',function(err,stdout,stderr) {
@@ -193,7 +232,8 @@ child = exec('lp_solve',function(err,stdout,stderr) {
     _.each(_.keys(conf.others), function(tm) {
         _.each(_.keys(conf.others[tm]), function(f) {
             _.each(_.keys(conf.others[tm][f]),function(d) {
-                _.each(_.values(conf.others[tm][f][d]),function(t) {
+                var tt = fill_times(conf.others[tm][f][d])
+                _.each(tt,function(t) {
                     nested_push(sched,f,d,t,tm)
                     nested(teams,tm,d,t,f)
                     if ( d === "sa" || d === "su" ) {
@@ -248,13 +288,32 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 }
             });
         });
+    } else if ( prog.format === "json" ) {
+        ccnt = 0;
+        tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
+        var stimes = _.map(_.keys(times), function(t) { return parseInt(t); });
+        ttimes = fill_times(stimes);
+        outstream.write(JSON.stringify(
+            {times:ttimes, 
+             days:week, sched:sched,
+             teams:tt,
+             teamsched: teams,
+             fields:conf.fields,
+             _: _,
+             format_team: format_team,
+             format_field: format_field
+            }));
+        
     } else if ( prog.format === "html" ) {
 
         colors = [ "red", "blue", "green", "orange", "cyan", "magenta" ]
 
         ccnt = 0;
         tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
-        outstream.write(fn({times:_.keys(times), 
+        var stimes = _.map(_.keys(times), function(t) { return parseInt(t); });
+        console.log('STIMES',stimes)
+        ttimes = fill_times(stimes);
+        outstream.write(fn({times:ttimes, 
                             days:week, sched:sched,
                             teams:tt,
                             fields:conf.fields,
