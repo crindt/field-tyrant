@@ -197,13 +197,26 @@ angular.module('myApp.directives', []).
                                     .attr('style', 
                                           function(slot) { 
                                               return "fill: "+colors(i); })
-                                g.append('svg:text')
-                                    .attr('x',function(slot) { return xx } )
-                                    .attr('y',function(slot) { return tScale(slot.from) })
-                                    .attr('style','text-anchor:middle;dominant-baseline:central;')                               
-                                    .attr("transform", function(slot) {
-                                        return " translate("+[slotw/2,sloth/2].join(",")+") rotate("+[-90,xx,tScale(slot.from)].join(",")+")"
-                                    })
+                                
+                                var tt = g.append('svg:g')
+                                    .attr("transform", "translate("+[xx,tScale(slot.to)].join(",")+") rotate(-90)")
+                                    .append('svg:foreignObject')
+                                    .attr('width', sloth)
+                                    .attr('height', slotw)
+
+                                tt.append('xhtml:body')
+                                    .style("font", "14px 'Helvetica Neue'")
+                                    .style("background-color", "transparent")
+                                    .style("margin", 0)
+                                    .style("padding", 0)
+                                    .style("text-align", "center")
+                                    .append('div')
+                                    .classed("teamname",true)
+                                    .style("height",slotw+"px")
+                                    .style("min-height",slotw+"px")
+                                    .style("min-width",sloth+"px")
+                                    .style("line-height",slotw+"px")
+                                    .style("font-weight","bold")
                                     .text(format_team(team.team))
                             });
                     })
