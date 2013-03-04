@@ -28,6 +28,14 @@ function AppCtrl($scope, $http, $dialog) {
         } ).join(", ")
     }
 
+    $scope.timestep = 15;
+
+    $scope.isBeforeTwilight = function(t) {
+        var ct = new Date($scope.twilight[0].civil_twilight)
+        var tt = ct.getHours()*100+ct.getMinutes()
+        return (t < tt)
+    }
+
     $scope.format_team = format_team
 
     $scope.format_field = function(f) {
@@ -49,20 +57,40 @@ function AppCtrl($scope, $http, $dialog) {
         d.open('partials/team-dialog','TeamDialogController')
     }
 
-    $http({method: 'GET', url: '/data/schedule.json'}).
+                
+    var today = new Date();
+    today.setHours(3)
+    today.setMinutes(0)
+    today.setSeconds(0)
+    today.setMilliseconds(0)
+    var mon = angular.copy(today).add(1).day().previous().monday()
+    var sun = angular.copy(today).add(-1).day().next().sunday()
+
+    $scope.basedate = angular.copy(mon)
+
+    $http({method: 'GET', 
+           url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),sun.getMonth()+1,sun.getDate()].join("/")}).
         success(function(data, status, headers, config) {
-            $scope.schedule = data;
-            console.log($scope.schedule)
-            $scope._ = _;
+            $scope.twilight = data
 
-            _.each(_.keys($scope.schedule.teamsched),function(k,i) {
-                $scope.colors[k] = colors20(i)
-            });
-
-            $scope.status = 'Good!'
+            $http({method: 'GET', url: '/data/schedule.json'}).
+                success(function(data, status, headers, config) {
+                    $scope.schedule = data;
+                    console.log($scope.schedule)
+                    $scope._ = _;
+                    
+                    _.each(_.keys($scope.schedule.teamsched),function(k,i) {
+                        $scope.colors[k] = colors20(i)
+                    });
+                    
+                    $scope.status = 'Good!'
+                }).
+                error(function(data, status, headers, config) {
+                    $scope.status = 'Error Getting Schedule!'
+                });
         }).
         error(function(data, status, headers, config) {
-            $scope.status = 'Error!'
+            $scope.status = 'Error Getting Twilight!'
         });
 
     $scope.setField = function(i) {

@@ -86,7 +86,7 @@ body {
 
 .team {
     stroke: #000;
-    fill-opacity: 0.5;
+    //fill-opacity: 0.5;
     shape-rendering: crispEdges;
 
 }
@@ -109,7 +109,24 @@ body {
 }
     
 .available {
-    fill: green;
+    //fill: green;
+    fill: #B4F0B6;
+    //fill-opacity: 0.5;
+    stroke: none;
+}
+
+svg rect.closed {
     fill-opacity: 0.5;
     stroke: none;
+
+}
+
+line.twilight {
+    stroke: red;
+    stroke-width: 2px;
+}
+
+.dtwilight text {
+    stroke: black;
+    opacity: 0.5;
 }

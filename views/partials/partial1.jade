@@ -12,7 +12,7 @@
             th(ng-repeat="d in schedule.days") {{d}}
 
       tbody
-        tr(ng-repeat="t in schedule.times")
+        tr(ng-repeat="t in schedule.times | filter:isBeforeTwilight")
           th.timecol {{format_time(t)}}
           td(ng-repeat="d in schedule.days",ng-class="sched(field,d,t)")
             ul
