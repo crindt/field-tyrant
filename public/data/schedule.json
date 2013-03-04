@@ -1,28 +1,48 @@
 {
     "times": [
         800,
+        815,
         830,
+        845,
         900,
+        915,
         930,
+        945,
         1000,
+        1015,
         1030,
+        1045,
         1100,
+        1115,
         1130,
+        1145,
         1200,
+        1215,
         1230,
+        1245,
         1300,
+        1315,
         1330,
+        1345,
         1400,
+        1415,
         1430,
+        1445,
         1500,
+        1515,
         1530,
+        1545,
         1600,
+        1615,
         1630,
+        1645,
         1700,
+        1715,
         1730,
+        1745,
         1800,
-        1830,
-        1900
+        1815,
+        1830
     ],
     "days": [
         "mo",
@@ -39,17 +59,36 @@
                 "1530": [
                     "GU9_RezaXFisher"
                 ],
+                "1545": [
+                    "GU9_RezaXFisher"
+                ],
                 "1600": [
                     "GU9_RezaXFisher"
                 ],
+                "1615": [
+                    "GU9_RezaXFisher"
+                ],
                 "1630": [
+                    "GU9_RezaXFisher",
+                    "GU13_ChilesXFisher"
+                ],
+                "1645": [
+                    "BU8_PerryXReza",
                     "GU13_ChilesXFisher"
                 ],
                 "1700": [
                     "BU8_PerryXReza",
                     "GU13_ChilesXFisher"
                 ],
+                "1715": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
                 "1730": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1745": [
                     "BU8_PerryXReza",
                     "GU13_ChilesXFisher"
                 ]
@@ -58,11 +97,24 @@
                 "1530": [
                     "GU9_RezaXFisher"
                 ],
+                "1545": [
+                    "GU9_RezaXFisher"
+                ],
                 "1600": [
                     "GU9_RezaXFisher",
                     "BU9_Serrano"
                 ],
+                "1615": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
                 "1630": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano",
+                    "GU13_ChilesXFisher"
+                ],
+                "1645": [
+                    "BU8_PerryXReza",
                     "BU9_Serrano",
                     "GU13_ChilesXFisher"
                 ],
@@ -71,7 +123,16 @@
                     "BU9_Serrano",
                     "GU13_ChilesXFisher"
                 ],
+                "1715": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "GU13_ChilesXFisher"
+                ],
                 "1730": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1745": [
                     "BU8_PerryXReza",
                     "GU13_ChilesXFisher"
                 ]
@@ -80,10 +141,19 @@
                 "1600": [
                     "BU10_Suarez"
                 ],
+                "1615": [
+                    "BU10_Suarez"
+                ],
                 "1630": [
                     "BU10_Suarez"
                 ],
+                "1645": [
+                    "BU10_Suarez"
+                ],
                 "1700": [
+                    "BU10_Suarez"
+                ],
+                "1715": [
                     "BU10_Suarez"
                 ]
             },
@@ -92,11 +162,23 @@
                     "BU11_Anderson",
                     "BU12_Martin"
                 ],
+                "1645": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
                 "1700": [
                     "BU11_Anderson",
                     "BU12_Martin"
                 ],
+                "1715": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
                 "1730": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1745": [
                     "BU11_Anderson",
                     "BU12_Martin"
                 ]
@@ -106,11 +188,23 @@
                     "BU11_Anderson",
                     "BU12_Martin"
                 ],
+                "1645": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
                 "1700": [
                     "BU11_Anderson",
                     "BU12_Martin"
                 ],
+                "1715": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
                 "1730": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1745": [
                     "BU11_Anderson",
                     "BU12_Martin"
                 ]
@@ -119,31 +213,61 @@
                 "1400": [
                     "Encinitas_Soccer"
                 ],
+                "1415": [
+                    "Encinitas_Soccer"
+                ],
                 "1430": [
+                    "Encinitas_Soccer"
+                ],
+                "1445": [
                     "Encinitas_Soccer"
                 ],
                 "1500": [
                     "BU14_Suarez"
                 ],
+                "1515": [
+                    "BU14_Suarez"
+                ],
                 "1530": [
+                    "BU14_Suarez"
+                ],
+                "1545": [
                     "BU14_Suarez"
                 ],
                 "1600": [
                     "BU14_Suarez"
                 ],
+                "1615": [
+                    "BU14_Suarez"
+                ],
                 "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1645": [
                     "Encinitas_Soccer"
                 ],
                 "1700": [
                     "Encinitas_Soccer"
                 ],
+                "1715": [
+                    "Encinitas_Soccer"
+                ],
                 "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1745": [
                     "Encinitas_Soccer"
                 ],
                 "1800": [
                     "Encinitas_Soccer"
                 ],
+                "1815": [
+                    "Encinitas_Soccer"
+                ],
                 "1830": [
+                    "Encinitas_Soccer"
+                ],
+                "1845": [
                     "Encinitas_Soccer"
                 ]
             },
@@ -151,31 +275,61 @@
                 "1400": [
                     "Encinitas_Soccer"
                 ],
+                "1415": [
+                    "Encinitas_Soccer"
+                ],
                 "1430": [
+                    "Encinitas_Soccer"
+                ],
+                "1445": [
                     "Encinitas_Soccer"
                 ],
                 "1500": [
                     "Encinitas_Soccer"
                 ],
+                "1515": [
+                    "Encinitas_Soccer"
+                ],
                 "1530": [
+                    "Encinitas_Soccer"
+                ],
+                "1545": [
                     "Encinitas_Soccer"
                 ],
                 "1600": [
                     "Encinitas_Soccer"
                 ],
+                "1615": [
+                    "Encinitas_Soccer"
+                ],
                 "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1645": [
                     "Encinitas_Soccer"
                 ],
                 "1700": [
                     "Encinitas_Soccer"
                 ],
+                "1715": [
+                    "Encinitas_Soccer"
+                ],
                 "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1745": [
                     "Encinitas_Soccer"
                 ],
                 "1800": [
                     "Encinitas_Soccer"
                 ],
+                "1815": [
+                    "Encinitas_Soccer"
+                ],
                 "1830": [
+                    "Encinitas_Soccer"
+                ],
+                "1845": [
                     "Encinitas_Soccer"
                 ]
             }
@@ -186,11 +340,23 @@
                     "GU11_Cardinale",
                     "BU12_SuarezXChiles"
                 ],
+                "1645": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
                 "1700": [
                     "GU11_Cardinale",
                     "BU12_SuarezXChiles"
                 ],
+                "1715": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
                 "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1745": [
                     "GU11_Cardinale",
                     "BU12_SuarezXChiles"
                 ]
@@ -200,11 +366,23 @@
                     "GU11_Cardinale",
                     "BU12_SuarezXChiles"
                 ],
+                "1645": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
                 "1700": [
                     "GU11_Cardinale",
                     "BU12_SuarezXChiles"
                 ],
+                "1715": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
                 "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1745": [
                     "GU11_Cardinale",
                     "BU12_SuarezXChiles"
                 ]
@@ -213,25 +391,49 @@
                 "1500": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1515": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1530": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1545": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1600": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1615": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1630": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1645": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1700": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1715": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1730": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1745": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1800": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1815": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1830": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1845": [
                     "Coastal_Dragons_Rugby"
                 ]
             },
@@ -239,31 +441,61 @@
                 "900": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "915": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "945": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1000": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1015": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1045": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1100": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1115": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1130": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1145": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1200": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1215": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1230": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1245": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1300": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1315": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1330": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1345": [
                     "Coastal_Dragons_Rugby"
                 ]
             },
@@ -271,25 +503,49 @@
                 "1500": [
                     "Encinitas_Lacrosse"
                 ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
                     "Encinitas_Lacrosse"
                 ],
                 "1600": [
                     "Encinitas_Lacrosse"
                 ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
                     "Encinitas_Lacrosse"
                 ],
                 "1700": [
                     "Encinitas_Lacrosse"
                 ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
                     "Encinitas_Lacrosse"
                 ],
                 "1800": [
                     "Encinitas_Lacrosse"
                 ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
                     "Encinitas_Lacrosse"
                 ]
             },
@@ -297,25 +553,49 @@
                 "1500": [
                     "Encinitas_Lacrosse"
                 ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
                     "Encinitas_Lacrosse"
                 ],
                 "1600": [
                     "Encinitas_Lacrosse"
                 ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
                     "Encinitas_Lacrosse"
                 ],
                 "1700": [
                     "Encinitas_Lacrosse"
                 ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
                     "Encinitas_Lacrosse"
                 ],
                 "1800": [
                     "Encinitas_Lacrosse"
                 ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
                     "Encinitas_Lacrosse"
                 ]
             }
@@ -325,25 +605,49 @@
                 "1500": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1515": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1530": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1545": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1600": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1615": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1630": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1645": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1700": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1715": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1730": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1745": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1800": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1815": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1830": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1845": [
                     "Coastal_Dragons_Rugby"
                 ]
             },
@@ -351,31 +655,61 @@
                 "900": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "915": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "945": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1000": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1015": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1045": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1100": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1115": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1130": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1145": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1200": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1215": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1230": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1245": [
                     "Coastal_Dragons_Rugby"
                 ],
                 "1300": [
                     "Coastal_Dragons_Rugby"
                 ],
+                "1315": [
+                    "Coastal_Dragons_Rugby"
+                ],
                 "1330": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1345": [
                     "Coastal_Dragons_Rugby"
                 ]
             },
@@ -383,25 +717,49 @@
                 "1500": [
                     "Encinitas_Lacrosse"
                 ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
                     "Encinitas_Lacrosse"
                 ],
                 "1600": [
                     "Encinitas_Lacrosse"
                 ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
                     "Encinitas_Lacrosse"
                 ],
                 "1700": [
                     "Encinitas_Lacrosse"
                 ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
                     "Encinitas_Lacrosse"
                 ],
                 "1800": [
                     "Encinitas_Lacrosse"
                 ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
                     "Encinitas_Lacrosse"
                 ]
             },
@@ -409,25 +767,49 @@
                 "1500": [
                     "Encinitas_Lacrosse"
                 ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
                     "Encinitas_Lacrosse"
                 ],
                 "1600": [
                     "Encinitas_Lacrosse"
                 ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
                     "Encinitas_Lacrosse"
                 ],
                 "1700": [
                     "Encinitas_Lacrosse"
                 ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
                     "Encinitas_Lacrosse"
                 ],
                 "1800": [
                     "Encinitas_Lacrosse"
                 ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
                     "Encinitas_Lacrosse"
                 ]
             },
@@ -435,25 +817,49 @@
                 "1500": [
                     "Encinitas_Soccer"
                 ],
+                "1515": [
+                    "Encinitas_Soccer"
+                ],
                 "1530": [
+                    "Encinitas_Soccer"
+                ],
+                "1545": [
                     "Encinitas_Soccer"
                 ],
                 "1600": [
                     "Encinitas_Soccer"
                 ],
+                "1615": [
+                    "Encinitas_Soccer"
+                ],
                 "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1645": [
                     "Encinitas_Soccer"
                 ],
                 "1700": [
                     "Encinitas_Soccer"
                 ],
+                "1715": [
+                    "Encinitas_Soccer"
+                ],
                 "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1745": [
                     "Encinitas_Soccer"
                 ],
                 "1800": [
                     "Encinitas_Soccer"
                 ],
+                "1815": [
+                    "Encinitas_Soccer"
+                ],
                 "1830": [
+                    "Encinitas_Soccer"
+                ],
+                "1845": [
                     "Encinitas_Soccer"
                 ]
             },
@@ -461,25 +867,49 @@
                 "1500": [
                     "Encinitas_Soccer"
                 ],
+                "1515": [
+                    "Encinitas_Soccer"
+                ],
                 "1530": [
+                    "Encinitas_Soccer"
+                ],
+                "1545": [
                     "Encinitas_Soccer"
                 ],
                 "1600": [
                     "Encinitas_Soccer"
                 ],
+                "1615": [
+                    "Encinitas_Soccer"
+                ],
                 "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1645": [
                     "Encinitas_Soccer"
                 ],
                 "1700": [
                     "Encinitas_Soccer"
                 ],
+                "1715": [
+                    "Encinitas_Soccer"
+                ],
                 "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1745": [
                     "Encinitas_Soccer"
                 ],
                 "1800": [
                     "Encinitas_Soccer"
                 ],
+                "1815": [
+                    "Encinitas_Soccer"
+                ],
                 "1830": [
+                    "Encinitas_Soccer"
+                ],
+                "1845": [
                     "Encinitas_Soccer"
                 ]
             }
@@ -489,25 +919,49 @@
                 "1500": [
                     "Encinitas_Lacrosse"
                 ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
                     "Encinitas_Lacrosse"
                 ],
                 "1600": [
                     "Encinitas_Lacrosse"
                 ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
                     "Encinitas_Lacrosse"
                 ],
                 "1700": [
                     "Encinitas_Lacrosse"
                 ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
                     "Encinitas_Lacrosse"
                 ],
                 "1800": [
                     "Encinitas_Lacrosse"
                 ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
                     "Encinitas_Lacrosse"
                 ]
             },
@@ -515,25 +969,49 @@
                 "1500": [
                     "Encinitas_Lacrosse"
                 ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
                     "Encinitas_Lacrosse"
                 ],
                 "1600": [
                     "Encinitas_Lacrosse"
                 ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
                     "Encinitas_Lacrosse"
                 ],
                 "1700": [
                     "Encinitas_Lacrosse"
                 ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
                     "Encinitas_Lacrosse"
                 ],
                 "1800": [
                     "Encinitas_Lacrosse"
                 ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
                 "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
                     "Encinitas_Lacrosse"
                 ]
             },
@@ -541,67 +1019,133 @@
                 "800": [
                     "Encinitas_Soccer"
                 ],
+                "815": [
+                    "Encinitas_Soccer"
+                ],
                 "830": [
+                    "Encinitas_Soccer"
+                ],
+                "845": [
                     "Encinitas_Soccer"
                 ],
                 "900": [
                     "Encinitas_Soccer"
                 ],
+                "915": [
+                    "Encinitas_Soccer"
+                ],
                 "930": [
+                    "Encinitas_Soccer"
+                ],
+                "945": [
                     "Encinitas_Soccer"
                 ],
                 "1000": [
                     "Encinitas_Soccer"
                 ],
+                "1015": [
+                    "Encinitas_Soccer"
+                ],
                 "1030": [
+                    "Encinitas_Soccer"
+                ],
+                "1045": [
                     "Encinitas_Soccer"
                 ],
                 "1100": [
                     "Encinitas_Soccer"
                 ],
+                "1115": [
+                    "Encinitas_Soccer"
+                ],
                 "1130": [
+                    "Encinitas_Soccer"
+                ],
+                "1145": [
                     "Encinitas_Soccer"
                 ],
                 "1200": [
                     "Encinitas_Little_League"
                 ],
+                "1215": [
+                    "Encinitas_Little_League"
+                ],
                 "1230": [
+                    "Encinitas_Little_League"
+                ],
+                "1245": [
                     "Encinitas_Little_League"
                 ],
                 "1300": [
                     "Encinitas_Little_League"
                 ],
+                "1315": [
+                    "Encinitas_Little_League"
+                ],
                 "1330": [
+                    "Encinitas_Little_League"
+                ],
+                "1345": [
                     "Encinitas_Little_League"
                 ],
                 "1400": [
                     "Encinitas_Little_League"
                 ],
+                "1415": [
+                    "Encinitas_Little_League"
+                ],
                 "1430": [
+                    "Encinitas_Little_League"
+                ],
+                "1445": [
                     "Encinitas_Little_League"
                 ],
                 "1500": [
                     "Encinitas_Little_League"
                 ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
                 "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
                     "Encinitas_Little_League"
                 ],
                 "1600": [
                     "Encinitas_Little_League"
                 ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
                 "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
                     "Encinitas_Little_League"
                 ],
                 "1700": [
                     "Encinitas_Little_League"
                 ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
                 "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
                     "Encinitas_Little_League"
                 ],
                 "1800": [
                     "Encinitas_Little_League"
                 ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
                 "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
                     "Encinitas_Little_League"
                 ]
             },
@@ -609,25 +1153,49 @@
                 "1500": [
                     "Encinitas_Little_League"
                 ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
                 "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
                     "Encinitas_Little_League"
                 ],
                 "1600": [
                     "Encinitas_Little_League"
                 ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
                 "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
                     "Encinitas_Little_League"
                 ],
                 "1700": [
                     "Encinitas_Little_League"
                 ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
                 "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
                     "Encinitas_Little_League"
                 ],
                 "1800": [
                     "Encinitas_Little_League"
                 ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
                 "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
                     "Encinitas_Little_League"
                 ]
             },
@@ -635,25 +1203,49 @@
                 "1500": [
                     "Encinitas_Little_League"
                 ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
                 "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
                     "Encinitas_Little_League"
                 ],
                 "1600": [
                     "Encinitas_Little_League"
                 ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
                 "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
                     "Encinitas_Little_League"
                 ],
                 "1700": [
                     "Encinitas_Little_League"
                 ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
                 "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
                     "Encinitas_Little_League"
                 ],
                 "1800": [
                     "Encinitas_Little_League"
                 ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
                 "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
                     "Encinitas_Little_League"
                 ]
             },
@@ -661,25 +1253,49 @@
                 "1500": [
                     "Encinitas_Little_League"
                 ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
                 "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
                     "Encinitas_Little_League"
                 ],
                 "1600": [
                     "Encinitas_Little_League"
                 ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
                 "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
                     "Encinitas_Little_League"
                 ],
                 "1700": [
                     "Encinitas_Little_League"
                 ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
                 "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
                     "Encinitas_Little_League"
                 ],
                 "1800": [
                     "Encinitas_Little_League"
                 ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
                 "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
                     "Encinitas_Little_League"
                 ]
             },
@@ -687,67 +1303,133 @@
                 "800": [
                     "Encinitas_Little_League"
                 ],
+                "815": [
+                    "Encinitas_Little_League"
+                ],
                 "830": [
+                    "Encinitas_Little_League"
+                ],
+                "845": [
                     "Encinitas_Little_League"
                 ],
                 "900": [
                     "Encinitas_Little_League"
                 ],
+                "915": [
+                    "Encinitas_Little_League"
+                ],
                 "930": [
+                    "Encinitas_Little_League"
+                ],
+                "945": [
                     "Encinitas_Little_League"
                 ],
                 "1000": [
                     "Encinitas_Little_League"
                 ],
+                "1015": [
+                    "Encinitas_Little_League"
+                ],
                 "1030": [
+                    "Encinitas_Little_League"
+                ],
+                "1045": [
                     "Encinitas_Little_League"
                 ],
                 "1100": [
                     "Encinitas_Little_League"
                 ],
+                "1115": [
+                    "Encinitas_Little_League"
+                ],
                 "1130": [
+                    "Encinitas_Little_League"
+                ],
+                "1145": [
                     "Encinitas_Little_League"
                 ],
                 "1200": [
                     "Encinitas_Little_League"
                 ],
+                "1215": [
+                    "Encinitas_Little_League"
+                ],
                 "1230": [
+                    "Encinitas_Little_League"
+                ],
+                "1245": [
                     "Encinitas_Little_League"
                 ],
                 "1300": [
                     "Encinitas_Little_League"
                 ],
+                "1315": [
+                    "Encinitas_Little_League"
+                ],
                 "1330": [
+                    "Encinitas_Little_League"
+                ],
+                "1345": [
                     "Encinitas_Little_League"
                 ],
                 "1400": [
                     "Encinitas_Little_League"
                 ],
+                "1415": [
+                    "Encinitas_Little_League"
+                ],
                 "1430": [
+                    "Encinitas_Little_League"
+                ],
+                "1445": [
                     "Encinitas_Little_League"
                 ],
                 "1500": [
                     "Encinitas_Little_League"
                 ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
                 "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
                     "Encinitas_Little_League"
                 ],
                 "1600": [
                     "Encinitas_Little_League"
                 ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
                 "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
                     "Encinitas_Little_League"
                 ],
                 "1700": [
                     "Encinitas_Little_League"
                 ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
                 "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
                     "Encinitas_Little_League"
                 ],
                 "1800": [
                     "Encinitas_Little_League"
                 ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
                 "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
                     "Encinitas_Little_League"
                 ]
             }
@@ -788,103 +1470,154 @@
     "teamsched": {
         "BU8_PerryXReza": {
             "mo": {
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             },
             "we": {
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             }
         },
         "GU9_RezaXFisher": {
             "mo": {
                 "1530": "berkS",
-                "1600": "berkS"
+                "1545": "berkS",
+                "1600": "berkS",
+                "1615": "berkS",
+                "1630": "berkS"
             },
             "we": {
                 "1530": "berkS",
-                "1600": "berkS"
+                "1545": "berkS",
+                "1600": "berkS",
+                "1615": "berkS",
+                "1630": "berkS"
             }
         },
         "BU9_Serrano": {
             "we": {
                 "1600": "berkS",
+                "1615": "berkS",
                 "1630": "berkS",
-                "1700": "berkS"
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS"
             }
         },
         "BU10_Suarez": {
             "fr": {
                 "1600": "berkS",
+                "1615": "berkS",
                 "1630": "berkS",
-                "1700": "berkS"
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS"
             }
         },
         "BU11_Anderson": {
             "tu": {
                 "1630": "berkS",
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             },
             "th": {
                 "1630": "berkS",
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             }
         },
         "GU11_Cardinale": {
             "tu": {
                 "1630": "adaE",
+                "1645": "adaE",
                 "1700": "adaE",
-                "1730": "adaE"
+                "1715": "adaE",
+                "1730": "adaE",
+                "1745": "adaE"
             },
             "th": {
                 "1630": "adaE",
+                "1645": "adaE",
                 "1700": "adaE",
-                "1730": "adaE"
+                "1715": "adaE",
+                "1730": "adaE",
+                "1745": "adaE"
             }
         },
         "BU12_Martin": {
             "tu": {
                 "1630": "berkS",
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             },
             "th": {
                 "1630": "berkS",
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             }
         },
         "BU12_SuarezXChiles": {
             "tu": {
                 "1630": "adaE",
+                "1645": "adaE",
                 "1700": "adaE",
-                "1730": "adaE"
+                "1715": "adaE",
+                "1730": "adaE",
+                "1745": "adaE"
             },
             "th": {
                 "1630": "adaE",
+                "1645": "adaE",
                 "1700": "adaE",
-                "1730": "adaE"
+                "1715": "adaE",
+                "1730": "adaE",
+                "1745": "adaE"
             }
         },
         "GU13_ChilesXFisher": {
             "mo": {
                 "1630": "berkS",
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             },
             "we": {
                 "1630": "berkS",
+                "1645": "berkS",
                 "1700": "berkS",
-                "1730": "berkS"
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
             }
         },
         "BU14_Suarez": {
             "su": {
                 "1500": "berkS",
+                "1515": "berkS",
                 "1530": "berkS",
-                "1600": "berkS"
+                "1545": "berkS",
+                "1600": "berkS",
+                "1615": "berkS"
             }
         },
         "Coastal_Dragons_Rugby": {
@@ -893,7 +1626,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1515": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1545": [
                     "adaE",
                     "adaW"
                 ],
@@ -901,7 +1642,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1615": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1645": [
                     "adaE",
                     "adaW"
                 ],
@@ -909,7 +1658,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1715": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1745": [
                     "adaE",
                     "adaW"
                 ],
@@ -917,7 +1674,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1815": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1830": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1845": [
                     "adaE",
                     "adaW"
                 ]
@@ -927,7 +1692,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "915": [
+                    "adaE",
+                    "adaW"
+                ],
                 "930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "945": [
                     "adaE",
                     "adaW"
                 ],
@@ -935,7 +1708,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1015": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1045": [
                     "adaE",
                     "adaW"
                 ],
@@ -943,7 +1724,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1115": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1130": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1145": [
                     "adaE",
                     "adaW"
                 ],
@@ -951,7 +1740,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1215": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1230": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1245": [
                     "adaE",
                     "adaW"
                 ],
@@ -959,7 +1756,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1315": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1330": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1345": [
                     "adaE",
                     "adaW"
                 ]
@@ -971,7 +1776,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1515": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1545": [
                     "adaE",
                     "adaW"
                 ],
@@ -979,7 +1792,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1615": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1645": [
                     "adaE",
                     "adaW"
                 ],
@@ -987,7 +1808,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1715": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1745": [
                     "adaE",
                     "adaW"
                 ],
@@ -995,7 +1824,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1815": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1830": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1845": [
                     "adaE",
                     "adaW"
                 ]
@@ -1005,7 +1842,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1515": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1545": [
                     "adaE",
                     "adaW"
                 ],
@@ -1013,7 +1858,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1615": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1645": [
                     "adaE",
                     "adaW"
                 ],
@@ -1021,7 +1874,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1715": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1745": [
                     "adaE",
                     "adaW"
                 ],
@@ -1029,7 +1890,15 @@
                     "adaE",
                     "adaW"
                 ],
+                "1815": [
+                    "adaE",
+                    "adaW"
+                ],
                 "1830": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1845": [
                     "adaE",
                     "adaW"
                 ]
@@ -1038,25 +1907,49 @@
                 "1500": [
                     "berkN"
                 ],
+                "1515": [
+                    "berkN"
+                ],
                 "1530": [
+                    "berkN"
+                ],
+                "1545": [
                     "berkN"
                 ],
                 "1600": [
                     "berkN"
                 ],
+                "1615": [
+                    "berkN"
+                ],
                 "1630": [
+                    "berkN"
+                ],
+                "1645": [
                     "berkN"
                 ],
                 "1700": [
                     "berkN"
                 ],
+                "1715": [
+                    "berkN"
+                ],
                 "1730": [
+                    "berkN"
+                ],
+                "1745": [
                     "berkN"
                 ],
                 "1800": [
                     "berkN"
                 ],
+                "1815": [
+                    "berkN"
+                ],
                 "1830": [
+                    "berkN"
+                ],
+                "1845": [
                     "berkN"
                 ]
             },
@@ -1064,25 +1957,49 @@
                 "1500": [
                     "berkN"
                 ],
+                "1515": [
+                    "berkN"
+                ],
                 "1530": [
+                    "berkN"
+                ],
+                "1545": [
                     "berkN"
                 ],
                 "1600": [
                     "berkN"
                 ],
+                "1615": [
+                    "berkN"
+                ],
                 "1630": [
+                    "berkN"
+                ],
+                "1645": [
                     "berkN"
                 ],
                 "1700": [
                     "berkN"
                 ],
+                "1715": [
+                    "berkN"
+                ],
                 "1730": [
+                    "berkN"
+                ],
+                "1745": [
                     "berkN"
                 ],
                 "1800": [
                     "berkN"
                 ],
+                "1815": [
+                    "berkN"
+                ],
                 "1830": [
+                    "berkN"
+                ],
+                "1845": [
                     "berkN"
                 ]
             }
@@ -1092,25 +2009,49 @@
                 "1500": [
                     "adaW"
                 ],
+                "1515": [
+                    "adaW"
+                ],
                 "1530": [
+                    "adaW"
+                ],
+                "1545": [
                     "adaW"
                 ],
                 "1600": [
                     "adaW"
                 ],
+                "1615": [
+                    "adaW"
+                ],
                 "1630": [
+                    "adaW"
+                ],
+                "1645": [
                     "adaW"
                 ],
                 "1700": [
                     "adaW"
                 ],
+                "1715": [
+                    "adaW"
+                ],
                 "1730": [
+                    "adaW"
+                ],
+                "1745": [
                     "adaW"
                 ],
                 "1800": [
                     "adaW"
                 ],
+                "1815": [
+                    "adaW"
+                ],
                 "1830": [
+                    "adaW"
+                ],
+                "1845": [
                     "adaW"
                 ]
             },
@@ -1118,25 +2059,49 @@
                 "1500": [
                     "adaW"
                 ],
+                "1515": [
+                    "adaW"
+                ],
                 "1530": [
+                    "adaW"
+                ],
+                "1545": [
                     "adaW"
                 ],
                 "1600": [
                     "adaW"
                 ],
+                "1615": [
+                    "adaW"
+                ],
                 "1630": [
+                    "adaW"
+                ],
+                "1645": [
                     "adaW"
                 ],
                 "1700": [
                     "adaW"
                 ],
+                "1715": [
+                    "adaW"
+                ],
                 "1730": [
+                    "adaW"
+                ],
+                "1745": [
                     "adaW"
                 ],
                 "1800": [
                     "adaW"
                 ],
+                "1815": [
+                    "adaW"
+                ],
                 "1830": [
+                    "adaW"
+                ],
+                "1845": [
                     "adaW"
                 ]
             },
@@ -1144,46 +2109,91 @@
                 "800": [
                     "berkN"
                 ],
+                "815": [
+                    "berkN"
+                ],
                 "830": [
+                    "berkN"
+                ],
+                "845": [
                     "berkN"
                 ],
                 "900": [
                     "berkN"
                 ],
+                "915": [
+                    "berkN"
+                ],
                 "930": [
+                    "berkN"
+                ],
+                "945": [
                     "berkN"
                 ],
                 "1000": [
                     "berkN"
                 ],
+                "1015": [
+                    "berkN"
+                ],
                 "1030": [
+                    "berkN"
+                ],
+                "1045": [
                     "berkN"
                 ],
                 "1100": [
                     "berkN"
                 ],
+                "1115": [
+                    "berkN"
+                ],
                 "1130": [
+                    "berkN"
+                ],
+                "1145": [
                     "berkN"
                 ],
                 "1400": [
                     "berkS"
                 ],
+                "1415": [
+                    "berkS"
+                ],
                 "1430": [
+                    "berkS"
+                ],
+                "1445": [
                     "berkS"
                 ],
                 "1630": [
                     "berkS"
                 ],
+                "1645": [
+                    "berkS"
+                ],
                 "1700": [
+                    "berkS"
+                ],
+                "1715": [
                     "berkS"
                 ],
                 "1730": [
                     "berkS"
                 ],
+                "1745": [
+                    "berkS"
+                ],
                 "1800": [
                     "berkS"
                 ],
+                "1815": [
+                    "berkS"
+                ],
                 "1830": [
+                    "berkS"
+                ],
+                "1845": [
                     "berkS"
                 ]
             },
@@ -1191,31 +2201,61 @@
                 "1400": [
                     "berkS"
                 ],
+                "1415": [
+                    "berkS"
+                ],
                 "1430": [
+                    "berkS"
+                ],
+                "1445": [
                     "berkS"
                 ],
                 "1500": [
                     "berkS"
                 ],
+                "1515": [
+                    "berkS"
+                ],
                 "1530": [
+                    "berkS"
+                ],
+                "1545": [
                     "berkS"
                 ],
                 "1600": [
                     "berkS"
                 ],
+                "1615": [
+                    "berkS"
+                ],
                 "1630": [
+                    "berkS"
+                ],
+                "1645": [
                     "berkS"
                 ],
                 "1700": [
                     "berkS"
                 ],
+                "1715": [
+                    "berkS"
+                ],
                 "1730": [
+                    "berkS"
+                ],
+                "1745": [
                     "berkS"
                 ],
                 "1800": [
                     "berkS"
                 ],
+                "1815": [
+                    "berkS"
+                ],
                 "1830": [
+                    "berkS"
+                ],
+                "1845": [
                     "berkS"
                 ]
             }
@@ -1225,25 +2265,49 @@
                 "1500": [
                     "berkN"
                 ],
+                "1515": [
+                    "berkN"
+                ],
                 "1530": [
+                    "berkN"
+                ],
+                "1545": [
                     "berkN"
                 ],
                 "1600": [
                     "berkN"
                 ],
+                "1615": [
+                    "berkN"
+                ],
                 "1630": [
+                    "berkN"
+                ],
+                "1645": [
                     "berkN"
                 ],
                 "1700": [
                     "berkN"
                 ],
+                "1715": [
+                    "berkN"
+                ],
                 "1730": [
+                    "berkN"
+                ],
+                "1745": [
                     "berkN"
                 ],
                 "1800": [
                     "berkN"
                 ],
+                "1815": [
+                    "berkN"
+                ],
                 "1830": [
+                    "berkN"
+                ],
+                "1845": [
                     "berkN"
                 ]
             },
@@ -1251,25 +2315,49 @@
                 "1500": [
                     "berkN"
                 ],
+                "1515": [
+                    "berkN"
+                ],
                 "1530": [
+                    "berkN"
+                ],
+                "1545": [
                     "berkN"
                 ],
                 "1600": [
                     "berkN"
                 ],
+                "1615": [
+                    "berkN"
+                ],
                 "1630": [
+                    "berkN"
+                ],
+                "1645": [
                     "berkN"
                 ],
                 "1700": [
                     "berkN"
                 ],
+                "1715": [
+                    "berkN"
+                ],
                 "1730": [
+                    "berkN"
+                ],
+                "1745": [
                     "berkN"
                 ],
                 "1800": [
                     "berkN"
                 ],
+                "1815": [
+                    "berkN"
+                ],
                 "1830": [
+                    "berkN"
+                ],
+                "1845": [
                     "berkN"
                 ]
             },
@@ -1277,25 +2365,49 @@
                 "1500": [
                     "berkN"
                 ],
+                "1515": [
+                    "berkN"
+                ],
                 "1530": [
+                    "berkN"
+                ],
+                "1545": [
                     "berkN"
                 ],
                 "1600": [
                     "berkN"
                 ],
+                "1615": [
+                    "berkN"
+                ],
                 "1630": [
+                    "berkN"
+                ],
+                "1645": [
                     "berkN"
                 ],
                 "1700": [
                     "berkN"
                 ],
+                "1715": [
+                    "berkN"
+                ],
                 "1730": [
+                    "berkN"
+                ],
+                "1745": [
                     "berkN"
                 ],
                 "1800": [
                     "berkN"
                 ],
+                "1815": [
+                    "berkN"
+                ],
                 "1830": [
+                    "berkN"
+                ],
+                "1845": [
                     "berkN"
                 ]
             },
@@ -1303,67 +2415,133 @@
                 "800": [
                     "berkN"
                 ],
+                "815": [
+                    "berkN"
+                ],
                 "830": [
+                    "berkN"
+                ],
+                "845": [
                     "berkN"
                 ],
                 "900": [
                     "berkN"
                 ],
+                "915": [
+                    "berkN"
+                ],
                 "930": [
+                    "berkN"
+                ],
+                "945": [
                     "berkN"
                 ],
                 "1000": [
                     "berkN"
                 ],
+                "1015": [
+                    "berkN"
+                ],
                 "1030": [
+                    "berkN"
+                ],
+                "1045": [
                     "berkN"
                 ],
                 "1100": [
                     "berkN"
                 ],
+                "1115": [
+                    "berkN"
+                ],
                 "1130": [
+                    "berkN"
+                ],
+                "1145": [
                     "berkN"
                 ],
                 "1200": [
                     "berkN"
                 ],
+                "1215": [
+                    "berkN"
+                ],
                 "1230": [
+                    "berkN"
+                ],
+                "1245": [
                     "berkN"
                 ],
                 "1300": [
                     "berkN"
                 ],
+                "1315": [
+                    "berkN"
+                ],
                 "1330": [
+                    "berkN"
+                ],
+                "1345": [
                     "berkN"
                 ],
                 "1400": [
                     "berkN"
                 ],
+                "1415": [
+                    "berkN"
+                ],
                 "1430": [
+                    "berkN"
+                ],
+                "1445": [
                     "berkN"
                 ],
                 "1500": [
                     "berkN"
                 ],
+                "1515": [
+                    "berkN"
+                ],
                 "1530": [
+                    "berkN"
+                ],
+                "1545": [
                     "berkN"
                 ],
                 "1600": [
                     "berkN"
                 ],
+                "1615": [
+                    "berkN"
+                ],
                 "1630": [
+                    "berkN"
+                ],
+                "1645": [
                     "berkN"
                 ],
                 "1700": [
                     "berkN"
                 ],
+                "1715": [
+                    "berkN"
+                ],
                 "1730": [
+                    "berkN"
+                ],
+                "1745": [
                     "berkN"
                 ],
                 "1800": [
                     "berkN"
                 ],
+                "1815": [
+                    "berkN"
+                ],
                 "1830": [
+                    "berkN"
+                ],
+                "1845": [
                     "berkN"
                 ]
             },
@@ -1371,43 +2549,85 @@
                 "1200": [
                     "berkN"
                 ],
+                "1215": [
+                    "berkN"
+                ],
                 "1230": [
+                    "berkN"
+                ],
+                "1245": [
                     "berkN"
                 ],
                 "1300": [
                     "berkN"
                 ],
+                "1315": [
+                    "berkN"
+                ],
                 "1330": [
+                    "berkN"
+                ],
+                "1345": [
                     "berkN"
                 ],
                 "1400": [
                     "berkN"
                 ],
+                "1415": [
+                    "berkN"
+                ],
                 "1430": [
+                    "berkN"
+                ],
+                "1445": [
                     "berkN"
                 ],
                 "1500": [
                     "berkN"
                 ],
+                "1515": [
+                    "berkN"
+                ],
                 "1530": [
+                    "berkN"
+                ],
+                "1545": [
                     "berkN"
                 ],
                 "1600": [
                     "berkN"
                 ],
+                "1615": [
+                    "berkN"
+                ],
                 "1630": [
+                    "berkN"
+                ],
+                "1645": [
                     "berkN"
                 ],
                 "1700": [
                     "berkN"
                 ],
+                "1715": [
+                    "berkN"
+                ],
                 "1730": [
+                    "berkN"
+                ],
+                "1745": [
                     "berkN"
                 ],
                 "1800": [
                     "berkN"
                 ],
+                "1815": [
+                    "berkN"
+                ],
                 "1830": [
+                    "berkN"
+                ],
+                "1845": [
                     "berkN"
                 ]
             }
@@ -1420,38 +2640,61 @@
             "slots": {
                 "tu": [
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ],
                 "th": [
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ],
                 "sa": [
                     1400,
+                    1415,
                     1430,
+                    1445,
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ]
             }
         },
@@ -1461,16 +2704,25 @@
             "slots": {
                 "sa": [
                     1400,
+                    1415,
                     1430,
+                    1445,
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ]
             }
         },
@@ -1480,89 +2732,151 @@
             "slots": {
                 "mo": [
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ],
                 "tu": [
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ],
                 "we": [
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ],
                 "th": [
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ],
                 "fr": [
                     1500,
+                    1515,
                     1530,
+                    1545,
                     1600,
+                    1615,
                     1630,
+                    1645,
                     1700,
+                    1715,
                     1730,
+                    1745,
                     1800,
+                    1815,
                     1830,
-                    1900
+                    1845
                 ],
                 "sa": [
                     800,
+                    815,
                     830,
+                    845,
                     900,
+                    915,
                     930,
+                    945,
                     1000,
+                    1015,
                     1030,
+                    1045,
                     1100,
+                    1115,
                     1130,
+                    1145,
                     1200,
+                    1215,
                     1230,
+                    1245,
                     1300,
-                    1330
+                    1315,
+                    1330,
+                    1345
                 ],
                 "su": [
                     800,
+                    815,
                     830,
+                    845,
                     900,
+                    915,
                     930,
+                    945,
                     1000,
+                    1015,
                     1030,
+                    1045,
                     1100,
+                    1115,
                     1130,
+                    1145,
                     1200,
+                    1215,
                     1230,
+                    1245,
                     1300,
+                    1315,
                     1330,
+                    1345,
                     1500,
+                    1515,
                     1530,
-                    1600
+                    1545,
+                    1600,
+                    1615
                 ]
             }
         },

@@ -52,22 +52,6 @@ function slot_clashes(sl,data) {
 
 }
 
-function split_time_array(ta) {
-    var slt = _.clone(ta);
-    var ll = []
-    // scan times to see if there are gaps, if so split into multiple arrays
-    while( slt.length > 0 ) {
-        var tt = []
-        var lstslt = null
-        for( ; !lstslt || (slt[0] && convert_time(slt[0]).getTime() === convert_time(lstslt,30).getTime()); 
-             lstslt = slt.shift() ) {
-            tt.push(slt[0]);
-        }
-        ll.push(tt)
-    }
-    return ll
-}
-
 angular.module('myApp.directives', []).
   directive('appVersion', ['version', function(version) {
     return function(scope, elm, attrs) {
@@ -87,11 +71,30 @@ angular.module('myApp.directives', []).
                 var vis = d3.select(element[0]);
 
                 var tw = 1200;
-                var th = 800;
-                var padding = 100;
+                var th = 650;
+                var padding = 50;
                 var w = tw - padding*2;
                 var h = th - padding*2;
+
+                var timestep = 15;
                 
+
+                function split_time_array(ta) {
+                    var slt = _.clone(ta);
+                    var ll = []
+                    // scan times to see if there are gaps, if so split into multiple arrays
+                    while( slt.length > 0 ) {
+                        var tt = []
+                        var lstslt = null
+                        for( ; !lstslt || (slt[0] && convert_time(slt[0]).getTime() === convert_time(lstslt,timestep).getTime()); 
+                             lstslt = slt.shift() ) {
+                            tt.push(slt[0]);
+                        }
+                        ll.push(tt)
+                    }
+                    return ll
+                }
+
                 var svg = vis.insert("svg:svg", "form")
                     .attr("width", tw )
                     .attr("height", th )
@@ -152,7 +155,7 @@ angular.module('myApp.directives', []).
                     .attr('y',function(sl) { return tScale(convert_time(sl.times[0])) })
                     .attr('width', xScale.rangeBand())
                     .attr('height', function(sl) { 
-                        return tScale(convert_time(sl.times[sl.times.length-1],30)) - tScale(convert_time(sl.times[0]));
+                        return tScale(convert_time(sl.times[sl.times.length-1],timestep)) - tScale(convert_time(sl.times[0]));
                     })
                     .append("svg:title")
                     .text("This time is allocated to Cardiff Soccer")
@@ -177,7 +180,7 @@ angular.module('myApp.directives', []).
                     .attr('y2',function(d) { return tScale(to); })
                 
                 svg.selectAll("line.timeticks")
-                    .data(tScale.ticks(d3.time.minutes,30).slice(1))
+                    .data(tScale.ticks(d3.time.minutes,timestep).slice(1))
                     .enter()
                     .append("svg:line")
                     .classed("timeticks",true)
@@ -219,7 +222,7 @@ angular.module('myApp.directives', []).
                             _.each(split_time_array(sla),function(ta) {
                                 var nsl = {day: d,
                                            from: convert_time(ta[0]),
-                                           to: convert_time(ta[ta.length-1],30),
+                                           to: convert_time(ta[ta.length-1],timestep),
                                            slot: 1
                                           }
 

@@ -14,6 +14,7 @@ prog
     .option('-f, --format <format>','Output Format')
     .option('-l, --loglevel <level>',"Set the loglevel for console output [info]","info")
     .option('-o, --output <file>',"File to output results to",null)
+    .option('-t, --timestep <int>',"Size of time block size to us <30 minutes>",30)
     .parse(process.argv)
 
 var outstream = process.stdout
@@ -99,7 +100,7 @@ function fill_times(arro) {
     var ltime = _.min(arro)
     var htime = _.max(arro)
     var ttimes = [];
-    for( t = Math.floor(ltime/100)+(ltime%100)/60; t <= Math.floor(htime/100)+(htime%100)/60; t += 0.5 ) {
+    for( t = Math.floor(ltime/100)+(ltime%100)/60; t < Math.floor(htime/100)+(htime%100)/60; t += prog.timestep/60 ) {
         ttimes.push(Math.floor(t)*100+(t%1)*60)
     }
     return ttimes;
@@ -113,13 +114,13 @@ function merge_times(arro) {
     var tts = [];
     var used = [];
     for( tt = arr.shift(); 
-         lt == undefined || tt == lt+0.5; 
+         lt == undefined || tt == lt+prog.timestep/60; 
          lt=tt,tt = arr.shift() ) {
         logger.debug("MERGING TIME "+lt+","+tt)
         tts.push(tt);
         used.push(float_time(arro.shift()));
     }
-    return int_time(used[0]) + "--" + int_time(used[used.length-1]+0.5);
+    return int_time(used[0]) + "--" + int_time(used[used.length-1]+prog.timestep/60);
 }
 
 function format_request(req) {
