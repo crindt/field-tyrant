@@ -9,11 +9,14 @@ function format_team(tm) {
 function AppCtrl($scope, $http, $dialog) {
     $scope.displayedField = 0;
 
-    var colors = {};
+    var colors20 = d3.scale.category20();
+
+    $scope.colors = {};
 
     $scope.team_style = function(tm) {
-        return colors[tm] ? "color:#333; text-shadow: 1px 1px #aaa; background-color: "+colors[tm] : "";
+        return $scope.colors[tm] ? "color:#333; text-shadow: 1px 1px #aaa; background-color: "+$scope.colors[tm] : "";
     }
+
 
     $scope.format_time = function(t) {
         return [Math.floor(t/100),(''+t).slice(-2)].join(":")
@@ -52,10 +55,8 @@ function AppCtrl($scope, $http, $dialog) {
             console.log($scope.schedule)
             $scope._ = _;
 
-            // set up colors
-            var color = new RColor;
-            _.each(_.keys($scope.schedule.teamsched),function(k) {
-                colors[k] = color.get(true,0.25,0.8)
+            _.each(_.keys($scope.schedule.teamsched),function(k,i) {
+                $scope.colors[k] = colors20(i)
             });
 
             $scope.status = 'Good!'

@@ -108,3 +108,8 @@ body {
     font-size: 12px;
 }
     
+.available {
+    fill: green;
+    fill-opacity: 0.5;
+    stroke: none;
+}

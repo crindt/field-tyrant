@@ -92,15 +92,16 @@ function int_time(t) {
 }
 
 function fill_times(arro) {
+    if ( arro[0] instanceof Array ) {
+        // arro is array of time ranges, recursively expand these
+        return _.flatten(_.union(_.map(arro,function(a) { return fill_times(a); })))
+    }
     var ltime = _.min(arro)
     var htime = _.max(arro)
     var ttimes = [];
-    console.log('BOUNDS: ',Math.floor(ltime/100)+(ltime%100)/60,Math.floor(htime/100)+(htime%100)/60)
     for( t = Math.floor(ltime/100)+(ltime%100)/60; t <= Math.floor(htime/100)+(htime%100)/60; t += 0.5 ) {
         ttimes.push(Math.floor(t)*100+(t%1)*60)
     }
-    console.log('TIMES: ',ltime,htime)
-    console.log('TTIMES: ',ttimes)
     return ttimes;
 }
 
@@ -157,9 +158,6 @@ _.each(_.values(conf.fields),function(fo) {
 
 
 
-
-
-
 // spawn lp_solve
 child = exec('lp_solve',function(err,stdout,stderr) {
     var cnt = 0;
@@ -188,7 +186,6 @@ child = exec('lp_solve',function(err,stdout,stderr) {
             d = 0
             t = 0
             var det = m[1].split(/_/)
-            console.log("DET:"+det.join(","))
             //[team,coach,of,d,t] = 
             var mm;
             if ( det[2] && ( mm = det[2].match(/^o(\d)/) ) && m[2] === "1" ) {
@@ -235,7 +232,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 var tt = fill_times(conf.others[tm][f][d])
                 _.each(tt,function(t) {
                     nested_push(sched,f,d,t,tm)
-                    nested(teams,tm,d,t,f)
+                    nested_push(teams,tm,d,t,f)
                     if ( d === "sa" || d === "su" ) {
                         wetimes[t] = 1
                     } else {
@@ -302,7 +299,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
              _: _,
              format_team: format_team,
              format_field: format_field
-            }));
+            },null,4));
         
     } else if ( prog.format === "html" ) {
 
@@ -443,6 +440,8 @@ _.each(_.keys(teams), function(tm) {
                 var times = teams[tm].req[pri-1][d]
                 tot += times.length
                 slots.push( _.map(times,function(t) { return bvar(tm,f,d,t) }) )
+
+                // filter for invalid variables that we will forcefully disallow
                 var iv = _.map(_.filter(times,function(t) { return !field_is_avail( f, d, t ) }),
                       function(t) {
                           return bvar(tm,f,d,t)

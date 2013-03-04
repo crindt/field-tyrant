@@ -1,10 +1,71 @@
 'use strict';
 
 /* Directives */
+String.prototype.splice = function( idx, rem, s ) {
+    return (this.slice(0,idx) + s + this.slice(idx + Math.abs(rem)));
+};
 
 
 function format_team(tm) {
     return tm.split("_").join(" ").split("X").join("/");
+}
+
+function convert_time(tm,add) {
+    var d = 1;
+    if ( add === undefined) add = 0
+    var th = Math.floor(tm/100)
+    var tm = parseInt((""+tm).slice(-2))+add
+    if (tm>59) { 
+        tm %= 60
+        th += 1
+    }
+    if (th>23) {
+        th %= 24
+        d += 1
+    }
+    return new Date(1970,0,d,th,tm)
+}
+
+function time_overlaps(o1,o2) {
+    var o1f = o1.from.getTime() 
+    var o1t = o1.to.getTime() 
+    var o2f = o2.from.getTime() 
+    var o2t = o2.to.getTime() 
+    return ( o1f >= o2f && o1f < o2t ) ||
+        ( o1t > o2f && o1t <= o2t );
+}
+
+function slot_clashes(sl,data) {
+    var clash = false;
+    _.each(data,function(d,i) {
+        _.each(d.slots,function(othersl) {
+            if ( sl.day == othersl.day && 
+                 sl.slot == othersl.slot &&
+                 time_overlaps(sl,othersl)
+               ) {
+                // overlap
+                clash = true;
+            }
+        });
+    });
+    return clash;
+
+}
+
+function split_time_array(ta) {
+    var slt = _.clone(ta);
+    var ll = []
+    // scan times to see if there are gaps, if so split into multiple arrays
+    while( slt.length > 0 ) {
+        var tt = []
+        var lstslt = null
+        for( ; !lstslt || (slt[0] && convert_time(slt[0]).getTime() === convert_time(lstslt,30).getTime()); 
+             lstslt = slt.shift() ) {
+            tt.push(slt[0]);
+        }
+        ll.push(tt)
+    }
+    return ll
 }
 
 angular.module('myApp.directives', []).
@@ -19,13 +80,14 @@ angular.module('myApp.directives', []).
             terminal: true,
             scope: {
                 field: '=',
-                schedule: '='
+                schedule: '=',
+                colors: '='
             },
             link: function( scope, element, attrs ) {
                 var vis = d3.select(element[0]);
 
                 var tw = 1200;
-                var th = 1200;
+                var th = 800;
                 var padding = 100;
                 var w = tw - padding*2;
                 var h = th - padding*2;
@@ -35,6 +97,16 @@ angular.module('myApp.directives', []).
                     .attr("height", th )
                     .append("svg:g")
                     .attr("transform","translate("+padding+" "+padding+")")
+
+                svg.append("svg:defs")
+                    .append("svg:clipPath")
+                    .attr("id", "clip")
+                    .append("svg:rect")
+                    .attr("id", "clip-rect")
+                    .attr("x", "0")
+                    .attr("y", "0")
+                    .attr("width", w)
+                    .attr("height", h);
 
                 var from = new Date(1970,0,1,8,0,0)
                 var to = new Date(1970,0,1,19,0,0)
@@ -48,15 +120,46 @@ angular.module('myApp.directives', []).
                     .ticks(d3.time.minutes,60)
                     .orient("left");
 
+                var days = ["mo","tu","we","th","fr","sa","su"]
 
                 var xScale = d3.scale.ordinal()
-                    .domain(["mo","tu","we","th","fr","sa","su"])
+                    .domain(days)
                     .rangeBands([0,w])
 
                 var xAxis = d3.svg.axis()
                     .scale(xScale)
                     .orient("top")
                     .ticks(2);
+
+                
+                // compute field availability
+                var ll = []
+                _.each( scope.schedule.fields[scope.field].slots, function(sl,d) {
+                    _.each(split_time_array(sl), function( ta ) { ll.push({day: d, times: ta}) } )
+                })
+
+                var fga = svg.append("svg:g")
+                    .attr("clip-path","url(#clip)")
+                    .selectAll("rect.available")
+                    .data(ll)
+                    .enter()
+                    .append("rect")
+                    .classed('available',true)
+                    .attr('x',function(sl) { 
+                        var ii = _.indexOf(days,sl.day);
+                        return ii*xScale.rangeBand()
+                    })
+                    .attr('y',function(sl) { return tScale(convert_time(sl.times[0])) })
+                    .attr('width', xScale.rangeBand())
+                    .attr('height', function(sl) { 
+                        return tScale(convert_time(sl.times[sl.times.length-1],30)) - tScale(convert_time(sl.times[0]));
+                    })
+                    .append("svg:title")
+                    .text("This time is allocated to Cardiff Soccer")
+
+                _.each(scope.schedule.fields, function(fo,field) {
+                })
+                
 
                 svg.append("g")
                     .attr("class","x axis")
@@ -89,48 +192,6 @@ angular.module('myApp.directives', []).
                     .attr("class","y axis")
                     .call(tAxis);
 
-                function convert_time(tm,add) {
-                    var d = 1;
-                    if ( add === undefined) add = 0
-                    var th = Math.floor(tm/100)
-                    var tm = parseInt(tm.slice(-2))+add
-                    if (tm>59) { 
-                        tm %= 60
-                        th += 1
-                    }
-                    if (th>23) {
-                        th %= 24
-                        d += 1
-                    }
-                    return new Date(1970,0,d,th,tm)
-                }
-
-                function time_overlaps(o1,o2) {
-                    var o1f = o1.from.getTime() 
-                    var o1t = o1.to.getTime() 
-                    var o2f = o2.from.getTime() 
-                    var o2t = o2.to.getTime() 
-                    return ( o1f >= o2f && o1f < o2t ) ||
-                        ( o1t > o2f && o1t <= o2t );
-                }
-
-                function slot_clashes(sl,data) {
-                    var clash = false;
-                    _.each(data,function(d,i) {
-                        _.each(d.slots,function(othersl) {
-                            if ( sl.day == othersl.day && 
-                                 sl.slot == othersl.slot &&
-                                 time_overlaps(sl,othersl)
-                               ) {
-                                // overlap
-                                clash = true;
-                            }
-                        });
-                    });
-                    return clash;
-
-                }
-
                 // copy from the team schedule data to d3-compatible data array
                 var daywidth = {}
                 var data = []
@@ -139,22 +200,37 @@ angular.module('myApp.directives', []).
                     _.each(tmo, function(sl,d) {
                         var ts = _.keys(sl)
                         var fieldmatch = _.filter(ts,function(ssl) { 
-                            return sl[ssl] == scope.field } )
+                            // allow "teams" to be assigned more than one field
+                            // at a particular time.  We really use this to
+                            // represent other league's field allocations.  Here
+                            // we check if the slot is an array of allocated
+                            // fields and if not we make it an array.
+                            var arr;
+                            if ( sl[ssl] instanceof Array ) { arr = sl[ssl]; } 
+                            else { arr = [sl[ssl]] }
+                            
+                            // now see if any of the fields in the array match
+                            // the field in this chart
+                            return _.indexOf(arr, scope.field) != -1
+                        } )
                         if ( fieldmatch.length>0 ) {
                             var sla = fieldmatch;
-                            var nsl = {day: d,
-                                       from: convert_time(sla[0]),
-                                       to: convert_time(sla[sla.length-1],30),
-                                       slot: 1
-                                      }
 
-                            // determine if schedules overlap and shift slots
-                            // accordingly
-                            while( slot_clashes( nsl, data ) ) {
-                                nsl.slot++;
-                            }
-                            if ( daywidth[d] == undefined || daywidth[d] < nsl.slot ) daywidth[d] = nsl.slot
-                            oo.slots.push(nsl)
+                            _.each(split_time_array(sla),function(ta) {
+                                var nsl = {day: d,
+                                           from: convert_time(ta[0]),
+                                           to: convert_time(ta[ta.length-1],30),
+                                           slot: 1
+                                          }
+
+                                // determine if slot overlaps with already scheduled
+                                // slots and shift it over accordingly
+                                while( slot_clashes( nsl, data ) ) {
+                                    nsl.slot++;
+                                }
+                                if ( daywidth[d] == undefined || daywidth[d] < nsl.slot ) daywidth[d] = nsl.slot
+                                oo.slots.push(nsl)
+                            })
                         }
                     });
                     if ( oo.slots.length > 0 ) data.push(oo);
@@ -167,8 +243,6 @@ angular.module('myApp.directives', []).
                 var teams = svg.selectAll("g.team")
                     .data(data,function(d) { return d.team; })
                 ;
-
-                var colors = d3.scale.category20();
 
                 teams.enter()
                     .append("svg:g")
@@ -192,11 +266,13 @@ angular.module('myApp.directives', []).
                                 g.append('svg:rect')
                                     .attr('x',function(slot) { return xx } )
                                     .attr('y',function(slot) { return tScale(slot.from) } )
+                                    //.attr('rx',8) // corder radius
+                                    //.attr('ry',8) 
                                     .attr('width', function(slot) { return slotw })
                                     .attr('height', function(slot) { return sloth; })
                                     .attr('style', 
                                           function(slot) { 
-                                              return "fill: "+colors(i); })
+                                              return "fill: "+scope.colors[team.team]; })
                                 
                                 var tt = g.append('svg:g')
                                     .attr("transform", "translate("+[xx,tScale(slot.to)].join(",")+") rotate(-90)")
@@ -218,7 +294,9 @@ angular.module('myApp.directives', []).
                                     .style("line-height",slotw+"px")
                                     .style("font-weight","bold")
                                     .text(format_team(team.team))
-                            });
+                                g.append('svg:title')
+                                    .text(function(slot) { return format_team(team.team) + " : "+slot.from.toLocaleTimeString().splice(-6,3,"") + "—" + slot.to.toLocaleTimeString().splice(-6,3,"") })
+                            })
                     })
                                   
                 

@@ -1,1 +1,1575 @@
-{"times":[800,830,900,930,1000,1030,1100,1130,1200,1230,1300,1330,1400,1430,1500,1530,1600,1630,1700,1730,1800,1830,1900],"days":["mo","tu","we","th","fr","sa","su"],"sched":{"berkS":{"mo":{"1530":["GU9_RezaXFisher"],"1600":["GU9_RezaXFisher"],"1630":["GU13_ChilesXFisher"],"1700":["BU8_PerryXReza","GU13_ChilesXFisher"],"1730":["BU8_PerryXReza","GU13_ChilesXFisher"]},"we":{"1530":["GU9_RezaXFisher"],"1600":["GU9_RezaXFisher","BU9_Serrano"],"1630":["BU9_Serrano","GU13_ChilesXFisher"],"1700":["BU8_PerryXReza","BU9_Serrano","GU13_ChilesXFisher"],"1730":["BU8_PerryXReza","GU13_ChilesXFisher"]},"fr":{"1600":["BU10_Suarez"],"1630":["BU10_Suarez"],"1700":["BU10_Suarez"]},"tu":{"1630":["BU11_Anderson","BU12_Martin"],"1700":["BU11_Anderson","BU12_Martin"],"1730":["BU11_Anderson","BU12_Martin"]},"th":{"1630":["BU11_Anderson","BU12_Martin"],"1700":["BU11_Anderson","BU12_Martin"],"1730":["BU11_Anderson","BU12_Martin"]},"su":{"1230":["BU14_Suarez"],"1300":["BU14_Suarez"],"1330":["BU14_Suarez"],"1400":["Encinitas_Soccer"],"1430":["Encinitas_Soccer"],"1500":["Encinitas_Soccer"],"1530":["Encinitas_Soccer"],"1600":["Encinitas_Soccer"],"1630":["Encinitas_Soccer"],"1700":["Encinitas_Soccer"],"1730":["Encinitas_Soccer"],"1800":["Encinitas_Soccer"],"1830":["Encinitas_Soccer"]},"sa":{"1400":["Encinitas_Soccer"],"1430":["Encinitas_Soccer"],"1500":["Encinitas_Soccer"],"1530":["Encinitas_Soccer"],"1600":["Encinitas_Soccer"],"1630":["Encinitas_Soccer"],"1700":["Encinitas_Soccer"],"1730":["Encinitas_Soccer"],"1800":["Encinitas_Soccer"],"1830":["Encinitas_Soccer"]}},"adaE":{"tu":{"1630":["GU11_Cardinale","BU12_SuarezXChiles"],"1700":["GU11_Cardinale","BU12_SuarezXChiles"],"1730":["GU11_Cardinale","BU12_SuarezXChiles"]},"th":{"1630":["GU11_Cardinale","BU12_SuarezXChiles"],"1700":["GU11_Cardinale","BU12_SuarezXChiles"],"1730":["GU11_Cardinale","BU12_SuarezXChiles"]},"we":{"1500":["Coastal_Dragons_Rugby"],"1530":["Coastal_Dragons_Rugby"],"1600":["Coastal_Dragons_Rugby"],"1630":["Coastal_Dragons_Rugby"],"1700":["Coastal_Dragons_Rugby"],"1730":["Coastal_Dragons_Rugby"],"1800":["Coastal_Dragons_Rugby"],"1830":["Coastal_Dragons_Rugby"]},"sa":{"900":["Coastal_Dragons_Rugby"],"930":["Coastal_Dragons_Rugby"],"1000":["Coastal_Dragons_Rugby"],"1030":["Coastal_Dragons_Rugby"],"1100":["Coastal_Dragons_Rugby"],"1130":["Coastal_Dragons_Rugby"],"1200":["Coastal_Dragons_Rugby"],"1230":["Coastal_Dragons_Rugby"],"1300":["Coastal_Dragons_Rugby"],"1330":["Coastal_Dragons_Rugby"]},"mo":{"1500":["Encinitas_Lacrosse"],"1530":["Encinitas_Lacrosse"],"1600":["Encinitas_Lacrosse"],"1630":["Encinitas_Lacrosse"],"1700":["Encinitas_Lacrosse"],"1730":["Encinitas_Lacrosse"],"1800":["Encinitas_Lacrosse"],"1830":["Encinitas_Lacrosse"]},"fr":{"1500":["Encinitas_Lacrosse"],"1530":["Encinitas_Lacrosse"],"1600":["Encinitas_Lacrosse"],"1630":["Encinitas_Lacrosse"],"1700":["Encinitas_Lacrosse"],"1730":["Encinitas_Lacrosse"],"1800":["Encinitas_Lacrosse"],"1830":["Encinitas_Lacrosse"]}},"adaW":{"we":{"1500":["Coastal_Dragons_Rugby"],"1530":["Coastal_Dragons_Rugby"],"1600":["Coastal_Dragons_Rugby"],"1630":["Coastal_Dragons_Rugby"],"1700":["Coastal_Dragons_Rugby"],"1730":["Coastal_Dragons_Rugby"],"1800":["Coastal_Dragons_Rugby"],"1830":["Coastal_Dragons_Rugby"]},"sa":{"900":["Coastal_Dragons_Rugby"],"930":["Coastal_Dragons_Rugby"],"1000":["Coastal_Dragons_Rugby"],"1030":["Coastal_Dragons_Rugby"],"1100":["Coastal_Dragons_Rugby"],"1130":["Coastal_Dragons_Rugby"],"1200":["Coastal_Dragons_Rugby"],"1230":["Coastal_Dragons_Rugby"],"1300":["Coastal_Dragons_Rugby"],"1330":["Coastal_Dragons_Rugby"]},"mo":{"1500":["Encinitas_Lacrosse"],"1530":["Encinitas_Lacrosse"],"1600":["Encinitas_Lacrosse"],"1630":["Encinitas_Lacrosse"],"1700":["Encinitas_Lacrosse"],"1730":["Encinitas_Lacrosse"],"1800":["Encinitas_Lacrosse"],"1830":["Encinitas_Lacrosse"]},"fr":{"1500":["Encinitas_Lacrosse"],"1530":["Encinitas_Lacrosse"],"1600":["Encinitas_Lacrosse"],"1630":["Encinitas_Lacrosse"],"1700":["Encinitas_Lacrosse"],"1730":["Encinitas_Lacrosse"],"1800":["Encinitas_Lacrosse"],"1830":["Encinitas_Lacrosse"]},"tu":{"1500":["Encinitas_Soccer"],"1530":["Encinitas_Soccer"],"1600":["Encinitas_Soccer"],"1630":["Encinitas_Soccer"],"1700":["Encinitas_Soccer"],"1730":["Encinitas_Soccer"],"1800":["Encinitas_Soccer"],"1830":["Encinitas_Soccer"]},"th":{"1500":["Encinitas_Soccer"],"1530":["Encinitas_Soccer"],"1600":["Encinitas_Soccer"],"1630":["Encinitas_Soccer"],"1700":["Encinitas_Soccer"],"1730":["Encinitas_Soccer"],"1800":["Encinitas_Soccer"],"1830":["Encinitas_Soccer"]}},"berkN":{"tu":{"1500":["Encinitas_Lacrosse"],"1530":["Encinitas_Lacrosse"],"1600":["Encinitas_Lacrosse"],"1630":["Encinitas_Lacrosse"],"1700":["Encinitas_Lacrosse"],"1730":["Encinitas_Lacrosse"],"1800":["Encinitas_Lacrosse"],"1830":["Encinitas_Lacrosse"]},"th":{"1500":["Encinitas_Lacrosse"],"1530":["Encinitas_Lacrosse"],"1600":["Encinitas_Lacrosse"],"1630":["Encinitas_Lacrosse"],"1700":["Encinitas_Lacrosse"],"1730":["Encinitas_Lacrosse"],"1800":["Encinitas_Lacrosse"],"1830":["Encinitas_Lacrosse"]},"su":{"800":["Encinitas_Soccer"],"830":["Encinitas_Soccer"],"900":["Encinitas_Soccer"],"930":["Encinitas_Soccer"],"1000":["Encinitas_Soccer"],"1030":["Encinitas_Soccer"],"1100":["Encinitas_Soccer"],"1130":["Encinitas_Soccer"],"1200":["Encinitas_Little_League"],"1230":["Encinitas_Little_League"],"1300":["Encinitas_Little_League"],"1330":["Encinitas_Little_League"],"1400":["Encinitas_Little_League"],"1430":["Encinitas_Little_League"],"1500":["Encinitas_Little_League"],"1530":["Encinitas_Little_League"],"1600":["Encinitas_Little_League"],"1630":["Encinitas_Little_League"],"1700":["Encinitas_Little_League"],"1730":["Encinitas_Little_League"],"1800":["Encinitas_Little_League"],"1830":["Encinitas_Little_League"]},"mo":{"1500":["Encinitas_Little_League"],"1530":["Encinitas_Little_League"],"1600":["Encinitas_Little_League"],"1630":["Encinitas_Little_League"],"1700":["Encinitas_Little_League"],"1730":["Encinitas_Little_League"],"1800":["Encinitas_Little_League"],"1830":["Encinitas_Little_League"]},"we":{"1500":["Encinitas_Little_League"],"1530":["Encinitas_Little_League"],"1600":["Encinitas_Little_League"],"1630":["Encinitas_Little_League"],"1700":["Encinitas_Little_League"],"1730":["Encinitas_Little_League"],"1800":["Encinitas_Little_League"],"1830":["Encinitas_Little_League"]},"fr":{"1500":["Encinitas_Little_League"],"1530":["Encinitas_Little_League"],"1600":["Encinitas_Little_League"],"1630":["Encinitas_Little_League"],"1700":["Encinitas_Little_League"],"1730":["Encinitas_Little_League"],"1800":["Encinitas_Little_League"],"1830":["Encinitas_Little_League"]},"sa":{"800":["Encinitas_Little_League"],"830":["Encinitas_Little_League"],"900":["Encinitas_Little_League"],"930":["Encinitas_Little_League"],"1000":["Encinitas_Little_League"],"1030":["Encinitas_Little_League"],"1100":["Encinitas_Little_League"],"1130":["Encinitas_Little_League"],"1200":["Encinitas_Little_League"],"1230":["Encinitas_Little_League"],"1300":["Encinitas_Little_League"],"1330":["Encinitas_Little_League"],"1400":["Encinitas_Little_League"],"1430":["Encinitas_Little_League"],"1500":["Encinitas_Little_League"],"1530":["Encinitas_Little_League"],"1600":["Encinitas_Little_League"],"1630":["Encinitas_Little_League"],"1700":["Encinitas_Little_League"],"1730":["Encinitas_Little_League"],"1800":["Encinitas_Little_League"],"1830":["Encinitas_Little_League"]}}},"teams":[{"name":"BU8_PerryXReza"},{"name":"GU9_RezaXFisher"},{"name":"BU9_Serrano"},{"name":"BU10_Suarez"},{"name":"BU11_Anderson"},{"name":"GU11_Cardinale"},{"name":"BU12_Martin"},{"name":"BU12_SuarezXChiles"},{"name":"GU13_ChilesXFisher"},{"name":"BU14_Suarez"}],"teamsched":{"BU8_PerryXReza":{"mo":{"1700":"berkS","1730":"berkS"},"we":{"1700":"berkS","1730":"berkS"}},"GU9_RezaXFisher":{"mo":{"1530":"berkS","1600":"berkS"},"we":{"1530":"berkS","1600":"berkS"}},"BU9_Serrano":{"we":{"1600":"berkS","1630":"berkS","1700":"berkS"}},"BU10_Suarez":{"fr":{"1600":"berkS","1630":"berkS","1700":"berkS"}},"BU11_Anderson":{"tu":{"1630":"berkS","1700":"berkS","1730":"berkS"},"th":{"1630":"berkS","1700":"berkS","1730":"berkS"}},"GU11_Cardinale":{"tu":{"1630":"adaE","1700":"adaE","1730":"adaE"},"th":{"1630":"adaE","1700":"adaE","1730":"adaE"}},"BU12_Martin":{"tu":{"1630":"berkS","1700":"berkS","1730":"berkS"},"th":{"1630":"berkS","1700":"berkS","1730":"berkS"}},"BU12_SuarezXChiles":{"tu":{"1630":"adaE","1700":"adaE","1730":"adaE"},"th":{"1630":"adaE","1700":"adaE","1730":"adaE"}},"GU13_ChilesXFisher":{"mo":{"1630":"berkS","1700":"berkS","1730":"berkS"},"we":{"1630":"berkS","1700":"berkS","1730":"berkS"}},"BU14_Suarez":{"su":{"1230":"berkS","1300":"berkS","1330":"berkS"}},"Coastal_Dragons_Rugby":{"we":{"1500":"adaW","1530":"adaW","1600":"adaW","1630":"adaW","1700":"adaW","1730":"adaW","1800":"adaW","1830":"adaW"},"sa":{"900":"adaW","930":"adaW","1000":"adaW","1030":"adaW","1100":"adaW","1130":"adaW","1200":"adaW","1230":"adaW","1300":"adaW","1330":"adaW"}},"Encinitas_Lacrosse":{"mo":{"1500":"adaW","1530":"adaW","1600":"adaW","1630":"adaW","1700":"adaW","1730":"adaW","1800":"adaW","1830":"adaW"},"fr":{"1500":"adaW","1530":"adaW","1600":"adaW","1630":"adaW","1700":"adaW","1730":"adaW","1800":"adaW","1830":"adaW"},"tu":{"1500":"berkN","1530":"berkN","1600":"berkN","1630":"berkN","1700":"berkN","1730":"berkN","1800":"berkN","1830":"berkN"},"th":{"1500":"berkN","1530":"berkN","1600":"berkN","1630":"berkN","1700":"berkN","1730":"berkN","1800":"berkN","1830":"berkN"}},"Encinitas_Soccer":{"tu":{"1500":"adaW","1530":"adaW","1600":"adaW","1630":"adaW","1700":"adaW","1730":"adaW","1800":"adaW","1830":"adaW"},"th":{"1500":"adaW","1530":"adaW","1600":"adaW","1630":"adaW","1700":"adaW","1730":"adaW","1800":"adaW","1830":"adaW"},"su":{"800":"berkN","830":"berkN","900":"berkN","930":"berkN","1000":"berkN","1030":"berkN","1100":"berkN","1130":"berkN","1400":"berkS","1430":"berkS","1500":"berkS","1530":"berkS","1600":"berkS","1630":"berkS","1700":"berkS","1730":"berkS","1800":"berkS","1830":"berkS"},"sa":{"1400":"berkS","1430":"berkS","1500":"berkS","1530":"berkS","1600":"berkS","1630":"berkS","1700":"berkS","1730":"berkS","1800":"berkS","1830":"berkS"}},"Encinitas_Little_League":{"mo":{"1500":"berkN","1530":"berkN","1600":"berkN","1630":"berkN","1700":"berkN","1730":"berkN","1800":"berkN","1830":"berkN"},"we":{"1500":"berkN","1530":"berkN","1600":"berkN","1630":"berkN","1700":"berkN","1730":"berkN","1800":"berkN","1830":"berkN"},"fr":{"1500":"berkN","1530":"berkN","1600":"berkN","1630":"berkN","1700":"berkN","1730":"berkN","1800":"berkN","1830":"berkN"},"sa":{"800":"berkN","830":"berkN","900":"berkN","930":"berkN","1000":"berkN","1030":"berkN","1100":"berkN","1130":"berkN","1200":"berkN","1230":"berkN","1300":"berkN","1330":"berkN","1400":"berkN","1430":"berkN","1500":"berkN","1530":"berkN","1600":"berkN","1630":"berkN","1700":"berkN","1730":"berkN","1800":"berkN","1830":"berkN"},"su":{"1200":"berkN","1230":"berkN","1300":"berkN","1330":"berkN","1400":"berkN","1430":"berkN","1500":"berkN","1530":"berkN","1600":"berkN","1630":"berkN","1700":"berkN","1730":"berkN","1800":"berkN","1830":"berkN"}}},"fields":{"adaE":{"pretty":"Ada Harris (East)","cap":2,"slots":{"tu":[1500,1530,1600,1630,1700,1730,1800,1830,1900],"th":[1500,1530,1600,1630,1700,1730,1800,1830,1900],"sa":[1400,1430,1500,1530,1600,1630,1700,1730,1800,1830,1900]}},"adaW":{"pretty":"Ada Harris (West)","cap":2,"slots":{"sa":[1400,1430,1500,1530,1600,1630,1700,1730,1800,1830,1900]}},"berkS":{"pretty":"Berkich (South)","cap":3,"slots":{"mo":[1500,1530,1600,1630,1700,1730,1800,1830,1900],"tu":[1500,1530,1600,1630,1700,1730,1800,1830,1900],"we":[1500,1530,1600,1630,1700,1730,1800,1830,1900],"th":[1500,1530,1600,1630,1700,1730,1800,1830,1900],"fr":[1500,1530,1600,1630,1700,1730,1800,1830,1900],"sa":[800,830,900,930,1000,1030,1100,1130,1200,1230,1300,1330],"su":[800,830,900,930,1000,1030,1100,1130,1200,1230,1300,1330]}},"berkN":{"pretty":"Berkich (North)","cap":3,"slots":{}}}}
+{
+    "times": [
+        800,
+        830,
+        900,
+        930,
+        1000,
+        1030,
+        1100,
+        1130,
+        1200,
+        1230,
+        1300,
+        1330,
+        1400,
+        1430,
+        1500,
+        1530,
+        1600,
+        1630,
+        1700,
+        1730,
+        1800,
+        1830,
+        1900
+    ],
+    "days": [
+        "mo",
+        "tu",
+        "we",
+        "th",
+        "fr",
+        "sa",
+        "su"
+    ],
+    "sched": {
+        "berkS": {
+            "mo": {
+                "1530": [
+                    "GU9_RezaXFisher"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher"
+                ],
+                "1630": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ]
+            },
+            "we": {
+                "1530": [
+                    "GU9_RezaXFisher"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1630": [
+                    "BU9_Serrano",
+                    "GU13_ChilesXFisher"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "GU13_ChilesXFisher"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ]
+            },
+            "fr": {
+                "1600": [
+                    "BU10_Suarez"
+                ],
+                "1630": [
+                    "BU10_Suarez"
+                ],
+                "1700": [
+                    "BU10_Suarez"
+                ]
+            },
+            "tu": {
+                "1630": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ]
+            },
+            "th": {
+                "1630": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ]
+            },
+            "su": {
+                "1400": [
+                    "Encinitas_Soccer"
+                ],
+                "1430": [
+                    "Encinitas_Soccer"
+                ],
+                "1500": [
+                    "BU14_Suarez"
+                ],
+                "1530": [
+                    "BU14_Suarez"
+                ],
+                "1600": [
+                    "BU14_Suarez"
+                ],
+                "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1700": [
+                    "Encinitas_Soccer"
+                ],
+                "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1800": [
+                    "Encinitas_Soccer"
+                ],
+                "1830": [
+                    "Encinitas_Soccer"
+                ]
+            },
+            "sa": {
+                "1400": [
+                    "Encinitas_Soccer"
+                ],
+                "1430": [
+                    "Encinitas_Soccer"
+                ],
+                "1500": [
+                    "Encinitas_Soccer"
+                ],
+                "1530": [
+                    "Encinitas_Soccer"
+                ],
+                "1600": [
+                    "Encinitas_Soccer"
+                ],
+                "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1700": [
+                    "Encinitas_Soccer"
+                ],
+                "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1800": [
+                    "Encinitas_Soccer"
+                ],
+                "1830": [
+                    "Encinitas_Soccer"
+                ]
+            }
+        },
+        "adaE": {
+            "tu": {
+                "1630": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1700": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ]
+            },
+            "th": {
+                "1630": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1700": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1530": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1600": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1630": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1700": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1730": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1800": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1830": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "sa": {
+                "900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1100": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1130": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1200": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1230": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1300": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1330": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ]
+            }
+        },
+        "adaW": {
+            "we": {
+                "1500": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1530": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1600": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1630": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1700": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1730": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1800": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1830": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "sa": {
+                "900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1100": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1130": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1200": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1230": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1300": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1330": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "Encinitas_Soccer"
+                ],
+                "1530": [
+                    "Encinitas_Soccer"
+                ],
+                "1600": [
+                    "Encinitas_Soccer"
+                ],
+                "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1700": [
+                    "Encinitas_Soccer"
+                ],
+                "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1800": [
+                    "Encinitas_Soccer"
+                ],
+                "1830": [
+                    "Encinitas_Soccer"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Encinitas_Soccer"
+                ],
+                "1530": [
+                    "Encinitas_Soccer"
+                ],
+                "1600": [
+                    "Encinitas_Soccer"
+                ],
+                "1630": [
+                    "Encinitas_Soccer"
+                ],
+                "1700": [
+                    "Encinitas_Soccer"
+                ],
+                "1730": [
+                    "Encinitas_Soccer"
+                ],
+                "1800": [
+                    "Encinitas_Soccer"
+                ],
+                "1830": [
+                    "Encinitas_Soccer"
+                ]
+            }
+        },
+        "berkN": {
+            "tu": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "su": {
+                "800": [
+                    "Encinitas_Soccer"
+                ],
+                "830": [
+                    "Encinitas_Soccer"
+                ],
+                "900": [
+                    "Encinitas_Soccer"
+                ],
+                "930": [
+                    "Encinitas_Soccer"
+                ],
+                "1000": [
+                    "Encinitas_Soccer"
+                ],
+                "1030": [
+                    "Encinitas_Soccer"
+                ],
+                "1100": [
+                    "Encinitas_Soccer"
+                ],
+                "1130": [
+                    "Encinitas_Soccer"
+                ],
+                "1200": [
+                    "Encinitas_Little_League"
+                ],
+                "1230": [
+                    "Encinitas_Little_League"
+                ],
+                "1300": [
+                    "Encinitas_Little_League"
+                ],
+                "1330": [
+                    "Encinitas_Little_League"
+                ],
+                "1400": [
+                    "Encinitas_Little_League"
+                ],
+                "1430": [
+                    "Encinitas_Little_League"
+                ],
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "sa": {
+                "800": [
+                    "Encinitas_Little_League"
+                ],
+                "830": [
+                    "Encinitas_Little_League"
+                ],
+                "900": [
+                    "Encinitas_Little_League"
+                ],
+                "930": [
+                    "Encinitas_Little_League"
+                ],
+                "1000": [
+                    "Encinitas_Little_League"
+                ],
+                "1030": [
+                    "Encinitas_Little_League"
+                ],
+                "1100": [
+                    "Encinitas_Little_League"
+                ],
+                "1130": [
+                    "Encinitas_Little_League"
+                ],
+                "1200": [
+                    "Encinitas_Little_League"
+                ],
+                "1230": [
+                    "Encinitas_Little_League"
+                ],
+                "1300": [
+                    "Encinitas_Little_League"
+                ],
+                "1330": [
+                    "Encinitas_Little_League"
+                ],
+                "1400": [
+                    "Encinitas_Little_League"
+                ],
+                "1430": [
+                    "Encinitas_Little_League"
+                ],
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ]
+            }
+        }
+    },
+    "teams": [
+        {
+            "name": "BU8_PerryXReza"
+        },
+        {
+            "name": "GU9_RezaXFisher"
+        },
+        {
+            "name": "BU9_Serrano"
+        },
+        {
+            "name": "BU10_Suarez"
+        },
+        {
+            "name": "BU11_Anderson"
+        },
+        {
+            "name": "GU11_Cardinale"
+        },
+        {
+            "name": "BU12_Martin"
+        },
+        {
+            "name": "BU12_SuarezXChiles"
+        },
+        {
+            "name": "GU13_ChilesXFisher"
+        },
+        {
+            "name": "BU14_Suarez"
+        }
+    ],
+    "teamsched": {
+        "BU8_PerryXReza": {
+            "mo": {
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "we": {
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "GU9_RezaXFisher": {
+            "mo": {
+                "1530": "berkS",
+                "1600": "berkS"
+            },
+            "we": {
+                "1530": "berkS",
+                "1600": "berkS"
+            }
+        },
+        "BU9_Serrano": {
+            "we": {
+                "1600": "berkS",
+                "1630": "berkS",
+                "1700": "berkS"
+            }
+        },
+        "BU10_Suarez": {
+            "fr": {
+                "1600": "berkS",
+                "1630": "berkS",
+                "1700": "berkS"
+            }
+        },
+        "BU11_Anderson": {
+            "tu": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "th": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "GU11_Cardinale": {
+            "tu": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            },
+            "th": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            }
+        },
+        "BU12_Martin": {
+            "tu": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "th": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "BU12_SuarezXChiles": {
+            "tu": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            },
+            "th": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            }
+        },
+        "GU13_ChilesXFisher": {
+            "mo": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "we": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "BU14_Suarez": {
+            "su": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            }
+        },
+        "Coastal_Dragons_Rugby": {
+            "we": {
+                "1500": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1600": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1700": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1800": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1830": [
+                    "adaE",
+                    "adaW"
+                ]
+            },
+            "sa": {
+                "900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1100": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1130": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1200": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1230": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1300": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1330": [
+                    "adaE",
+                    "adaW"
+                ]
+            }
+        },
+        "Encinitas_Lacrosse": {
+            "mo": {
+                "1500": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1600": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1700": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1800": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1830": [
+                    "adaE",
+                    "adaW"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1600": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1700": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1800": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1830": [
+                    "adaE",
+                    "adaW"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ]
+            }
+        },
+        "Encinitas_Soccer": {
+            "tu": {
+                "1500": [
+                    "adaW"
+                ],
+                "1530": [
+                    "adaW"
+                ],
+                "1600": [
+                    "adaW"
+                ],
+                "1630": [
+                    "adaW"
+                ],
+                "1700": [
+                    "adaW"
+                ],
+                "1730": [
+                    "adaW"
+                ],
+                "1800": [
+                    "adaW"
+                ],
+                "1830": [
+                    "adaW"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "adaW"
+                ],
+                "1530": [
+                    "adaW"
+                ],
+                "1600": [
+                    "adaW"
+                ],
+                "1630": [
+                    "adaW"
+                ],
+                "1700": [
+                    "adaW"
+                ],
+                "1730": [
+                    "adaW"
+                ],
+                "1800": [
+                    "adaW"
+                ],
+                "1830": [
+                    "adaW"
+                ]
+            },
+            "su": {
+                "800": [
+                    "berkN"
+                ],
+                "830": [
+                    "berkN"
+                ],
+                "900": [
+                    "berkN"
+                ],
+                "930": [
+                    "berkN"
+                ],
+                "1000": [
+                    "berkN"
+                ],
+                "1030": [
+                    "berkN"
+                ],
+                "1100": [
+                    "berkN"
+                ],
+                "1130": [
+                    "berkN"
+                ],
+                "1400": [
+                    "berkS"
+                ],
+                "1430": [
+                    "berkS"
+                ],
+                "1630": [
+                    "berkS"
+                ],
+                "1700": [
+                    "berkS"
+                ],
+                "1730": [
+                    "berkS"
+                ],
+                "1800": [
+                    "berkS"
+                ],
+                "1830": [
+                    "berkS"
+                ]
+            },
+            "sa": {
+                "1400": [
+                    "berkS"
+                ],
+                "1430": [
+                    "berkS"
+                ],
+                "1500": [
+                    "berkS"
+                ],
+                "1530": [
+                    "berkS"
+                ],
+                "1600": [
+                    "berkS"
+                ],
+                "1630": [
+                    "berkS"
+                ],
+                "1700": [
+                    "berkS"
+                ],
+                "1730": [
+                    "berkS"
+                ],
+                "1800": [
+                    "berkS"
+                ],
+                "1830": [
+                    "berkS"
+                ]
+            }
+        },
+        "Encinitas_Little_League": {
+            "mo": {
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ]
+            },
+            "sa": {
+                "800": [
+                    "berkN"
+                ],
+                "830": [
+                    "berkN"
+                ],
+                "900": [
+                    "berkN"
+                ],
+                "930": [
+                    "berkN"
+                ],
+                "1000": [
+                    "berkN"
+                ],
+                "1030": [
+                    "berkN"
+                ],
+                "1100": [
+                    "berkN"
+                ],
+                "1130": [
+                    "berkN"
+                ],
+                "1200": [
+                    "berkN"
+                ],
+                "1230": [
+                    "berkN"
+                ],
+                "1300": [
+                    "berkN"
+                ],
+                "1330": [
+                    "berkN"
+                ],
+                "1400": [
+                    "berkN"
+                ],
+                "1430": [
+                    "berkN"
+                ],
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ]
+            },
+            "su": {
+                "1200": [
+                    "berkN"
+                ],
+                "1230": [
+                    "berkN"
+                ],
+                "1300": [
+                    "berkN"
+                ],
+                "1330": [
+                    "berkN"
+                ],
+                "1400": [
+                    "berkN"
+                ],
+                "1430": [
+                    "berkN"
+                ],
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ]
+            }
+        }
+    },
+    "fields": {
+        "adaE": {
+            "pretty": "Ada Harris (East)",
+            "cap": 2,
+            "slots": {
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "sa": [
+                    1400,
+                    1430,
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ]
+            }
+        },
+        "adaW": {
+            "pretty": "Ada Harris (West)",
+            "cap": 2,
+            "slots": {
+                "sa": [
+                    1400,
+                    1430,
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ]
+            }
+        },
+        "berkS": {
+            "pretty": "Berkich (South)",
+            "cap": 3,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "sa": [
+                    800,
+                    830,
+                    900,
+                    930,
+                    1000,
+                    1030,
+                    1100,
+                    1130,
+                    1200,
+                    1230,
+                    1300,
+                    1330
+                ],
+                "su": [
+                    800,
+                    830,
+                    900,
+                    930,
+                    1000,
+                    1030,
+                    1100,
+                    1130,
+                    1200,
+                    1230,
+                    1300,
+                    1330,
+                    1500,
+                    1530,
+                    1600
+                ]
+            }
+        },
+        "berkN": {
+            "pretty": "Berkich (North)",
+            "cap": 3,
+            "slots": {}
+        }
+    }
+}
