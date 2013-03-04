@@ -97,8 +97,9 @@ function fill_times(arro) {
         // arro is array of time ranges, recursively expand these
         return _.flatten(_.union(_.map(arro,function(a) { return fill_times(a); })))
     }
-    var ltime = _.min(arro)
-    var htime = _.max(arro)
+    tarr = _.map(arro,function(t) { return t === 'dusk' ? 2100 : t; }) // convert dusk keyword to late
+    var ltime = _.min(tarr)
+    var htime = _.max(tarr)
     var ttimes = [];
     for( t = Math.floor(ltime/100)+(ltime%100)/60; t < Math.floor(htime/100)+(htime%100)/60; t += prog.timestep/60 ) {
         ttimes.push(Math.floor(t)*100+(t%1)*60)

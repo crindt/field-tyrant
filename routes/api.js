@@ -32,11 +32,12 @@ var post_data = {
 // set up to determine whether we're in DST
 // per: http://stackoverflow.com/questions/11887934/check-if-daylight-savings-time-is-in-use-and-if-it-is-for-how-many-hours
 var arr = [];
+var d = moment(new Date().getFullYear(),0,1,8) // 8 am
 for (var i = 0; i < 365; i++) {
- var d = new Date();
- d.setDate(i);
- newoffset = d.getTimezoneOffset();
- arr.push(newoffset);
+    var nd = moment(d).add('days',i).toDate()
+    
+    newoffset = nd.getTimezoneOffset();
+    arr.push(newoffset);
 }
 DST = Math.min.apply(null, arr);
 nonDST = Math.max.apply(null, arr);
@@ -87,17 +88,39 @@ request.post(
 exports.twilight = function(req, res, next) {
     var mm = parseInt(req.params.month)-1
     var dd = parseInt(req.params.day)
-    var tt = twi[mm][dd]
-    if ( tt ) {
-        var yy = new Date().getYear()
-        var dt = new Date(yy,mm,dd,12,0).getTimezoneOffset();
+    var mm2 = req.params.month2 ? parseInt(req.params.month2)-1 : mm
+    var dd2 = req.params.day2 ? parseInt(req.params.day2)  : dd
+
+    var now = moment()
+    // DST defined by 8am
+    var startDate = moment([now.year(), mm, dd, 8]).toDate()
+    var endDate = moment([now.year(), mm2, dd2, 8]).toDate()
+
+    var daysToSend = [];
+    console.log(startDate)
+    console.log(endDate)
+    for (var d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
+        var ddd = moment(d).toDate()
+        var o ={ date: new Date(d) }
+        var dt = ddd.getTimezoneOffset();
         console.log(DST,nonDST,dt)
         var isDST = (dt === DST)
         if ( !isDST && dt !== nonDST ) {
             console.log("ERROR", "DST CALCS BROKEN")
         }
+        var tt = twi[d.getMonth()][d.getDate()]
         var hh = parseInt(tt.slice(0,2),10)+(isDST?1:0);
         var mn = parseInt(tt.slice(2,4),10)
-        res.json( {civil_twilight: new Date(yy,mm,dd,hh,mn) } )
+        var dd = new Date(o.date)
+        dd.setHours(hh);
+        dd.setMinutes(mn);
+        o.civil_twilight = dd;
+        console.log(o.civil_twilight+" is "+(isDST?"":"NOT")+" DST")
+        daysToSend.push(o);
     }
+    //console.log(twi)
+    //console.log(mm,dd,mm2,dd2)
+    //console.log(daysToSend)
+
+    res.json(daysToSend)
 }

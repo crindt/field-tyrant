@@ -5,6 +5,11 @@ block body
     .navbar-inner
       .container-fluid
         a.brand(href="#") Cardiff Soccer Field Allocation (March 2013)
+        .nav
+          li
+            a(href='chartview') Chart view
+          li
+            a(href='tableview') Table view
 
   .container-fluid
     div(ng-view)
@@ -25,9 +30,9 @@ block body
   script(src='js/directives.js')
 
   // angular-ui and ui-bootstrap
-  script(src="https://raw.github.com/angular-ui/angular-ui/v0.4.0/build/angular-ui-ieshiv.min.js")  
-  script(src="https://raw.github.com/angular-ui/angular-ui/v0.4.0/build/angular-ui.min.js")
+  script(src="/js/lib/angular-ui/angular-ui-ieshiv.min.js")  
+  script(src="/js/lib/angular-ui/angular-ui.min.js")
   script(src="/js/lib/ui-bootstrap/ui-bootstrap-custom-0.1.1-SNAPSHOT.js")
 
-  script(src="https://raw.github.com/sterlingwes/RandomColor/master/rcolor.js")
   script(src="//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js")

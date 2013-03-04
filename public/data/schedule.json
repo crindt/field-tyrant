@@ -42,7 +42,15 @@
         1745,
         1800,
         1815,
-        1830
+        1830,
+        1845,
+        1900,
+        1915,
+        1930,
+        1945,
+        2000,
+        2015,
+        2030
     ],
     "days": [
         "mo",
@@ -269,6 +277,30 @@
                 ],
                 "1845": [
                     "Encinitas_Soccer"
+                ],
+                "1900": [
+                    "Encinitas_Soccer"
+                ],
+                "1915": [
+                    "Encinitas_Soccer"
+                ],
+                "1930": [
+                    "Encinitas_Soccer"
+                ],
+                "1945": [
+                    "Encinitas_Soccer"
+                ],
+                "2000": [
+                    "Encinitas_Soccer"
+                ],
+                "2015": [
+                    "Encinitas_Soccer"
+                ],
+                "2030": [
+                    "Encinitas_Soccer"
+                ],
+                "2045": [
+                    "Encinitas_Soccer"
                 ]
             },
             "sa": {
@@ -330,6 +362,30 @@
                     "Encinitas_Soccer"
                 ],
                 "1845": [
+                    "Encinitas_Soccer"
+                ],
+                "1900": [
+                    "Encinitas_Soccer"
+                ],
+                "1915": [
+                    "Encinitas_Soccer"
+                ],
+                "1930": [
+                    "Encinitas_Soccer"
+                ],
+                "1945": [
+                    "Encinitas_Soccer"
+                ],
+                "2000": [
+                    "Encinitas_Soccer"
+                ],
+                "2015": [
+                    "Encinitas_Soccer"
+                ],
+                "2030": [
+                    "Encinitas_Soccer"
+                ],
+                "2045": [
                     "Encinitas_Soccer"
                 ]
             }
@@ -435,6 +491,30 @@
                 ],
                 "1845": [
                     "Coastal_Dragons_Rugby"
+                ],
+                "1900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1915": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1945": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2015": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2045": [
+                    "Coastal_Dragons_Rugby"
                 ]
             },
             "sa": {
@@ -547,6 +627,30 @@
                 ],
                 "1845": [
                     "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
                 ]
             },
             "fr": {
@@ -596,6 +700,30 @@
                     "Encinitas_Lacrosse"
                 ],
                 "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
                     "Encinitas_Lacrosse"
                 ]
             }
@@ -649,6 +777,30 @@
                 ],
                 "1845": [
                     "Coastal_Dragons_Rugby"
+                ],
+                "1900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1915": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1945": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2015": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2045": [
+                    "Coastal_Dragons_Rugby"
                 ]
             },
             "sa": {
@@ -761,6 +913,30 @@
                 ],
                 "1845": [
                     "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
                 ]
             },
             "fr": {
@@ -810,6 +986,30 @@
                     "Encinitas_Lacrosse"
                 ],
                 "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
                     "Encinitas_Lacrosse"
                 ]
             },
@@ -861,6 +1061,30 @@
                 ],
                 "1845": [
                     "Encinitas_Soccer"
+                ],
+                "1900": [
+                    "Encinitas_Soccer"
+                ],
+                "1915": [
+                    "Encinitas_Soccer"
+                ],
+                "1930": [
+                    "Encinitas_Soccer"
+                ],
+                "1945": [
+                    "Encinitas_Soccer"
+                ],
+                "2000": [
+                    "Encinitas_Soccer"
+                ],
+                "2015": [
+                    "Encinitas_Soccer"
+                ],
+                "2030": [
+                    "Encinitas_Soccer"
+                ],
+                "2045": [
+                    "Encinitas_Soccer"
                 ]
             },
             "th": {
@@ -910,6 +1134,30 @@
                     "Encinitas_Soccer"
                 ],
                 "1845": [
+                    "Encinitas_Soccer"
+                ],
+                "1900": [
+                    "Encinitas_Soccer"
+                ],
+                "1915": [
+                    "Encinitas_Soccer"
+                ],
+                "1930": [
+                    "Encinitas_Soccer"
+                ],
+                "1945": [
+                    "Encinitas_Soccer"
+                ],
+                "2000": [
+                    "Encinitas_Soccer"
+                ],
+                "2015": [
+                    "Encinitas_Soccer"
+                ],
+                "2030": [
+                    "Encinitas_Soccer"
+                ],
+                "2045": [
                     "Encinitas_Soccer"
                 ]
             }
@@ -963,6 +1211,30 @@
                 ],
                 "1845": [
                     "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
                 ]
             },
             "th": {
@@ -1012,6 +1284,30 @@
                     "Encinitas_Lacrosse"
                 ],
                 "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
                     "Encinitas_Lacrosse"
                 ]
             },
@@ -1147,6 +1443,30 @@
                 ],
                 "1845": [
                     "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
+                    "Encinitas_Little_League"
                 ]
             },
             "mo": {
@@ -1196,6 +1516,30 @@
                     "Encinitas_Little_League"
                 ],
                 "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
                     "Encinitas_Little_League"
                 ]
             },
@@ -1247,6 +1591,30 @@
                 ],
                 "1845": [
                     "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
+                    "Encinitas_Little_League"
                 ]
             },
             "fr": {
@@ -1296,6 +1664,30 @@
                     "Encinitas_Little_League"
                 ],
                 "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
                     "Encinitas_Little_League"
                 ]
             },
@@ -1430,6 +1822,30 @@
                     "Encinitas_Little_League"
                 ],
                 "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
                     "Encinitas_Little_League"
                 ]
             }
@@ -1685,6 +2101,38 @@
                 "1845": [
                     "adaE",
                     "adaW"
+                ],
+                "1900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1915": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1945": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2015": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2045": [
+                    "adaE",
+                    "adaW"
                 ]
             },
             "sa": {
@@ -1835,6 +2283,38 @@
                 "1845": [
                     "adaE",
                     "adaW"
+                ],
+                "1900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1915": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1945": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2015": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2045": [
+                    "adaE",
+                    "adaW"
                 ]
             },
             "fr": {
@@ -1901,6 +2381,38 @@
                 "1845": [
                     "adaE",
                     "adaW"
+                ],
+                "1900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1915": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1945": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2015": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2045": [
+                    "adaE",
+                    "adaW"
                 ]
             },
             "tu": {
@@ -1951,6 +2463,30 @@
                 ],
                 "1845": [
                     "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
                 ]
             },
             "th": {
@@ -2000,6 +2536,30 @@
                     "berkN"
                 ],
                 "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
                     "berkN"
                 ]
             }
@@ -2053,6 +2613,30 @@
                 ],
                 "1845": [
                     "adaW"
+                ],
+                "1900": [
+                    "adaW"
+                ],
+                "1915": [
+                    "adaW"
+                ],
+                "1930": [
+                    "adaW"
+                ],
+                "1945": [
+                    "adaW"
+                ],
+                "2000": [
+                    "adaW"
+                ],
+                "2015": [
+                    "adaW"
+                ],
+                "2030": [
+                    "adaW"
+                ],
+                "2045": [
+                    "adaW"
                 ]
             },
             "th": {
@@ -2102,6 +2686,30 @@
                     "adaW"
                 ],
                 "1845": [
+                    "adaW"
+                ],
+                "1900": [
+                    "adaW"
+                ],
+                "1915": [
+                    "adaW"
+                ],
+                "1930": [
+                    "adaW"
+                ],
+                "1945": [
+                    "adaW"
+                ],
+                "2000": [
+                    "adaW"
+                ],
+                "2015": [
+                    "adaW"
+                ],
+                "2030": [
+                    "adaW"
+                ],
+                "2045": [
                     "adaW"
                 ]
             },
@@ -2195,6 +2803,30 @@
                 ],
                 "1845": [
                     "berkS"
+                ],
+                "1900": [
+                    "berkS"
+                ],
+                "1915": [
+                    "berkS"
+                ],
+                "1930": [
+                    "berkS"
+                ],
+                "1945": [
+                    "berkS"
+                ],
+                "2000": [
+                    "berkS"
+                ],
+                "2015": [
+                    "berkS"
+                ],
+                "2030": [
+                    "berkS"
+                ],
+                "2045": [
+                    "berkS"
                 ]
             },
             "sa": {
@@ -2256,6 +2888,30 @@
                     "berkS"
                 ],
                 "1845": [
+                    "berkS"
+                ],
+                "1900": [
+                    "berkS"
+                ],
+                "1915": [
+                    "berkS"
+                ],
+                "1930": [
+                    "berkS"
+                ],
+                "1945": [
+                    "berkS"
+                ],
+                "2000": [
+                    "berkS"
+                ],
+                "2015": [
+                    "berkS"
+                ],
+                "2030": [
+                    "berkS"
+                ],
+                "2045": [
                     "berkS"
                 ]
             }
@@ -2309,6 +2965,30 @@
                 ],
                 "1845": [
                     "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
                 ]
             },
             "we": {
@@ -2359,6 +3039,30 @@
                 ],
                 "1845": [
                     "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
                 ]
             },
             "fr": {
@@ -2408,6 +3112,30 @@
                     "berkN"
                 ],
                 "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
                     "berkN"
                 ]
             },
@@ -2543,6 +3271,30 @@
                 ],
                 "1845": [
                     "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
                 ]
             },
             "su": {
@@ -2629,6 +3381,30 @@
                 ],
                 "1845": [
                     "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
                 ]
             }
         }
@@ -2654,7 +3430,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ],
                 "th": [
                     1500,
@@ -2672,7 +3456,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ],
                 "sa": [
                     1400,
@@ -2694,7 +3486,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ]
             }
         },
@@ -2722,7 +3522,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ]
             }
         },
@@ -2746,7 +3554,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ],
                 "tu": [
                     1500,
@@ -2764,7 +3580,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ],
                 "we": [
                     1500,
@@ -2782,7 +3606,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ],
                 "th": [
                     1500,
@@ -2800,7 +3632,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ],
                 "fr": [
                     1500,
@@ -2818,7 +3658,15 @@
                     1800,
                     1815,
                     1830,
-                    1845
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
                 ],
                 "sa": [
                     800,

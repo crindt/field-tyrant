@@ -5,4 +5,4 @@
         h5 {{format_field(field)}}
 .tab-content
   .tab-pane(ng-repeat="(myfield,fieldo) in schedule.fields",id="{{myfield}}",data-ng-class="{active: displayedField==$index}")
-    fieldchart(schedule="schedule",field="myfield",colors="colors")
+    fieldchart(schedule="schedule",field="myfield",colors="colors",twilight="twilight",basedate="basedate",timestep="timestep")
