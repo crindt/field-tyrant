@@ -14,8 +14,9 @@ prog
     .option('-f, --format <format>','Output Format')
     .option('-l, --loglevel <level>',"Set the loglevel for console output [info]","info")
     .option('-o, --output <file>',"File to output results to",null)
-    .option('-t, --timestep <int>',"Size of time block size to us <30 minutes>",30)
-    .option('-e, --echo', "Echo the program and results to stdout",false)
+    .option('-t, --timestep <int>',"Size of time block size to us [30 minutes]",30)
+    .option('-e, --echo', "Echo the program and results to stdout [false]",false)
+    .option('-b, --bvarweight <float>', "Weight to apply to the sum of binary variables in the objective [0.00001]", 0.00001)
     .parse(process.argv)
 
 var outstream = process.stdout
@@ -137,6 +138,8 @@ function format_team(tm) {
 }
 
 function format_field(f) {
+    if ( f instanceof Array ) 
+        return _.map(f,function(ff) { return format_field(ff) }).join(", ")
     return conf.fields && conf.fields[f] ? conf.fields[f].pretty : f;
 }
 
