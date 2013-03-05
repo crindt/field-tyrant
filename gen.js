@@ -188,6 +188,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
     var wetimes = {}
     var sched = {}
     var teams = {}
+    var unallocated = {}
     var choices = {}
     if ( err ) {
         logger.error(err.toString().split("\n"))
@@ -278,6 +279,9 @@ child = exec('lp_solve',function(err,stdout,stderr) {
         var opts = conf.teams[tm].req.slice(0,-1)  // grab all requests except for the dummy
         if ( opts.length === 0 ) logger.warning("\tNO OPTIONS PROVIDED")
 
+        unallocated[tm] = { name: tm,
+                            conflicts: [] }
+
         _.each(opts, function(opt,i) {
             logger.warning("\toption "+(i+1)+": "+
                            _.map(_.keys(opt), function(d) { return d+" "+merge_times(_.clone(opt[d])) }).join(", ")
@@ -291,10 +295,17 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                     if ( teams[otm][d] ) {
                         var tarr = _.map( _.keys(teams[otm][d]), function( t ) { return parseInt(t) })
                         var intr = _.intersection(tarr, opt[d])
-                        if ( intr.length > 0 ) conflicts.push( { team: otm, day: d, slot: merge_times(tarr), field: _.unique(_.values(teams[otm][d])).join(", ") } );
+                        var ff = teams[otm][d]
+                        if ( intr.length > 0 ) conflicts.push( { team: otm, day: d, 
+                                                                 slot: merge_times(tarr), 
+                                                                 field: _.unique(_.values(_.flatten(ff))).join(", ") } );
                     }
                 });
             });
+
+            // store so we can send to JSON
+            unallocated[tm].conflicts.push( conflicts )
+
             _.each(conflicts, function(c) {
                 logger.warning("\t\tconflicts with: "+format_team(c.team)+" on "+c.day+" @ "+format_field(c.field)+": "+c.slot);
             });
@@ -354,9 +365,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
              teams:tt,
              teamsched: teams,
              fields:conf.fields,
-             _: _,
-             format_team: format_team,
-             format_field: format_field
+             unallocated:unallocated
             },null,4));
         
     } else if ( prog.format === "html" ) {
