@@ -216,7 +216,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
             //[team,coach,of,d,t] = 
             var mm;
             if ( det[2] && ( mm = det[2].match(/^o(\d)/) ) && m[2] === "1" ) {
-                // selection
+                // store the selected choice (option/request) for each time
                 nested(choices,[det[0],det[1]].join("_"),mm[1])
             }
             else if ( det[3] && det[4] && m[2] == 1 ) {
@@ -293,12 +293,16 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 _.each(_.keys(opt), function(d) {
                     var dts = opt[d];
                     if ( teams[otm][d] ) {
+                        // other team is scheduled on day associated with this option
+                        // see if it conflicts with this team's requested time
                         var tarr = _.map( _.keys(teams[otm][d]), function( t ) { return parseInt(t) })
                         var intr = _.intersection(tarr, opt[d])
-                        var ff = teams[otm][d]
-                        if ( intr.length > 0 ) conflicts.push( { team: otm, day: d, 
-                                                                 slot: merge_times(tarr), 
-                                                                 field: _.unique(_.values(_.flatten(ff))).join(", ") } );
+                        if ( intr.length > 0 ) {
+                            // there is a time intersection, this is a conflict
+                            conflicts.push( { team: otm, day: d, 
+                                              slot: merge_times(tarr), 
+                                              field: _.unique(_.values(_.flatten(teams[otm][d]))).join(", ") } );
+                        }
                     }
                 });
             });
@@ -310,10 +314,13 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 logger.warning("\t\tconflicts with: "+format_team(c.team)+" on "+c.day+" @ "+format_field(c.field)+": "+c.slot);
             });
         });
-    })
+    });
 
+
+    // OUTPUT THE RESULTS
 
     if ( prog.format === "field" ) {
+
         outstream.write("FIELD SCHEDULES\n")
         // loop over fields in the schedule
         _.each(sched,function(fo,f) { 
@@ -338,9 +345,15 @@ child = exec('lp_solve',function(err,stdout,stderr) {
 
     } else if ( prog.format === "team" ) {
         outstream.write("TEAM SCHEDULES\n")
-        _.each(_.keys(teams),function(tm) {
+
+        // each team
+        _.each(teams,function(tmo,tm) {
             outstream.write(sprintf("\t%s: choice %s\n",format_team(tm),choices[tm]))
+
+            // each day
             _.each(_.sortBy(_.keys(teams[tm]),function(k) { return dorder[k] }), function(d) {
+
+                // convert times to integers
                 var tarr = _.sortBy(_.keys(teams[tm][d]),function(t) {return parseInt(t);})
                 while( tarr.length > 0 ) {
                     t = tarr[0]
@@ -354,6 +367,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
                 }
             });
         });
+
     } else if ( prog.format === "json" ) {
         ccnt = 0;
         tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
@@ -389,14 +403,20 @@ child = exec('lp_solve',function(err,stdout,stderr) {
     }
 })
 
+// Check the child's exit code for errors
 child.on("exit",function(code) {
     if ( code ) logger.error("lp_solve process exited with ERROR: "+code)
 })
 
+// Handle any process exceptions (e.g., a broken pipe if the child dies)
 process.on('uncaughtException', function(err) {
     logger.error(util.inspect(err));
+    logger.error(err.stack);
+    setTimeout(process.exit, 1000)   // let messages clear before exiting
 });
 
+
+// hashes to store variable names
 var bvars = {};
 var ivars = {}
 
@@ -412,6 +432,9 @@ function bvar() {
         pri = t.fpref.indexOf(f)+1
     }
     if (pri<1) pri = t.fpref.length;
+    if ( ivars[v] !== undefined ) {
+        throw new Exception( "Variable "+v+" defined as both a binary variable and an integer variable" )
+    }
     bvars[v] = pri
     return v;
 }
@@ -428,6 +451,9 @@ function ivar() {
         pri = t.fpref.indexOf(f.slice(0,-1)) 
     }
     if (pri<0) pri = 1;
+    if ( bvars[v] !== undefined ) {
+        throw new Exception( "Variable "+v+" defined as both an integer variable and a binary variable" )
+    }
     ivars[v] = pri
     return v;
 }
@@ -440,7 +466,7 @@ function emit(str) {
 }
 
 
-// objective
+// emit objective
 emit("min: 0.00001 bvarsum\n");
 _.each(teams,function(tmo,tm) {
     var pri = 1;
@@ -457,6 +483,8 @@ _.each(teams,function(tmo,tm) {
 });
 emit(";\n")
 
+
+// There by constraints below... 
 
 emit("/* Must pick one option for each team */\n");
 _.each(_.keys(teams),function(tm) {
@@ -496,6 +524,7 @@ _.each(_.keys(teams), function(tm) {
                 slots.push( _.map(times,function(t) { return bvar(tm,f,d,t) }) )
 
                 // filter for invalid variables that we will forcefully disallow
+                // if the field is not available at that day and time
                 var iv = _.map(_.filter(times,function(t) { return !field_is_avail( f, d, t ) }),
                       function(t) {
                           return bvar(tm,f,d,t)
