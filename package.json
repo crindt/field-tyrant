@@ -17,5 +17,6 @@
     , "jade": "*"
     , "request": "*"
     , "moment": "*"
+    , "marked": "*"
   }
 }
