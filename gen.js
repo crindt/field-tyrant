@@ -139,6 +139,15 @@ function format_field(f) {
 
 // SETUP
 
+// add dummy request
+_.each(conf.teams, function(tmo,tm) {
+    if ( tmo.req.length == 0 || _.keys(tmo.req[tmo.req.length-1]).length !== 0 ) {
+        // last request for this team is not {}
+        // push a dummy on there
+        tmo.req.push({})
+    }
+})
+
 // expand times for team requests
 _.each(_.values(conf.teams),function(tmo) { 
     _.each(tmo.req, function(r) {
@@ -460,8 +469,6 @@ _.each(_.keys(teams), function(tm) {
         pri++;
     })
 });
-
-
 
 emit("\n/* DON'T OVERBOOK FIELDS */");
 _.each(_.keys(fields), function(f) {
