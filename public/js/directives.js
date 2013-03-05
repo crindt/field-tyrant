@@ -114,7 +114,7 @@ angular.module('myApp.directives', []).
 	            .attr('width', '6')
 	            .attr('height', '6')
 	            .append('svg:image')
-	            .attr('xlink:href', '/img/stripe.png')
+	            .attr('xlink:href', '/images/stripe.png')
 	            //.attr('xlink:href', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAQElEQ…BLsJqErACrInQFGIqwKUBRhEsBXBE+BWBFQPwM5E18AABhRzBYLDdhJAAAAABJRU5ErkJggg==')
 	            .attr('x', 0)
 	            .attr('y', 0)
