@@ -15,6 +15,7 @@ prog
     .option('-l, --loglevel <level>',"Set the loglevel for console output [info]","info")
     .option('-o, --output <file>',"File to output results to",null)
     .option('-t, --timestep <int>',"Size of time block size to us <30 minutes>",30)
+    .option('-e, --echo', "Echo the program and results to stdout",false)
     .parse(process.argv)
 
 var outstream = process.stdout
@@ -56,7 +57,7 @@ function nested() {
     if ( aa.length == 2 ) {
         v[aa[0]] = aa[1];
     } else {
-        console.log("ERROR SHIFTING NESTED")
+        logger.error("ERROR SHIFTING NESTED")
     }
 }
 function nested_push() {
@@ -73,7 +74,7 @@ function nested_push() {
         if ( v[aa[0]] === undefined ) { v[aa[0]] = [] }
         v[aa[0]].push( aa[1] );
     } else {
-        console.log("ERROR SHIFTING NESTED")
+        logger.error("ERROR SHIFTING NESTED")
     }
 }
 
@@ -101,6 +102,9 @@ function fill_times(arro) {
     var ltime = _.min(tarr)
     var htime = _.max(tarr)
     var ttimes = [];
+    if ( ( (htime%100) % prog.timestep ) != 0 ) {
+        logger.warning("Field preferences time specified ("+htime+") is not aligned with the timestep ("+prog.timestep+")" )
+    }
     for( t = Math.floor(ltime/100)+(ltime%100)/60; t < Math.floor(htime/100)+(htime%100)/60; t += prog.timestep/60 ) {
         ttimes.push(Math.floor(t)*100+(t%1)*60)
     }
@@ -149,7 +153,7 @@ _.each(conf.teams, function(tmo,tm) {
 })
 
 // expand times for team requests
-_.each(_.values(conf.teams),function(tmo) { 
+_.each(conf.teams,function(tmo,tm) { 
     _.each(tmo.req, function(r) {
         _.each(_.keys(r), function(d) {
             r[d] = fill_times(r[d])
@@ -158,12 +162,12 @@ _.each(_.values(conf.teams),function(tmo) {
 });
 
 // expand times for field slots
-_.each(_.values(conf.fields),function(fo) {
-    _.each(_.keys(fo.slots), function(d) {
-        if ( fo.slots[d].length > 0 && fo.slots[d][0] instanceof Array ) {
-            fo.slots[d] = _.flatten(_.union(_.map(fo.slots[d], function (tt) { return fill_times(tt) })))
+_.each(conf.fields,function(fo,f) {
+    _.each(fo.slots, function(dayo,d) {
+        if ( dayo.length > 0 && dayo[0] instanceof Array ) {
+            fo.slots[d] = _.flatten(_.union(_.map(dayo, function (tt) { return fill_times(tt) })))
         } else 
-            fo.slots[d] = fill_times(fo.slots[d]);
+            fo.slots[d] = fill_times(dayo);
     });
 });
 
@@ -188,7 +192,7 @@ child = exec('lp_solve',function(err,stdout,stderr) {
         });
     }
     _.each(stdout.split(/\n/), function(line) {
-        console.log(line)
+        if ( prog.echo ) console.log(line)
         var m
         if ( m = line.match(/^\s*$/)) {}
         else if ( m = line.match(/Value of the objective function:/) ) {}
@@ -319,7 +323,6 @@ child = exec('lp_solve',function(err,stdout,stderr) {
         ccnt = 0;
         tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
         var stimes = _.map(_.keys(times), function(t) { return parseInt(t); });
-        console.log('STIMES',stimes)
         ttimes = fill_times(stimes);
         outstream.write(fn({times:ttimes, 
                             days:week, sched:sched,
@@ -396,7 +399,7 @@ function ivar() {
 }
 
 function emit(str) {
-    process.stdout.write(str);
+    if ( prog.echo ) process.stdout.write(str);
     child.stdin.write(str);
 }
 
