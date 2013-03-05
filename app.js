@@ -6,6 +6,24 @@
 var express = require('express'),
   routes = require('./routes'),
   api = require('./routes/api')
+  marked = require('marked')
+
+var hl = require("highlight").Highlight;
+
+
+marked.setOptions({
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  langPrefix: 'language-',
+  highlight: function(code, lang) {
+      var html = hl(code);
+      return html
+  }
+});
 
 var app = module.exports = express();
 

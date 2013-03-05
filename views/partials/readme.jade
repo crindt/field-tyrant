@@ -49,7 +49,13 @@
     The web app is an [angular.js](http://angularjs.org) app served up by
     [express](http://expressjs.com).  The schedules are displayed as SVG generated
     using [d3.js](http://d3js.org) to convert the JSON data.  
-    
+
+    ```
+    % npm install
+    % node app.js
+    ```
+
+    By default, the application listens for requests on `http://localhost:3000`
     
     # Further notes
 
@@ -71,38 +77,40 @@
     defined as well.  The above preferences are specifed in a JSON file, for
     example:
 
-    ```
-      { "teams": {
-            "team1": {
-              "fpref" : [ "field1","field2" ],
-              "req"   : [
-                   { "mo": [ 1630, 1800 ], "we": [ 1630, 1800 ] },
-                   { "tu": [ 1530, 1700 ], "th": [ 1530, 1700 ] } ] },
-            "team2": {
-              "fpref" : [ "field2","field1" ],
-              "req"   : [
-                   { "mo": [ 1730, 1900 ], "we": [ 1730, 1900 ] },
-                   { "tu": [ 1430, 1600 ], "th": [ 1430, 1600 ] } ] },
-              ...
-           },
-         "fields": {
-           "field1": {
-             "capacity": 1,
-             "slots": {
-               "tu": [ 1500, "dusk" ]
-               "th": [ 1500, "dusk" ]
-              }
-           },
-           "field2": {
-             "capacity": 2,
-             "slots": {
-               "mo": [ 1500, "dusk" ]
-               "we": [ 1500, "dusk" ]
-              }
-           },
-           ...
-         }
-      }
+    ```js
+      { "teams": 
+        {
+            "GU10_team1": {
+                "fpref" : [ "field1","field2" ],
+                "req"   : [
+                    { "mo": [ 1630, 1800 ], "we": [ 1630, 1800 ] },
+                    { "tu": [ 1530, 1700 ], "th": [ 1530, 1700 ] } ] },
+            "BU10_team2": {
+                "fpref" : [ "field2","field1" ],
+                "req"   : [
+                    { "mo": [ 1730, 1900 ], "we": [ 1730, 1900 ] },
+                    { "tu": [ 1430, 1600 ], "th": [ 1430, 1600 ] } ] }
+        },
+        "fields": {
+            "field1": {
+                "pretty": "Field 1",
+                "cap": 1,
+                "slots": {
+                    "tu": [ 1500, "dusk" ],
+                    "th": [ 1500, "dusk" ]
+                }
+            },
+            "field2": {
+                "pretty": "Field 2",
+                "cap": 1,
+                "slots": {
+                    "mo": [ 1500, "dusk" ],
+                    "we": [ 1500, "dusk" ]
+                }
+            }
+        },
+        "others": {}
+    }
     ```
 
     To ensure a solution is always found, a dummy "request" for each team is
