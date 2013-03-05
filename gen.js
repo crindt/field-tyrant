@@ -495,6 +495,6 @@ emit( "\nbin "+_.keys(bvars).join(", ")+";\n");
 
 // dump binary variables
 emit( "\n\n/* INTEGER VARS */" );
-emit( "\nint "+_.keys(bvars).join(", ")+";\n");
+emit( "\nint "+_.keys(ivars).join(", ")+";\n");
 
 child.stdin.end();

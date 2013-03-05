@@ -162,3 +162,7 @@ MyCtrl1.$inject = ['$scope','$http'];
 function MyCtrl2() {
 }
 MyCtrl2.$inject = [];
+
+function DocCtrl() {
+}
+DocCtrl.$inject = [];
