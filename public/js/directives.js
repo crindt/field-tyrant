@@ -6,8 +6,21 @@ String.prototype.splice = function( idx, rem, s ) {
 };
 
 
-function format_team(tm) {
-    return tm.split("_").join(" ").split("X").join("/");
+function format_team(tm,px) {
+    var fullname = tm.split("_").join(" ").split("X").join("/");
+    var name = fullname;
+
+    if ( px && px/fullname.length < 5 ) {
+        // not much space, let's abbrieviate
+        if ( name.match(/^[GB]U/) ) {
+            name = name.split(/\s+/)[0]
+        } else {
+            name = _.map(name.split(/\s+/),
+                         function(ss) { return ss[0].toUpperCase() })
+                .join("")
+        }
+    }
+    return name
 }
 
 function time_overlaps(o1,o2) {
@@ -52,14 +65,18 @@ angular.module('myApp.directives', []).
                 colors: '=',
                 twilight: '=',
                 basedate: '=',
-                timestep: '='
+                timestep: '=',
+                formatfield: '=',
+                chartWidth: '@chartWidth',
+                chartHeight: '@chartHeight',
+                chartPadding: '@chartPadding'
             },
             link: function( scope, element, attrs ) {
                 var vis = d3.select(element[0]);
 
-                var tw = 1200;
-                var th = 650;
-                var padding = 50;
+                var tw = parseInt(attrs.chartWidth) || 1200;
+                var th = parseInt(attrs.chartHeight) || 600;
+                var padding = parseInt(attrs.chartPadding) || 50;
                 var w = tw - padding*2;
                 var h = th - padding*2;
 
@@ -185,7 +202,7 @@ angular.module('myApp.directives', []).
                                 scope.mousecoord = d3.mouse(this)
                                 // manual inversion of day based upon pointer
                                 var dayidx = Math.floor(scope.mousecoord[0]/xScale.rangeBand())
-                                var title = "The field is closed to everyone on "+days[dayidx]+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
+                                var title = scope.formatfield(scope.field)+" is closed to everyone on "+days[dayidx]+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
                                 d3.select(this)
                                     .selectAll('title')
                                     .text(function(dd) {
@@ -244,7 +261,7 @@ angular.module('myApp.directives', []).
                                 scope.mousecoord = d3.mouse(this)
                                 // manual inversion of day based upon pointer
                                 var dayidx = Math.floor(scope.mousecoord[0]/xScale.rangeBand())
-                                var title = "The field allocated to Cardiff Soccer on "+days[dayidx]+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
+                                var title = scope.formatfield(scope.field)+" is allocated to Cardiff Soccer on "+days[dayidx]+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
                                 d3.select(this)
                                     .selectAll('title')
                                     .text(function(dd) {
@@ -390,7 +407,8 @@ angular.module('myApp.directives', []).
                                             .attr('height', function(slot) { return sloth; })
                                             .attr('style', 
                                                   function(slot) { 
-                                                      return "fill: "+scope.colors[team.team]; })
+                                                      return "fill: "+scope.colors[team.team]; 
+                                                  })
                                         
                                         var tgg = g.append('svg:g')
                                             .attr("transform", "translate("+[xx,tScale(myto)].join(",")+") rotate(-90)")
@@ -417,10 +435,10 @@ angular.module('myApp.directives', []).
                                             .style("min-width",sloth+"px")
                                             .style("line-height",slotw+"px")
                                             .style("font-weight","bold")
-                                            .text(format_team(team.team))
+                                            .text(format_team(team.team,sloth))
 
                                         // fallback for IE
-                                        var tn = format_team(team.team);
+                                        var tn = format_team(team.team,sloth);
                                         if ( tn.match(/^[GB]/) ) tn = tn.split(" ")[0]
                                         sw.append('svg:text')
                                             .attr('dx',sloth/2)

@@ -81,7 +81,16 @@ function AppCtrl($scope, $http, $dialog) {
                     
                     _.each(_.keys($scope.schedule.teamsched),function(k,i) {
                         $scope.colors[k] = colors20(i)
+
+                        if ( k.match(/(League|Lacrosse|Rugby)/ ) ) {
+                            // override leagues
+                            var c = 5 + (i%4); // make them shades of gray
+                            $scope.colors[k] = "#"+c+c+c;
+                        }
+
+
                     });
+
                     
                     $scope.status = 'Good!'
                 }).
