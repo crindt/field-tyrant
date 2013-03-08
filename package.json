@@ -18,5 +18,6 @@
     , "request": "*"
     , "moment": "*"
     , "marked": "*"
+    , "highlight": "*"
   }
 }
