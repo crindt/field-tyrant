@@ -13,6 +13,8 @@ function AppCtrl($scope, $http, $dialog) {
 
     $scope.colors = {};
 
+    $scope.rain = {}
+
     $scope.team_style = function(tm) {
         return $scope.colors[tm] ? "color:#333; text-shadow: 1px 1px #aaa; background-color: "+$scope.colors[tm] : "";
     }
@@ -100,6 +102,15 @@ function AppCtrl($scope, $http, $dialog) {
         }).
         error(function(data, status, headers, config) {
             $scope.status = 'Error Getting Twilight!'
+        });
+
+    $http({method: 'GET',
+           url: '/data/rain.json'})
+        .success(function(data,status,headers,config) {
+            $scope.rain = data;
+        }).
+        error(function(data,status,headers,config) {
+            $scope.status = 'Error Getting Rain!'
         });
 
     $scope.setField = function(i) {

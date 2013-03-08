@@ -6,4 +6,4 @@
 .tab-content
   label 
   .tab-pane(ng-repeat="(myfield,fieldo) in schedule.fields",id="{{myfield}}",data-ng-class="{active: displayedField==$index}")
-    fieldchart(schedule="schedule",field="myfield",colors="colors",twilight="twilight",basedate="basedate",timestep="timestep",formatfield="format_field",chart-width="1200",chart-height="800")
+    fieldchart(schedule="schedule",field="myfield",colors="colors",twilight="twilight",basedate="basedate",timestep="timestep",formatfield="format_field",rain="rain",chart-width="1200",chart-height="800")

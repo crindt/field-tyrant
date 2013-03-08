@@ -542,7 +542,7 @@ _.each(_.keys(teams), function(tm) {
     })
 });
 
-emit("\n/* DON'T OVERBOOK FIELDS */");
+emit("\n\n/* DON'T OVERBOOK FIELDS */");
 _.each(_.keys(fields), function(f) {
     _.each(_.keys(fields[f].slots), function(d) {
         _.each(fields[f].slots[d], function(t) {
@@ -555,7 +555,7 @@ _.each(_.keys(fields), function(f) {
     });
 });
 
-emit("\n/* CREATE BVAR SUM */\n")
+emit("\n\n/* CREATE BVAR SUM */\n")
 emit("bvarsum = " + _.map(_.keys(bvars),function(v) { return bvars[v]+" "+v; }).join( " + " ) + ";")
 
 if ( invalid.length ) {
@@ -576,4 +576,5 @@ emit( "\nbin "+_.keys(bvars).join(", ")+";\n");
 emit( "\n\n/* INTEGER VARS */" );
 emit( "\nint "+_.keys(ivars).join(", ")+";\n");
 
+// close the stream to child.stdin, this will cause lp_solve to execute and solve
 child.stdin.end();

@@ -124,3 +124,12 @@ exports.twilight = function(req, res, next) {
 
     res.json(daysToSend)
 }
+
+exports.rain = function(req,res) {
+    res.json({
+        berkS: [ { day: 'mo'} ],
+        berkN: [],
+        adaW:  [],
+        adaE:  []
+    })
+}

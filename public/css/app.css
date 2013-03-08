@@ -130,3 +130,12 @@ line.twilight {
     stroke: black;
     opacity: 0.5;
 }
+
+.rain {
+    stroke: blue;
+    color: blue;
+    fill: white;
+    fill-opacity: 0.8;
+    text-shadow: 0.1em 0.1em 0.05em #000;
+    font-size: 200%;
+}

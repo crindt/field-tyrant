@@ -49,6 +49,45 @@ function slot_clashes(sl,data) {
 
 }
 
+function append_textbox(text,width,height,classes) {
+    return function(d,i) {
+        // per http://stackoverflow.com/questions/12975717/using-switch-with-foreignobject-in-svg
+
+        var sw = d3.select(this).append('svg:switch')
+            .classed("textswitch",true)
+
+        var tt = sw.append('svg:foreignObject')
+            .attr('width', width)
+            .attr('height', height)
+            .attr('requiredFeatures',"http://www.w3.org/TR/SVG11/feature#Extensibility")
+
+        tt.append('xhtml:body')
+            .style("font", "14px 'Helvetica Neue'")
+            .style("background-color", "transparent")
+            .style("margin", 0)
+            .style("padding", 0)
+            .style("text-align", "center")
+            .append('div')
+            .classed(classes,true)
+            .style("height",height+"px")
+            .style("min-height",height+"px")
+            .style("min-width",width+"px")
+            .style("line-height",height+"px")
+            .style("font-weight","bold")
+            .text(text)
+
+        // fallback for IE
+        sw.append('svg:text')
+            .attr('dx',width/2)
+            .attr('dy',height/2)
+            .style('text-anchor','middle')
+            .classed(classes,true)
+            .text(text)
+
+        return this
+    }
+}
+
 angular.module('myApp.directives', []).
   directive('appVersion', ['version', function(version) {
     return function(scope, elm, attrs) {
@@ -67,6 +106,7 @@ angular.module('myApp.directives', []).
                 basedate: '=',
                 timestep: '=',
                 formatfield: '=',
+                rain: '=',
                 chartWidth: '@chartWidth',
                 chartHeight: '@chartHeight',
                 chartPadding: '@chartPadding'
@@ -79,6 +119,9 @@ angular.module('myApp.directives', []).
                 var padding = parseInt(attrs.chartPadding) || 50;
                 var w = tw - padding*2;
                 var h = th - padding*2;
+                var days = ["mo","tu","we","th","fr","sa","su"]
+
+                var xScale, tScale // defined in watch statements
 
                 function convert_time(tma,add,base) {
                     var d = 1;
@@ -132,11 +175,73 @@ angular.module('myApp.directives', []).
 	            .attr('height', '6')
 	            .append('svg:image')
 	            .attr('xlink:href', '/images/stripe.png')
-	            //.attr('xlink:href', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAQElEQ…BLsJqErACrInQFGIqwKUBRhEsBXBE+BWBFQPwM5E18AABhRzBYLDdhJAAAAABJRU5ErkJggg==')
 	            .attr('x', 0)
 	            .attr('y', 0)
 	            .attr('width', 6)
 	            .attr('height', 6);
+                defs.append("svg:pattern")
+                    .attr('id','rainhatch')
+	            .attr('patternUnits', 'userSpaceOnUse')
+	            .attr('width', '6')
+	            .attr('height', '6')
+	            .append('svg:image')
+	            .attr('xlink:href', '/images/transparent-stripe-blue.png')
+	            .attr('x', 0)
+	            .attr('y', 0)
+	            .attr('width', 6)
+	            .attr('height', 6);
+
+
+                // keep track of the mouse position
+                var mousecoord = null
+
+                // lay down the "closed" rectangle
+                var closed = svg.append("svg:rect")
+                    .classed('closed',true)
+                    .attr('x', 0)
+                    .attr('y', 0)
+                    .attr('width', w)
+                    .attr('height', h)
+                    .style('fill', 'url(#diaghatch) #000')
+                    .on('mousemove', function(d) {
+                        scope.mousecoord = d3.mouse(this)
+                        // manual inversion of day based upon pointer
+                        var dayidx = Math.floor(scope.mousecoord[0]/xScale.rangeBand())
+                        var title = scope.formatfield(scope.field)+" is closed to everyone on "+days[dayidx]+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
+                        d3.select(this)
+                            .selectAll('title')
+                            .text(function(dd) {
+                                return title
+                            })
+                    })
+                    .append("svg:title")
+                    .text("NO MESSAGE")
+
+
+                // background axis features
+                var axesg_b = svg.append('svg:g')
+                    .classed('axes',true)
+
+                var availableg = svg.append("svg:g")
+                    .classed('available',true)
+                    .attr("clip-path","url(#clip)")
+                
+                // add the group for allocated field blocks
+                var allocationsg = svg.append("svg:g")
+                    .classed('allocations',true)
+                    .attr("clip-path","url(#clip)")
+
+                var raing = svg.append("svg:g")
+                    .classed('rainclosures',true)
+                    .attr("clip-path","url(#clip)")
+
+                var twighlightg = svg.append('svg:g')
+                    .classed('twilight',true)
+                    .attr("clip-path","url(#clip)")
+
+                // foregroup axis features
+                var axesg = svg.append('svg:g')
+                    .classed('axes',true)
 
 
                 // Watch the PSRS model for changes
@@ -149,7 +254,6 @@ angular.module('myApp.directives', []).
                         return angular.toJson(scope.schedule) 
                             + angular.toJson(scope.twilight)
                     },  function(newVal,oldVal) {
-
 
                         // set up the time scale
                         //var from = new Date(1970,0,1,8,0,0)
@@ -171,49 +275,13 @@ angular.module('myApp.directives', []).
                         var to = angular.copy(twilight).add(1).hour();
                         to.setMinutes(0)
 
-                        var days = ["mo","tu","we","th","fr","sa","su"]
-
-                        var tScale = d3.time.scale()
+                        tScale = d3.time.scale()
                             .domain([from,to])
                             .range([0,h])
 
-                        var xScale = d3.scale.ordinal()
+                        xScale = d3.scale.ordinal()
                             .domain(days)
                             .rangeBands([0,w])
-
-
-
-
-                        // keep track of the mouse position
-                        var mousecoord = null
-
-                        // lay down the "closed" rectangle
-                        svg.selectAll("rect.closed")
-                            .data([1])
-                            .enter()
-                            .append("svg:rect")
-                            .classed('closed',true)
-                            .attr('x', 0)
-                            .attr('y', 0)
-                            .attr('width', w)
-                            .attr('height', h)
-                            .style('fill', 'url(#diaghatch) #000')
-                            .on('mousemove', function(d) {
-                                scope.mousecoord = d3.mouse(this)
-                                // manual inversion of day based upon pointer
-                                var dayidx = Math.floor(scope.mousecoord[0]/xScale.rangeBand())
-                                var title = scope.formatfield(scope.field)+" is closed to everyone on "+days[dayidx]+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
-                                d3.select(this)
-                                    .selectAll('title')
-                                    .text(function(dd) {
-                                        return title
-                                    })
-                            })
-                            .append("svg:title")
-                            .text("NO MESSAGE")
-                        
-
-
 
                         // do the axes
                         var tAxis = d3.svg.axis()
@@ -230,10 +298,9 @@ angular.module('myApp.directives', []).
                         var ll = []
                         _.each( scope.schedule.fields[scope.field].slots, function(sl,d) {
                             _.each(split_time_array(sl), function( ta ) { ll.push({day: d, times: ta}) } )
-                                })
+                                });
 
-                            var fga = svg.append("svg:g")
-                            .attr("clip-path","url(#clip)")
+                        availableg
                             .selectAll("rect.available")
                             .data(ll)
                             .enter()
@@ -272,15 +339,16 @@ angular.module('myApp.directives', []).
                             .text("This time is allocated to Cardiff Soccer")
 
                         _.each(scope.schedule.fields, function(fo,field) {
-                        })
+                        });
                             
 
-                            svg.append("g")
+                        axesg.append("g")
                             .attr("class","x axis")
                             .attr("transform", "translate(0,0)")
                             .call(xAxis);
 
-                        svg.selectAll("line.dayticks")
+                        axesg_b // goes in back
+                            .selectAll("line.dayticks")
                             .data(["mo","tu","we","th","fr","sa","su"])
                             .enter()
                             .append("svg:line")
@@ -290,7 +358,8 @@ angular.module('myApp.directives', []).
                             .attr('x2',function(d,i) { return (i+1)*xScale.rangeBand(); })
                             .attr('y2',function(d) { return tScale(to); })
                         
-                        svg.selectAll("line.timeticks")
+                        axesg_b // goes in back
+                            .selectAll("line.timeticks")
                             .data(tScale.ticks(d3.time.minutes,scope.timestep).slice(1))
                             .enter()
                             .append("svg:line")
@@ -302,7 +371,8 @@ angular.module('myApp.directives', []).
                         
                         
 
-                        svg.append("g")
+                        axesg
+                            .append("g")
                             .attr("class","y axis")
                             .call(tAxis);
 
@@ -354,7 +424,8 @@ angular.module('myApp.directives', []).
                         console.log("FIELD IS ",scope.field)
                         console.log(data)
 
-                        var teams = svg.selectAll("g.team")
+                        var teams = allocationsg
+                            .selectAll("g.team")
                             .data(data,function(d) { return d.team; })
                         ;
 
@@ -413,6 +484,11 @@ angular.module('myApp.directives', []).
                                         var tgg = g.append('svg:g')
                                             .attr("transform", "translate("+[xx,tScale(myto)].join(",")+") rotate(-90)")
 
+                                        if ( true ) {
+                                            var tn = format_team(team.team,sloth);
+                                            if ( tn.match(/^[GB]/) ) tn = tn.split(" ")[0]
+                                            tgg.each(append_textbox(tn,sloth,slotw,'teamname'))
+                                        } else {
                                         // per http://stackoverflow.com/questions/12975717/using-switch-with-foreignobject-in-svg
                                         var sw = tgg.append('svg:switch')
 
@@ -445,7 +521,7 @@ angular.module('myApp.directives', []).
                                             .attr('dy',slotw/2)
                                             .style('text-anchor','middle')
                                             .text(tn)
-
+                                        }
 
                                         g.append('svg:title')
                                             .text(function(slot) { return format_team(team.team) + " : "+slot.from.toLocaleTimeString().splice(-6,3,"") + "—" + myto.toLocaleTimeString().splice(-6,3,"") })
@@ -454,8 +530,7 @@ angular.module('myApp.directives', []).
 
                         // draw twilight times
                         var monday = new Date(scope.twilight[0].civil_twilight)
-                        var gg = svg.append('svg:g')
-                            .classed('twilight',true)
+                        var gg = twighlightg
                             .selectAll('g.dtwilight')
                             .data(_.map(scope.twilight, function(t) { 
                                 var dd = new Date(t.civil_twilight)
@@ -483,6 +558,55 @@ angular.module('myApp.directives', []).
                             .attr('y', function( t,i ) { return tScale(t) })
                             .attr('dy', '16px')
                             .text("Twilight")
+                    })
+
+                scope.$watch(
+                    function() {
+                        return angular.toJson(scope.rain)
+
+                    }, function( newVal, oldval ) {
+
+                        if ( !scope.rain || !scope.rain[scope.field] ) return
+
+                        var raingg = raing
+                            .selectAll("g.raing")
+                            .data(scope.rain[scope.field])
+
+                        raingg
+                            .enter()
+                            .append("svg:g")
+                            .classed("raing",true)
+
+                        raingg
+                            .append("svg:title")
+                            .text(scope.field+" is closed due to rain")
+                        
+                        raingg
+                            .append("svg:rect")
+                            .classed("rain",true)
+                            .attr('x',function(d) { return xScale(d.day) })
+                            .attr('y',function(d) { return 0 })
+                            .attr('width', xScale.rangeBand)
+                            .attr('height', h)
+                            .style('fill', 'url(#rainhatch) #00f')
+
+                        var tgg = raingg.append('svg:g')
+                            .attr("transform", 
+                                  function(d) {
+                                      return "translate("+[xScale(d.day),h].join(",")+") rotate(-90)"})
+
+                        tgg.selectAll('g.textbox')
+                        .data([1])
+                        .enter()
+                            .append('svg:g').classed('textbox',true)
+                            .each(append_textbox("CLOSED DUE TO RAIN",
+                                                 h,xScale.rangeBand(),
+                                                 'rain'),
+                             h,xScale.rangeBand())
+
+                        raingg
+                            .exit()
+                            .remove()
                     })
             }
         }

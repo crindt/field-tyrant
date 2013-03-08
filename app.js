@@ -60,6 +60,8 @@ app.get('/api/solution', api.solution);
 app.get('/api/twilight/:month/:day', api.twilight);
 app.get('/api/twilight/:month/:day/:month2/:day2', api.twilight);
 
+app.get('/api/rain', api.rain)
+
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
 
