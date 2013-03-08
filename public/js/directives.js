@@ -5,6 +5,18 @@ String.prototype.splice = function( idx, rem, s ) {
     return (this.slice(0,idx) + s + this.slice(idx + Math.abs(rem)));
 };
 
+var daymap = {
+    mo: "Monday",
+    tu: "Tuesday",
+    we: "Wednesday",
+    th: "Thursday",
+    fr: "Friday",
+    sa: "Saturday",
+    su: "Sunday"
+}
+function format_day(d) {
+    return daymap[d] || d
+}
 
 function format_team(tm,px) {
     var fullname = tm.split("_").join(" ").split("X").join("/");
@@ -207,7 +219,7 @@ angular.module('myApp.directives', []).
                         scope.mousecoord = d3.mouse(this)
                         // manual inversion of day based upon pointer
                         var dayidx = Math.floor(scope.mousecoord[0]/xScale.rangeBand())
-                        var title = scope.formatfield(scope.field)+" is closed to everyone on "+days[dayidx]+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
+                        var title = scope.formatfield(scope.field)+" is closed to everyone on "+format_day(days[dayidx])+" @ "+tScale.invert(scope.mousecoord[1]).toString("h:mm tt")
                         d3.select(this)
                             .selectAll('title')
                             .text(function(dd) {
@@ -579,7 +591,9 @@ angular.module('myApp.directives', []).
 
                         raingg
                             .append("svg:title")
-                            .text(scope.field+" is closed due to rain")
+                            .text(function(d) {
+                                return scope.formatfield(scope.field)+" is closed due to rain on "+format_day(d.day)
+                            })
                         
                         raingg
                             .append("svg:rect")
