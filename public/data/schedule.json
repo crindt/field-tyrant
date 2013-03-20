@@ -77,12 +77,10 @@
                     "GU9_RezaXFisher"
                 ],
                 "1630": [
-                    "GU9_RezaXFisher",
-                    "GU13_ChilesXFisher"
+                    "GU9_RezaXFisher"
                 ],
                 "1645": [
-                    "BU8_PerryXReza",
-                    "GU13_ChilesXFisher"
+                    "GU9_RezaXFisher"
                 ],
                 "1700": [
                     "BU8_PerryXReza",
@@ -99,14 +97,24 @@
                 "1745": [
                     "BU8_PerryXReza",
                     "GU13_ChilesXFisher"
+                ],
+                "1800": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1815": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
                 ]
             },
             "we": {
                 "1530": [
-                    "GU9_RezaXFisher"
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
                 ],
                 "1545": [
-                    "GU9_RezaXFisher"
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
                 ],
                 "1600": [
                     "GU9_RezaXFisher",
@@ -118,22 +126,18 @@
                 ],
                 "1630": [
                     "GU9_RezaXFisher",
-                    "BU9_Serrano",
-                    "GU13_ChilesXFisher"
+                    "BU9_Serrano"
                 ],
                 "1645": [
-                    "BU8_PerryXReza",
-                    "BU9_Serrano",
-                    "GU13_ChilesXFisher"
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
                 ],
                 "1700": [
                     "BU8_PerryXReza",
-                    "BU9_Serrano",
                     "GU13_ChilesXFisher"
                 ],
                 "1715": [
                     "BU8_PerryXReza",
-                    "BU9_Serrano",
                     "GU13_ChilesXFisher"
                 ],
                 "1730": [
@@ -141,6 +145,14 @@
                     "GU13_ChilesXFisher"
                 ],
                 "1745": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1800": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1815": [
                     "BU8_PerryXReza",
                     "GU13_ChilesXFisher"
                 ]
@@ -1838,18 +1850,20 @@
     "teamsched": {
         "BU8_PerryXReza": {
             "mo": {
-                "1645": "berkS",
                 "1700": "berkS",
                 "1715": "berkS",
                 "1730": "berkS",
-                "1745": "berkS"
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
             },
             "we": {
-                "1645": "berkS",
                 "1700": "berkS",
                 "1715": "berkS",
                 "1730": "berkS",
-                "1745": "berkS"
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
             }
         },
         "GU9_RezaXFisher": {
@@ -1858,24 +1872,26 @@
                 "1545": "berkS",
                 "1600": "berkS",
                 "1615": "berkS",
-                "1630": "berkS"
+                "1630": "berkS",
+                "1645": "berkS"
             },
             "we": {
                 "1530": "berkS",
                 "1545": "berkS",
                 "1600": "berkS",
                 "1615": "berkS",
-                "1630": "berkS"
+                "1630": "berkS",
+                "1645": "berkS"
             }
         },
         "BU9_Serrano": {
             "we": {
+                "1530": "berkS",
+                "1545": "berkS",
                 "1600": "berkS",
                 "1615": "berkS",
                 "1630": "berkS",
-                "1645": "berkS",
-                "1700": "berkS",
-                "1715": "berkS"
+                "1645": "berkS"
             }
         },
         "BU10_Suarez": {
@@ -1954,20 +1970,20 @@
         },
         "GU13_ChilesXFisher": {
             "mo": {
-                "1630": "berkS",
-                "1645": "berkS",
                 "1700": "berkS",
                 "1715": "berkS",
                 "1730": "berkS",
-                "1745": "berkS"
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
             },
             "we": {
-                "1630": "berkS",
-                "1645": "berkS",
                 "1700": "berkS",
                 "1715": "berkS",
                 "1730": "berkS",
-                "1745": "berkS"
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
             }
         },
         "BU14_Suarez": {
