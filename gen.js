@@ -1,7 +1,7 @@
 var prog = require('commander');
 var _ = require('underscore');
 var fs = require('fs');
-var exec = require('child_process').exec,
+var spawn = require('child_process').spawn,
     child;
 var colors = require('colors')
         ,winston = require("winston")
@@ -184,7 +184,25 @@ _.each(conf.fields,function(fo,f) {
 
 // spawn lp_solve.  It will listen on child.stdin until we write the program to
 // it and close it below
-child = exec('lp_solve',function(err,stdout,stderr) {
+child = spawn('lp_solve')
+
+var allerrs = []
+child.stderr.on('data',function(data) {
+    var errs = data.split("\n");
+    if ( errs ) {
+        _.each(errs, function(line) {
+            allerrs.push(line)
+        });
+    }
+})
+
+var data = ""
+
+child.stdout.on('data',function(buf) {
+    data += buf.toString()
+})
+
+function parseResults(data) {
     var cnt = 0;
     var times = {}
     var wetimes = {}
@@ -192,20 +210,9 @@ child = exec('lp_solve',function(err,stdout,stderr) {
     var teams = {}
     var unallocated = {}
     var choices = {}
-    if ( err ) {
-        logger.error(err.toString().split("\n"))
-        throw new Error("Terminating");
-    }
-    var errs = stderr.split("\n");
-    if ( errs ) {
-        _.each(errs, function(line) {
-            logger.debug("ERRORS".red)
-            logger.debug(line.red)
-        });
-    }
 
     // parse the lines of output from lp_solve to get the solution
-    _.each(stdout.split(/\n/), function(line) {
+    _.each(data.split(/\n/), function(line) {
         if ( prog.echo ) console.log(line)
         var m
         if ( m = line.match(/^\s*$/)) {}
@@ -403,18 +410,27 @@ child = exec('lp_solve',function(err,stdout,stderr) {
     } else {
         logger.warning( "SOLVED, but no output format specified" );
     }
-})
+
+}
 
 // Check the child's exit code for errors
-child.on("exit",function(code) {
-    if ( code ) logger.error("lp_solve process exited with ERROR: "+code)
+child.on("close",function(code) {
+
+    parseResults(data)
+
+    setTimeout(function() {
+        if ( code ) logger.error("lp_solve process exited with ERROR: "+code)
+        if ( allerrs.length ) logger.debug("ERRORS".red)
+        _.each(allerrs,function(line) {
+            logger.debug(line.red)
+        })},2000)
 })
 
 // Handle any process exceptions (e.g., a broken pipe if the child dies)
 process.on('uncaughtException', function(err) {
     logger.error(util.inspect(err));
     logger.error(err.stack);
-    setTimeout(process.exit, 1000)   // let messages clear before exiting
+    setTimeout(process.exit, 3000)   // let messages clear before exiting
 });
 
 
@@ -539,13 +555,17 @@ _.each(_.keys(teams), function(tm) {
     })
 });
 
+function tdem(tm) {
+    return teams[tm].dem || 1
+}
+
 emit("\n\n/* DON'T OVERBOOK FIELDS */");
 _.each(_.keys(fields), function(f) {
     _.each(_.keys(fields[f].slots), function(d) {
         _.each(fields[f].slots[d], function(t) {
             emit( "\n" )
             emit( ivar(f,d,t)+" >= " )
-            emit( _.map(_.keys(teams), function(tm) { return bvar(tm,f,d,t) } ).join(" + ") );
+            emit( _.map(_.keys(teams), function(tm) { return tdem(tm)+" "+bvar(tm,f,d,t) } ).join(" + ") );
             emit( ";\n" )
             emit( ivar(f,d,t)+" <= "+(field_is_avail( f, d, t )?fields[f].cap+0.5:0)+";\n" )
         });
