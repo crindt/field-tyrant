@@ -18,6 +18,8 @@ prog
     .option('-t, --timestep <int>',"Size of time block size to us [30 minutes]",30)
     .option('-e, --echo', "Echo the program and results to stdout [false]",false)
     .option('-b, --bvarweight <float>', "Weight to apply to the sum of binary variables in the objective [0.00001]", 0.00001)
+    .option('-x, --force <string>', "Comma separated list of variables to force to be 1", null)
+    .option('-a, --always-feasible', "Set up dummy options to always admit feasibility", true)
     .parse(process.argv)
 
 var outstream = process.stdout
@@ -152,7 +154,7 @@ function format_field(f) {
 
 // add dummy request
 _.each(conf.teams, function(tmo,tm) {
-    if ( tmo.req.length == 0 || _.keys(tmo.req[tmo.req.length-1]).length !== 0 ) {
+    if ( prog.alwaysFeasible && ( tmo.req.length == 0 || _.keys(tmo.req[tmo.req.length-1]).length !== 0 )) {
         // last request for this team is not {}
         // push a dummy on there
         tmo.req.push({})
@@ -465,7 +467,6 @@ function emit(str) {
     child.stdin.write(str);
 }
 
-
 // emit objective
 emit("min: 0.00001 bvarsum\n");
 _.each(teams,function(tmo,tm) {
@@ -474,9 +475,13 @@ _.each(teams,function(tmo,tm) {
 
         // the last request ( the dummy ) will have a high cost
         var mult = 1;
-        if ( pri === tmo.req.length ) mult = _.keys(teams).length*100;
+        var tpri = pri
+        if ( tpri === tmo.req.length ) mult = _.keys(teams).length*100;
+        else if ( tpri > 1 ) 
+            tpri = 1+tpri/100
 
-        emit(" + "+(mult*pri)+" "+bvar(tm,"o"+pri))
+        //emit(" + "+(mult*tpri/pri)+" "+bvar(tm,"o"+pri))
+        emit(" + "+(mult*tpri)+" "+bvar(tm,"o"+pri))
         pri++
     });
     emit("\n")
@@ -484,15 +489,7 @@ _.each(teams,function(tmo,tm) {
 emit(";\n")
 
 
-// There by constraints below... 
-
-emit("/* Must pick one option for each team */\n");
-_.each(_.keys(teams),function(tm) {
-    var pri = 0
-    emit(_.map(_.keys(teams[tm].req),function(o) { 
-        pri++; return bvar(tm, "o"+pri)
-    }).join(" + ")+" = 1;\n" );
-});
+// There be constraints below... 
 
 function field_is_avail(f,d,t) {
     return _.find(fields[f].slots[d], function(tt) { 
@@ -533,7 +530,7 @@ _.each(_.keys(teams), function(tm) {
                                                       
             });
             if ( tot ) {
-                emit(tot+" "+bvar(tm,"o"+pri,f)+" = "+_.flatten(slots).join(" + ")+";\n");
+                emit(tot+" "+bvar(tm,"o"+pri,f)+" < "+_.flatten(slots).join(" + ")+";\n");
             }
 
         });
@@ -547,10 +544,10 @@ _.each(_.keys(fields), function(f) {
     _.each(_.keys(fields[f].slots), function(d) {
         _.each(fields[f].slots[d], function(t) {
             emit( "\n" )
-            emit( ivar(f,d,t)+" <= "+(field_is_avail( f, d, t )?fields[f].cap+0.5:0)+";\n" )
-            emit( ivar(f,d,t)+" = " )
+            emit( ivar(f,d,t)+" >= " )
             emit( _.map(_.keys(teams), function(tm) { return bvar(tm,f,d,t) } ).join(" + ") );
             emit( ";\n" )
+            emit( ivar(f,d,t)+" <= "+(field_is_avail( f, d, t )?fields[f].cap+0.5:0)+";\n" )
         });
     });
 });
@@ -565,6 +562,23 @@ if ( invalid.length ) {
 if ( unreq.length ) {
     emit( "\n\n/* ZERO THE UNREQUESTED TIMES */\n" );
     emit( _.flatten(unreq).join(" + " )+" = 0;");
+}
+
+
+
+// these are at the end because they're ranges
+emit("\n\n/* Must pick one option for each team */\n");
+_.each(_.keys(teams),function(tm) {
+    var pri = 0
+    emit('0.5 < '+_.map(_.keys(teams[tm].req),function(o) { 
+        pri++; return bvar(tm, "o"+pri)
+    }).join(" + ")+" < 1.5;\n" );
+});
+
+if ( prog.force ) {
+    var vv = prog.force.split(",");
+    emit( "\n\n/* VARIABLES FORCED */\n" );
+    emit( vv.join(" + ") + " >= "+(vv.length-0.5)+";\n");
 }
 
 

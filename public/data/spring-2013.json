@@ -1,54 +1,3662 @@
 {
-    "teams": {
-        "bu12_martin": [
-            { "tu": [1500, 1530], "th": [1500, 1530] },
-            { "we": [1600, 1630], "fr": [1600, 1630] },
-            {}
-        ],
-        "gu13_tbd": [
-            { "we": [1500, 1530], "fr": [1500, 1530] },
-            { "tu": [1700, 1730], "th": [1700, 1730] },
-            {}
-        ],
-        "bu14_tbd": [
-            { "we": [1600, 1630], "fr": [1600, 1630] },
-            { "we": [1700, 1730], "fr": [1700, 1730] },
-            {}
-        ]
+    "times": [
+        800,
+        815,
+        830,
+        845,
+        900,
+        915,
+        930,
+        945,
+        1000,
+        1015,
+        1030,
+        1045,
+        1100,
+        1115,
+        1130,
+        1145,
+        1200,
+        1215,
+        1230,
+        1245,
+        1300,
+        1315,
+        1330,
+        1345,
+        1400,
+        1415,
+        1430,
+        1445,
+        1500,
+        1515,
+        1530,
+        1545,
+        1600,
+        1615,
+        1630,
+        1645,
+        1700,
+        1715,
+        1730,
+        1745,
+        1800,
+        1815,
+        1830,
+        1845,
+        1900,
+        1915,
+        1930,
+        1945,
+        2000,
+        2015,
+        2030
+    ],
+    "days": [
+        "mo",
+        "tu",
+        "we",
+        "th",
+        "fr",
+        "sa",
+        "su"
+    ],
+    "sched": {
+        "berkS": {
+            "mo": {
+                "1530": [
+                    "GU9_RezaXFisher"
+                ],
+                "1545": [
+                    "GU9_RezaXFisher"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher"
+                ],
+                "1615": [
+                    "GU9_RezaXFisher"
+                ],
+                "1630": [
+                    "GU9_RezaXFisher"
+                ],
+                "1645": [
+                    "GU9_RezaXFisher"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1715": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1745": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1800": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1815": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ]
+            },
+            "we": {
+                "1530": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1545": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1615": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1630": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1645": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1715": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1745": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1800": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ],
+                "1815": [
+                    "BU8_PerryXReza",
+                    "GU13_ChilesXFisher"
+                ]
+            },
+            "fr": {
+                "1600": [
+                    "BU10_Suarez"
+                ],
+                "1615": [
+                    "BU10_Suarez"
+                ],
+                "1630": [
+                    "BU10_Suarez"
+                ],
+                "1645": [
+                    "BU10_Suarez"
+                ],
+                "1700": [
+                    "BU10_Suarez"
+                ],
+                "1715": [
+                    "BU10_Suarez"
+                ]
+            },
+            "tu": {
+                "1630": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1645": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1715": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1745": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ]
+            },
+            "th": {
+                "1630": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1645": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1715": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1745": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ]
+            },
+            "su": {
+                "1400": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1415": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1430": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1445": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1500": [
+                    "BU14_Suarez"
+                ],
+                "1515": [
+                    "BU14_Suarez"
+                ],
+                "1530": [
+                    "BU14_Suarez"
+                ],
+                "1545": [
+                    "BU14_Suarez"
+                ],
+                "1600": [
+                    "BU14_Suarez"
+                ],
+                "1615": [
+                    "BU14_Suarez"
+                ],
+                "1630": [
+                    "BU12_SuarezXChiles"
+                ],
+                "1645": [
+                    "BU12_SuarezXChiles"
+                ],
+                "1700": [
+                    "BU12_SuarezXChiles"
+                ],
+                "1715": [
+                    "BU12_SuarezXChiles"
+                ],
+                "1730": [
+                    "BU12_SuarezXChiles"
+                ],
+                "1745": [
+                    "BU12_SuarezXChiles"
+                ]
+            },
+            "sa": {
+                "1400": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1415": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1430": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1445": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1500": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1515": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1530": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1545": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1600": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1615": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1630": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1645": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1700": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1715": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1730": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1745": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1800": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1815": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1830": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1845": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1900": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1915": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1930": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1945": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2000": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2015": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2030": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2045": [
+                    "Encinitas_Soccer_League"
+                ]
+            }
+        },
+        "adaE": {
+            "tu": {
+                "1630": [
+                    "GU11_Cardinale"
+                ],
+                "1645": [
+                    "GU11_Cardinale"
+                ],
+                "1700": [
+                    "GU11_Cardinale"
+                ],
+                "1715": [
+                    "GU11_Cardinale"
+                ],
+                "1730": [
+                    "GU11_Cardinale"
+                ],
+                "1745": [
+                    "GU11_Cardinale"
+                ]
+            },
+            "th": {
+                "1630": [
+                    "GU11_Cardinale"
+                ],
+                "1645": [
+                    "GU11_Cardinale"
+                ],
+                "1700": [
+                    "GU11_Cardinale"
+                ],
+                "1715": [
+                    "GU11_Cardinale"
+                ],
+                "1730": [
+                    "GU11_Cardinale"
+                ],
+                "1745": [
+                    "GU11_Cardinale"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1515": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1530": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1545": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1600": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1615": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1630": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1645": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1700": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1715": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1730": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1745": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1800": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1815": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1830": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1845": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1915": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1945": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2015": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2045": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "sa": {
+                "900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "915": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "945": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1015": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1045": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1100": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1115": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1130": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1145": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1200": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1215": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1230": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1245": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1300": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1315": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1330": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1345": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
+                ]
+            }
+        },
+        "adaW": {
+            "we": {
+                "1500": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1515": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1530": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1545": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1600": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1615": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1630": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1645": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1700": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1715": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1730": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1745": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1800": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1815": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1830": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1845": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1915": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1945": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2015": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "2045": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "sa": {
+                "900": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "915": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "930": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "945": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1000": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1015": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1030": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1045": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1100": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1115": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1130": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1145": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1200": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1215": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1230": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1245": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1300": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1315": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1330": [
+                    "Coastal_Dragons_Rugby"
+                ],
+                "1345": [
+                    "Coastal_Dragons_Rugby"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1515": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1530": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1545": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1600": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1615": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1630": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1645": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1700": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1715": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1730": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1745": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1800": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1815": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1830": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1845": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1900": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1915": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1930": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1945": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2000": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2015": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2030": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2045": [
+                    "Encinitas_Soccer_League"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1515": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1530": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1545": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1600": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1615": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1630": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1645": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1700": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1715": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1730": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1745": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1800": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1815": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1830": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1845": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1900": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1915": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1930": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1945": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2000": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2015": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2030": [
+                    "Encinitas_Soccer_League"
+                ],
+                "2045": [
+                    "Encinitas_Soccer_League"
+                ]
+            }
+        },
+        "berkN": {
+            "tu": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1515": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1530": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1545": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1600": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1615": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1630": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1645": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1700": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1715": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1730": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1745": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1800": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1815": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1830": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1845": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1900": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1915": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1930": [
+                    "Encinitas_Lacrosse"
+                ],
+                "1945": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2000": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2015": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2030": [
+                    "Encinitas_Lacrosse"
+                ],
+                "2045": [
+                    "Encinitas_Lacrosse"
+                ]
+            },
+            "su": {
+                "800": [
+                    "Encinitas_Soccer_League"
+                ],
+                "815": [
+                    "Encinitas_Soccer_League"
+                ],
+                "830": [
+                    "Encinitas_Soccer_League"
+                ],
+                "845": [
+                    "Encinitas_Soccer_League"
+                ],
+                "900": [
+                    "Encinitas_Soccer_League"
+                ],
+                "915": [
+                    "Encinitas_Soccer_League"
+                ],
+                "930": [
+                    "Encinitas_Soccer_League"
+                ],
+                "945": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1000": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1015": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1030": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1045": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1100": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1115": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1130": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1145": [
+                    "Encinitas_Soccer_League"
+                ],
+                "1200": [
+                    "Encinitas_Little_League"
+                ],
+                "1215": [
+                    "Encinitas_Little_League"
+                ],
+                "1230": [
+                    "Encinitas_Little_League"
+                ],
+                "1245": [
+                    "Encinitas_Little_League"
+                ],
+                "1300": [
+                    "Encinitas_Little_League"
+                ],
+                "1315": [
+                    "Encinitas_Little_League"
+                ],
+                "1330": [
+                    "Encinitas_Little_League"
+                ],
+                "1345": [
+                    "Encinitas_Little_League"
+                ],
+                "1400": [
+                    "Encinitas_Little_League"
+                ],
+                "1415": [
+                    "Encinitas_Little_League"
+                ],
+                "1430": [
+                    "Encinitas_Little_League"
+                ],
+                "1445": [
+                    "Encinitas_Little_League"
+                ],
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
+                    "Encinitas_Little_League"
+                ]
+            },
+            "sa": {
+                "800": [
+                    "Encinitas_Little_League"
+                ],
+                "815": [
+                    "Encinitas_Little_League"
+                ],
+                "830": [
+                    "Encinitas_Little_League"
+                ],
+                "845": [
+                    "Encinitas_Little_League"
+                ],
+                "900": [
+                    "Encinitas_Little_League"
+                ],
+                "915": [
+                    "Encinitas_Little_League"
+                ],
+                "930": [
+                    "Encinitas_Little_League"
+                ],
+                "945": [
+                    "Encinitas_Little_League"
+                ],
+                "1000": [
+                    "Encinitas_Little_League"
+                ],
+                "1015": [
+                    "Encinitas_Little_League"
+                ],
+                "1030": [
+                    "Encinitas_Little_League"
+                ],
+                "1045": [
+                    "Encinitas_Little_League"
+                ],
+                "1100": [
+                    "Encinitas_Little_League"
+                ],
+                "1115": [
+                    "Encinitas_Little_League"
+                ],
+                "1130": [
+                    "Encinitas_Little_League"
+                ],
+                "1145": [
+                    "Encinitas_Little_League"
+                ],
+                "1200": [
+                    "Encinitas_Little_League"
+                ],
+                "1215": [
+                    "Encinitas_Little_League"
+                ],
+                "1230": [
+                    "Encinitas_Little_League"
+                ],
+                "1245": [
+                    "Encinitas_Little_League"
+                ],
+                "1300": [
+                    "Encinitas_Little_League"
+                ],
+                "1315": [
+                    "Encinitas_Little_League"
+                ],
+                "1330": [
+                    "Encinitas_Little_League"
+                ],
+                "1345": [
+                    "Encinitas_Little_League"
+                ],
+                "1400": [
+                    "Encinitas_Little_League"
+                ],
+                "1415": [
+                    "Encinitas_Little_League"
+                ],
+                "1430": [
+                    "Encinitas_Little_League"
+                ],
+                "1445": [
+                    "Encinitas_Little_League"
+                ],
+                "1500": [
+                    "Encinitas_Little_League"
+                ],
+                "1515": [
+                    "Encinitas_Little_League"
+                ],
+                "1530": [
+                    "Encinitas_Little_League"
+                ],
+                "1545": [
+                    "Encinitas_Little_League"
+                ],
+                "1600": [
+                    "Encinitas_Little_League"
+                ],
+                "1615": [
+                    "Encinitas_Little_League"
+                ],
+                "1630": [
+                    "Encinitas_Little_League"
+                ],
+                "1645": [
+                    "Encinitas_Little_League"
+                ],
+                "1700": [
+                    "Encinitas_Little_League"
+                ],
+                "1715": [
+                    "Encinitas_Little_League"
+                ],
+                "1730": [
+                    "Encinitas_Little_League"
+                ],
+                "1745": [
+                    "Encinitas_Little_League"
+                ],
+                "1800": [
+                    "Encinitas_Little_League"
+                ],
+                "1815": [
+                    "Encinitas_Little_League"
+                ],
+                "1830": [
+                    "Encinitas_Little_League"
+                ],
+                "1845": [
+                    "Encinitas_Little_League"
+                ],
+                "1900": [
+                    "Encinitas_Little_League"
+                ],
+                "1915": [
+                    "Encinitas_Little_League"
+                ],
+                "1930": [
+                    "Encinitas_Little_League"
+                ],
+                "1945": [
+                    "Encinitas_Little_League"
+                ],
+                "2000": [
+                    "Encinitas_Little_League"
+                ],
+                "2015": [
+                    "Encinitas_Little_League"
+                ],
+                "2030": [
+                    "Encinitas_Little_League"
+                ],
+                "2045": [
+                    "Encinitas_Little_League"
+                ]
+            }
+        }
+    },
+    "teams": [
+        {
+            "name": "BU8_PerryXReza"
+        },
+        {
+            "name": "GU9_RezaXFisher"
+        },
+        {
+            "name": "BU9_Serrano"
+        },
+        {
+            "name": "BU10_Suarez"
+        },
+        {
+            "name": "BU11_Anderson"
+        },
+        {
+            "name": "GU11_Cardinale"
+        },
+        {
+            "name": "BU12_Martin"
+        },
+        {
+            "name": "BU12_SuarezXChiles"
+        },
+        {
+            "name": "GU13_ChilesXFisher"
+        },
+        {
+            "name": "BU14_Suarez"
+        }
+    ],
+    "teamsched": {
+        "BU8_PerryXReza": {
+            "mo": {
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
+            },
+            "we": {
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
+            }
+        },
+        "GU9_RezaXFisher": {
+            "mo": {
+                "1530": "berkS",
+                "1545": "berkS",
+                "1600": "berkS",
+                "1615": "berkS",
+                "1630": "berkS",
+                "1645": "berkS"
+            },
+            "we": {
+                "1530": "berkS",
+                "1545": "berkS",
+                "1600": "berkS",
+                "1615": "berkS",
+                "1630": "berkS",
+                "1645": "berkS"
+            }
+        },
+        "BU9_Serrano": {
+            "we": {
+                "1530": "berkS",
+                "1545": "berkS",
+                "1600": "berkS",
+                "1615": "berkS",
+                "1630": "berkS",
+                "1645": "berkS"
+            }
+        },
+        "BU10_Suarez": {
+            "fr": {
+                "1600": "berkS",
+                "1615": "berkS",
+                "1630": "berkS",
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS"
+            }
+        },
+        "BU11_Anderson": {
+            "tu": {
+                "1630": "berkS",
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
+            },
+            "th": {
+                "1630": "berkS",
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
+            }
+        },
+        "GU11_Cardinale": {
+            "tu": {
+                "1630": "adaE",
+                "1645": "adaE",
+                "1700": "adaE",
+                "1715": "adaE",
+                "1730": "adaE",
+                "1745": "adaE"
+            },
+            "th": {
+                "1630": "adaE",
+                "1645": "adaE",
+                "1700": "adaE",
+                "1715": "adaE",
+                "1730": "adaE",
+                "1745": "adaE"
+            }
+        },
+        "BU12_Martin": {
+            "tu": {
+                "1630": "berkS",
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
+            },
+            "th": {
+                "1630": "berkS",
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
+            }
+        },
+        "BU12_SuarezXChiles": {
+            "su": {
+                "1630": "berkS",
+                "1645": "berkS",
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS"
+            }
+        },
+        "GU13_ChilesXFisher": {
+            "mo": {
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
+            },
+            "we": {
+                "1700": "berkS",
+                "1715": "berkS",
+                "1730": "berkS",
+                "1745": "berkS",
+                "1800": "berkS",
+                "1815": "berkS"
+            }
+        },
+        "BU14_Suarez": {
+            "su": {
+                "1500": "berkS",
+                "1515": "berkS",
+                "1530": "berkS",
+                "1545": "berkS",
+                "1600": "berkS",
+                "1615": "berkS"
+            }
+        },
+        "Coastal_Dragons_Rugby": {
+            "we": {
+                "1500": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1515": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1545": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1600": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1615": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1645": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1700": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1715": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1745": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1800": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1815": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1830": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1845": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1915": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1945": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2015": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2045": [
+                    "adaE",
+                    "adaW"
+                ]
+            },
+            "sa": {
+                "900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "915": [
+                    "adaE",
+                    "adaW"
+                ],
+                "930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "945": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1015": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1045": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1100": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1115": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1130": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1145": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1200": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1215": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1230": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1245": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1300": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1315": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1330": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1345": [
+                    "adaE",
+                    "adaW"
+                ]
+            }
+        },
+        "Encinitas_Lacrosse": {
+            "mo": {
+                "1500": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1515": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1545": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1600": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1615": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1645": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1700": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1715": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1745": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1800": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1815": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1830": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1845": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1915": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1945": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2015": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2045": [
+                    "adaE",
+                    "adaW"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1515": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1530": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1545": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1600": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1615": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1630": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1645": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1700": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1715": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1730": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1745": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1800": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1815": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1830": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1845": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1900": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1915": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1930": [
+                    "adaE",
+                    "adaW"
+                ],
+                "1945": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2000": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2015": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2030": [
+                    "adaE",
+                    "adaW"
+                ],
+                "2045": [
+                    "adaE",
+                    "adaW"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "berkN"
+                ],
+                "1515": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1545": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1615": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1645": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1715": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1745": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1815": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ],
+                "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "berkN"
+                ],
+                "1515": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1545": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1615": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1645": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1715": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1745": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1815": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ],
+                "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
+                ]
+            }
+        },
+        "Encinitas_Soccer_League": {
+            "tu": {
+                "1500": [
+                    "adaW"
+                ],
+                "1515": [
+                    "adaW"
+                ],
+                "1530": [
+                    "adaW"
+                ],
+                "1545": [
+                    "adaW"
+                ],
+                "1600": [
+                    "adaW"
+                ],
+                "1615": [
+                    "adaW"
+                ],
+                "1630": [
+                    "adaW"
+                ],
+                "1645": [
+                    "adaW"
+                ],
+                "1700": [
+                    "adaW"
+                ],
+                "1715": [
+                    "adaW"
+                ],
+                "1730": [
+                    "adaW"
+                ],
+                "1745": [
+                    "adaW"
+                ],
+                "1800": [
+                    "adaW"
+                ],
+                "1815": [
+                    "adaW"
+                ],
+                "1830": [
+                    "adaW"
+                ],
+                "1845": [
+                    "adaW"
+                ],
+                "1900": [
+                    "adaW"
+                ],
+                "1915": [
+                    "adaW"
+                ],
+                "1930": [
+                    "adaW"
+                ],
+                "1945": [
+                    "adaW"
+                ],
+                "2000": [
+                    "adaW"
+                ],
+                "2015": [
+                    "adaW"
+                ],
+                "2030": [
+                    "adaW"
+                ],
+                "2045": [
+                    "adaW"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "adaW"
+                ],
+                "1515": [
+                    "adaW"
+                ],
+                "1530": [
+                    "adaW"
+                ],
+                "1545": [
+                    "adaW"
+                ],
+                "1600": [
+                    "adaW"
+                ],
+                "1615": [
+                    "adaW"
+                ],
+                "1630": [
+                    "adaW"
+                ],
+                "1645": [
+                    "adaW"
+                ],
+                "1700": [
+                    "adaW"
+                ],
+                "1715": [
+                    "adaW"
+                ],
+                "1730": [
+                    "adaW"
+                ],
+                "1745": [
+                    "adaW"
+                ],
+                "1800": [
+                    "adaW"
+                ],
+                "1815": [
+                    "adaW"
+                ],
+                "1830": [
+                    "adaW"
+                ],
+                "1845": [
+                    "adaW"
+                ],
+                "1900": [
+                    "adaW"
+                ],
+                "1915": [
+                    "adaW"
+                ],
+                "1930": [
+                    "adaW"
+                ],
+                "1945": [
+                    "adaW"
+                ],
+                "2000": [
+                    "adaW"
+                ],
+                "2015": [
+                    "adaW"
+                ],
+                "2030": [
+                    "adaW"
+                ],
+                "2045": [
+                    "adaW"
+                ]
+            },
+            "su": {
+                "800": [
+                    "berkN"
+                ],
+                "815": [
+                    "berkN"
+                ],
+                "830": [
+                    "berkN"
+                ],
+                "845": [
+                    "berkN"
+                ],
+                "900": [
+                    "berkN"
+                ],
+                "915": [
+                    "berkN"
+                ],
+                "930": [
+                    "berkN"
+                ],
+                "945": [
+                    "berkN"
+                ],
+                "1000": [
+                    "berkN"
+                ],
+                "1015": [
+                    "berkN"
+                ],
+                "1030": [
+                    "berkN"
+                ],
+                "1045": [
+                    "berkN"
+                ],
+                "1100": [
+                    "berkN"
+                ],
+                "1115": [
+                    "berkN"
+                ],
+                "1130": [
+                    "berkN"
+                ],
+                "1145": [
+                    "berkN"
+                ],
+                "1400": [
+                    "berkS"
+                ],
+                "1415": [
+                    "berkS"
+                ],
+                "1430": [
+                    "berkS"
+                ],
+                "1445": [
+                    "berkS"
+                ]
+            },
+            "sa": {
+                "1400": [
+                    "berkS"
+                ],
+                "1415": [
+                    "berkS"
+                ],
+                "1430": [
+                    "berkS"
+                ],
+                "1445": [
+                    "berkS"
+                ],
+                "1500": [
+                    "berkS"
+                ],
+                "1515": [
+                    "berkS"
+                ],
+                "1530": [
+                    "berkS"
+                ],
+                "1545": [
+                    "berkS"
+                ],
+                "1600": [
+                    "berkS"
+                ],
+                "1615": [
+                    "berkS"
+                ],
+                "1630": [
+                    "berkS"
+                ],
+                "1645": [
+                    "berkS"
+                ],
+                "1700": [
+                    "berkS"
+                ],
+                "1715": [
+                    "berkS"
+                ],
+                "1730": [
+                    "berkS"
+                ],
+                "1745": [
+                    "berkS"
+                ],
+                "1800": [
+                    "berkS"
+                ],
+                "1815": [
+                    "berkS"
+                ],
+                "1830": [
+                    "berkS"
+                ],
+                "1845": [
+                    "berkS"
+                ],
+                "1900": [
+                    "berkS"
+                ],
+                "1915": [
+                    "berkS"
+                ],
+                "1930": [
+                    "berkS"
+                ],
+                "1945": [
+                    "berkS"
+                ],
+                "2000": [
+                    "berkS"
+                ],
+                "2015": [
+                    "berkS"
+                ],
+                "2030": [
+                    "berkS"
+                ],
+                "2045": [
+                    "berkS"
+                ]
+            }
+        },
+        "Encinitas_Little_League": {
+            "mo": {
+                "1500": [
+                    "berkN"
+                ],
+                "1515": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1545": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1615": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1645": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1715": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1745": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1815": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ],
+                "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "berkN"
+                ],
+                "1515": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1545": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1615": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1645": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1715": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1745": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1815": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ],
+                "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "berkN"
+                ],
+                "1515": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1545": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1615": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1645": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1715": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1745": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1815": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ],
+                "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
+                ]
+            },
+            "sa": {
+                "800": [
+                    "berkN"
+                ],
+                "815": [
+                    "berkN"
+                ],
+                "830": [
+                    "berkN"
+                ],
+                "845": [
+                    "berkN"
+                ],
+                "900": [
+                    "berkN"
+                ],
+                "915": [
+                    "berkN"
+                ],
+                "930": [
+                    "berkN"
+                ],
+                "945": [
+                    "berkN"
+                ],
+                "1000": [
+                    "berkN"
+                ],
+                "1015": [
+                    "berkN"
+                ],
+                "1030": [
+                    "berkN"
+                ],
+                "1045": [
+                    "berkN"
+                ],
+                "1100": [
+                    "berkN"
+                ],
+                "1115": [
+                    "berkN"
+                ],
+                "1130": [
+                    "berkN"
+                ],
+                "1145": [
+                    "berkN"
+                ],
+                "1200": [
+                    "berkN"
+                ],
+                "1215": [
+                    "berkN"
+                ],
+                "1230": [
+                    "berkN"
+                ],
+                "1245": [
+                    "berkN"
+                ],
+                "1300": [
+                    "berkN"
+                ],
+                "1315": [
+                    "berkN"
+                ],
+                "1330": [
+                    "berkN"
+                ],
+                "1345": [
+                    "berkN"
+                ],
+                "1400": [
+                    "berkN"
+                ],
+                "1415": [
+                    "berkN"
+                ],
+                "1430": [
+                    "berkN"
+                ],
+                "1445": [
+                    "berkN"
+                ],
+                "1500": [
+                    "berkN"
+                ],
+                "1515": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1545": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1615": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1645": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1715": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1745": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1815": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ],
+                "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
+                ]
+            },
+            "su": {
+                "1200": [
+                    "berkN"
+                ],
+                "1215": [
+                    "berkN"
+                ],
+                "1230": [
+                    "berkN"
+                ],
+                "1245": [
+                    "berkN"
+                ],
+                "1300": [
+                    "berkN"
+                ],
+                "1315": [
+                    "berkN"
+                ],
+                "1330": [
+                    "berkN"
+                ],
+                "1345": [
+                    "berkN"
+                ],
+                "1400": [
+                    "berkN"
+                ],
+                "1415": [
+                    "berkN"
+                ],
+                "1430": [
+                    "berkN"
+                ],
+                "1445": [
+                    "berkN"
+                ],
+                "1500": [
+                    "berkN"
+                ],
+                "1515": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1545": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1615": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1645": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1715": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1745": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ],
+                "1815": [
+                    "berkN"
+                ],
+                "1830": [
+                    "berkN"
+                ],
+                "1845": [
+                    "berkN"
+                ],
+                "1900": [
+                    "berkN"
+                ],
+                "1915": [
+                    "berkN"
+                ],
+                "1930": [
+                    "berkN"
+                ],
+                "1945": [
+                    "berkN"
+                ],
+                "2000": [
+                    "berkN"
+                ],
+                "2015": [
+                    "berkN"
+                ],
+                "2030": [
+                    "berkN"
+                ],
+                "2045": [
+                    "berkN"
+                ]
+            }
+        }
     },
     "fields": {
         "adaE": {
-            "tu": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ],
-            "th": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ]
+            "pretty": "Ada Harris (East)",
+            "cap": 2,
+            "slots": {
+                "tu": [
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ],
+                "th": [
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ],
+                "sa": [
+                    1400,
+                    1415,
+                    1430,
+                    1445,
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ]
+            }
+        },
+        "adaW": {
+            "pretty": "Ada Harris (West)",
+            "cap": 2,
+            "slots": {
+                "sa": [
+                    1400,
+                    1415,
+                    1430,
+                    1445,
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ]
+            }
+        },
+        "berkS": {
+            "pretty": "Berkich (South)",
+            "cap": 3,
+            "slots": {
+                "mo": [
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ],
+                "tu": [
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ],
+                "we": [
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ],
+                "th": [
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ],
+                "fr": [
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ],
+                "sa": [
+                    800,
+                    815,
+                    830,
+                    845,
+                    900,
+                    915,
+                    930,
+                    945,
+                    1000,
+                    1015,
+                    1030,
+                    1045,
+                    1100,
+                    1115,
+                    1130,
+                    1145,
+                    1200,
+                    1215,
+                    1230,
+                    1245,
+                    1300,
+                    1315,
+                    1330,
+                    1345
+                ],
+                "su": [
+                    800,
+                    815,
+                    830,
+                    845,
+                    900,
+                    915,
+                    930,
+                    945,
+                    1000,
+                    1015,
+                    1030,
+                    1045,
+                    1100,
+                    1115,
+                    1130,
+                    1145,
+                    1200,
+                    1215,
+                    1230,
+                    1245,
+                    1300,
+                    1315,
+                    1330,
+                    1345,
+                    1500,
+                    1515,
+                    1530,
+                    1545,
+                    1600,
+                    1615,
+                    1630,
+                    1645,
+                    1700,
+                    1715,
+                    1730,
+                    1745,
+                    1800,
+                    1815,
+                    1830,
+                    1845,
+                    1900,
+                    1915,
+                    1930,
+                    1945,
+                    2000,
+                    2015,
+                    2030,
+                    2045
+                ]
+            }
+        },
+        "berkN": {
+            "pretty": "Berkich (North)",
+            "cap": 3,
+            "slots": {}
         }
     },
-    "others": {
-        "CDR": {
-            "adaE": {
-                "we": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ],
-                "sa": [ 900, 930, 1000, 1030, 1100, 1130, 1200, 1230 ]
-            },
-            "adaW": {
-                "we": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ],
-                "sa": [ 900, 930, 1000, 1030, 1100, 1130, 1200, 1230 ]
-            }
-        },
-        "EML": {
-            "adaE": {
-                "mo": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ],
-                "fr": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ]
-            },
-            "adaW": {
-                "mo": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ],
-                "fr": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ]
-            }
-        },
-        "ESL": {
-            "adaW": {
-                "tu": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ],
-                "th": [ 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900 ]
-            }
-        }
-    } 
+    "unallocated": {}
 }
-    
