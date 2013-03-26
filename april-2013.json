@@ -1,0 +1,205 @@
+{
+    "teams": {
+        "BU8_PerryXReza": {
+            "fpref" : ["berkS","adaE"],
+            "dem" : 1,
+            "req": [
+                { "mo": [1700, 1830], "we": [1700, 1830] }
+            ]
+        },
+        "GU9_RezaXFisher": {
+            "fpref" : ["berkS","adaE"],
+            "dem" : 1,
+            "req": [
+                { "mo": [1530, 1700], "we": [1530, 1700] }
+            ]
+        },
+        "BU9_Serrano": {
+            "fpref" : ["berkS","adaE"],
+            "dem" : 1,
+            "req": [
+                { "we": [1530, 1700] }
+            ]
+        },
+        "BU10_Suarez": {
+            "fpref" : ["berkS","adaE"],
+            "dem" : 2,
+            "req": [
+                { "fr": [1600, 1730] }
+            ]
+        },
+        "BU11_Anderson": {
+            "fpref" : ["berkS","adaE"],
+            "dem" : 2,
+            "req": [
+                { "tu": [1630, 1800], "th": [1630, 1800] }
+            ]
+        },
+        "GU11_Cardinale": {
+            "fpref" : ["adaE","berkS"],
+            "dem" : 1,
+            "req":  [
+                { "tu": [1630, 1800], "th": [1630, 1800] }
+            ]
+        },
+        "BU12_Martin": {
+            "fpref" : ["berkS","adaE"],
+            "dem" : 2,
+            "req":  [
+                { "tu": [1630, 1800], "th": [1630, 1800] }
+            ]
+        },
+        "BU12_SuarezXChiles": {
+            "fpref" : ["adaE","berkS"],
+            "dem" : 2,
+            "req":  [
+                { "su": [1630, 1800] }
+            ]
+        },
+        "GU13_ChilesXFisher": {
+            "fpref" : ["adaE","berkS"],
+            "dem" : 2,
+            "req": [
+                { "mo": [1600, 1730], "we": [1600, 1730] },
+                { "mo": [1700, 1830], "we": [1700, 1830] }
+            ]
+        },
+        "BU14_Suarez": {
+            "fpref" : ["berkS","adaE"],
+            "dem" : 2,
+            "req":  [
+                { "su": [1500, 1630] }
+            ]
+        },
+        "Goalie_Chris": {
+            "fpref" : ["ada"],
+            "dem" : 1,
+            "req" : [
+                { "fr": [1600, 1800] }
+            ]
+        },
+        "ESLGU14_POLTL": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "mo" : [1730, 1900], "we": [1730, 1900] }
+            ]
+        },
+        "ESLGU14_EYRE": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "mo" : [1730, 1900], "we": [1730, 1900] }
+            ]
+        },
+        "ESLBU15_NEWMAN": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "mo" : [1730, 1900], "th" : [1730, 1900] }
+            ]
+        },
+        "ESLBU14_BERTH": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "tu" : [1600, 1730], "fr": [1600, 1730] }
+            ]
+        },
+        "ESLGU17_POLTL": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "tu" : [1730, 1900], "th": [1730, 1900] }
+            ]
+        },
+        "ESLGU15_GONZALES": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "tu" : [1730, 1900], "th": [1730, 1900] }
+            ]
+        }
+    },
+    "fields": {
+        "ada": {
+            "pretty": "Ada Harris",
+            "cap" : 4,
+            "slots": {
+                "mo": [ 1500, "dusk" ],
+                "tu": [ 1500, "dusk" ],
+                "we": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ],
+                "fr": [ 1500, "dusk" ],
+                "sa": [ 1400, "dusk" ]
+            }
+        },
+        "berkS": {
+            "pretty": "Berkich (South)",
+            "cap" : 4,
+            "slots": {
+                "mo": [ 1500, "dusk" ],
+                "tu": [ 1500, "dusk" ],
+                "we": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ],
+                "fr": [ 1500, "dusk" ],
+                "sa": [ 800, 1400 ],
+                "su": [ [ 800, 1400 ], [1500, "dusk"] ]
+            }
+        },
+        "berkN": {
+            "pretty": "Berkich (North)",
+            "cap" : 3,
+            "slots": {
+                "tu": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ]
+            }
+        }
+    },
+    "others": {
+        "Coastal_Dragons_Rugby": {
+            "ada": {
+                "we": [ 1500, "dusk" ],
+                "sa": [ 900, 1400 ]
+            }
+        },
+        "Encinitas_Little_League": {
+            "berkN": {
+                "mo": [ 1500, "dusk" ],
+                "we": [ 1500, "dusk" ],
+                "fr": [ 1500, "dusk" ],
+                "sa": [ 800, "dusk" ],
+                "su": [ 1200, "dusk" ]
+            }
+        },
+        "Encinitas_Soccer_League": {
+            "ada": {
+                "tu": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ]
+            },
+            "berkN": {
+                "su": [ 800, 1200]
+            },
+            "berkS": {
+                "sa": [ 1400, "dusk"],
+                "su": [ [ 1400, 1500] ]
+            }
+        }
+    },
+    "displays": {
+        "Encinitas_Soccer_League": {
+            "ada": {
+                "tu": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ]
+            },
+            "berkN": {
+                "su": [ 800, 1200 ]
+            },
+            "berkS": {
+                "sa": [ 1400, "dusk"],
+                "su": [ 1400, "dusk" ]
+            }
+        }
+    }
+}
+    

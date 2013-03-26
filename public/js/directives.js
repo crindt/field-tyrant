@@ -391,7 +391,17 @@ angular.module('myApp.directives', []).
                         // copy from the team schedule data to d3-compatible data array
                         var daywidth = {}
                         var data = []
-                        _.each(scope.schedule.teamsched,function(tmo,tm) {
+                        var teamlist = 
+                            _.keys(scope.schedule.teamsched).sort(
+                                function(a,b) {
+                                    var ai = _.indexOf(
+                                        _.map(scope.schedule.teams,function(t){return t.name}),a);
+                                    var bi = _.indexOf(
+                                        _.map(scope.schedule.teams,function(t){return t.name}),b);
+                                    return ai - bi
+                                })
+                        _.each(teamlist,function(tm){
+                            var tmo = scope.schedule.teamsched[tm]
                             var oo = { team: tm, slots: [] }
                             _.each(tmo, function(sl,d) {
                                 var ts = _.keys(sl)

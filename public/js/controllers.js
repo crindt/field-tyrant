@@ -6,7 +6,7 @@ function format_team(tm) {
         return tm.split("X").join("/").split("_").join(" ")
 }
 
-function AppCtrl($scope, $http, $dialog) {
+function AppCtrl($scope, $http, $dialog, $location, Schedule) {
     $scope.displayedField = 0;
 
     var colors20 = d3.scale.category20();
@@ -74,31 +74,6 @@ function AppCtrl($scope, $http, $dialog) {
            url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),sun.getMonth()+1,sun.getDate()].join("/")}).
         success(function(data, status, headers, config) {
             $scope.twilight = data
-
-            $http({method: 'GET', url: '/data/schedule.json'}).
-                success(function(data, status, headers, config) {
-                    $scope.schedule = data;
-                    console.log($scope.schedule)
-                    $scope._ = _;
-                    
-                    _.each(_.keys($scope.schedule.teamsched),function(k,i) {
-                        $scope.colors[k] = colors20(i)
-
-                        if ( k.match(/(League|Lacrosse|Rugby)/ ) ) {
-                            // override leagues
-                            var c = 5 + (i%4); // make them shades of gray
-                            $scope.colors[k] = "#"+c+c+c;
-                        }
-
-
-                    });
-
-                    
-                    $scope.status = 'Good!'
-                }).
-                error(function(data, status, headers, config) {
-                    $scope.status = 'Error Getting Schedule!'
-                });
         }).
         error(function(data, status, headers, config) {
             $scope.status = 'Error Getting Twilight!'
@@ -131,10 +106,70 @@ function AppCtrl($scope, $http, $dialog) {
         }
         return "error";
     }
+
+    Schedule.query(function(d) {
+        console.log(d)
+        $scope.schedules = _.map(d,function(s) { 
+            var a = _.filter(_.values(s),
+                             function(ss) { return typeof ss !== 'function'}
+                            ).join("") 
+
+            return a;
+        })
+
+        // default to last value
+        var tmp = $scope.schedules[$scope.schedules.length-1]
+        setTimeout(function() {
+            $scope.$apply(function() {
+                $scope.schedfile = tmp
+            })
+        },500)
+
+    });
+
+    $scope.schedule = undefined
+
+    $scope.$watch('schedfile',function(newVal,oldval) {
+        $location.path('/').replace(); // go back home
+        $scope.loadSchedule(newVal)
+    })
+
+
+    $scope.loadSchedule = function(sch) {
+        Schedule.get({sched:sch},function(data) {
+            console.log(data.teamsched)
+            $scope.schedule = data;
+            console.log($scope.schedule)
+            $scope._ = _;
+            
+            console.log('THESCHED',$scope.schedule)
+            _.each(_.keys($scope.schedule.teamsched),function(k,i) {
+                console.log('ki',k,i)
+                $scope.colors[k] = colors20(i)
+
+                if ( k.match(/(League|Lacrosse|Rugby|^ESL)/ ) ) {
+                    // override leagues
+                    var c = 5 + (i%4); // make them shades of gray
+                    $scope.colors[k] = "#"+c+c+c;
+                }
+
+
+            });
+
+            $scope.timestep = parseInt(data.timestep)
+            
+            $scope.status = 'Good!'
+        })
+    }
+
     $scope.isSched = function(field,d,t) {
         return $scope.sched(field,d,t).match(/scheduled/);
-    }
+    };
+
+    $scope.loadSchedule('april-2013-sched.json')
+        
 }
+MyCtrl1.$inject = ['$scope','$http','$dialog','$dialog','Schedule'];
 
 
 app.controller(

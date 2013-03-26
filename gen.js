@@ -20,6 +20,7 @@ prog
     .option('-b, --bvarweight <float>', "Weight to apply to the sum of binary variables in the objective [0.00001]", 0.00001)
     .option('-x, --force <string>', "Comma separated list of variables to force to be 1", null)
     .option('-a, --always-feasible', "Set up dummy options to always admit feasibility", true)
+    .option('-p, --limit-to-prefs', "Limit allocations only to preferred fields",false)
     .parse(process.argv)
 
 var outstream = process.stdout
@@ -80,6 +81,25 @@ function nested_push() {
     if ( aa.length == 2 ) {
         if ( v[aa[0]] === undefined ) { v[aa[0]] = [] }
         v[aa[0]].push( aa[1] );
+    } else {
+        logger.error("ERROR SHIFTING NESTED")
+    }
+}
+function nested_unshift() {
+    var args = _.values(arguments);
+    var v = args.shift()
+    var aa = args.slice(0,-2)
+    var arg;
+    while( arg = aa.shift() ) {
+        if ( v[arg] === undefined ) { v[arg] = {} }
+        v = v[arg]
+    }
+    aa = args.slice(-2)
+    if ( aa.length == 2 ) {
+        if ( v[aa[0]] === undefined ) { v[aa[0]] = [] }
+        console.log('wowee',v)
+        v[aa[0]].unshift( aa[1] );
+        console.log('wowee2',v)
     } else {
         logger.error("ERROR SHIFTING NESTED")
     }
@@ -184,7 +204,7 @@ _.each(conf.fields,function(fo,f) {
 
 // spawn lp_solve.  It will listen on child.stdin until we write the program to
 // it and close it below
-child = spawn('lp_solve')
+child = spawn('lp_solve',['-presolve'])
 
 var allerrs = []
 child.stderr.on('data',function(data) {
@@ -388,7 +408,8 @@ function parseResults(data) {
              teams:tt,
              teamsched: teams,
              fields:conf.fields,
-             unallocated:unallocated
+             unallocated:unallocated,
+             timestep:prog.timestep
             },null,4));
         
     } else if ( prog.format === "html" ) {
@@ -571,6 +592,17 @@ _.each(_.keys(fields), function(f) {
         });
     });
 });
+
+
+if ( prog.limitToPrefs ) {
+    emit("\n\n/* DISALLOW NON-PREFERRED FIELDS */\n");
+    _.each(teams,function(to,tm) {
+        var notfields = _.difference(_.keys(fields), to.fpref);
+        _.each(notfields,function(f) {
+            emit(_.map(to.req,function(r,prim) {return bvar(tm,"o"+(prim+1),f)}).join(" + ")+" = 0;\n")
+        });
+    });
+}
 
 emit("\n\n/* CREATE BVAR SUM */\n")
 emit("bvarsum = " + _.map(_.keys(bvars),function(v) { return bvars[v]+" "+v; }).join( " + " ) + ";")

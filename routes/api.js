@@ -1,6 +1,8 @@
 var _ = require('underscore');
 var request = require('request')
 var moment = require('moment')
+var fs = require('fs')
+var path = require('path')
 
 /*
  * Serve JSON to our AngularJS client
@@ -80,7 +82,7 @@ request.post(
                 }
             });
         } else {
-            console.log('ERROR: ',error,response.statusCode,response.body,body,response)
+            console.log('ERROR: ',error)
         }
     }
 );
@@ -123,6 +125,39 @@ exports.twilight = function(req, res, next) {
     //console.log(daysToSend)
 
     res.json(daysToSend)
+}
+
+exports.listsched = function(req,res) {
+    files = fs.readdirSync( path.join( __dirname, '../public/sched') );
+
+    res.json(_.filter(files,function(f) { return f.match(/-sched\.json$/); }))
+}
+
+exports.sched = function(req,res) {
+
+    console.log("FILE IS "+req.params.sched)
+
+    // hack to disallow path specification in file parameter
+    if ( req.params.sched.match(/\//) ) res.json({error: "Filename can't have / characters"})
+
+    var pp = path.join(__dirname,'../public/sched',req.params.sched)
+    console.log(pp)
+    fs.readFile(pp, function(err,data) {
+
+        if (err) {
+            console.log(err)
+            res.send( 404, {error: err} )
+        }
+
+        if (data === undefined) {
+            res.json( {error: "Unknown error resulted in null data"} )
+            return
+        } else {
+            var obj = JSON.parse(data.toString())
+            console.log(obj)
+            res.json( obj );
+        }
+    })
 }
 
 exports.rain = function(req,res) {

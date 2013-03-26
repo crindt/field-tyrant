@@ -62,6 +62,9 @@ app.get('/api/twilight/:month/:day/:month2/:day2', api.twilight);
 
 app.get('/api/rain', api.rain)
 
+app.get('/api/schedule/list', api.listsched);
+app.get('/api/schedule/:sched', api.sched);
+
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
 
