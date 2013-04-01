@@ -4,6 +4,8 @@ var url = require('url')
 var https = require('https')
 var _ = require('underscore')
 var async = require('async')
+var redis = require("redis"),
+redclient = redis.createClient();
 
 var express = require('express');
 
@@ -11,6 +13,9 @@ var oauthurl = url.parse(secrets.web.redirect_uris[0])
 
 var prog = require('commander')
 var moment = require('moment')
+
+// for later def
+var sched, basedate
 
 /* use a function for the exact format desired... */
 function ISODateString(d){
@@ -42,60 +47,12 @@ var dayarr = {
     sa: 6
 }
 
-
-prog
-    .version('0.0.1')
-    .option('-c, --calendar [name]', 'Calendar to add events to [test]', 'test')
-    .option('-f, --from [date]', 'Time to start adding events [now]', moment())
-    .option('-t, --to [date]', 'Time to stop adding events [now+1 week]', moment().add('days',7))
-    .option('-s, --sched [filename]', 'File to load the schedule from', null)
-    .option('--field [fieldtag]', 'Field to copy schedule for', 'berkS')
-    .option('--dosched', "Set if we're to schedule", false)
-    .option('--overwrite', "Set if we should delete the existing calendar", false)
-    .option('--omit [regexp]', "Regex of teams to omit from schedule", null)
-    .parse(process.argv);
-
-if ( !prog.sched || !prog.field ) prog.help()
-
-var sched = require(prog.sched)
+var fieldmap = {
+    berkS: "Berkich (South)",
+    berkN: "Berkich (North)"
+}
 
 var app = express();
-
-console.log('pathname', oauthurl.pathname)
-app.get(oauthurl.pathname,function(req,res) {
-    console.log('got auth as get')
-    console.log('params',req.params)
-    console.log('query',req.query)
-    console.log('body',req.body)
-
-    if ( req.query.error ) {
-
-        res.send('Auth Error '+req.query.error)
-
-    } else {
-        // got auth
-        app.set('gcode',req.query.code)
-
-        oauth2Client.getToken(app.get('gcode'), function(err, tokens) {
-            if ( err ) throw new Error('Error',err)
-            if ( tokens.error ) {
-                console.log(tokens.error)
-                throw new Error('Token Error',tokens.error)
-            }
-            console.log('tokens',tokens)
-            // set tokens to the client
-            app.set('gtokens',tokens)
-            // TODO: tokens should be set by OAuth2 client.
-            oauth2Client.credentials = tokens;
-
-            res.redirect('/')
-        });
-
-    }
-        
-})
-
-
 
 var OAuth2Client = googleapis.OAuth2Client;
 
@@ -108,9 +65,51 @@ var REDIRECT_URL = process.env.GOOGLE_REDIRECT_URL || secrets.web.redirect_uris[
 var oauth2Client =
     new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 
+
+function receiveOauth2Response(req,res,next) {
+    console.log('got auth as get')
+    console.log('params',req.params)
+    console.log('query',req.query)
+    console.log('body',req.body)
+
+    if ( req.query.error ) {
+
+        next(req.query)
+
+    } else {
+        // got auth
+        console.log('gcode',req.query.code)
+        app.set('gcode',req.query.code)
+
+        oauth2Client.getToken(app.get('gcode'), function(err, tokens) {
+            if ( err ) throw err
+            if ( tokens.error ) {
+                console.log(tokens.error)
+                throw tokens.error
+            }
+            console.log('tokens77',tokens)
+            // set tokens to the client
+            app.set('gtokens',tokens)
+            // TODO: tokens should be set by OAuth2 client.
+            oauth2Client.credentials = tokens;
+
+            if ( req.query.state === 'COMMANDLINE' ) 
+                res.json(JSON.stringify(tokens))
+            else {
+                console.log("GOT CREDS, REDIRECTING",req.query.state || '/')
+                res.redirect(req.query.state || '/')
+            }
+        });
+
+        //next({error:'Got to unexpected point in program'})
+    }
+}
+
+
+
 function onSuccess(cb) {
     return function(err,data) {
-        if ( err ) throw new Error(JSON.stringify(err))
+        if ( err ) throw JSON.stringify(err)
         else cb(err,data)
     }
 }
@@ -119,12 +118,6 @@ function format_team(tm) {
         return tm.split("X").join("/").split("_").join(" ")
 }
 
-//moment().local()
-var basedate = moment()
-if (prog.from) {
-    basedate = moment(prog.from)
-}
-console.log('basedate',basedate)
 function convert_time(tma,add,base) {
     var d = 1;
     if ( add === undefined) add = 0
@@ -182,19 +175,201 @@ function slot_clashes(sl,data) {
 
 }
 
+function doSchedule(cb) {
+    return function (req,res) {
+        var client = req.calclient
 
-app.get('/',function(req,res) {
+        console.log("GETTING CALENDAR LIST...")
+        getCalendarList( client, oauth2Client, onSuccess(function(err,list){
 
+            console.log("...GOT LIST")
+
+            var start = moment()
+            var end = start.add('hour',1)
+
+            function addEvent(id,ev,addEventCb) {
+                var eva = {
+                    calendarId: id,
+                    resource: ev
+                }
+                console.log("ADDING EVENT..."+JSON.stringify(eva))
+                client.calendar.events.insert(eva)
+                    .withAuthClient(oauth2Client)
+                    .execute(onSuccess(function(err,myev) {
+                        console.log("...SUCCESSFULLY ADDED ",myev)
+                        addEventCb()
+                    }))
+            }
+
+            function addSchedule(calid,sched,addSchedCb) {
+                console.log("ADDING SCHEDULE...")
+                var teamlist = 
+                    _.keys(sched.teamsched).sort(
+                        function(a,b) {
+                            var ai = _.indexOf(
+                                _.map(sched.teams,function(t){return t.name}),a);
+                            var bi = _.indexOf(
+                                _.map(sched.teams,function(t){return t.name}),b);
+                            return ai - bi
+                        })
+                var data = []
+                var omitRegex = prog.omit ? new RegExp(prog.omit) : null
+                console.log("TEAMLIST",teamlist)
+                _.each(teamlist,function(tm){
+                    var tmo = sched.teamsched[tm]
+                    var oo = { team: tm, slots: [] }
+
+                    if ( omitRegex && omitRegex.exec(tm) ) {
+                        console.log('Skipping scheduled item for '+tm)
+                        return // skip to next
+                    }
+
+                    console.log("DOING TEAM")
+                    _.each(tmo, function(sl,d) {
+                        console.log("SLOT",d,sl)
+                        var ts = _.keys(sl)
+                        var fieldmatch = _.filter(ts,function(ssl) { 
+                            // allow "teams" to be assigned more than one field
+                            // at a particular time.  We really use this to
+                            // represent other league's field allocations.  Here
+                            // we check if the slot is an array of allocated
+                            // fields and if not we make it an array.
+                            var arr;
+                            if ( sl[ssl] instanceof Array ) { arr = sl[ssl]; } 
+                            else { arr = [sl[ssl]] }
+                            
+                            // now see if any of the fields in the array match
+                            // the field in this chart
+                            return _.indexOf(arr, prog.field) != -1
+                        } )
+                        console.log("FIELDMATCH",fieldmatch)
+                        if ( fieldmatch.length>0 ) {
+                            var sla = fieldmatch;
+
+                            _.each(split_time_array(sla),function(ta) {
+                                var nsl = {day: d,
+                                           from: convert_time(ta[0]),
+                                           to: convert_time(ta[ta.length-1],sched.timestep),
+                                           slot: 1
+                                          }
+
+                                // determine if slot overlaps with already scheduled
+                                // slots and shift it over accordingly
+                                while( slot_clashes( nsl, data ) ) {
+                                    nsl.slot++;
+                                }
+                                oo.slots.push(nsl)
+                            });
+                        }
+                    });
+                    if ( oo.slots.length > 0 ) data.push(oo);
+                });
+
+                // OK, loop over slots 
+                var colcnt = 0;
+                var cols = {}
+                console.log("LOOPING SLOTS",data.length)
+                _.each(data,function(ts) {
+                    console.log("...SLOTL",ts)
+                    async.each(ts.slots,function addScheduleEvent(sl,cb2) {
+                        console.log("PROCESSING SLOT",JSON.stringify(sl))
+
+                        // convert to next occuring date after start
+                        var dayconv = dayarr[sl.day]
+                        if ( dayconv < basedate.day() ) dayconv += 7
+
+                        if ( cols[ts.team] === undefined ) cols[ts.team] = (colcnt++ % 12)+1
+
+                        var event = {
+                            summary: prog.field+":"+format_team(ts.team),
+                            location: prog.field,
+                            start: {dateTime: ISODateString(sl.from.day(dayconv).toDate()), timeZone:'America/Los_Angeles'},
+                            end: {dateTime: ISODateString(sl.to.day(dayconv).toDate()), timeZone:'America/Los_Angeles'}
+                            //colorId: cols[ts.team]
+                        }
+                        // RRULE:FREQ=WEEKLY;WKST=SU;BYDAY=WE;UNTIL=20130313T223000Z
+                        if ( prog.to ) {
+                            var until = moment(prog.to)
+                            event.recurrence = [['RRULE:FREQ=WEEKLY',
+                                                 'WKST=MO',
+                                                 'BYDAY='+sl.day.toUpperCase(),
+                                                 'UNTIL='+iCalDateString(until.toDate())].join(";")
+                                               ]
+                        }
+
+                        console.log("ADDING EVENT..."+JSON.stringify(event))
+                        addEvent(calid,event,onSuccess(function(err,ev) {
+                            if ( err ) throw err
+                            console.log("...SUCCESSFULLY ADDED")
+                            cb2()
+                        }));
+
+                    }, onSuccess(function afterScheduleAdd(err) {
+                        console.log("DONE ADDING")
+                        if ( err ) throw err
+                        //sendData(res,'slots')(null,data)
+                        addSchedCb()
+                    }));
+                });
+            }
+
+            var start = moment()
+            var end = start.add('hour',1)
+
+            var event = {
+                summary: "Test Appointment",
+                location: "Dudeville",
+                start: { dateTime: start },
+                end: { dateTime: end }
+            }
+
+            console.log("LOOKING FOR "+prog.calendar+" CALENDAR...")
+            var testcal = _.find(list.items,function(c) { return c.summary === prog.calendar } )
+
+            if ( prog.overwrite && testcal) {
+                // delete calendar first
+                console.log("DELETING EXISTING CALENDAR "+testcal.summary)
+                deleteCalendar(client,oauth2Client,testcal.id,onSuccess(function(err,cal) {
+                    console.log("...SUCCESSFULLY DELETED")
+                    setTimeout(createEvents,2000)  // run after delay to allow delete to clear
+                }))
+                testcal = null
+            } else {
+                createEvents()
+            }
+
+            function createEvents() {
+                if ( !testcal ) {
+                    console.log("..."+prog.calendar+" NOT THERE, CREATING...")
+                    createCalendar(client,oauth2Client, prog.calendar, onSuccess(function(err,cal) {
+                        console.log("...SUCCESSFULLY CREATED "+prog.calendar)
+                        testcal = cal
+
+                        addSchedule(testcal.id,sched,cb)
+                        
+                    }))
+                } else {
+                    console.log("...FOUND "+prog.calendar+":",JSON.stringify(testcal))
+
+                    addSchedule(testcal.id,sched,cb)
+                }
+            }
+        }))
+    }
+}
+
+
+function handleReply(req,res,next) {
     console.log("GOT REQUEST...")
 
     googleapis.load('calendar', 'v3', function(err, client) {
 
         if (!oauth2Client.credentials) {
-        
+            
             console.log("NO CREDENTIALS, AUTHORIZING...")
 
             getAccessToken(oauth2Client,req,res,function() {
-                console.log('tokens',oauth2Client.credentials)
+                console.log('tokens3',oauth2Client.credentials)
                 console.log("...AUTHORIZED, REDIRECTING")
                 res.redirect(req.originalUrl)
             });
@@ -202,177 +377,10 @@ app.get('/',function(req,res) {
         } else {
 
             try {
-                console.log("GETTING CALENDAR LIST...")
-                getCalendarList( client, oauth2Client, onSuccess(function(err,list){
+                redclient.set('gcalcreds',JSON.stringify(oauth2Client))
 
-                    console.log("...GOT LIST")
-
-                    var start = moment()
-                    var end = start.add('hour',1)
-
-                    function addEvent(id,ev,cb) {
-                        var eva = {
-                            calendarId: id,
-                            resource: ev
-                        }
-                        console.log("ADDING EVENT..."+JSON.stringify(eva))
-                        client.calendar.events.insert(eva)
-                            .withAuthClient(oauth2Client)
-                            .execute(onSuccess(function(err,myev) {
-                                console.log("...SUCCESSFULLY ADDED ",myev)
-                                cb()
-                            }))
-                    }
-
-                    function addSchedule(calid,sched,cb) {
-                        var teamlist = 
-                            _.keys(sched.teamsched).sort(
-                                function(a,b) {
-                                    var ai = _.indexOf(
-                                        _.map(sched.teams,function(t){return t.name}),a);
-                                    var bi = _.indexOf(
-                                        _.map(sched.teams,function(t){return t.name}),b);
-                                    return ai - bi
-                                })
-                        var data = []
-                        var omitRegex = prog.omit ? new RegExp(prog.omit) : null
-                        _.each(teamlist,function(tm){
-                            var tmo = sched.teamsched[tm]
-                            var oo = { team: tm, slots: [] }
-
-                            if ( omitRegex && omitRegex.exec(tm) ) {
-                                console.log('Skipping scheduled item for '+tm)
-                                return // skip to next
-                            }
-
-                            _.each(tmo, function(sl,d) {
-                                var ts = _.keys(sl)
-                                var fieldmatch = _.filter(ts,function(ssl) { 
-                                    // allow "teams" to be assigned more than one field
-                                    // at a particular time.  We really use this to
-                                    // represent other league's field allocations.  Here
-                                    // we check if the slot is an array of allocated
-                                    // fields and if not we make it an array.
-                                    var arr;
-                                    if ( sl[ssl] instanceof Array ) { arr = sl[ssl]; } 
-                                    else { arr = [sl[ssl]] }
-                                    
-                                    // now see if any of the fields in the array match
-                                    // the field in this chart
-                                    return _.indexOf(arr, prog.field) != -1
-                                } )
-                                if ( fieldmatch.length>0 ) {
-                                    var sla = fieldmatch;
-
-                                    _.each(split_time_array(sla),function(ta) {
-                                        var nsl = {day: d,
-                                                   from: convert_time(ta[0]),
-                                                   to: convert_time(ta[ta.length-1],sched.timestep),
-                                                   slot: 1
-                                                  }
-
-                                        // determine if slot overlaps with already scheduled
-                                        // slots and shift it over accordingly
-                                        while( slot_clashes( nsl, data ) ) {
-                                            nsl.slot++;
-                                        }
-                                        oo.slots.push(nsl)
-                                    })
-                                        }
-                            });
-                            if ( oo.slots.length > 0 ) data.push(oo);
-                        });
-
-                        // OK, loop over slots 
-                        _.each(data,function(ts) {
-                            async.each(ts.slots,function addScheduleEvent(sl,cb2) {
-                                console.log("PROCESSING SLOT",JSON.stringify(sl))
-
-                                // convert to next occuring date after start
-                                var dayconv = dayarr[sl.day]
-                                if ( dayconv < basedate.day() ) dayconv += 7
-
-                                var event = {
-                                    summary: prog.field+":"+format_team(ts.team),
-                                    location: prog.field,
-                                    start: {dateTime: ISODateString(sl.from.day(dayconv).toDate()), timeZone:'America/Los_Angeles'},
-                                    end: {dateTime: ISODateString(sl.to.day(dayconv).toDate()), timeZone:'America/Los_Angeles'}
-                                }
-                                // RRULE:FREQ=WEEKLY;WKST=SU;BYDAY=WE;UNTIL=20130313T223000Z
-                                if ( prog.to ) {
-                                    var until = moment(prog.to)
-                                    event.recurrence = [['RRULE:FREQ=WEEKLY',
-                                                         'WKST=MO',
-                                                         'BYDAY='+sl.day.toUpperCase(),
-                                                         'UNTIL='+iCalDateString(until.toDate())].join(";")
-                                                        ]
-                                }
-
-                                console.log("ADDING EVENT..."+JSON.stringify(event))
-                                addEvent(calid,event,onSuccess(function(err,ev) {
-                                    console.log("...SUCCESSFULLY ADDED")
-                                    cb2()
-                                }));
-
-                            }, onSuccess(function afterScheduleAdd(err) {
-                                sendData(res,'slots')(null,data)
-                            }));
-                        });
-
-                    }
-
-                    var start = moment()
-                    var end = start.add('hour',1)
-
-                    var event = {
-                        summary: "Test Appointment",
-                        location: "Dudeville",
-                        start: { dateTime: start },
-                        end: { dateTime: end }
-                    }
-
-                    console.log("LOOKING FOR test CALENDAR...")
-                    var testcal = _.find(list.items,function(c) { return c.summary === prog.calendar } )
-
-                    if ( prog.overwrite && testcal) {
-                        // delete calendar first
-                        console.log("DELETING EXISTING CALENDAR "+testcal.summary)
-                        deleteCalendar(client,oauth2Client,testcal.id,onSuccess(function(err,cal) {
-                            console.log("...SUCCESSFULLY DELETED")
-                            setTimeout(createEvents,2000)  // run after delay to allow delete to clear
-                        }))
-                        testcal = null
-                    } else {
-                        createEvents()
-                    }
-
-                    function createEvents() {
-                        if ( !testcal ) {
-                            console.log("..."+prog.calendar+" NOT THERE, CREATING...")
-                            createCalendar(client,oauth2Client, prog.calendar, onSuccess(function(err,cal) {
-                                console.log("...SUCCESSFULLY CREATED "+prog.calendar)
-                                testcal = cal
-                                if ( prog.dosched ) {
-                                    addSchedule(testcal.id,sched)
-                                } else {
-                                    addEvent(testcal.id,event,function(err){
-                                        res.send('Whoopoo! '+JSON.stringify(event))
-                                    })
-                                }
-                                
-                            }))
-                        } else {
-                            console.log("...FOUND "+prog.calendar+":",JSON.stringify(testcal))
-                            if ( prog.dosched ) {
-                                addSchedule(testcal.id,sched)
-                            } else {
-                                addEvent(testcal.id,event,function(err){
-                                    res.send('Whoopoo! '+JSON.stringify(event))
-                                })
-                            }
-                        }
-                    }
-                }))
+                req.calclient = client
+                next()
             } catch (e) {
                 console.log("ERROR COMMUNICATING WITH GOOGLE",e)
                 res.send("ERROR COMMUNICATING WITH GOOGLE: "+JSON.stringify(e))
@@ -380,7 +388,34 @@ app.get('/',function(req,res) {
 
         }
     });    
-})
+}
+
+function googleAuth(req,res,next) {
+
+    if ( !oauth2Client.credentials ) {
+        console.log("NO CREDENTIALS, AUTHORIZING...")
+        
+        getAccessToken(oauth2Client,req,res,function() {
+            console.log('tokens4',oauth2Client.credentials)
+            console.log("...AUTHORIZED, REDIRECTING")
+            res.redirect(req.originalUrl)
+        });
+    } else 
+        next()
+}
+
+
+console.log('pathname', oauthurl.pathname)
+app.get(oauthurl.pathname,
+        receiveOauth2Response)
+
+app.get('/',
+        googleAuth,
+        handleReply,
+        function(req,res) {
+            console.log("You're authorized now")
+            res.send("You're authorized now")
+        })
 
 
 var options = {
@@ -389,29 +424,38 @@ var options = {
 };
 
 https.createServer(options, app).listen(1337);
-
 console.log('Listening on port 1337');
 
 
+
+
+
 var readline = require('readline');
+var request = require('superagent')
 
 function getAccessToken(oauth2Client, req, res, callback) {
     // generate consent page url
     var url = oauth2Client.generateAuthUrl({
         access_type: 'offline',
         scope: 'https://www.googleapis.com/auth/calendar',
-        state: req.originalUrl  // to send back after auth
+        state: (req ? req.originalUrl : "/")   // to send back after auth
     });
 
-    if ( !res ) {
+    if ( prog.noweb ) {
+
+        var rl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+
         console.log('Visit the url: ', url);
         rl.question('Enter the code here:', function(code) {
             
             // request access token
             oauth2Client.getToken(code, function(err, tokens) {
-                if ( err ) throw new Error('Error',err)
-                if ( tokens.error ) throw new Error('Token Error',tokens.error)
-                console.log('tokens',tokens)
+                if ( err ) throw err
+                if ( tokens.error ) throw tokens.error
+                console.log('tokens1',tokens)
                 // set tokens to the client
                 // TODO: tokens should be set by OAuth2 client.
                 oauth2Client.credentials = tokens;
@@ -468,3 +512,198 @@ function sendData(res,label) {
     }
 }
 
+if ( prog.noweb ) {
+    getAccessToken(oauth2Client,{originalUrl:'COMMANDLINE'},null,function() {
+        if (!oauth2Client.credentials) {
+            throw new Error ('No auth')
+        }
+
+        console.log('tokens2',oauth2Client.credentials)
+        googleapis.load('calendar', 'v3', function( err, client ) {
+            getCalendarList(client,oauth2Client,function(err,list){
+                console.log("...GOT LIST")
+                console.log("list",list)
+                process.exit
+            })
+        })
+    })
+}
+
+
+
+
+prog
+    .version('0.0.1')
+    .option('-c, --calendar [name]', 'Calendar to add events to [test]', 'test')
+    .option('-f, --from [date]', 'Time to start adding events [now]', moment())
+    .option('-t, --to [date]', 'Time to stop adding events [now+1 week]', moment().add('days',7))
+    .option('-s, --sched [filename]', 'File to load the schedule from', null)
+    .option('--field [fieldtag]', 'Field to copy schedule for', 'berkS')
+    .option('--overwrite', "Set if we should delete the existing calendar", false)
+    .option('--omit [regexp]', "Regex of teams to omit from schedule", null)
+
+
+function ifCredentialed(cb) {
+    console.log("CHECKING CREDS...")
+    redclient.get("gcalcreds",function(err,creds) {
+        if ( err ) throw err
+        if ( creds == null ) {
+            console.log("...NOT AUTHENTICATED")
+            process.exit()
+
+        } else {
+
+            console.log("...ALREADY AUTHENTICATED")
+            console.log(JSON.stringify(creds))
+            creds = JSON.parse(creds)
+            oauth2Client.credentials = creds.credentials;
+
+            cb()
+        }
+    })
+}
+
+function loadSched() {
+    console.log("Loading schedule from",prog.sched)
+    sched = require(prog.sched)
+    basedate = moment()
+
+    if (prog.from) {
+        basedate = moment(prog.from)
+    }        
+
+}
+
+prog.command('schedule <field> [calendar]')
+    .description('upload the schedule for the given field')
+    .action(function scheduleField(field,calname) {
+        prog.calendar = calname || field
+        prog.field = field
+        console.log("Request to schedule field",prog.field,"on calendar",prog.calendar)
+        loadSched()
+
+        ifCredentialed(function() {
+            googleapis.load('calendar', 'v3', function(err, client) {
+                doSchedule(function() {
+                    console.log("All done!")
+                    setTimeout(function(){console.log("CLEARING....");process.exit()},10000)
+                })({calclient:client},{})
+            })
+        })
+    })
+
+prog.command('color calendar <color>')
+    .description('Set the color of the given calendar')
+    .action(function colorCalendar(calname) {
+        prog.calendar = calname
+
+        ifCredentialed(function() {
+            googleapis.load('calendar', 'v3', function(err,client) {
+                client.calendar.colors.get()
+                .withAuthClient(oauth2Client)
+                .execute(onSuccess(function(err,cols) {
+                    console.log('colors',cols)
+                    process.exit()
+                }))
+            })
+        })
+    })
+
+
+function getEventList(client,authClient,calendar,cb) {
+    getCalendarList( client, authClient, onSuccess( function( err, list ) {
+        console.log("LOOKING FOR "+calendar+" CALENDAR...")
+        var testcal = _.find(list.items,function(c) { return c.summary === calendar } )
+
+        if ( testcal ) {
+            prog.from = prog.from ? moment(prog.from) : moment()
+            prog.to = prog.to ? moment(prog.to) : prog.from.add('months',1)
+            var req = {
+                calendarId: testcal.id
+                ,timeMin: ISODateString(prog.from.toDate())
+                ,timeMax: ISODateString(prog.to.toDate())
+            }
+            console.log('req',req)
+            client.calendar.events.list(req)
+                .withAuthClient(oauth2Client)
+                .execute(onSuccess(function(err,items) {
+                    console.log('events')
+                    cb(items, testcal)
+                }))
+        }
+    }))
+}
+
+
+prog.command('list <calendar> [filter]')
+    .description('List events from the given calendar matching the optional filter')
+    .action(function listEvents(calname) {
+        prog.calendar = calname
+
+        ifCredentialed(function() {
+            googleapis.load('calendar', 'v3', function(err,client) {
+
+                getEventList( client, oauth2Client, prog.calendar, function( items ) {
+                    console.log('events')
+                    console.log(items)
+                    process.exit()
+                })
+            })
+        })
+    })
+
+
+prog
+    .command('clear <field>')
+    .description('clear the calendar for the given field')
+    .action(function clearField(field,calname) {
+        prog.field = field
+        prog.calendar = prog.field
+
+        var rl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+
+        rl.question('Clear calendar '+prog.calendar+' for field '+prog.field+'? ', function(yn) {
+            if ( yn !== 'y' ) {
+                console.log("OK, cancelling...")
+                process.exit()
+            } 
+            console.log("OK, clearing...")
+            ifCredentialed(function() {
+                googleapis.load('calendar', 'v3', function(err,client) {
+                    getEventList( client, oauth2Client, prog.calendar, function( list, cal ) {
+                        //console.log(_.map(items,function(it) { return JSON.stringify(it); }).join("\n"))
+                        //console.log('length',items.length)
+                        async.each(list.items,function(it,cb123) {
+                            console.log("Deleting ",JSON.stringify(it,null,4))
+                            client.calendar.events.delete({calendarId: cal.id,
+                                                           eventId: it.id})
+                                .withAuthClient(oauth2Client)
+                                .execute(function(err,items) {
+                                    cb123(err)
+                                })
+                        },function(err) {
+                            if ( err ) throw err
+
+                            console.log("SUCCESSFULLY CLEARED ENTRIES")
+                            process.exit()
+                        })
+                    })
+                })
+            })
+        })
+
+    })
+
+
+prog.command('reauth')
+    .description('Give client an authorization prompt')
+
+
+prog
+    .parse(process.argv);
+
+
+// no command will start the webserver
