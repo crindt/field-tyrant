@@ -46,8 +46,6 @@ var week = _.union(workweek,weekend);
 
 var conf = JSON.parse(fs.readFileSync(prog.args[0],'utf8'));
 
-var fn = jade.compile(fs.readFileSync('fieldtablevert.jade','utf8'),{pretty:true});
-
 var teams = conf.teams;
 var fields = conf.fields;
 
@@ -411,23 +409,7 @@ function parseResults(data) {
              unallocated:unallocated,
              timestep:prog.timestep
             },null,4));
-        
-    } else if ( prog.format === "html" ) {
 
-        colors = [ "red", "blue", "green", "orange", "cyan", "magenta" ]
-
-        ccnt = 0;
-        tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
-        var stimes = _.map(_.keys(times), function(t) { return parseInt(t); });
-        ttimes = fill_times(stimes);
-        outstream.write(fn({times:ttimes, 
-                            days:week, sched:sched,
-                            teams:tt,
-                            fields:conf.fields,
-                            _: _,
-                            format_team: format_team,
-                            format_field: format_field
-                           }))
     } else {
         logger.warning( "SOLVED, but no output format specified" );
     }
@@ -518,7 +500,17 @@ _.each(teams,function(tmo,tm) {
             tpri = 1+tpri/100
 
         //emit(" + "+(mult*tpri/pri)+" "+bvar(tm,"o"+pri))
-        emit(" + "+(mult*tpri)+" "+bvar(tm,"o"+pri))
+        //emit(" + "+(mult*tpri)+" "+bvar(tm,"o"+pri))
+
+        // explode options to weight by field preference (if any)
+        emit(" + "+_.map(_.keys(fields), function(f) {
+            // weight by field preference order
+            var fpri 
+            if ( (fpri = tmo.fpref.indexOf(f)) < 0 ) fpri = tmo.fpref.length
+            fpri++
+            return (((tpri-1)*10)+fpri) + " " + bvar(tm,"o"+pri,f)
+        }).join("+"))
+
         pri++
     });
     emit("\n")
@@ -539,11 +531,12 @@ var unreq = []
 
 emit( "\n/* team options */" );
 _.each(_.keys(teams), function(tm) {
+    var to = teams[tm]
     var pri = 1
     _.each(_.keys( teams[tm].req ), function(o) {
         // allow exactly one option to be chosen
         emit( "\n"+bvar(tm,"o"+pri)+" = "+_.map(_.keys(fields), function(f) {
-            return bvar(tm,"o"+pri,f)
+            return  bvar(tm,"o"+pri,f)
         }).join("+")+";\n")
 
         // require all slots for a particular option to be used if the option is selected
