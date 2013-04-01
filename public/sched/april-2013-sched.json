@@ -93,30 +93,24 @@
             },
             "tu": {
                 "1630": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU11_Anderson"
                 ],
                 "1700": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU11_Anderson"
                 ],
                 "1730": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU11_Anderson"
                 ]
             },
             "th": {
                 "1630": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU11_Anderson"
                 ],
                 "1700": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU11_Anderson"
                 ],
                 "1730": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU11_Anderson"
                 ]
             },
             "su": {
@@ -261,19 +255,16 @@
                 ],
                 "1730": [
                     "GU11_Cardinale",
-                    "ESLBU15_NEWMAN",
                     "ESLGU17_POLTL",
                     "ESLGU15_GONZALES",
                     "Encinitas_Soccer_League"
                 ],
                 "1800": [
-                    "ESLBU15_NEWMAN",
                     "ESLGU17_POLTL",
                     "ESLGU15_GONZALES",
                     "Encinitas_Soccer_League"
                 ],
                 "1830": [
-                    "ESLBU15_NEWMAN",
                     "ESLGU17_POLTL",
                     "ESLGU15_GONZALES",
                     "Encinitas_Soccer_League"
@@ -302,19 +293,13 @@
                     "GU13_ChilesXFisher"
                 ],
                 "1730": [
-                    "ESLGU14_POLTL",
-                    "ESLGU14_EYRE",
-                    "ESLBU15_NEWMAN"
+                    "ESLGU14_POLTL"
                 ],
                 "1800": [
-                    "ESLGU14_POLTL",
-                    "ESLGU14_EYRE",
-                    "ESLBU15_NEWMAN"
+                    "ESLGU14_POLTL"
                 ],
                 "1830": [
-                    "ESLGU14_POLTL",
-                    "ESLGU14_EYRE",
-                    "ESLBU15_NEWMAN"
+                    "ESLGU14_POLTL"
                 ]
             },
             "we": {
@@ -338,17 +323,14 @@
                 ],
                 "1730": [
                     "ESLGU14_POLTL",
-                    "ESLGU14_EYRE",
                     "Coastal_Dragons_Rugby"
                 ],
                 "1800": [
                     "ESLGU14_POLTL",
-                    "ESLGU14_EYRE",
                     "Coastal_Dragons_Rugby"
                 ],
                 "1830": [
                     "ESLGU14_POLTL",
-                    "ESLGU14_EYRE",
                     "Coastal_Dragons_Rugby"
                 ],
                 "1900": [
@@ -366,19 +348,16 @@
             },
             "fr": {
                 "1600": [
-                    "GOAL_Chris",
-                    "ESLBU14_BERTH"
+                    "Goalie_Chris"
                 ],
                 "1630": [
-                    "GOAL_Chris",
-                    "ESLBU14_BERTH"
+                    "Goalie_Chris"
                 ],
                 "1700": [
-                    "GOAL_Chris",
-                    "ESLBU14_BERTH"
+                    "Goalie_Chris"
                 ],
                 "1730": [
-                    "GOAL_Chris"
+                    "Goalie_Chris"
                 ]
             },
             "sa": {
@@ -415,6 +394,28 @@
             }
         },
         "berkN": {
+            "tu": {
+                "1630": [
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "BU12_Martin"
+                ]
+            },
+            "th": {
+                "1630": [
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "BU12_Martin"
+                ]
+            },
             "mo": {
                 "1500": [
                     "Encinitas_Little_League"
@@ -723,16 +724,10 @@
             "name": "BU14_Suarez"
         },
         {
-            "name": "GOAL_Chris"
+            "name": "Goalie_Chris"
         },
         {
             "name": "ESLGU14_POLTL"
-        },
-        {
-            "name": "ESLGU14_EYRE"
-        },
-        {
-            "name": "ESLBU15_NEWMAN"
         },
         {
             "name": "ESLBU14_BERTH"
@@ -809,14 +804,14 @@
         },
         "BU12_Martin": {
             "tu": {
-                "1630": "berkS",
-                "1700": "berkS",
-                "1730": "berkS"
+                "1630": "berkN",
+                "1700": "berkN",
+                "1730": "berkN"
             },
             "th": {
-                "1630": "berkS",
-                "1700": "berkS",
-                "1730": "berkS"
+                "1630": "berkN",
+                "1700": "berkN",
+                "1730": "berkN"
             }
         },
         "BU12_SuarezXChiles": {
@@ -845,7 +840,7 @@
                 "1600": "berkS"
             }
         },
-        "GOAL_Chris": {
+        "Goalie_Chris": {
             "fr": {
                 "1600": "ada",
                 "1630": "ada",
@@ -865,37 +860,8 @@
                 "1830": "ada"
             }
         },
-        "ESLGU14_EYRE": {
-            "mo": {
-                "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
-            },
-            "we": {
-                "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
-            }
-        },
-        "ESLBU15_NEWMAN": {
-            "mo": {
-                "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
-            },
-            "th": {
-                "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
-            }
-        },
         "ESLBU14_BERTH": {
             "tu": {
-                "1600": "ada",
-                "1630": "ada",
-                "1700": "ada"
-            },
-            "fr": {
                 "1600": "ada",
                 "1630": "ada",
                 "1700": "ada"
