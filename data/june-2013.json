@@ -185,12 +185,6 @@
         }
     },
     "others": {
-        "Coastal_Dragons_Rugby": {
-            "ada": {
-                "we": [ 1500, "dusk" ],
-                "sa": [ 900, 1400 ]
-            }
-        },
         "Encinitas_Little_League": {
             "berkN": {
                 "mo": [ 1500, "dusk" ],
