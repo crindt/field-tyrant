@@ -1,0 +1,233 @@
+{
+    "teams": {
+        "BU8_PerryXReza": {
+            "fpref" : ["berkS","ada"],
+            "dem" : 1,
+            "req": [
+                { "mo": [1700, 1830], "we": [1700, 1830] }
+            ]
+        },
+        "GU9_RezaXFisher": {
+            "fpref" : ["berkS","ada"],
+            "dem" : 1,
+            "req": [
+                { "mo": [1530, 1700], "we": [1530, 1700] }
+            ]
+        },
+        "BU9_Serrano": {
+            "fpref" : ["berkS","ada"],
+            "dem" : 1,
+            "req": [
+                { "mo": [1530,1700], "we": [1530, 1700] }
+            ]
+        },
+        "BU10_Suarez": {
+            "fpref" : ["berkS","ada"],
+            "dem" : 2,
+            "req": [
+                { "fr": [1600, 1730] }
+            ]
+        },
+        "BU11_Anderson": {
+            "fpref" : ["berkS","ada"],
+            "dem" : 2,
+            "req": [
+                { "tu": [1630, 1800], "th": [1630, 1800] }
+            ]
+        },
+        "GU11_Cardinale": {
+            "fpref" : ["ada","berkS"],
+            "dem" : 1,
+            "req":  [
+                { "tu": [1730,1900], "th": [1730,1900] }
+            ]
+        },
+        "BU12_Martin": {
+            "fpref" : ["berkN","ada"],
+            "dem" : 2,
+            "req":  [
+                { "tu": [1630, 1800], "th": [1630, 1800] }
+            ]
+        },
+        "BU12_SuarezXChiles": {
+            "fpref" : ["ada"],
+            "dem" : 1,
+            "req":  [
+                { "we": [1530, 1700] }
+            ]
+        },
+        "GU13_ChilesXFisher": {
+            "fpref" : ["ada","berkS"],
+            "dem" : 1,
+            "req": [
+                { "mo": [1600, 1730], "we": [1600, 1730] },
+                { "mo": [1700, 1830], "we": [1700, 1830] }
+            ]
+        },
+        "BU14_Suarez": {
+            "fpref" : ["berkS","ada"],
+            "dem" : 2,
+            "req":  [
+                { "su": [1500, 1630] }
+            ]
+        },
+        "Goalie_Chris": {
+            "fpref" : ["ada"],
+            "dem" : 1,
+            "req" : [
+                { "fr": [1600, 1800] }
+            ]
+        },
+        "ESLGU12_NEWMAN": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "mo" : [1600, 1730], "th" : [1600,1730] }
+            ]
+        },
+        "ESLBU12_ELENZMARTIN": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "mo" : [1730, 1900] }
+            ]
+        },
+        "ESLBU14_PALAFOX": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "we" : [1730, 1900] }
+            ]
+        },
+        "ESLGU11_YAMAZAKI": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "tu" : [1600, 1730] }
+            ]
+        },
+        "ESLBU13_DEAN": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "tu" : [1600, 1730] }
+            ]
+        },
+        "ESLGU12_YAMAZAKI": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "tu" : [1730,1900] }
+            ]
+        },
+        "ESLBU14_WATSON": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "tu" : [1600, 1730] }
+            ]
+        },
+        "ESLGU10_EYRE": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "th" : [1600, 1730] }
+            ]
+        },
+        "ESLBU13_PALAFOX": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "th" : [1730,1900] }
+            ]
+        },
+        "ESLGU13_EYRE": {
+            "fpref" : ["ada"],
+            "dem"   : 1,
+            "req"   : [
+                { "th" : [1730,1900] }
+            ]
+        }
+    },
+    "fields": {
+        "ada": {
+            "pretty": "Ada Harris",
+            "cap" : 4,
+            "slots": {
+                "mo": [ 1500, "dusk" ],
+                "tu": [ 1500, "dusk" ],
+                "we": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ],
+                "fr": [ 1500, "dusk" ],
+                "sa": [ 1400, "dusk" ]
+            }
+        },
+        "berkS": {
+            "pretty": "Berkich (South)",
+            "cap" : 4,
+            "slots": {
+                "mo": [ 1500, "dusk" ],
+                "tu": [ 1500, "dusk" ],
+                "we": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ],
+                "fr": [ 1500, "dusk" ],
+                "sa": [ 800, 1400 ],
+                "su": [ [ 800, 1400 ], [1500, "dusk"] ]
+            }
+        },
+        "berkN": {
+            "pretty": "Berkich (North)",
+            "cap" : 3,
+            "slots": {
+                "tu": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ]
+            }
+        }
+    },
+    "others": {
+        "Coastal_Dragons_Rugby": {
+            "ada": {
+                "we": [ 1500, "dusk" ],
+                "sa": [ 900, 1400 ]
+            }
+        },
+        "Encinitas_Little_League": {
+            "berkN": {
+                "mo": [ 1500, "dusk" ],
+                "we": [ 1500, "dusk" ],
+                "fr": [ 1500, "dusk" ],
+                "sa": [ 800, "dusk" ],
+                "su": [ 1200, "dusk" ]
+            }
+        },
+        "Encinitas_Soccer_League": {
+            "ada": {
+                "tu": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ]
+            },
+            "berkN": {
+                "su": [ 800, 1200]
+            },
+            "berkS": {
+                "sa": [ 1400, "dusk"],
+                "su": [ [ 1400, 1500] ]
+            }
+        }
+    },
+    "displays": {
+        "Encinitas_Soccer_League": {
+            "ada": {
+                "tu": [ 1500, "dusk" ],
+                "th": [ 1500, "dusk" ]
+            },
+            "berkN": {
+                "su": [ 800, 1200 ]
+            },
+            "berkS": {
+                "sa": [ 1400, "dusk"],
+                "su": [ 1400, "dusk" ]
+            }
+        }
+    }
+}
+    

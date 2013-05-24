@@ -49,7 +49,8 @@ var dayarr = {
 
 var fieldmap = {
     berkS: "Berkich (South)",
-    berkN: "Berkich (North)"
+    berkN: "Berkich (North)",
+    ada: "Ada Harris"
 }
 
 var app = express();
@@ -115,7 +116,11 @@ function onSuccess(cb) {
 }
 
 function format_team(tm) {
-        return tm.split("X").join("/").split("_").join(" ")
+    return tm.split("X").join("/").split("_").join(" ")
+}
+
+function format_field(f) {
+    return fieldmap[f] || '[Unknown Field]'
 }
 
 function convert_time(tma,add,base) {
@@ -281,8 +286,9 @@ function doSchedule(cb) {
                         if ( cols[ts.team] === undefined ) cols[ts.team] = (colcnt++ % 12)+1
 
                         var event = {
-                            summary: prog.field+":"+format_team(ts.team),
-                            location: prog.field,
+                            //summary: prog.field+":"+format_team(ts.team),
+                            summary: format_team(ts.team),
+                            location: format_field(prog.field),
                             start: {dateTime: ISODateString(sl.from.day(dayconv).toDate()), timeZone:'America/Los_Angeles'},
                             end: {dateTime: ISODateString(sl.to.day(dayconv).toDate()), timeZone:'America/Los_Angeles'}
                             //colorId: cols[ts.team]
