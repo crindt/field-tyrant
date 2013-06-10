@@ -112,7 +112,7 @@ example:
 
 To ensure a solution is always found, a dummy "request" for each team is
 added that contains no slots.  Choosing this option carries a penalty in the
-objective function that prevent its section unless it can't otherwise be
+objective function that prevents its selection unless it can't otherwise be
 avoided.  By always reaching some solution, the program can identify where
 the conflicts are for the teams assigned to their dummy request.  This
 information can be useful for resolving the conflicts.
