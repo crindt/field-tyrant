@@ -1,0 +1,108 @@
+{
+  "teams": {
+    "BU8_PerryXReza": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 1,
+      "req": [
+        { "mo": [1700, 1830], "we": [1700, 1830] }
+      ]
+    },
+    "GU9_RezaXFisher": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 1,
+      "req": [
+        { "mo": [1530, 1700], "we": [1530, 1700] }
+      ]
+    },
+    "BU9_Serrano": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 1,
+      "req": [
+        { "mo": [1530,1700], "we": [1530, 1700] }
+      ]
+    },
+    "BU10_Suarez": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "fr": [1600, 1730] }
+      ]
+    },
+    "BU11_Anderson": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "tu": [1630, 1800], "th": [1630, 1800] }
+      ]
+    },
+    "GU11_Cardinale": {
+      "fpref" : ["ada","berkN","lakeU","lakeL"],
+      "dem" : 1,
+      "req":  [
+        { "tu": [1730,1900], "th": [1730,1900] }
+      ]
+    },
+    "BU12_Martin": {
+      "fpref" : ["berkN","lakeU","ada"],
+      "dem" : 2,
+      "req":  [
+        { "tu": [1630, 1800], "th": [1630, 1800] }
+      ]
+    },
+    "BU12_SuarezXChiles": {
+      "fpref" : ["ada","berkN","lakeU"],
+      "dem" : 1,
+      "req":  [
+        { "we": [1530, 1700] }
+      ]
+    },
+    "GU13_ChilesXFisher": {
+      "fpref" : ["ada","berkN","lakeU","lakeL"],
+      "dem" : 1,
+      "req": [
+        { "mo": [1600, 1730], "we": [1600, 1730] },
+        { "mo": [1700, 1830], "we": [1700, 1830] }
+      ]
+    },
+    "BU14_Suarez": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req":  [
+        { "su": [1500, 1630] }
+      ]
+    },
+    "Goalie_Chris": {
+      "fpref" : ["ada","lakeU"],
+      "dem" : 1,
+      "req" : [
+        { "fr": [1600, 1800] }
+      ]
+    }
+  },
+  "fields": {
+    "ada": {
+      "pretty": "Ada Harris",
+      "cap" : 4,
+      "slots": {
+        "tu": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ]
+      }
+    },
+    "lakeU": {
+      "pretty": "Lake (Upper)",
+      "cap": 6,
+      "slots": {
+        "tu": [1500, 1800],
+        "we": [1500, 1800],
+        "th": [1500, 1800],
+        "fr": [1500, 1800],
+        "sa": [ 900, "dusk" ]
+      }
+    }
+  },
+  "others": {
+  },
+  "displays": {
+  }
+}
+
