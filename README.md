@@ -117,10 +117,10 @@ avoided.  By always reaching some solution, the program can identify where
 the conflicts are for the teams assigned to their dummy request.  This
 information can be useful for resolving the conflicts.
 
-The program is formulated around decision variables *`x`* that represent
+The program is formulated around decision variables `x` that represent
 team-field-time allocations, where time is descretized at some appropriate
 level of resolution (e.g. 30 minutes).  We group the decision variables into
-_options_, *`o`*, representing each team's set of requested field slots.
+_options_, `o`, representing each team's set of requested field slots.
 
 The program takes the general form:
 
