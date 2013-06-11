@@ -496,9 +496,9 @@ _.each(teams,function(tmo,tm) {
     // the last request ( the dummy ) will have a high cost
     var mult = 1;
     var tpri = pri
-    if ( tpri === tmo.req.length ) mult = _.keys(teams).length*100;
-    else if ( tpri > 1 ) 
-      tpri = 1+tpri/100
+    if ( prog.alwaysFeasible && tpri === tmo.req.length ) mult = _.keys(teams).length*100;  // last option is dummy
+    //else if ( tpri > 1 ) 
+      //tpri = 1+tpri/100
 
     //emit(" + "+(mult*tpri/pri)+" "+bvar(tm,"o"+pri))
     //emit(" + "+(mult*tpri)+" "+bvar(tm,"o"+pri))

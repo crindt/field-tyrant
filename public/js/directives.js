@@ -486,7 +486,7 @@ angular.module('myApp.directives', []).
                                         var xx = xScale(slot.day)+slotbor+(slot.slot-1)*slotw;
                                         // adjust for other leagues schedules to fill
                                         // the whole column
-                                        if ( team.team.match(/(encinitas_soccer|little_league|rugby|lacrosse)/i) ) {
+                                        if ( team.team.match(/(encinitas_soccer|little_league|rugby|lacrosse|softball|adult|city)/i) ) {
                                             xx = xScale(slot.day)
                                             slotw = rb
                                         }

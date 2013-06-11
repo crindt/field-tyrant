@@ -25,7 +25,7 @@
       "fpref" : ["berkN","lakeU","lakeL","ada"],
       "dem" : 2,
       "req": [
-        { "fr": [1600, 1730] }
+        { "tu": [1630, 1800], "th": [1630, 1800] }
       ]
     },
     "BU11_Anderson": {

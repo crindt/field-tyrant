@@ -147,7 +147,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
                 console.log('ki',k,i)
                 $scope.colors[k] = colors20(i)
 
-                if ( k.match(/(League|Lacrosse|Rugby|^ESL)/ ) ) {
+                if ( k.match(/(League|Lacrosse|Rugby|^ESL|Softball|Adult|City)/ ) ) {
                     // override leagues
                     var c = 5 + (i%4); // make them shades of gray
                     $scope.colors[k] = "#"+c+c+c;
