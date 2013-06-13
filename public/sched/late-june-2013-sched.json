@@ -161,46 +161,6 @@
                     "BU12_SuarezXChiles"
                 ]
             },
-            "mo": {
-                "1600": [
-                    "GU13_ChilesXFisher"
-                ],
-                "1630": [
-                    "GU13_ChilesXFisher"
-                ],
-                "1700": [
-                    "GU13_ChilesXFisher"
-                ],
-                "1730": [
-                    "BU14_Suarez"
-                ],
-                "1800": [
-                    "BU14_Suarez"
-                ],
-                "1830": [
-                    "BU14_Suarez"
-                ]
-            },
-            "we": {
-                "1600": [
-                    "GU13_ChilesXFisher"
-                ],
-                "1630": [
-                    "GU13_ChilesXFisher"
-                ],
-                "1700": [
-                    "GU13_ChilesXFisher"
-                ],
-                "1730": [
-                    "BU14_Suarez"
-                ],
-                "1800": [
-                    "BU14_Suarez"
-                ],
-                "1830": [
-                    "BU14_Suarez"
-                ]
-            },
             "fr": {
                 "1600": [
                     "Goalie_Chris"
@@ -219,22 +179,78 @@
         "lakeU": {
             "mo": {
                 "1500": [
+                    "GU13_ChilesXFisher",
                     "Encinitas_Adult_Kickball"
                 ],
                 "1530": [
+                    "GU13_ChilesXFisher",
                     "Encinitas_Adult_Kickball"
                 ],
                 "1600": [
+                    "GU13_ChilesXFisher",
                     "Encinitas_Adult_Kickball"
                 ],
                 "1630": [
+                    "BU14_Suarez",
                     "Encinitas_Adult_Kickball"
                 ],
                 "1700": [
+                    "BU14_Suarez",
                     "Encinitas_Adult_Kickball"
                 ],
                 "1730": [
+                    "BU14_Suarez",
                     "Encinitas_Adult_Kickball"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2100": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2130": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "GU13_ChilesXFisher",
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1530": [
+                    "GU13_ChilesXFisher",
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1600": [
+                    "GU13_ChilesXFisher",
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1630": [
+                    "BU14_Suarez",
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1700": [
+                    "BU14_Suarez",
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1730": [
+                    "BU14_Suarez",
+                    "San_Dieguito_Youth_Softball"
                 ],
                 "1800": [
                     "Encinitas_Adult_Leagues"
@@ -262,50 +278,6 @@
                 ]
             },
             "tu": {
-                "1500": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1530": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1600": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1630": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1700": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1730": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1800": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1830": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1900": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1930": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2000": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2030": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2100": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2130": [
-                    "Encinitas_Adult_Leagues"
-                ]
-            },
-            "we": {
                 "1500": [
                     "San_Dieguito_Youth_Softball"
                 ],
@@ -575,26 +547,26 @@
         },
         "GU13_ChilesXFisher": {
             "mo": {
-                "1600": "ada",
-                "1630": "ada",
-                "1700": "ada"
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
             },
             "we": {
-                "1600": "ada",
-                "1630": "ada",
-                "1700": "ada"
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
             }
         },
         "BU14_Suarez": {
             "mo": {
-                "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
             },
             "we": {
-                "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
             }
         },
         "Goalie_Chris": {
