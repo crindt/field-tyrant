@@ -121,7 +121,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
         var tmp = $scope.schedules[$scope.schedules.length-1]
         setTimeout(function() {
             $scope.$apply(function() {
-                $scope.schedfile = 'june-2013-sched.json'
+                $scope.schedfile = 'late-june-2013-sched.json'
             })
         },500)
 
@@ -136,6 +136,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
 
 
     $scope.loadSchedule = function(sch) {
+      if ( sch === undefined ) return
         Schedule.get({sched:sch},function(data) {
             console.log(data.teamsched)
             $scope.schedule = data;
@@ -166,7 +167,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
         return $scope.sched(field,d,t).match(/scheduled/);
     };
 
-    $scope.loadSchedule('april-2013-sched.json')
+  //$scope.loadSchedule('april-2013-sched.json')
         
 }
 MyCtrl1.$inject = ['$scope','$http','$dialog','$dialog','Schedule'];
@@ -205,9 +206,11 @@ function MyCtrl1($scope,$http) {
 MyCtrl1.$inject = ['$scope','$http'];
 
 
-function MyCtrl2() {
+function MyCtrl2($scope,$routeParams) {
+//  $scope.schedfile = $routeParams.sched || 'june-2013-sched.json'
+//  $scope.loadSchedule($scope.schedfile)
 }
-MyCtrl2.$inject = [];
+MyCtrl2.$inject = ['$scope','$routeParams'];
 
 function DocCtrl() {
 }

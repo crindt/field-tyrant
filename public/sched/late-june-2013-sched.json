@@ -1,0 +1,1171 @@
+{
+    "times": [
+        900,
+        930,
+        1000,
+        1030,
+        1100,
+        1130,
+        1200,
+        1230,
+        1300,
+        1330,
+        1400,
+        1430,
+        1500,
+        1530,
+        1600,
+        1630,
+        1700,
+        1730,
+        1800,
+        1830,
+        1900,
+        1930,
+        2000,
+        2030,
+        2100
+    ],
+    "days": [
+        "mo",
+        "tu",
+        "we",
+        "th",
+        "fr",
+        "sa",
+        "su"
+    ],
+    "sched": {
+        "berkN": {
+            "mo": {
+                "1530": [
+                    "GU9_RezaXFisher"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1630": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano"
+                ],
+                "1800": [
+                    "BU8_PerryXReza"
+                ]
+            },
+            "we": {
+                "1530": [
+                    "GU9_RezaXFisher"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1630": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano"
+                ],
+                "1800": [
+                    "BU8_PerryXReza"
+                ]
+            },
+            "tu": {
+                "1630": [
+                    "BU10_SuarezXGardner"
+                ],
+                "1700": [
+                    "BU10_SuarezXGardner"
+                ],
+                "1730": [
+                    "BU10_SuarezXGardner"
+                ]
+            },
+            "th": {
+                "1630": [
+                    "BU10_SuarezXGardner"
+                ],
+                "1700": [
+                    "BU10_SuarezXGardner"
+                ],
+                "1730": [
+                    "BU10_SuarezXGardner"
+                ]
+            }
+        },
+        "ada": {
+            "tu": {
+                "1600": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1630": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1800": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1830": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ]
+            },
+            "th": {
+                "1600": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1630": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1800": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1830": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ]
+            },
+            "mo": {
+                "1600": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1630": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1700": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1730": [
+                    "BU14_Suarez"
+                ],
+                "1800": [
+                    "BU14_Suarez"
+                ],
+                "1830": [
+                    "BU14_Suarez"
+                ]
+            },
+            "we": {
+                "1600": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1630": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1700": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1730": [
+                    "BU14_Suarez"
+                ],
+                "1800": [
+                    "BU14_Suarez"
+                ],
+                "1830": [
+                    "BU14_Suarez"
+                ]
+            },
+            "fr": {
+                "1600": [
+                    "Goalie_Chris"
+                ],
+                "1630": [
+                    "Goalie_Chris"
+                ],
+                "1700": [
+                    "Goalie_Chris"
+                ],
+                "1730": [
+                    "Goalie_Chris"
+                ]
+            }
+        },
+        "lakeU": {
+            "mo": {
+                "1500": [
+                    "Encinitas_Adult_Kickball"
+                ],
+                "1530": [
+                    "Encinitas_Adult_Kickball"
+                ],
+                "1600": [
+                    "Encinitas_Adult_Kickball"
+                ],
+                "1630": [
+                    "Encinitas_Adult_Kickball"
+                ],
+                "1700": [
+                    "Encinitas_Adult_Kickball"
+                ],
+                "1730": [
+                    "Encinitas_Adult_Kickball"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2100": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2130": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1530": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1600": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1630": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1700": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1730": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2100": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2130": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1530": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1600": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1630": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1700": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1730": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2100": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2130": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1530": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1600": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1630": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1700": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1730": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2100": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2130": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1530": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1600": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1630": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1700": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1730": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2100": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2130": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            }
+        }
+    },
+    "teams": [
+        {
+            "name": "BU8_PerryXReza"
+        },
+        {
+            "name": "GU9_RezaXFisher"
+        },
+        {
+            "name": "BU9_Serrano"
+        },
+        {
+            "name": "BU10_SuarezXGardner"
+        },
+        {
+            "name": "BU11_Anderson"
+        },
+        {
+            "name": "GU11_Cardinale"
+        },
+        {
+            "name": "BU12_Martin"
+        },
+        {
+            "name": "BU12_SuarezXChiles"
+        },
+        {
+            "name": "GU13_ChilesXFisher"
+        },
+        {
+            "name": "BU14_Suarez"
+        },
+        {
+            "name": "Goalie_Chris"
+        }
+    ],
+    "teamsched": {
+        "BU8_PerryXReza": {
+            "mo": {
+                "1700": "berkN",
+                "1730": "berkN",
+                "1800": "berkN"
+            },
+            "we": {
+                "1700": "berkN",
+                "1730": "berkN",
+                "1800": "berkN"
+            }
+        },
+        "GU9_RezaXFisher": {
+            "mo": {
+                "1530": "berkN",
+                "1600": "berkN",
+                "1630": "berkN"
+            },
+            "we": {
+                "1530": "berkN",
+                "1600": "berkN",
+                "1630": "berkN"
+            }
+        },
+        "BU9_Serrano": {
+            "mo": {
+                "1600": "berkN",
+                "1630": "berkN",
+                "1700": "berkN",
+                "1730": "berkN"
+            },
+            "we": {
+                "1600": "berkN",
+                "1630": "berkN",
+                "1700": "berkN",
+                "1730": "berkN"
+            }
+        },
+        "BU10_SuarezXGardner": {
+            "tu": {
+                "1630": "berkN",
+                "1700": "berkN",
+                "1730": "berkN"
+            },
+            "th": {
+                "1630": "berkN",
+                "1700": "berkN",
+                "1730": "berkN"
+            }
+        },
+        "BU11_Anderson": {
+            "tu": {
+                "1600": "ada",
+                "1630": "ada",
+                "1700": "ada"
+            },
+            "th": {
+                "1600": "ada",
+                "1630": "ada",
+                "1700": "ada"
+            }
+        },
+        "GU11_Cardinale": {
+            "tu": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            },
+            "th": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            }
+        },
+        "BU12_Martin": {
+            "tu": {
+                "1600": "ada",
+                "1630": "ada",
+                "1700": "ada"
+            },
+            "th": {
+                "1600": "ada",
+                "1630": "ada",
+                "1700": "ada"
+            }
+        },
+        "BU12_SuarezXChiles": {
+            "tu": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            },
+            "th": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            }
+        },
+        "GU13_ChilesXFisher": {
+            "mo": {
+                "1600": "ada",
+                "1630": "ada",
+                "1700": "ada"
+            },
+            "we": {
+                "1600": "ada",
+                "1630": "ada",
+                "1700": "ada"
+            }
+        },
+        "BU14_Suarez": {
+            "mo": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            },
+            "we": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            }
+        },
+        "Goalie_Chris": {
+            "fr": {
+                "1600": "ada",
+                "1630": "ada",
+                "1700": "ada",
+                "1730": "ada"
+            }
+        },
+        "Encinitas_Adult_Kickball": {
+            "mo": {
+                "1500": [
+                    "lakeU"
+                ],
+                "1530": [
+                    "lakeU"
+                ],
+                "1600": [
+                    "lakeU"
+                ],
+                "1630": [
+                    "lakeU"
+                ],
+                "1700": [
+                    "lakeU"
+                ],
+                "1730": [
+                    "lakeU"
+                ]
+            }
+        },
+        "San_Dieguito_Youth_Softball": {
+            "tu": {
+                "1500": [
+                    "lakeU"
+                ],
+                "1530": [
+                    "lakeU"
+                ],
+                "1600": [
+                    "lakeU"
+                ],
+                "1630": [
+                    "lakeU"
+                ],
+                "1700": [
+                    "lakeU"
+                ],
+                "1730": [
+                    "lakeU"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "lakeU"
+                ],
+                "1530": [
+                    "lakeU"
+                ],
+                "1600": [
+                    "lakeU"
+                ],
+                "1630": [
+                    "lakeU"
+                ],
+                "1700": [
+                    "lakeU"
+                ],
+                "1730": [
+                    "lakeU"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "lakeU"
+                ],
+                "1530": [
+                    "lakeU"
+                ],
+                "1600": [
+                    "lakeU"
+                ],
+                "1630": [
+                    "lakeU"
+                ],
+                "1700": [
+                    "lakeU"
+                ],
+                "1730": [
+                    "lakeU"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "lakeU"
+                ],
+                "1530": [
+                    "lakeU"
+                ],
+                "1600": [
+                    "lakeU"
+                ],
+                "1630": [
+                    "lakeU"
+                ],
+                "1700": [
+                    "lakeU"
+                ],
+                "1730": [
+                    "lakeU"
+                ]
+            }
+        },
+        "Encinitas_Adult_Leagues": {
+            "mo": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ],
+                "2100": [
+                    "lakeU"
+                ],
+                "2130": [
+                    "lakeU"
+                ]
+            },
+            "tu": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ],
+                "2100": [
+                    "lakeU"
+                ],
+                "2130": [
+                    "lakeU"
+                ]
+            },
+            "we": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ],
+                "2100": [
+                    "lakeU"
+                ],
+                "2130": [
+                    "lakeU"
+                ]
+            },
+            "th": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ],
+                "2100": [
+                    "lakeU"
+                ],
+                "2130": [
+                    "lakeU"
+                ]
+            },
+            "fr": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ],
+                "2100": [
+                    "lakeU"
+                ],
+                "2130": [
+                    "lakeU"
+                ]
+            }
+        }
+    },
+    "fields": {
+        "ada": {
+            "pretty": "Ada Harris",
+            "cap": 4,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "sa": [
+                    1400,
+                    1430,
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        },
+        "berkN": {
+            "pretty": "Berkich (North)",
+            "cap": 3,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "sa": [
+                    900,
+                    930,
+                    1000,
+                    1030,
+                    1100,
+                    1130,
+                    1200,
+                    1230,
+                    1300,
+                    1330,
+                    1400,
+                    1430,
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        },
+        "lakeU": {
+            "pretty": "Lake (Upper)",
+            "cap": 6,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "su": [
+                    900,
+                    930,
+                    1000,
+                    1030,
+                    1100,
+                    1130,
+                    1200,
+                    1230,
+                    1300,
+                    1330,
+                    1400,
+                    1430,
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        },
+        "lakeL": {
+            "pretty": "Lake (Lower)",
+            "cap": 4,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030,
+                    2100,
+                    2130
+                ],
+                "su": [
+                    900,
+                    930,
+                    1000,
+                    1030,
+                    1100,
+                    1130,
+                    1200,
+                    1230,
+                    1300,
+                    1330,
+                    1400,
+                    1430,
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        }
+    },
+    "unallocated": {},
+    "timestep": 30
+}

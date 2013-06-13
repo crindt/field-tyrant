@@ -174,9 +174,9 @@ function format_field(f) {
 // add dummy request
 _.each(conf.teams, function(tmo,tm) {
   if ( prog.alwaysFeasible && ( tmo.req.length == 0 || _.keys(tmo.req[tmo.req.length-1]).length !== 0 )) {
-    // last request for this team is not {}
+    // last request for this team is not []
     // push a dummy on there
-    tmo.req.push({})
+    tmo.req.push([])
   }
 })
 
