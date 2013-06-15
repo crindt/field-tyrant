@@ -110,6 +110,10 @@
         },
         "ada": {
             "tu": {
+                "1530": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
                 "1600": [
                     "BU11_Anderson",
                     "BU12_Martin"
@@ -119,8 +123,7 @@
                     "BU12_Martin"
                 ],
                 "1700": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU12_SuarezXChiles"
                 ],
                 "1730": [
                     "GU11_Cardinale",
@@ -131,11 +134,14 @@
                     "BU12_SuarezXChiles"
                 ],
                 "1830": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "GU11_Cardinale"
                 ]
             },
             "th": {
+                "1530": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
                 "1600": [
                     "BU11_Anderson",
                     "BU12_Martin"
@@ -145,8 +151,7 @@
                     "BU12_Martin"
                 ],
                 "1700": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU12_SuarezXChiles"
                 ],
                 "1730": [
                     "GU11_Cardinale",
@@ -157,8 +162,7 @@
                     "BU12_SuarezXChiles"
                 ],
                 "1830": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "GU11_Cardinale"
                 ]
             },
             "fr": {
@@ -499,14 +503,14 @@
         },
         "BU11_Anderson": {
             "tu": {
+                "1530": "ada",
                 "1600": "ada",
-                "1630": "ada",
-                "1700": "ada"
+                "1630": "ada"
             },
             "th": {
+                "1530": "ada",
                 "1600": "ada",
-                "1630": "ada",
-                "1700": "ada"
+                "1630": "ada"
             }
         },
         "GU11_Cardinale": {
@@ -523,26 +527,26 @@
         },
         "BU12_Martin": {
             "tu": {
+                "1530": "ada",
                 "1600": "ada",
-                "1630": "ada",
-                "1700": "ada"
+                "1630": "ada"
             },
             "th": {
+                "1530": "ada",
                 "1600": "ada",
-                "1630": "ada",
-                "1700": "ada"
+                "1630": "ada"
             }
         },
         "BU12_SuarezXChiles": {
             "tu": {
+                "1700": "ada",
                 "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
+                "1800": "ada"
             },
             "th": {
+                "1700": "ada",
                 "1730": "ada",
-                "1800": "ada",
-                "1830": "ada"
+                "1800": "ada"
             }
         },
         "GU13_ChilesXFisher": {
