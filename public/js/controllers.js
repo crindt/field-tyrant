@@ -121,7 +121,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
         var tmp = $scope.schedules[$scope.schedules.length-1]
         setTimeout(function() {
             $scope.$apply(function() {
-                $scope.schedfile = 'late-june-2013-sched.json'
+                $scope.schedfile = 'aug-2013-sched.json'
             })
         },500)
 

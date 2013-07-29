@@ -29,7 +29,7 @@
       ]
     },
     "BU11_Anderson": {
-      "fpref" : ["ada","lakeU","berkN","lakeL"],
+      "fpref" : ["lakeU","ada","berkN","lakeL"],
       "dem" : 2,
       "req": [
         { "tu": [1530, 1700], "th": [1530, 1700] }
@@ -50,7 +50,7 @@
       ]
     },
     "BU12_SuarezXChiles": {
-      "fpref" : [ "ada","lakeU"],
+      "fpref" : [ "lakeU","ada"],
       "dem" : 1,
       "req":  [
         { "tu": [1700,1830], "th": [1700, 1830] }
@@ -77,7 +77,7 @@
     },
     "Goalie_Chris": {
       "fpref" : ["ada","lakeU"],
-      "dem" : 1,
+      "dem" : 0,
       "req" : [
         { "fr": [1600, 1800] }
       ]

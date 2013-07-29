@@ -103,13 +103,16 @@
             },
             "tu": {
                 "1530": [
+                    "BU11_Anderson",
                     "BU12_Martin"
                 ],
                 "1600": [
+                    "BU11_Anderson",
                     "BU12_Martin"
                 ],
                 "1630": [
                     "BU10_SuarezXGardner",
+                    "BU11_Anderson",
                     "BU12_Martin"
                 ],
                 "1700": [
@@ -121,13 +124,16 @@
             },
             "th": {
                 "1530": [
+                    "BU11_Anderson",
                     "BU12_Martin"
                 ],
                 "1600": [
+                    "BU11_Anderson",
                     "BU12_Martin"
                 ],
                 "1630": [
                     "BU10_SuarezXGardner",
+                    "BU11_Anderson",
                     "BU12_Martin"
                 ],
                 "1700": [
@@ -140,15 +146,6 @@
         },
         "ada": {
             "tu": {
-                "1530": [
-                    "BU11_Anderson"
-                ],
-                "1600": [
-                    "BU11_Anderson"
-                ],
-                "1630": [
-                    "BU11_Anderson"
-                ],
                 "1700": [
                     "BU12_SuarezXChiles"
                 ],
@@ -165,15 +162,6 @@
                 ]
             },
             "th": {
-                "1530": [
-                    "BU11_Anderson"
-                ],
-                "1600": [
-                    "BU11_Anderson"
-                ],
-                "1630": [
-                    "BU11_Anderson"
-                ],
                 "1700": [
                     "BU12_SuarezXChiles"
                 ],
@@ -279,14 +267,14 @@
         },
         "BU11_Anderson": {
             "tu": {
-                "1530": "ada",
-                "1600": "ada",
-                "1630": "ada"
+                "1530": "lakeU",
+                "1600": "lakeU",
+                "1630": "lakeU"
             },
             "th": {
-                "1530": "ada",
-                "1600": "ada",
-                "1630": "ada"
+                "1530": "lakeU",
+                "1600": "lakeU",
+                "1630": "lakeU"
             }
         },
         "GU11_Cardinale": {

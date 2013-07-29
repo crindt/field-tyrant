@@ -4,21 +4,21 @@
       "fpref" : ["berkN","lakeU","lakeL","ada"],
       "dem" : 1,
       "req": [
-        { "we": [1630, 1800], "fr": [1630, 1800] }
+        { "mo": [1700, 1830], "we": [1700, 1830] }
       ]
     },
     "GU9_RezaXFisher": {
       "fpref" : ["berkN","lakeU","lakeL","ada"],
       "dem" : 1,
       "req": [
-        { "we": [1500, 1630], "fr": [1500, 1630] }
+        { "mo": [1530, 1700], "we": [1530, 1700] }
       ]
     },
     "BU9_Serrano": {
       "fpref" : ["berkN","lakeU","lakeL","ada"],
       "dem" : 2,
       "req": [
-        { "we": [1600,1800], "fr": [1600, 1800] }
+        { "mo": [1600,1800], "we": [1600, 1800] }
       ]
     },
     "BU10_SuarezXGardner": {
@@ -43,7 +43,7 @@
       ]
     },
     "BU12_Martin": {
-      "fpref" : ["lakeU"],
+      "fpref" : ["ada"],
       "dem" : 2,
       "req":  [
         { "tu": [1530, 1700], "th": [1530, 1700] }
@@ -60,18 +60,18 @@
       "fpref" : ["lakeU","ada","berkN","lakeL"],
       "dem" : 2,
       "req": [
-        { "we": [1500, 1630], "fr": [1500, 1630] },
-        { "we": [1600, 1730], "fr": [1600, 1730] },
-        { "we": [1700, 1830], "fr": [1700, 1830] }
+        { "mo": [1500, 1630], "we": [1500, 1630] },
+        { "mo": [1600, 1730], "we": [1600, 1730] },
+        { "mo": [1700, 1830], "we": [1700, 1830] }
       ]
     },
     "BU14_Suarez": {
       "fpref" : ["lakeU","ada","berkN","lakeL"],
       "dem" : 2,
       "req":  [
-        { "we": [1630, 1800], "fr": [1630, 1800] },
-        { "we": [1730, 1900], "fr": [1730, 1900] },
-        { "we": [1600, 1730], "fr": [1600, 1730] },
+        { "mo": [1630, 1800], "we": [1630, 1800] },
+        { "mo": [1730, 1900], "we": [1730, 1900] },
+        { "mo": [1600, 1730], "we": [1600, 1730] },
         { "su": [1500, 1630] }
       ]
     },
@@ -88,61 +88,63 @@
       "pretty": "Ada Harris",
       "cap" : 4,
       "slots": {
+        "mo": [ 1500, "dusk" ],
         "tu": [ 1500, "dusk" ],
-        "th": [ 1500, "dusk" ]
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ],
+        "sa": [ 1400, "dusk" ]
       }
     },
     "berkN": {
       "pretty": "Berkich (North)",
       "cap" : 3,
       "slots": {
+        "mo": [ 1500, "dusk" ],
+        "tu": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ],
+        "sa": [ 900, "dusk" ]
       }
     },
     "lakeU": {
       "pretty": "Lake (Upper)",
       "cap": 6,
       "slots": {
+        "mo": [1500, 1800],
         "tu": [1500, 1800],
         "we": [1500, 1800],
         "th": [1500, 1800],
         "fr": [1500, 1800],
-        "sa": [ 800, "dusk" ]
+        "su": [ 900, "dusk" ]
       }
     },
     "lakeL": {
       "pretty": "Lake (Lower)",
       "cap": 4,
       "slots": {
+        "mo": [1500, 1800],
+        "fr": [1500, 2200],
+        "su": [ 900, "dusk" ]
       }
     }
   },
   "others": {
-  },
-  "displays": {
-    "San_Dieguito_Youth_Softball": {
-      "lakeU": {
-        "su": [ 800, 2200 ]
-      },
-      "lakeL": {
-        "su": [ 800, 2200 ]
-      }
-    },
-    "Pop_Warner_Football": {
+    "Encinitas_Adult_Kickball": {
       "lakeU": {
         "mo": [ 1500, 1800 ]
-      },
-      "lakeL": {
-        "mo": [ 1500, 1800 ],
-        "tu": [ 1500, 2200 ],
-        "we": [ 1500, 2200 ],
-        "th": [ 1500, 2200 ],
-        "fr": [ 1500, 2200 ]
+      }
+    },
+    "San_Dieguito_Youth_Softball": {
+      "lakeU": {
+        "tu": [ 1500, 1800 ],
+        "we": [ 1500, 1800 ],
+        "th": [ 1500, 1800 ],
+        "fr": [ 1500, 1800 ]
       }
     },
     "Encinitas_Adult_Leagues": {
-      "lakeL": {
-        "mo": [ 1800, 2200 ]
-      },
       "lakeU": {
         "mo": [ 1800, 2200 ],
         "tu": [ 1800, 2200 ],
@@ -150,10 +152,25 @@
         "th": [ 1800, 2200 ],
         "fr": [ 1800, 2200 ]
       }
+    }
+  },
+  "displays": {
+    "San_Dieguito_Youth_Softball": {
+      "lakeU": {
+        "mo": [ 1500, 1800 ],
+        "tu": [ 1500, 1800 ],
+        "we": [ 1500, 1800 ],
+        "th": [ 1500, 1800 ],
+        "fr": [ 1500, 1800 ]
+      }
     },
-    "Encinitas_Soccer_League": {
-      "lakeL": {
-        "sa": [ 800, 2200 ]
+    "Encinitas_Adult_Leagues": {
+      "lakeU": {
+        "mo": [ 1800, 2200 ],
+        "tu": [ 1800, 2200 ],
+        "we": [ 1800, 2200 ],
+        "th": [ 1800, 2200 ],
+        "fr": [ 1800, 2200 ]
       }
     }
   }
