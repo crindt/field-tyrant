@@ -66,12 +66,14 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
     today.setSeconds(0)
     today.setMilliseconds(0)
     var mon = angular.copy(today).add(1).day().previous().monday()
+    var fri = angular.copy(today).add(-1).day().next().friday()
     var sun = angular.copy(today).add(-1).day().next().sunday()
 
     $scope.basedate = angular.copy(mon)
 
     $http({method: 'GET', 
-           url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),sun.getMonth()+1,sun.getDate()].join("/")}).
+           //url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),sun.getMonth()+1,sun.getDate()].join("/")}).
+           url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),fri.getMonth()+1,fri.getDate()].join("/")}).
         success(function(data, status, headers, config) {
             $scope.twilight = data
         }).
@@ -148,7 +150,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
                 console.log('ki',k,i)
                 $scope.colors[k] = colors20(i)
 
-                if ( k.match(/(League|Lacrosse|Rugby|^ESL|Softball|Adult|City)/ ) ) {
+                if ( k.match(/(League|Lacrosse|Rugby|^ESL|Softball|Adult|City|Warner)/i ) ) {
                     // override leagues
                     var c = 5 + (i%4); // make them shades of gray
                     $scope.colors[k] = "#"+c+c+c;

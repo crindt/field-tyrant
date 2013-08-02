@@ -10,9 +10,9 @@ var daymap = {
     tu: "Tuesday",
     we: "Wednesday",
     th: "Thursday",
-    fr: "Friday",
-    sa: "Saturday",
-    su: "Sunday"
+    fr: "Friday"
+  //,sa: "Saturday"
+//    ,su: "Sunday"
 }
 function format_day(d) {
     return daymap[d] || d
@@ -131,7 +131,9 @@ angular.module('myApp.directives', []).
                 var padding = parseInt(attrs.chartPadding) || 50;
                 var w = tw - padding*2;
                 var h = th - padding*2;
-                var days = ["mo","tu","we","th","fr","sa","su"]
+                //var days = ["mo","tu","we","th","fr","sa","su"]
+                var days = ["mo","tu","we","th","fr"]
+                var otherleague = /(encinitas_soccer|little_league|rugby|lacrosse|softball|adult|city|warner)/i
 
                 var xScale, tScale // defined in watch statements
 
@@ -270,7 +272,9 @@ angular.module('myApp.directives', []).
                         // set up the time scale
                         //var from = new Date(1970,0,1,8,0,0)
                         var from = angular.copy(scope.basedate)
-                        from.setHours(8)
+                      //from.setHours(8)
+                        from.setHours(14)
+                        from.setMinutes(30)
 
                         var twilight = _.max(scope.twilight, function(t) { 
                             
@@ -328,13 +332,18 @@ angular.module('myApp.directives', []).
                             .attr('width', xScale.rangeBand())
                             .attr('height', function(sl) { 
                                 var lasttime = convert_time(sl.times[sl.times.length-1],scope.timestep)
-                                var mytwilight = new Date(scope.twilight[_.indexOf(days,sl.day)].civil_twilight)
-                                // schedule times specified for monday
-                                mytwilight.setMonth(lasttime.getMonth())
-                                mytwilight.setDate(lasttime.getDate())
-
-                                if ( lasttime > mytwilight ) lasttime = mytwilight
-                                return tScale(lasttime) - tScale(convert_time(sl.times[0]));
+                                var ii = _.indexOf(days,sl.day)  // catch case when day isn't being plotted
+                                if ( ii >= 0 ) {
+                                  var mytwilight = new Date(scope.twilight[ii].civil_twilight)
+                                  // schedule times specified for monday
+                                  mytwilight.setMonth(lasttime.getMonth())
+                                  mytwilight.setDate(lasttime.getDate())
+                                  
+                                  if ( lasttime > mytwilight ) lasttime = mytwilight
+                                  return tScale(lasttime) - tScale(convert_time(sl.times[0]));
+                                } else {
+                                  return 0
+                                }
                             })
                             .on('mousemove', function(d) {
                                 scope.mousecoord = d3.mouse(this)
@@ -361,7 +370,8 @@ angular.module('myApp.directives', []).
 
                         axesg_b // goes in back
                             .selectAll("line.dayticks")
-                            .data(["mo","tu","we","th","fr","sa","su"])
+                            //.data(["mo","tu","we","th","fr","sa","su"])
+                            .data(["mo","tu","we","th","fr"])
                             .enter()
                             .append("svg:line")
                             .classed("dayticks",true)
@@ -429,9 +439,12 @@ angular.module('myApp.directives', []).
                                                    slot: 1
                                                   }
 
+                                        // grab already scheduled slots not representing other leagues
+                                        var avoid = _.filter(data,function(d) { return !d.team.match(otherleague) });
+
                                         // determine if slot overlaps with already scheduled
                                         // slots and shift it over accordingly
-                                        while( slot_clashes( nsl, data ) ) {
+                                        while( slot_clashes( nsl, avoid ) ) {
                                             nsl.slot++;
                                         }
                                         if ( daywidth[d] == undefined || daywidth[d] < nsl.slot ) daywidth[d] = nsl.slot
@@ -486,7 +499,7 @@ angular.module('myApp.directives', []).
                                         var xx = xScale(slot.day)+slotbor+(slot.slot-1)*slotw;
                                         // adjust for other leagues schedules to fill
                                         // the whole column
-                                        if ( team.team.match(/(encinitas_soccer|little_league|rugby|lacrosse|softball|adult|city)/i) ) {
+                                        if ( team.team.match(otherleague) ) {
                                             xx = xScale(slot.day)
                                             slotw = rb
                                         }
