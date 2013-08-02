@@ -14,6 +14,7 @@ prog
   .version('0.0.1')
   .option('-f, --format <format>','Output Format')
   .option('-l, --loglevel <level>',"Set the loglevel for console output [info]","info")
+  .option('-i, --input <file>',"File to read schedule from",null)
   .option('-o, --output <file>',"File to output results to",null)
   .option('-t, --timestep <int>',"Size of time block size to us [30 minutes]",30)
   .option('-e, --echo', "Echo the program and results to stdout [false]",false)
@@ -21,6 +22,7 @@ prog
   .option('-x, --force <string>', "Comma separated list of variables to force to be 1", null)
   .option('-a, --always-feasible', "Set up dummy options to always admit feasibility", true)
   .option('-p, --limit-to-prefs', "Limit allocations only to preferred fields",false)
+  .option('-c, --prefer-comp', "Give comp teams slightly more importance",false)
   .parse(process.argv)
 
 var outstream = process.stdout
@@ -44,7 +46,7 @@ var workweek = ["mo", "tu", "we", "th", "fr"]
 var weekend = ["sa","su"]
 var week = _.union(workweek,weekend);
 
-var conf = JSON.parse(fs.readFileSync(prog.args[0],'utf8'));
+var conf = JSON.parse(fs.readFileSync(prog.input || '/dev/stdin','utf8').toString());
 
 var teams = conf.teams;
 var fields = conf.fields;
@@ -203,7 +205,9 @@ _.each(conf.fields,function(fo,f) {
 
 // spawn lp_solve.  It will listen on child.stdin until we write the program to
 // it and close it below
-child = spawn('lp_solve',['-presolve'])
+lpopts = prog.args.length ? _.map(prog.args,function(a) { return a.replace(/^--/,"-") }) : ['-presolve']
+console.log('lpopts',lpopts)
+child = spawn('lp_solve',lpopts)
 
 var allerrs = []
 child.stderr.on('data',function(data) {
