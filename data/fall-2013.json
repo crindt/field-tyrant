@@ -1,0 +1,412 @@
+
+{
+  "teams": {
+    "BU8_PerryXReza": {
+      "fpref" : ["berkS","berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "mo": [1700, 1830], "we": [1700, 1830] }
+      ]
+    },
+    "GU9_RezaXFisher": {
+      "fpref" : ["berkS","berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "mo": [1530, 1700], "we": [1530, 1700] }
+      ]
+    },
+    "BU9_Serrano": {
+      "fpref" : ["berkS","berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "mo": [1600,1800], "we": [1600, 1800] },
+        { "mo": [1630,1800], "we": [1630, 1800] }
+      ]
+    },
+    "BU10_SuarezXGardner": {
+      "fpref" : ["berkS","berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "tu": [1630, 1800], "th": [1630, 1800] }
+      ]
+    },
+    "BU11_Anderson": {
+      "fpref" : ["lakeU","ada","berkN","lakeL"],
+      "dem" : 2,
+      "req": [
+        { "tu": [1530, 1700], "th": [1530, 1700] }
+      ]
+    },
+    "GU11_Cardinale": {
+      "fpref" : ["lakeU","berkN","ada","lakeL"],
+      "dem" : 2,
+      "req":  [
+        { "tu": [1700,1830], "th": [1700, 1830] }
+      ]
+    },
+    "BU12_Martin": {
+      "fpref" : ["lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req":  [
+        { "tu": [1530, 1700], "th": [1530, 1700] }
+      ]
+    },
+    "BU12_SuarezXChiles": {
+      "fpref" : [ "lakeU","lakeL","ada"],
+      "dem" : 1,
+      "req":  [
+        { "tu": [1700,1830], "th": [1700, 1830] }
+      ]
+    },
+    "GU13_ChilesXFisher": {
+      "fpref" : ["lakeU","lakeL","ada","berkN","lakeL"],
+      "dem" : 2,
+      "req": [
+        { "mo": [1530, 1700], "we": [1530, 1700] },
+        { "mo": [1600, 1730], "we": [1600, 1730] },
+        { "mo": [1700, 1830], "we": [1700, 1830] }
+      ]
+    },
+    "BU14_Suarez": {
+      "fpref" : ["lakeU","lakeL","ada","berkN","lakeL"],
+      "dem" : 2,
+      "req":  [
+        { "mo": [1700, 1830], "we": [1700, 1830] },
+        { "mo": [1730, 1900], "we": [1730, 1900] },
+        { "mo": [1600, 1730], "we": [1600, 1730] },
+        { "su": [1500, 1630] }
+      ]
+    },
+    "Goalie_Chris": {
+      "fpref" : ["lakeU","lakeL","ada"],
+      "dem" : 1,
+      "req" : [
+        { "fr": [1600, 1800] }
+      ]
+    },
+    "FiveOClockFridays_Suarez": {
+      "fpref": [ "lakeU" ],
+      "dem": 2,
+      "req": [
+        { "fr": [1700,1830] }
+      ]
+    },
+
+
+    "GU17r_Melton": {
+      "fpref": ["lakeU","lakeL","ada"],
+      "dem": 3,
+      "req": [
+        { "mo": [1630, 1800], "we": [1630, 1800] },
+        { "mo": [1600, 1730], "we": [1600, 1730] }
+      ]
+    },
+    "GU8r_Egan": {
+      "fpref": ["berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        { "we": [1600, 1700] },
+        { "we": [1700, 1800] }
+      ]
+    },
+    "GU8r_Brough": {
+      "fpref": ["berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        { "th":[1600,1700] },
+        { "we":[1600,1700] },
+        { "th":[1530,1630] },
+        { "we":[1530,1630] }
+      ]
+    },
+    "GU8r_Thielman": {
+      "fpref": ["berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        { "we":[1600,1700], "th":[1600,1700] },
+        { "th":[1530,1630] },
+        { "th":[1600,1700] },
+        { "we":[1600,1700] },
+        { "we":[1730,1830] }
+      ]
+    },
+    "BU8r_Davis": {
+      "fpref": ["berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        { "tu":[1600,1700] },
+        { "th":[1600,1700] }
+      ]
+    },
+    "BU8r_Hertz": {
+      "fpref": ["lakeL", "berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        { "mo": [1700,1800], "we": [1700,1800] },
+        { "tu": [1700,1800], "we": [1700,1800] },
+        { "tu": [1700,1800], "th": [1700,1800] },
+        { "we": [1700,1800], "th": [1700,1800] },
+        { "tu": [1700,1800] },
+        { "we": [1700,1800] },
+        { "th": [1700,1800] }
+      ]
+    },
+    "BU8r_Burke": {
+      "fpref": ["berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        { "tu": [1700,1800] },
+        { "th": [1700,1800] },
+	{ "we": [1700,1800] }
+      ]
+    },
+    "BU8r_Brewer": {
+      "fpref": ["berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        { "tu": [1500, 1600], "th": [1500,1600] },
+	{ "tu": [1600, 1700], "th": [1600,1700] }
+      ]
+    },
+    "BU8r_Schnick": {
+      "fpref": ["berkN", "berkS", "ada"],
+      "dem": 2,
+      "req": [
+        {"th":[1600, 1700] },
+        {"th":[1630, 1730] },
+        {"th":[1700, 1800] },
+        {"we":[1600, 1700] },
+        {"we":[1630, 1730] },
+        {"we":[1700, 1800] },
+        {"fr":[1500, 1600] },
+        {"fr":[1530, 1630] },
+        {"fr":[1600, 1700] },
+        {"fr":[1630, 1730] },
+        {"fr":[1700, 1800] }
+      ]
+    },
+    "GU10r_Torn": {
+      "fpref": ["berkS","ada","berkN","lakeU","lakeL"],
+      "dem": 2,
+      "req": [
+        {"mo":[1700, 1800], "we":[1700,1800] },
+        {"we":[1700, 1800], "fr":[1700,1800] },
+        {"tu":[1700, 1800], "fr":[1700,1800] },
+        {"mo":[1700, 1800], "fr":[1700,1800] },
+        {"tu":[1700, 1800], "we":[1700,1800] },
+        {"mo":[1700, 1800], "tu":[1700,1800] }
+      ]
+    },
+    "GU10r_Monahan": {
+      "fpref": ["berkS","ada","berkN","lakeL","lakeU"],
+      "dem": 2,
+      "req": [
+        {"mo":[1600, 1700], "we":[1600,1700] },
+        {"mo":[1630, 1730], "we":[1630,1730] },
+        {"mo":[1700, 1800], "we":[1700,1800] }
+      ]
+    },
+    "GU10r_Irons": {
+      "fpref": ["berkS","ada","berkN","lakeU","lakeL"],
+      "dem": 2,
+      "req": [
+        {"tu":[1700,1800], "th":[1700,1800]},
+	{"tu":[1700,1800], "fr":[1700,1800]},
+        {"th":[1700,1800], "fr":[1700,1800]},
+	{"tu":[1700,1800]},
+	{"th":[1700,1800]},
+	{"fr":[1700,1800]}
+      ]
+    },
+    "BU10r_Murphy": {
+      "fpref": ["lakeU","lakeL"],
+      "dem": 2,
+      "req": [
+        {"tu":[1630,1730],"th":[1630,1730]},
+        {"tu":[1530,1630],"th":[1530,1630]},
+        {"tu":[1600,1700],"th":[1600,1700]},
+        {"tu":[1500,1600],"th":[1500,1600]}
+      ]
+    },
+    "BU10r_Cherewick": {
+      "fpref": ["berkS","ada","berkN","lakeU","lakeL"],
+      "dem": 2,
+      "req": [
+        {"we":[1530,1630],"th":[1530,1630]}
+      ]
+    },
+    "BU10r_Hartman": {
+      "fpref": ["ada","lakeU","lakeL","berkS","berkN"],
+      "dem": 2,
+      "req": [
+        {"tu":[1600,1700],"fr":[1600,1700]},
+        {"we":[1600,1700],"fr":[1600,1700]}
+      ]
+    },
+    "BU10r_Fromovitz": {
+      "fpref": ["ada","lakeL","lakeU","berkS","berkN"],
+      "dem": 2,
+      "req": [
+        {"we":[1600,1700]},
+        {"th":[1600,1700]},
+        {"tu":[1600,1700]}
+      ]
+    },
+    "BU12r_Sadler": {
+      "fpref": ["lakeL","lakeU","ada"],
+      "dem": 2,
+      "req": [
+        { "mo": [1700,1800], "we": [1700, 1800] },
+        { "mo": [1800,1900], "we": [1800, 1900] }
+      ]
+    },
+    "Micro_Boyd": {
+      "fpref": ["berkN","berkS"],
+      "dem": 1,
+      "req": [
+        {"we":[1600,1700]},
+	{"fr":[1700,1800]}
+      ]
+    },
+    "Micro_Manning": {
+      "fpref": ["berkN","berkS"],
+      "dem": 1,
+      "req": [
+        {"tu":[1600,1700]},
+        {"th":[1600,1700]},
+        {"tu":[1700,1800]},
+        {"th":[1700,1800]},
+        {"mo":[1600,1700]},
+        {"mo":[1700,1800]}
+
+      ]
+    },
+    "Micro_Delport": {
+      "fpref": ["berkN","berkS"],
+      "dem": 1,
+      "req": []
+    },
+    "Micro_Bates": {
+      "fpref": ["lakeU","ada","berkN","berkS"],
+      "dem": 1,
+      "req": [
+        {"tu": [1500,1600], "th": [1500,1600]},
+        {"tu": [1600,1700], "th": [1600,1700]},
+        {"tu": [1700,1800], "th": [1700,1800]}
+      ]
+    }
+  },
+  "fields": {
+    "ada": {
+      "pretty": "Ada Harris",
+      "cap" : 4,
+      "slots": {
+        "mo": [ 1500, "dusk" ],
+        "tu": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ]
+      }
+    },
+    "berkN": {
+      "pretty": "Berkich (North)",
+      "cap" : 4,
+      "slots": {
+        "mo": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ]
+      }
+    },
+    "berkS": {
+      "pretty": "Berkich (South)",
+      "cap" : 4,
+      "slots": {
+        "mo": [ 1500, "dusk" ],
+        "tu": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ]
+      }
+    },
+    "lakeU": {
+      "pretty": "Lake (Upper)",
+      "cap": 6,
+      "slots": {
+        "mo": [1500, 1830],
+        "tu": [1500, 1830],
+        "we": [1500, 1830],
+        "th": [1500, 1830],
+        "fr": [1500, 1830],
+        "su": [ 900, "dusk" ]
+      }
+    },
+    "lakeL": {
+      "pretty": "Lake (Lower)",
+      "cap": 4,
+      "slots": {
+        "mo": [1500, 1830],
+        "we": [1500, 2100]
+      }
+    }
+  },
+  "others": {
+    "San_Dieguito_Youth_Softball": {
+      "lakeL": {
+        "fr": [ 1500, 2100 ]
+      }
+    },
+    "Encinitas_Adult_Leagues": {
+      "lakeL": {
+        "mo": [ 1730, 2100 ]
+      },
+      "lakeU": {
+        "mo": [ 1730, 2100 ],
+        "tu": [ 1730, 2100 ],
+        "we": [ 1730, 2100 ],
+        "th": [ 1730, 2100 ],
+        "fr": [ 1730, 2100 ]
+      }
+    },
+    "Pop_Warner": {
+      "lakeL": {
+        "tu": [ 1500, 2100 ],
+        "th": [ 1500, 2100 ]
+      },
+      "berkN": {
+        "tu": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ]
+      }
+    }
+  },
+  "displays": {
+    "San_Dieguito_Youth_Softball": {
+      "lakeL": {
+        "fr": [ 1500, 2100 ]
+      }
+    },
+    "Encinitas_Adult_Leagues": {
+      "lakeL": {
+        "mo": [ 1730, 2100 ]
+      },
+      "lakeU": {
+        "mo": [ 1730, 2100 ],
+        "tu": [ 1730, 2100 ],
+        "we": [ 1730, 2100 ],
+        "th": [ 1730, 2100 ],
+        "fr": [ 1730, 2100 ]
+      }
+    },
+    "Pop_Warner": {
+      "lakeL": {
+        "tu": [ 1500, 2100 ],
+        "th": [ 1500, 2100 ]
+      },
+      "berkN": {
+        "tu": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ]
+      }
+    }
+  }
+}
+
