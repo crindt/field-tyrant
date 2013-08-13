@@ -65,6 +65,8 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
     today.setMinutes(0)
     today.setSeconds(0)
     today.setMilliseconds(0)
+    today.setMonth(9)
+    today.setDate(31)
     var mon = angular.copy(today).add(1).day().previous().monday()
     var fri = angular.copy(today).add(-1).day().next().friday()
     var sun = angular.copy(today).add(-1).day().next().sunday()
@@ -213,6 +215,12 @@ function MyCtrl2($scope,$routeParams) {
 //  $scope.loadSchedule($scope.schedfile)
 }
 MyCtrl2.$inject = ['$scope','$routeParams'];
+
+function MyCtrl3($scope,$routeParams) {
+  $scope.schedfile = $routeParams.sched || 'june-2013-sched.json'
+  $scope.loadSchedule($scope.schedfile)
+}
+MyCtrl3.$inject = ['$scope','$routeParams'];
 
 function DocCtrl() {
 }
