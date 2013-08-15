@@ -310,21 +310,21 @@
                 ],
                 "1530": [
                     "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU12_Martin",
+                    "BU10r_Murphy"
                 ],
                 "1600": [
                     "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU12_Martin",
+                    "BU10r_Murphy"
                 ],
                 "1630": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "BU10r_Murphy"
+                    "BU12_SuarezXChiles"
                 ],
                 "1700": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "BU10r_Murphy"
+                    "BU12_SuarezXChiles"
                 ],
                 "1730": [
                     "GU11_Cardinale",
@@ -356,21 +356,21 @@
                 ],
                 "1530": [
                     "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU12_Martin",
+                    "BU10r_Murphy"
                 ],
                 "1600": [
                     "BU11_Anderson",
-                    "BU12_Martin"
+                    "BU12_Martin",
+                    "BU10r_Murphy"
                 ],
                 "1630": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "BU10r_Murphy"
+                    "BU12_SuarezXChiles"
                 ],
                 "1700": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "BU10r_Murphy"
+                    "BU12_SuarezXChiles"
                 ],
                 "1730": [
                     "GU11_Cardinale",
@@ -1083,12 +1083,12 @@
         },
         "BU10r_Murphy": {
             "tu": {
-                "1630": "lakeU",
-                "1700": "lakeU"
+                "1530": "lakeU",
+                "1600": "lakeU"
             },
             "th": {
-                "1630": "lakeU",
-                "1700": "lakeU"
+                "1530": "lakeU",
+                "1600": "lakeU"
             }
         },
         "BU10r_Cherewick": {

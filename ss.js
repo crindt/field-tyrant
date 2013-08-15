@@ -32,7 +32,7 @@ _.each(_.keys(ts.sched), function(ff) {
     debug: true,
     username: 'crindt',
     password: 'caT0996Feet',
-    spreadsheetName: 'Cardiff Soccer Fall Practice Schedule',
+    spreadsheetName: 'Cardiff Soccer Fall Practice Schedule v2',
     worksheetName: f,
     callback: sheetReady
   });
