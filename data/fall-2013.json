@@ -198,7 +198,7 @@
       ]
     },
     "GU10r_Monahan": {
-      "fpref": ["berkS","adaW","berkN","lakeL","lakeU"],
+      "fpref": ["berkN","adaW"],
       "dem": 2,
       "req": [
         {"mo":[1600, 1700], "we":[1600,1700] },
@@ -287,7 +287,7 @@
       "req": []
     },
     "Micro_Bates": {
-      "fpref": ["lakeU","adaW","berkN","berkS"],
+      "fpref": ["adaW","lakeU","berkN","berkS"],
       "dem": 1,
       "req": [
         {"tu": [1500,1600], "th": [1500,1600]},
