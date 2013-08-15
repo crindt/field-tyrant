@@ -65,12 +65,10 @@
                     "BU10r_Cherewick"
                 ],
                 "1630": [
-                    "GU9_RezaXFisher",
-                    "Micro_Boyd"
+                    "GU9_RezaXFisher"
                 ],
                 "1700": [
-                    "BU8_PerryXReza",
-                    "Micro_Boyd"
+                    "BU8_PerryXReza"
                 ],
                 "1730": [
                     "BU8_PerryXReza"
@@ -125,6 +123,14 @@
                 "1730": [
                     "BU10_SuarezXGardner",
                     "Micro_Manning"
+                ]
+            },
+            "fr": {
+                "1700": [
+                    "Micro_Boyd"
+                ],
+                "1730": [
+                    "Micro_Boyd"
                 ]
             }
         },
@@ -1128,9 +1134,9 @@
             }
         },
         "Micro_Boyd": {
-            "we": {
-                "1630": "berkS",
-                "1700": "berkS"
+            "fr": {
+                "1700": "berkS",
+                "1730": "berkS"
             }
         },
         "Micro_Manning": {
