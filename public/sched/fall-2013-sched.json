@@ -392,9 +392,6 @@
                 ]
             },
             "mo": {
-                "1500": [
-                    "GU13_ChilesXFisher"
-                ],
                 "1530": [
                     "GU13_ChilesXFisher"
                 ],
@@ -403,10 +400,12 @@
                     "GU17r_Melton"
                 ],
                 "1630": [
+                    "GU13_ChilesXFisher",
                     "BU14_Suarez",
                     "GU17r_Melton"
                 ],
                 "1700": [
+                    "GU13_ChilesXFisher",
                     "BU14_Suarez",
                     "GU17r_Melton"
                 ],
@@ -434,9 +433,6 @@
                 ]
             },
             "we": {
-                "1500": [
-                    "GU13_ChilesXFisher"
-                ],
                 "1530": [
                     "GU13_ChilesXFisher",
                     "BU10r_Cherewick"
@@ -447,7 +443,7 @@
                     "BU10r_Cherewick"
                 ],
                 "1630": [
-                    "BU14_Suarez",
+                    "GU13_ChilesXFisher",
                     "GU17r_Melton"
                 ],
                 "1700": [
@@ -459,6 +455,7 @@
                     "GU17r_Melton"
                 ],
                 "1800": [
+                    "BU14_Suarez",
                     "Encinitas_Adult_Leagues"
                 ],
                 "1830": [
@@ -922,14 +919,15 @@
         },
         "GU13_ChilesXFisher": {
             "mo": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU",
+                "1700": "lakeU"
             },
             "we": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU"
             },
             "fr": {
                 "1530": "lakeU",
@@ -944,9 +942,9 @@
                 "1730": "lakeU"
             },
             "we": {
-                "1630": "lakeU",
                 "1700": "lakeU",
-                "1730": "lakeU"
+                "1730": "lakeU",
+                "1800": "lakeU"
             }
         },
         "Goalie_Chris": {
