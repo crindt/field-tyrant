@@ -41,19 +41,17 @@
                 ],
                 "1600": [
                     "GU9_RezaXFisher",
-                    "BU9_Serrano"
+                    "GU10r_Monahan"
                 ],
                 "1630": [
                     "GU9_RezaXFisher",
-                    "BU9_Serrano"
+                    "GU10r_Monahan"
                 ],
                 "1700": [
-                    "BU8_PerryXReza",
-                    "BU9_Serrano"
+                    "BU8_PerryXReza"
                 ],
                 "1730": [
-                    "BU8_PerryXReza",
-                    "BU9_Serrano"
+                    "BU8_PerryXReza"
                 ],
                 "1800": [
                     "BU8_PerryXReza"
@@ -65,19 +63,17 @@
                 ],
                 "1600": [
                     "GU9_RezaXFisher",
-                    "BU9_Serrano"
+                    "GU10r_Monahan"
                 ],
                 "1630": [
                     "GU9_RezaXFisher",
-                    "BU9_Serrano"
+                    "GU10r_Monahan"
                 ],
                 "1700": [
-                    "BU8_PerryXReza",
-                    "BU9_Serrano"
+                    "BU8_PerryXReza"
                 ],
                 "1730": [
-                    "BU8_PerryXReza",
-                    "BU9_Serrano"
+                    "BU8_PerryXReza"
                 ],
                 "1800": [
                     "BU8_PerryXReza"
@@ -130,121 +126,25 @@
                 ]
             }
         },
-        "lakeU": {
-            "tu": {
-                "1530": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
-                ],
-                "1600": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
-                ],
-                "1630": [
-                    "BU11_Anderson",
-                    "BU12_Martin",
-                    "BU10r_Murphy"
-                ],
-                "1700": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "BU10r_Murphy"
-                ],
-                "1730": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1800": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1830": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1900": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1930": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2000": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2030": [
-                    "Encinitas_Adult_Leagues"
-                ]
-            },
-            "th": {
-                "1530": [
-                    "BU11_Anderson",
-                    "BU12_Martin",
-                    "BU10r_Cherewick"
-                ],
-                "1600": [
-                    "BU11_Anderson",
-                    "BU12_Martin",
-                    "BU10r_Cherewick"
-                ],
-                "1630": [
-                    "BU11_Anderson",
-                    "BU12_Martin",
-                    "BU10r_Murphy"
-                ],
-                "1700": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "BU10r_Murphy"
-                ],
-                "1730": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1800": [
-                    "GU11_Cardinale",
-                    "BU12_SuarezXChiles",
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1830": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1900": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1930": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2000": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2030": [
-                    "Encinitas_Adult_Leagues"
-                ]
-            },
+        "lakeL": {
             "mo": {
-                "1530": [
-                    "GU13_ChilesXFisher"
-                ],
                 "1600": [
-                    "GU13_ChilesXFisher"
+                    "BU9_Serrano"
                 ],
                 "1630": [
-                    "GU13_ChilesXFisher",
-                    "GU17r_Melton"
+                    "BU9_Serrano"
                 ],
                 "1700": [
-                    "BU14_Suarez",
-                    "GU17r_Melton"
+                    "BU9_Serrano",
+                    "BU8r_Hertz",
+                    "BU12r_Sadler"
                 ],
                 "1730": [
-                    "BU14_Suarez",
-                    "GU17r_Melton",
-                    "Encinitas_Adult_Leagues"
+                    "BU9_Serrano",
+                    "BU8r_Hertz",
+                    "BU12r_Sadler"
                 ],
                 "1800": [
-                    "BU14_Suarez",
                     "Encinitas_Adult_Leagues"
                 ],
                 "1830": [
@@ -264,16 +164,246 @@
                 ]
             },
             "we": {
+                "1600": [
+                    "BU9_Serrano"
+                ],
+                "1630": [
+                    "BU9_Serrano"
+                ],
+                "1700": [
+                    "BU9_Serrano",
+                    "BU8r_Hertz",
+                    "BU12r_Sadler"
+                ],
+                "1730": [
+                    "BU9_Serrano",
+                    "BU8r_Hertz",
+                    "BU12r_Sadler"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "San_Dieguito_Youth_Softball"
+                ],
                 "1530": [
-                    "GU13_ChilesXFisher",
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1600": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1630": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1700": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1730": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1800": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1830": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1900": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "1930": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "2000": [
+                    "San_Dieguito_Youth_Softball"
+                ],
+                "2030": [
+                    "San_Dieguito_Youth_Softball"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "Pop_Warner"
+                ],
+                "1530": [
+                    "Pop_Warner"
+                ],
+                "1600": [
+                    "Pop_Warner"
+                ],
+                "1630": [
+                    "Pop_Warner"
+                ],
+                "1700": [
+                    "Pop_Warner"
+                ],
+                "1730": [
+                    "Pop_Warner"
+                ],
+                "1800": [
+                    "Pop_Warner"
+                ],
+                "1830": [
+                    "Pop_Warner"
+                ],
+                "1900": [
+                    "Pop_Warner"
+                ],
+                "1930": [
+                    "Pop_Warner"
+                ],
+                "2000": [
+                    "Pop_Warner"
+                ],
+                "2030": [
+                    "Pop_Warner"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Pop_Warner"
+                ],
+                "1530": [
+                    "Pop_Warner"
+                ],
+                "1600": [
+                    "Pop_Warner"
+                ],
+                "1630": [
+                    "Pop_Warner"
+                ],
+                "1700": [
+                    "Pop_Warner"
+                ],
+                "1730": [
+                    "Pop_Warner"
+                ],
+                "1800": [
+                    "Pop_Warner"
+                ],
+                "1830": [
+                    "Pop_Warner"
+                ],
+                "1900": [
+                    "Pop_Warner"
+                ],
+                "1930": [
+                    "Pop_Warner"
+                ],
+                "2000": [
+                    "Pop_Warner"
+                ],
+                "2030": [
+                    "Pop_Warner"
+                ]
+            }
+        },
+        "lakeU": {
+            "tu": {
+                "1500": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1530": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1600": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1630": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles",
+                    "BU10r_Murphy"
+                ],
+                "1700": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles",
+                    "BU10r_Murphy"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1530": [
+                    "BU11_Anderson",
+                    "BU12_Martin",
                     "BU10r_Cherewick"
                 ],
                 "1600": [
-                    "GU13_ChilesXFisher",
+                    "BU11_Anderson",
+                    "BU12_Martin",
                     "BU10r_Cherewick"
                 ],
                 "1630": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles",
+                    "BU10r_Murphy"
+                ],
+                "1700": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles",
+                    "BU10r_Murphy"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1530": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1600": [
                     "GU13_ChilesXFisher",
+                    "GU17r_Melton"
+                ],
+                "1630": [
+                    "BU14_Suarez",
                     "GU17r_Melton"
                 ],
                 "1700": [
@@ -282,11 +412,53 @@
                 ],
                 "1730": [
                     "BU14_Suarez",
-                    "GU17r_Melton",
-                    "Encinitas_Adult_Leagues"
+                    "GU17r_Melton"
                 ],
                 "1800": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1830": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1900": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "1930": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2000": [
+                    "Encinitas_Adult_Leagues"
+                ],
+                "2030": [
+                    "Encinitas_Adult_Leagues"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "GU13_ChilesXFisher"
+                ],
+                "1530": [
+                    "GU13_ChilesXFisher",
+                    "BU10r_Cherewick"
+                ],
+                "1600": [
+                    "GU13_ChilesXFisher",
+                    "GU17r_Melton",
+                    "BU10r_Cherewick"
+                ],
+                "1630": [
                     "BU14_Suarez",
+                    "GU17r_Melton"
+                ],
+                "1700": [
+                    "BU14_Suarez",
+                    "GU17r_Melton"
+                ],
+                "1730": [
+                    "BU14_Suarez",
+                    "GU17r_Melton"
+                ],
+                "1800": [
                     "Encinitas_Adult_Leagues"
                 ],
                 "1830": [
@@ -306,10 +478,15 @@
                 ]
             },
             "fr": {
+                "1530": [
+                    "GU13_ChilesXFisher"
+                ],
                 "1600": [
+                    "GU13_ChilesXFisher",
                     "Goalie_Chris"
                 ],
                 "1630": [
+                    "GU13_ChilesXFisher",
                     "Goalie_Chris"
                 ],
                 "1700": [
@@ -318,11 +495,9 @@
                 ],
                 "1730": [
                     "Goalie_Chris",
-                    "FiveOClockFridays_Suarez",
-                    "Encinitas_Adult_Leagues"
+                    "FiveOClockFridays_Suarez"
                 ],
                 "1800": [
-                    "FiveOClockFridays_Suarez",
                     "Encinitas_Adult_Leagues"
                 ],
                 "1830": [
@@ -468,15 +643,15 @@
                 ]
             }
         },
-        "ada": {
+        "adaW": {
             "we": {
                 "1600": [
                     "GU8r_Thielman",
-                    "GU10r_Monahan"
+                    "BU10r_Fromovitz"
                 ],
                 "1630": [
                     "GU8r_Thielman",
-                    "GU10r_Monahan"
+                    "BU10r_Fromovitz"
                 ],
                 "1700": [
                     "GU10r_Torn"
@@ -508,12 +683,6 @@
                 ]
             },
             "mo": {
-                "1600": [
-                    "GU10r_Monahan"
-                ],
-                "1630": [
-                    "GU10r_Monahan"
-                ],
                 "1700": [
                     "GU10r_Torn"
                 ],
@@ -547,167 +716,6 @@
                 ],
                 "1630": [
                     "BU10r_Hartman"
-                ]
-            }
-        },
-        "lakeL": {
-            "mo": {
-                "1700": [
-                    "BU8r_Hertz",
-                    "BU12r_Sadler"
-                ],
-                "1730": [
-                    "BU8r_Hertz",
-                    "BU12r_Sadler",
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1800": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1830": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1900": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "1930": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2000": [
-                    "Encinitas_Adult_Leagues"
-                ],
-                "2030": [
-                    "Encinitas_Adult_Leagues"
-                ]
-            },
-            "we": {
-                "1600": [
-                    "BU10r_Fromovitz"
-                ],
-                "1630": [
-                    "BU10r_Fromovitz"
-                ],
-                "1700": [
-                    "BU8r_Hertz",
-                    "BU12r_Sadler"
-                ],
-                "1730": [
-                    "BU8r_Hertz",
-                    "BU12r_Sadler"
-                ]
-            },
-            "fr": {
-                "1500": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1530": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1600": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1630": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1700": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1730": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1800": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1830": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1900": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "1930": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "2000": [
-                    "San_Dieguito_Youth_Softball"
-                ],
-                "2030": [
-                    "San_Dieguito_Youth_Softball"
-                ]
-            },
-            "tu": {
-                "1500": [
-                    "Pop_Warner"
-                ],
-                "1530": [
-                    "Pop_Warner"
-                ],
-                "1600": [
-                    "Pop_Warner"
-                ],
-                "1630": [
-                    "Pop_Warner"
-                ],
-                "1700": [
-                    "Pop_Warner"
-                ],
-                "1730": [
-                    "Pop_Warner"
-                ],
-                "1800": [
-                    "Pop_Warner"
-                ],
-                "1830": [
-                    "Pop_Warner"
-                ],
-                "1900": [
-                    "Pop_Warner"
-                ],
-                "1930": [
-                    "Pop_Warner"
-                ],
-                "2000": [
-                    "Pop_Warner"
-                ],
-                "2030": [
-                    "Pop_Warner"
-                ]
-            },
-            "th": {
-                "1500": [
-                    "Pop_Warner"
-                ],
-                "1530": [
-                    "Pop_Warner"
-                ],
-                "1600": [
-                    "Pop_Warner"
-                ],
-                "1630": [
-                    "Pop_Warner"
-                ],
-                "1700": [
-                    "Pop_Warner"
-                ],
-                "1730": [
-                    "Pop_Warner"
-                ],
-                "1800": [
-                    "Pop_Warner"
-                ],
-                "1830": [
-                    "Pop_Warner"
-                ],
-                "1900": [
-                    "Pop_Warner"
-                ],
-                "1930": [
-                    "Pop_Warner"
-                ],
-                "2000": [
-                    "Pop_Warner"
-                ],
-                "2030": [
-                    "Pop_Warner"
                 ]
             }
         }
@@ -840,16 +848,16 @@
         },
         "BU9_Serrano": {
             "mo": {
-                "1600": "berkS",
-                "1630": "berkS",
-                "1700": "berkS",
-                "1730": "berkS"
+                "1600": "lakeL",
+                "1630": "lakeL",
+                "1700": "lakeL",
+                "1730": "lakeL"
             },
             "we": {
-                "1600": "berkS",
-                "1630": "berkS",
-                "1700": "berkS",
-                "1730": "berkS"
+                "1600": "lakeL",
+                "1630": "lakeL",
+                "1700": "lakeL",
+                "1730": "lakeL"
             }
         },
         "BU10_SuarezXGardner": {
@@ -866,59 +874,64 @@
         },
         "BU11_Anderson": {
             "tu": {
+                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU",
-                "1630": "lakeU"
+                "1600": "lakeU"
             },
             "th": {
+                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU",
-                "1630": "lakeU"
+                "1600": "lakeU"
             }
         },
         "GU11_Cardinale": {
             "tu": {
+                "1630": "lakeU",
                 "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1730": "lakeU"
             },
             "th": {
+                "1630": "lakeU",
                 "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1730": "lakeU"
             }
         },
         "BU12_Martin": {
             "tu": {
+                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU",
-                "1630": "lakeU"
+                "1600": "lakeU"
             },
             "th": {
+                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU",
-                "1630": "lakeU"
+                "1600": "lakeU"
             }
         },
         "BU12_SuarezXChiles": {
             "tu": {
+                "1630": "lakeU",
                 "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1730": "lakeU"
             },
             "th": {
+                "1630": "lakeU",
                 "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1730": "lakeU"
             }
         },
         "GU13_ChilesXFisher": {
             "mo": {
+                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU",
-                "1630": "lakeU"
+                "1600": "lakeU"
             },
             "we": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "fr": {
                 "1530": "lakeU",
                 "1600": "lakeU",
                 "1630": "lakeU"
@@ -926,14 +939,14 @@
         },
         "BU14_Suarez": {
             "mo": {
+                "1630": "lakeU",
                 "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1730": "lakeU"
             },
             "we": {
+                "1630": "lakeU",
                 "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1730": "lakeU"
             }
         },
         "Goalie_Chris": {
@@ -947,17 +960,18 @@
         "FiveOClockFridays_Suarez": {
             "fr": {
                 "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1730": "lakeU"
             }
         },
         "GU17r_Melton": {
             "mo": {
+                "1600": "lakeU",
                 "1630": "lakeU",
                 "1700": "lakeU",
                 "1730": "lakeU"
             },
             "we": {
+                "1600": "lakeU",
                 "1630": "lakeU",
                 "1700": "lakeU",
                 "1730": "lakeU"
@@ -977,12 +991,12 @@
         },
         "GU8r_Thielman": {
             "we": {
-                "1600": "ada",
-                "1630": "ada"
+                "1600": "adaW",
+                "1630": "adaW"
             },
             "th": {
-                "1600": "ada",
-                "1630": "ada"
+                "1600": "adaW",
+                "1630": "adaW"
             }
         },
         "BU8r_Davis": {
@@ -1019,38 +1033,38 @@
         },
         "BU8r_Schnick": {
             "th": {
-                "1600": "ada",
-                "1630": "ada"
+                "1600": "adaW",
+                "1630": "adaW"
             }
         },
         "GU10r_Torn": {
             "mo": {
-                "1700": "ada",
-                "1730": "ada"
+                "1700": "adaW",
+                "1730": "adaW"
             },
             "we": {
-                "1700": "ada",
-                "1730": "ada"
+                "1700": "adaW",
+                "1730": "adaW"
             }
         },
         "GU10r_Monahan": {
             "mo": {
-                "1600": "ada",
-                "1630": "ada"
+                "1600": "berkS",
+                "1630": "berkS"
             },
             "we": {
-                "1600": "ada",
-                "1630": "ada"
+                "1600": "berkS",
+                "1630": "berkS"
             }
         },
         "GU10r_Irons": {
             "tu": {
-                "1700": "ada",
-                "1730": "ada"
+                "1700": "adaW",
+                "1730": "adaW"
             },
             "th": {
-                "1700": "ada",
-                "1730": "ada"
+                "1700": "adaW",
+                "1730": "adaW"
             }
         },
         "BU10r_Murphy": {
@@ -1075,18 +1089,18 @@
         },
         "BU10r_Hartman": {
             "tu": {
-                "1600": "ada",
-                "1630": "ada"
+                "1600": "adaW",
+                "1630": "adaW"
             },
             "fr": {
-                "1600": "ada",
-                "1630": "ada"
+                "1600": "adaW",
+                "1630": "adaW"
             }
         },
         "BU10r_Fromovitz": {
             "we": {
-                "1600": "lakeL",
-                "1630": "lakeL"
+                "1600": "adaW",
+                "1630": "adaW"
             }
         },
         "BU12r_Sadler": {
@@ -1113,12 +1127,12 @@
         },
         "Micro_Bates": {
             "tu": {
-                "1500": "ada",
-                "1530": "ada"
+                "1500": "adaW",
+                "1530": "adaW"
             },
             "th": {
-                "1500": "ada",
-                "1530": "ada"
+                "1500": "adaW",
+                "1530": "adaW"
             }
         },
         "San_Dieguito_Youth_Softball": {
@@ -1163,10 +1177,6 @@
         },
         "Encinitas_Adult_Leagues": {
             "mo": {
-                "1730": [
-                    "lakeL",
-                    "lakeU"
-                ],
                 "1800": [
                     "lakeL",
                     "lakeU"
@@ -1193,9 +1203,6 @@
                 ]
             },
             "tu": {
-                "1730": [
-                    "lakeU"
-                ],
                 "1800": [
                     "lakeU"
                 ],
@@ -1216,9 +1223,6 @@
                 ]
             },
             "we": {
-                "1730": [
-                    "lakeU"
-                ],
                 "1800": [
                     "lakeU"
                 ],
@@ -1239,9 +1243,6 @@
                 ]
             },
             "th": {
-                "1730": [
-                    "lakeU"
-                ],
                 "1800": [
                     "lakeU"
                 ],
@@ -1262,9 +1263,6 @@
                 ]
             },
             "fr": {
-                "1730": [
-                    "lakeU"
-                ],
                 "1800": [
                     "lakeU"
                 ],
@@ -1427,8 +1425,8 @@
         }
     },
     "fields": {
-        "ada": {
-            "pretty": "Ada Harris",
+        "adaW": {
+            "pretty": "Ada Harris (West)",
             "cap": 4,
             "slots": {
                 "mo": [
@@ -1692,7 +1690,7 @@
         },
         "lakeL": {
             "pretty": "Lake (Lower)",
-            "cap": 4,
+            "cap": 6,
             "slots": {
                 "mo": [
                     1500,
