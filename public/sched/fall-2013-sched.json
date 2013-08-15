@@ -132,14 +132,17 @@
                     "BU9_Serrano"
                 ],
                 "1630": [
-                    "BU9_Serrano"
+                    "BU9_Serrano",
+                    "BU14_Suarez"
                 ],
                 "1700": [
                     "BU9_Serrano",
+                    "BU14_Suarez",
                     "BU12r_Sadler"
                 ],
                 "1730": [
                     "BU9_Serrano",
+                    "BU14_Suarez",
                     "BU12r_Sadler"
                 ],
                 "1800": [
@@ -170,11 +173,16 @@
                 ],
                 "1700": [
                     "BU9_Serrano",
+                    "BU14_Suarez",
                     "BU12r_Sadler"
                 ],
                 "1730": [
                     "BU9_Serrano",
+                    "BU14_Suarez",
                     "BU12r_Sadler"
+                ],
+                "1800": [
+                    "BU14_Suarez"
                 ]
             },
             "fr": {
@@ -397,16 +405,13 @@
                 ],
                 "1630": [
                     "GU13_ChilesXFisher",
-                    "BU14_Suarez",
                     "GU17r_Melton"
                 ],
                 "1700": [
                     "GU13_ChilesXFisher",
-                    "BU14_Suarez",
                     "GU17r_Melton"
                 ],
                 "1730": [
-                    "BU14_Suarez",
                     "GU17r_Melton"
                 ],
                 "1800": [
@@ -443,15 +448,12 @@
                     "GU17r_Melton"
                 ],
                 "1700": [
-                    "BU14_Suarez",
                     "GU17r_Melton"
                 ],
                 "1730": [
-                    "BU14_Suarez",
                     "GU17r_Melton"
                 ],
                 "1800": [
-                    "BU14_Suarez",
                     "Encinitas_Adult_Leagues"
                 ],
                 "1830": [
@@ -947,14 +949,14 @@
         },
         "BU14_Suarez": {
             "mo": {
-                "1630": "lakeU",
-                "1700": "lakeU",
-                "1730": "lakeU"
+                "1630": "lakeL",
+                "1700": "lakeL",
+                "1730": "lakeL"
             },
             "we": {
-                "1700": "lakeU",
-                "1730": "lakeU",
-                "1800": "lakeU"
+                "1700": "lakeL",
+                "1730": "lakeL",
+                "1800": "lakeL"
             }
         },
         "Goalie_Chris": {

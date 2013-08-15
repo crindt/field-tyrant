@@ -68,7 +68,7 @@
       ]
     },
     "BU14_Suarez": {
-      "fpref" : ["lakeU","lakeL","adaW","berkN","lakeL"],
+      "fpref" : ["lakeL","lakeU","adaW","berkN","lakeL"],
       "dem" : 2,
       "req":  [
         { "mo": [1630, 1800], "we": [1700, 1830] },
