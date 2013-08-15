@@ -136,12 +136,10 @@
                 ],
                 "1700": [
                     "BU9_Serrano",
-                    "BU8r_Hertz",
                     "BU12r_Sadler"
                 ],
                 "1730": [
                     "BU9_Serrano",
-                    "BU8r_Hertz",
                     "BU12r_Sadler"
                 ],
                 "1800": [
@@ -172,12 +170,10 @@
                 ],
                 "1700": [
                     "BU9_Serrano",
-                    "BU8r_Hertz",
                     "BU12r_Sadler"
                 ],
                 "1730": [
                     "BU9_Serrano",
-                    "BU8r_Hertz",
                     "BU12r_Sadler"
                 ]
             },
@@ -523,6 +519,20 @@
                 "1630": [
                     "GU8r_Egan",
                     "Micro_Boyd"
+                ],
+                "1700": [
+                    "BU8r_Hertz"
+                ],
+                "1730": [
+                    "BU8r_Hertz"
+                ]
+            },
+            "mo": {
+                "1700": [
+                    "BU8r_Hertz"
+                ],
+                "1730": [
+                    "BU8r_Hertz"
                 ]
             },
             "tu": {
@@ -1005,12 +1015,12 @@
         },
         "BU8r_Hertz": {
             "mo": {
-                "1700": "lakeL",
-                "1730": "lakeL"
+                "1700": "berkN",
+                "1730": "berkN"
             },
             "we": {
-                "1700": "lakeL",
-                "1730": "lakeL"
+                "1700": "berkN",
+                "1730": "berkN"
             }
         },
         "BU8r_Burke": {

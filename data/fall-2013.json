@@ -139,7 +139,7 @@
       ]
     },
     "BU8r_Hertz": {
-      "fpref": ["lakeL", "berkN", "berkS", "adaW"],
+      "fpref": ["berkN", "berkS", "adaW","lakeL"],
       "dem": 2,
       "req": [
         { "mo": [1700,1800], "we": [1700,1800] },
