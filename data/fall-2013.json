@@ -264,13 +264,14 @@
       "fpref": ["berkN","berkS"],
       "dem": 1,
       "req": [
+	{"fr":[1600,1700]},
 	{"fr":[1700,1800]},
         {"we":[1630,1730]},
         {"we":[1600,1700]}
       ]
     },
     "Micro_Manning": {
-      "fpref": ["berkN","berkS"],
+      "fpref": ["berkN","berkS","adaW"],
       "dem": 1,
       "req": [
         {"tu":[1600,1700]},

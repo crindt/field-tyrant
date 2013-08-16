@@ -93,11 +93,11 @@
                 ],
                 "1700": [
                     "BU10_SuarezXGardner",
-                    "BU8r_Burke"
+                    "GU10r_Irons"
                 ],
                 "1730": [
                     "BU10_SuarezXGardner",
-                    "BU8r_Burke"
+                    "GU10r_Irons"
                 ]
             },
             "th": {
@@ -118,18 +118,18 @@
                 ],
                 "1700": [
                     "BU10_SuarezXGardner",
-                    "Micro_Manning"
+                    "GU10r_Irons"
                 ],
                 "1730": [
                     "BU10_SuarezXGardner",
-                    "Micro_Manning"
+                    "GU10r_Irons"
                 ]
             },
             "fr": {
-                "1700": [
+                "1600": [
                     "Micro_Boyd"
                 ],
-                "1730": [
+                "1630": [
                     "Micro_Boyd"
                 ]
             }
@@ -693,20 +693,6 @@
                 "1630": [
                     "GU8r_Thielman",
                     "BU8r_Schnick"
-                ],
-                "1700": [
-                    "GU10r_Irons"
-                ],
-                "1730": [
-                    "GU10r_Irons"
-                ]
-            },
-            "mo": {
-                "1700": [
-                    "GU10r_Torn"
-                ],
-                "1730": [
-                    "GU10r_Torn"
                 ]
             },
             "tu": {
@@ -717,16 +703,26 @@
                     "Micro_Bates"
                 ],
                 "1600": [
-                    "BU10r_Hartman"
+                    "BU10r_Hartman",
+                    "Micro_Manning"
                 ],
                 "1630": [
-                    "BU10r_Hartman"
+                    "BU10r_Hartman",
+                    "Micro_Manning"
                 ],
                 "1700": [
-                    "GU10r_Irons"
+                    "BU8r_Burke"
                 ],
                 "1730": [
-                    "GU10r_Irons"
+                    "BU8r_Burke"
+                ]
+            },
+            "mo": {
+                "1700": [
+                    "GU10r_Torn"
+                ],
+                "1730": [
+                    "GU10r_Torn"
                 ]
             },
             "fr": {
@@ -1037,8 +1033,8 @@
         },
         "BU8r_Burke": {
             "tu": {
-                "1700": "berkS",
-                "1730": "berkS"
+                "1700": "adaW",
+                "1730": "adaW"
             }
         },
         "BU8r_Brewer": {
@@ -1079,12 +1075,12 @@
         },
         "GU10r_Irons": {
             "tu": {
-                "1700": "adaW",
-                "1730": "adaW"
+                "1700": "berkS",
+                "1730": "berkS"
             },
             "th": {
-                "1700": "adaW",
-                "1730": "adaW"
+                "1700": "berkS",
+                "1730": "berkS"
             }
         },
         "BU10r_Murphy": {
@@ -1135,14 +1131,14 @@
         },
         "Micro_Boyd": {
             "fr": {
-                "1700": "berkS",
-                "1730": "berkS"
+                "1600": "berkS",
+                "1630": "berkS"
             }
         },
         "Micro_Manning": {
-            "th": {
-                "1700": "berkS",
-                "1730": "berkS"
+            "tu": {
+                "1600": "adaW",
+                "1630": "adaW"
             }
         },
         "Micro_Bates": {
