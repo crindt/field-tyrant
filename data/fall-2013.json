@@ -1,14 +1,14 @@
 
 {
   "teams": {
-    "BU8_PerryXReza": {
+    "BU8_Reza": {
       "fpref" : ["berkS","berkN","lakeU","lakeL","adaW"],
       "dem" : 2,
       "req": [
         { "mo": [1700, 1830], "we": [1700, 1830] }
       ]
     },
-    "GU9_RezaXFisher": {
+    "GU9_Reza": {
       "fpref" : ["berkS","berkN","lakeU","lakeL","adaW"],
       "dem" : 2,
       "req": [
@@ -23,7 +23,7 @@
         { "mo": [1630,1800], "we": [1630, 1800] }
       ]
     },
-    "BU10_SuarezXGardner": {
+    "BU10_Gardner": {
       "fpref" : ["berkS","berkN","lakeU","lakeL","adaW"],
       "dem" : 2,
       "req": [
@@ -51,14 +51,14 @@
         { "tu": [1500, 1630], "th": [1500, 1630] }
       ]
     },
-    "BU12_SuarezXChiles": {
+    "BU12_Suarez": {
       "fpref" : [ "lakeU","lakeL","adaW"],
       "dem" : 1,
       "req":  [
         { "tu": [1630,1800], "th": [1630, 1800] }
       ]
     },
-    "GU13_ChilesXFisher": {
+    "GU13_Chiles": {
       "fpref" : ["lakeU","lakeL","adaW","berkN","lakeL"],
       "dem" : 2,
       "req": [
@@ -243,7 +243,7 @@
         {"we":[1600,1700],"fr":[1600,1700]}
       ]
     },
-    "BU10r_Fromovitz": {
+    "BU10r_Frumovitz": {
       "fpref": ["adaW","lakeL","lakeU","berkS","berkN"],
       "dem": 2,
       "req": [

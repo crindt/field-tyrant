@@ -37,44 +37,44 @@
         "berkS": {
             "mo": {
                 "1530": [
-                    "GU9_RezaXFisher"
+                    "GU9_Reza"
                 ],
                 "1600": [
-                    "GU9_RezaXFisher"
+                    "GU9_Reza"
                 ],
                 "1630": [
-                    "GU9_RezaXFisher"
+                    "GU9_Reza"
                 ],
                 "1700": [
-                    "BU8_PerryXReza"
+                    "BU8_Reza"
                 ],
                 "1730": [
-                    "BU8_PerryXReza"
+                    "BU8_Reza"
                 ],
                 "1800": [
-                    "BU8_PerryXReza"
+                    "BU8_Reza"
                 ]
             },
             "we": {
                 "1530": [
-                    "GU9_RezaXFisher",
+                    "GU9_Reza",
                     "BU10r_Cherewick"
                 ],
                 "1600": [
-                    "GU9_RezaXFisher",
+                    "GU9_Reza",
                     "BU10r_Cherewick"
                 ],
                 "1630": [
-                    "GU9_RezaXFisher"
+                    "GU9_Reza"
                 ],
                 "1700": [
-                    "BU8_PerryXReza"
+                    "BU8_Reza"
                 ],
                 "1730": [
-                    "BU8_PerryXReza"
+                    "BU8_Reza"
                 ],
                 "1800": [
-                    "BU8_PerryXReza"
+                    "BU8_Reza"
                 ]
             },
             "tu": {
@@ -88,15 +88,15 @@
                     "BU8r_Davis"
                 ],
                 "1630": [
-                    "BU10_SuarezXGardner",
+                    "BU10_Gardner",
                     "BU8r_Davis"
                 ],
                 "1700": [
-                    "BU10_SuarezXGardner",
+                    "BU10_Gardner",
                     "GU10r_Irons"
                 ],
                 "1730": [
-                    "BU10_SuarezXGardner",
+                    "BU10_Gardner",
                     "GU10r_Irons"
                 ]
             },
@@ -113,15 +113,15 @@
                     "BU10r_Cherewick"
                 ],
                 "1630": [
-                    "BU10_SuarezXGardner",
+                    "BU10_Gardner",
                     "GU8r_Brough"
                 ],
                 "1700": [
-                    "BU10_SuarezXGardner",
+                    "BU10_Gardner",
                     "GU10r_Irons"
                 ],
                 "1730": [
-                    "BU10_SuarezXGardner",
+                    "BU10_Gardner",
                     "GU10r_Irons"
                 ]
             },
@@ -326,15 +326,15 @@
                 ],
                 "1630": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "BU12_Suarez"
                 ],
                 "1700": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "BU12_Suarez"
                 ],
                 "1730": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "BU12_Suarez"
                 ],
                 "1800": [
                     "Encinitas_Adult_Leagues"
@@ -372,15 +372,15 @@
                 ],
                 "1630": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "BU12_Suarez"
                 ],
                 "1700": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "BU12_Suarez"
                 ],
                 "1730": [
                     "GU11_Cardinale",
-                    "BU12_SuarezXChiles"
+                    "BU12_Suarez"
                 ],
                 "1800": [
                     "Encinitas_Adult_Leagues"
@@ -403,18 +403,18 @@
             },
             "mo": {
                 "1530": [
-                    "GU13_ChilesXFisher"
+                    "GU13_Chiles"
                 ],
                 "1600": [
-                    "GU13_ChilesXFisher",
+                    "GU13_Chiles",
                     "GU17r_Melton"
                 ],
                 "1630": [
-                    "GU13_ChilesXFisher",
+                    "GU13_Chiles",
                     "GU17r_Melton"
                 ],
                 "1700": [
-                    "GU13_ChilesXFisher",
+                    "GU13_Chiles",
                     "GU17r_Melton"
                 ],
                 "1730": [
@@ -441,14 +441,14 @@
             },
             "we": {
                 "1530": [
-                    "GU13_ChilesXFisher"
+                    "GU13_Chiles"
                 ],
                 "1600": [
-                    "GU13_ChilesXFisher",
+                    "GU13_Chiles",
                     "GU17r_Melton"
                 ],
                 "1630": [
-                    "GU13_ChilesXFisher",
+                    "GU13_Chiles",
                     "GU17r_Melton"
                 ],
                 "1700": [
@@ -478,14 +478,14 @@
             },
             "fr": {
                 "1530": [
-                    "GU13_ChilesXFisher"
+                    "GU13_Chiles"
                 ],
                 "1600": [
-                    "GU13_ChilesXFisher",
+                    "GU13_Chiles",
                     "Goalie_Chris"
                 ],
                 "1630": [
-                    "GU13_ChilesXFisher",
+                    "GU13_Chiles",
                     "Goalie_Chris"
                 ],
                 "1700": [
@@ -666,11 +666,11 @@
             "we": {
                 "1600": [
                     "GU8r_Thielman",
-                    "BU10r_Fromovitz"
+                    "BU10r_Frumovitz"
                 ],
                 "1630": [
                     "GU8r_Thielman",
-                    "BU10r_Fromovitz"
+                    "BU10r_Frumovitz"
                 ],
                 "1700": [
                     "GU10r_Torn"
@@ -737,16 +737,16 @@
     },
     "teams": [
         {
-            "name": "BU8_PerryXReza"
+            "name": "BU8_Reza"
         },
         {
-            "name": "GU9_RezaXFisher"
+            "name": "GU9_Reza"
         },
         {
             "name": "BU9_Serrano"
         },
         {
-            "name": "BU10_SuarezXGardner"
+            "name": "BU10_Gardner"
         },
         {
             "name": "BU11_Anderson"
@@ -758,10 +758,10 @@
             "name": "BU12_Martin"
         },
         {
-            "name": "BU12_SuarezXChiles"
+            "name": "BU12_Suarez"
         },
         {
-            "name": "GU13_ChilesXFisher"
+            "name": "GU13_Chiles"
         },
         {
             "name": "BU14_Suarez"
@@ -818,7 +818,7 @@
             "name": "BU10r_Hartman"
         },
         {
-            "name": "BU10r_Fromovitz"
+            "name": "BU10r_Frumovitz"
         },
         {
             "name": "BU12r_Sadler"
@@ -837,7 +837,7 @@
         }
     ],
     "teamsched": {
-        "BU8_PerryXReza": {
+        "BU8_Reza": {
             "mo": {
                 "1700": "berkS",
                 "1730": "berkS",
@@ -849,7 +849,7 @@
                 "1800": "berkS"
             }
         },
-        "GU9_RezaXFisher": {
+        "GU9_Reza": {
             "mo": {
                 "1530": "berkS",
                 "1600": "berkS",
@@ -875,7 +875,7 @@
                 "1730": "lakeL"
             }
         },
-        "BU10_SuarezXGardner": {
+        "BU10_Gardner": {
             "tu": {
                 "1630": "berkS",
                 "1700": "berkS",
@@ -923,7 +923,7 @@
                 "1600": "lakeU"
             }
         },
-        "BU12_SuarezXChiles": {
+        "BU12_Suarez": {
             "tu": {
                 "1630": "lakeU",
                 "1700": "lakeU",
@@ -935,7 +935,7 @@
                 "1730": "lakeU"
             }
         },
-        "GU13_ChilesXFisher": {
+        "GU13_Chiles": {
             "mo": {
                 "1530": "lakeU",
                 "1600": "lakeU",
@@ -1113,7 +1113,7 @@
                 "1630": "adaW"
             }
         },
-        "BU10r_Fromovitz": {
+        "BU10r_Frumovitz": {
             "we": {
                 "1600": "adaW",
                 "1630": "adaW"
