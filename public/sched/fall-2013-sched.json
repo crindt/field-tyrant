@@ -680,12 +680,6 @@
                 ]
             },
             "th": {
-                "1500": [
-                    "Micro_Bates"
-                ],
-                "1530": [
-                    "Micro_Bates"
-                ],
                 "1600": [
                     "GU8r_Thielman",
                     "BU8r_Schnick"
@@ -1143,10 +1137,6 @@
         },
         "Micro_Bates": {
             "tu": {
-                "1500": "adaW",
-                "1530": "adaW"
-            },
-            "th": {
                 "1500": "adaW",
                 "1530": "adaW"
             }
