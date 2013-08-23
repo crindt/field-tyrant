@@ -49,7 +49,7 @@ async.waterfall([
 
           //clear
           _.each(_.range(3,20),function(r) {
-            _.each(_.range(2,17),function(c) {
+            _.each(_.range(2,19),function(c) {
               var vv = {}
               vv[r] = {}
               vv[r][c] = ""
@@ -97,7 +97,11 @@ async.waterfall([
               
               var r = ti*2-30+3
               
-              var c0 = days[d]*3+2
+              var bcols = 3
+              if ( ff.match(/lakeU/i) ) bcols = 4
+              console.log(ff,'bcols',bcols)
+
+              var c0 = days[d]*bcols+2
 
               var minc = _.max(_.map(s,function(tm) { return col[tm] || 0 }))+1
 
@@ -115,7 +119,7 @@ async.waterfall([
                 var cmax = c
                 if ( isExt ) {
                   tm = tm.replace(/_/g," ")
-                  cmax = c0+2
+                  cmax = c0+bcols-1
                 }
                 console.log(tm,i,c,cmax)
                 _.each(_.range(c,cmax+1), function(cc) {

@@ -322,19 +322,23 @@
                 "1600": [
                     "BU11_Anderson",
                     "BU12_Martin",
+                    "Goalie_Chris",
                     "BU10r_Murphy"
                 ],
                 "1630": [
                     "GU11_Cardinale",
-                    "BU12_Suarez"
+                    "BU12_Suarez",
+                    "Goalie_Chris"
                 ],
                 "1700": [
                     "GU11_Cardinale",
-                    "BU12_Suarez"
+                    "BU12_Suarez",
+                    "Goalie_Chris"
                 ],
                 "1730": [
                     "GU11_Cardinale",
-                    "BU12_Suarez"
+                    "BU12_Suarez",
+                    "Goalie_Chris"
                 ],
                 "1800": [
                     "Encinitas_Adult_Leagues"
@@ -481,19 +485,15 @@
                     "GU13_Chiles"
                 ],
                 "1600": [
-                    "GU13_Chiles",
-                    "Goalie_Chris"
+                    "GU13_Chiles"
                 ],
                 "1630": [
-                    "GU13_Chiles",
-                    "Goalie_Chris"
+                    "GU13_Chiles"
                 ],
                 "1700": [
-                    "Goalie_Chris",
                     "FiveOClockFridays_Suarez"
                 ],
                 "1730": [
-                    "Goalie_Chris",
                     "FiveOClockFridays_Suarez"
                 ],
                 "1800": [
@@ -960,7 +960,7 @@
             }
         },
         "Goalie_Chris": {
-            "fr": {
+            "tu": {
                 "1600": "lakeU",
                 "1630": "lakeU",
                 "1700": "lakeU",
@@ -1619,7 +1619,7 @@
         },
         "lakeU": {
             "pretty": "Lake (Upper)",
-            "cap": 6,
+            "cap": 8,
             "slots": {
                 "mo": [
                     1500,
