@@ -518,9 +518,13 @@
         },
         "berkN": {
             "we": {
+                "1530": [
+                    "Micro_Wilson"
+                ],
                 "1600": [
                     "GU8r_Egan",
-                    "GU10r_Monahan"
+                    "GU10r_Monahan",
+                    "Micro_Wilson"
                 ],
                 "1630": [
                     "GU8r_Egan",
@@ -824,7 +828,7 @@
             "name": "Micro_Manning"
         },
         {
-            "name": "Micro_Delport"
+            "name": "Micro_Wilson"
         },
         {
             "name": "Micro_Bates"
@@ -1133,6 +1137,12 @@
             "tu": {
                 "1600": "adaW",
                 "1630": "adaW"
+            }
+        },
+        "Micro_Wilson": {
+            "we": {
+                "1530": "berkN",
+                "1600": "berkN"
             }
         },
         "Micro_Bates": {
@@ -1509,7 +1519,7 @@
         },
         "berkN": {
             "pretty": "Berkich (North)",
-            "cap": 4,
+            "cap": 5,
             "slots": {
                 "mo": [
                     1500,
@@ -1724,11 +1734,6 @@
             }
         }
     },
-    "unallocated": {
-        "Micro_Delport": {
-            "name": "Micro_Delport",
-            "conflicts": []
-        }
-    },
+    "unallocated": {},
     "timestep": 30
 }

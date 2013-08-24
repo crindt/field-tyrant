@@ -280,10 +280,12 @@
 
       ]
     },
-    "Micro_Delport": {
+    "Micro_Wilson": {
       "fpref": ["berkN","berkS"],
       "dem": 1,
-      "req": []
+      "req": [
+        {"we":[1530,1630]}
+      ]
     },
     "Micro_Bates": {
       "fpref": ["adaW","lakeU","berkN","berkS"],
@@ -312,7 +314,7 @@
     },
     "berkN": {
       "pretty": "Berkich (North)",
-      "cap" : 4,
+      "cap" : 5,
       "slots": {
         "mo": [ 1500, "dusk" ],
         "we": [ 1500, "dusk" ]
