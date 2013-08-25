@@ -310,10 +310,6 @@
         },
         "lakeU": {
             "tu": {
-                "1500": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
-                ],
                 "1530": [
                     "BU11_Anderson",
                     "BU12_Martin",
@@ -326,7 +322,9 @@
                     "BU10r_Murphy"
                 ],
                 "1630": [
+                    "BU11_Anderson",
                     "GU11_Cardinale",
+                    "BU12_Martin",
                     "BU12_Suarez",
                     "Goalie_Chris"
                 ],
@@ -360,10 +358,6 @@
                 ]
             },
             "th": {
-                "1500": [
-                    "BU11_Anderson",
-                    "BU12_Martin"
-                ],
                 "1530": [
                     "BU11_Anderson",
                     "BU12_Martin",
@@ -375,7 +369,9 @@
                     "BU10r_Murphy"
                 ],
                 "1630": [
+                    "BU11_Anderson",
                     "GU11_Cardinale",
+                    "BU12_Martin",
                     "BU12_Suarez"
                 ],
                 "1700": [
@@ -887,14 +883,14 @@
         },
         "BU11_Anderson": {
             "tu": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU"
             },
             "th": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU"
             }
         },
         "GU11_Cardinale": {
@@ -911,14 +907,14 @@
         },
         "BU12_Martin": {
             "tu": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU"
             },
             "th": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU"
             }
         },
         "BU12_Suarez": {

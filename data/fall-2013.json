@@ -31,10 +31,10 @@
       ]
     },
     "BU11_Anderson": {
-      "fpref" : ["lakeU","adaW","berkN","lakeL"],
+      "fpref" : ["lakeU"],
       "dem" : 2,
       "req": [
-        { "tu": [1500, 1630], "th": [1500, 1630] }
+        { "tu": [1530, 1700], "th": [1530, 1700] }
       ]
     },
     "GU11_Cardinale": {
@@ -45,10 +45,10 @@
       ]
     },
     "BU12_Martin": {
-      "fpref" : ["lakeU","lakeL","adaW"],
+      "fpref" : ["lakeU"],
       "dem" : 2,
       "req":  [
-        { "tu": [1500, 1630], "th": [1500, 1630] }
+        { "tu": [1530, 1700], "th": [1530, 1700] }
       ]
     },
     "BU12_Suarez": {

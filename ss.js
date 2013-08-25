@@ -47,9 +47,14 @@ async.waterfall([
         function sheetReady(err,ss) {
           if (err) throw err
 
+
+          var bcols = 3
+          if ( ff.match(/lakeU/i) ) bcols = 5
+          console.log(ff,'bcols',bcols)
+
           //clear
           _.each(_.range(3,20),function(r) {
-            _.each(_.range(2,19),function(c) {
+            _.each(_.range(2,2+bcols*5),function(c) {
               var vv = {}
               vv[r] = {}
               vv[r][c] = ""
@@ -98,7 +103,7 @@ async.waterfall([
               var r = ti*2-30+3
               
               var bcols = 3
-              if ( ff.match(/lakeU/i) ) bcols = 4
+              if ( ff.match(/lakeU/i) ) bcols = 5
               console.log(ff,'bcols',bcols)
 
               var c0 = days[d]*bcols+2
