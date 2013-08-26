@@ -680,6 +680,12 @@
                 ]
             },
             "th": {
+                "1500": [
+                    "GU8r_Diller"
+                ],
+                "1530": [
+                    "GU8r_Diller"
+                ],
                 "1600": [
                     "GU8r_Thielman",
                     "BU8r_Schnick"
@@ -777,6 +783,9 @@
         },
         {
             "name": "GU8r_Thielman"
+        },
+        {
+            "name": "GU8r_Diller"
         },
         {
             "name": "BU8r_Davis"
@@ -1007,6 +1016,12 @@
             "th": {
                 "1600": "adaW",
                 "1630": "adaW"
+            }
+        },
+        "GU8r_Diller": {
+            "th": {
+                "1500": "adaW",
+                "1530": "adaW"
             }
         },
         "BU8r_Davis": {
