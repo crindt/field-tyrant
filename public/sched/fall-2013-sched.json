@@ -697,18 +697,18 @@
                     "Micro_Bates"
                 ],
                 "1600": [
-                    "BU10r_Hartman",
-                    "Micro_Manning"
+                    "BU10r_Hartman"
                 ],
                 "1630": [
-                    "BU10r_Hartman",
-                    "Micro_Manning"
+                    "BU10r_Hartman"
                 ],
                 "1700": [
-                    "BU8r_Burke"
+                    "BU8r_Burke",
+                    "Micro_Manning"
                 ],
                 "1730": [
-                    "BU8r_Burke"
+                    "BU8r_Burke",
+                    "Micro_Manning"
                 ]
             },
             "mo": {
@@ -1131,8 +1131,8 @@
         },
         "Micro_Manning": {
             "tu": {
-                "1600": "adaW",
-                "1630": "adaW"
+                "1700": "adaW",
+                "1730": "adaW"
             }
         },
         "Micro_Wilson": {
