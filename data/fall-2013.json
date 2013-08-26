@@ -15,12 +15,19 @@
         { "mo": [1530, 1700], "we": [1530, 1700] }
       ]
     },
-    "BU9_Serrano": {
-      "fpref" : ["lakeL","lakeU","berkS","berkN","adaW"],
+    "BU9_SerranoXwed": {
+      "fpref" : ["lakeL"],
       "dem" : 2,
       "req": [
-        { "mo": [1600,1800], "we": [1600, 1800] },
-        { "mo": [1630,1800], "we": [1630, 1800] }
+        {"we": [1600, 1800] },
+        {"we": [1630, 1800] }
+      ]
+    },
+    "BU9_SerranoXfri": {
+      "fpref" : ["berkS"],
+      "dem" : 2,
+      "req": [
+        { "fr": [1600,1800] }
       ]
     },
     "BU10_Gardner": {

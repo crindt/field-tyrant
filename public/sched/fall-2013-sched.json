@@ -77,6 +77,22 @@
                     "BU8_Reza"
                 ]
             },
+            "fr": {
+                "1600": [
+                    "BU9_SerranoXfri",
+                    "Micro_Boyd"
+                ],
+                "1630": [
+                    "BU9_SerranoXfri",
+                    "Micro_Boyd"
+                ],
+                "1700": [
+                    "BU9_SerranoXfri"
+                ],
+                "1730": [
+                    "BU9_SerranoXfri"
+                ]
+            },
             "tu": {
                 "1500": [
                     "BU8r_Brewer"
@@ -124,32 +140,39 @@
                     "BU10_Gardner",
                     "GU10r_Irons"
                 ]
-            },
-            "fr": {
-                "1600": [
-                    "Micro_Boyd"
-                ],
-                "1630": [
-                    "Micro_Boyd"
-                ]
             }
         },
         "lakeL": {
-            "mo": {
+            "we": {
                 "1600": [
-                    "BU9_Serrano"
+                    "BU9_SerranoXwed"
                 ],
                 "1630": [
-                    "BU9_Serrano",
-                    "BU14_Suarez"
+                    "BU9_SerranoXwed"
                 ],
                 "1700": [
-                    "BU9_Serrano",
+                    "BU9_SerranoXwed",
                     "BU14_Suarez",
                     "BU12r_Sadler"
                 ],
                 "1730": [
-                    "BU9_Serrano",
+                    "BU9_SerranoXwed",
+                    "BU14_Suarez",
+                    "BU12r_Sadler"
+                ],
+                "1800": [
+                    "BU14_Suarez"
+                ]
+            },
+            "mo": {
+                "1630": [
+                    "BU14_Suarez"
+                ],
+                "1700": [
+                    "BU14_Suarez",
+                    "BU12r_Sadler"
+                ],
+                "1730": [
                     "BU14_Suarez",
                     "BU12r_Sadler"
                 ],
@@ -170,27 +193,6 @@
                 ],
                 "2030": [
                     "Encinitas_Adult_Leagues"
-                ]
-            },
-            "we": {
-                "1600": [
-                    "BU9_Serrano"
-                ],
-                "1630": [
-                    "BU9_Serrano"
-                ],
-                "1700": [
-                    "BU9_Serrano",
-                    "BU14_Suarez",
-                    "BU12r_Sadler"
-                ],
-                "1730": [
-                    "BU9_Serrano",
-                    "BU14_Suarez",
-                    "BU12r_Sadler"
-                ],
-                "1800": [
-                    "BU14_Suarez"
                 ]
             },
             "fr": {
@@ -743,7 +745,10 @@
             "name": "GU9_Reza"
         },
         {
-            "name": "BU9_Serrano"
+            "name": "BU9_SerranoXwed"
+        },
+        {
+            "name": "BU9_SerranoXfri"
         },
         {
             "name": "BU10_Gardner"
@@ -864,18 +869,20 @@
                 "1630": "berkS"
             }
         },
-        "BU9_Serrano": {
-            "mo": {
-                "1600": "lakeL",
-                "1630": "lakeL",
-                "1700": "lakeL",
-                "1730": "lakeL"
-            },
+        "BU9_SerranoXwed": {
             "we": {
                 "1600": "lakeL",
                 "1630": "lakeL",
                 "1700": "lakeL",
                 "1730": "lakeL"
+            }
+        },
+        "BU9_SerranoXfri": {
+            "fr": {
+                "1600": "berkS",
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
             }
         },
         "BU10_Gardner": {

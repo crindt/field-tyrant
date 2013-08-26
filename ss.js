@@ -232,6 +232,7 @@ async.waterfall([
       var sarr = convert_sched(s)
       
       if ( !tm.match(/(Warner|Encinitas|Softball|Rugby|Lacrosse)/) ) {
+        
         data.push(_.flatten([tm,tc[tm2] ? tc[tm2].email : "TEAM NOT FOUND IN CONTACTS",sarr]))
         console.log(tm,':',tc[tm2] ? tc[tm2].email : "TEAM NOT FOUND IN CONTACTS",'==>',sarr.join("; "))
       }

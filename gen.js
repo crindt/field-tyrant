@@ -130,7 +130,7 @@ function fill_times(arro) {
   var htime = _.max(tarr)
   var ttimes = [];
   if ( ( (htime%100) % prog.timestep ) != 0 ) {
-    logger.warning("Field preferences time specified ("+htime+") is not aligned with the timestep ("+prog.timestep+")" )
+    logger.warning("Field preferences time specified ("+htime+") is not aligned with the timestep ("+prog.timestep+"): "+((htime%100) % prog.timestep) )
     throw new Error("Failed on filling times: "+JSON.stringify(tarr))
   }
   for( t = Math.floor(ltime/100)+(ltime%100)/60; t < Math.floor(htime/100)+(htime%100)/60; t += prog.timestep/60 ) {
