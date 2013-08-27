@@ -683,10 +683,12 @@
             },
             "th": {
                 "1500": [
-                    "GU8r_Diller"
+                    "GU8r_Diller",
+                    "Micro_Bates"
                 ],
                 "1530": [
-                    "GU8r_Diller"
+                    "GU8r_Diller",
+                    "Micro_Bates"
                 ],
                 "1600": [
                     "GU8r_Thielman",
@@ -698,12 +700,6 @@
                 ]
             },
             "tu": {
-                "1500": [
-                    "Micro_Bates"
-                ],
-                "1530": [
-                    "Micro_Bates"
-                ],
                 "1600": [
                     "BU10r_Hartman"
                 ],
@@ -1164,7 +1160,7 @@
             }
         },
         "Micro_Bates": {
-            "tu": {
+            "th": {
                 "1500": "adaW",
                 "1530": "adaW"
             }
