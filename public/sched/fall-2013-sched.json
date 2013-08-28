@@ -409,18 +409,18 @@
                 ],
                 "1600": [
                     "GU13_Chiles",
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1630": [
                     "GU13_Chiles",
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1700": [
                     "GU13_Chiles",
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1730": [
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1800": [
                     "Encinitas_Adult_Leagues"
@@ -447,17 +447,17 @@
                 ],
                 "1600": [
                     "GU13_Chiles",
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1630": [
                     "GU13_Chiles",
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1700": [
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1730": [
-                    "GU17r_Melton"
+                    "GU19r_Melton"
                 ],
                 "1800": [
                     "Encinitas_Adult_Leagues"
@@ -516,20 +516,18 @@
         },
         "berkN": {
             "we": {
-                "1530": [
-                    "Micro_Wilson"
-                ],
                 "1600": [
+                    "GU8r_Egan",
+                    "GU10r_Monahan"
+                ],
+                "1630": [
                     "GU8r_Egan",
                     "GU10r_Monahan",
                     "Micro_Wilson"
                 ],
-                "1630": [
-                    "GU8r_Egan",
-                    "GU10r_Monahan"
-                ],
                 "1700": [
-                    "BU8r_Hertz"
+                    "BU8r_Hertz",
+                    "Micro_Wilson"
                 ],
                 "1730": [
                     "BU8r_Hertz"
@@ -774,7 +772,7 @@
             "name": "FiveOClockFridays_Suarez"
         },
         {
-            "name": "GU17r_Melton"
+            "name": "GU19r_Melton"
         },
         {
             "name": "GU8r_Egan"
@@ -985,7 +983,7 @@
                 "1730": "lakeU"
             }
         },
-        "GU17r_Melton": {
+        "GU19r_Melton": {
             "mo": {
                 "1600": "lakeU",
                 "1630": "lakeU",
@@ -1155,8 +1153,8 @@
         },
         "Micro_Wilson": {
             "we": {
-                "1530": "berkN",
-                "1600": "berkN"
+                "1630": "berkN",
+                "1700": "berkN"
             }
         },
         "Micro_Bates": {

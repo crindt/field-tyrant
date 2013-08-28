@@ -100,7 +100,7 @@
     },
 
 
-    "GU17r_Melton": {
+    "GU19r_Melton": {
       "fpref": ["lakeU","lakeL","adaW"],
       "dem": 2,
       "req": [
@@ -300,7 +300,7 @@
       "fpref": ["berkN","berkS"],
       "dem": 1,
       "req": [
-        {"we":[1530,1630]}
+        {"we":[1630,1730]}
       ]
     },
     "Micro_Bates": {
