@@ -706,9 +706,11 @@
             },
             "tu": {
                 "1600": [
+                    "BU8r_Schnick",
                     "BU10r_Hartman"
                 ],
                 "1630": [
+                    "BU8r_Schnick",
                     "BU10r_Hartman"
                 ],
                 "1700": [
@@ -1075,6 +1077,10 @@
             }
         },
         "BU8r_Schnick": {
+            "tu": {
+                "1600": "adaW",
+                "1630": "adaW"
+            },
             "th": {
                 "1600": "adaW",
                 "1630": "adaW"
