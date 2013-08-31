@@ -91,11 +91,11 @@
         { "tu": [1600, 1800] }
       ]
     },
-    "FiveOClockFridays_Suarez": {
+    "FiveDollarFridays_Suarez": {
       "fpref": [ "lakeU" ],
       "dem": 2,
       "req": [
-        { "fr": [1700,1800] }
+        { "fr": [1600,1800] }
       ]
     },
 

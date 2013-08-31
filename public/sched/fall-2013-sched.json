@@ -486,16 +486,18 @@
                     "GU13_Chiles"
                 ],
                 "1600": [
-                    "GU13_Chiles"
+                    "GU13_Chiles",
+                    "FiveDollarFridays_Suarez"
                 ],
                 "1630": [
-                    "GU13_Chiles"
+                    "GU13_Chiles",
+                    "FiveDollarFridays_Suarez"
                 ],
                 "1700": [
-                    "FiveOClockFridays_Suarez"
+                    "FiveDollarFridays_Suarez"
                 ],
                 "1730": [
-                    "FiveOClockFridays_Suarez"
+                    "FiveDollarFridays_Suarez"
                 ],
                 "1800": [
                     "Encinitas_Adult_Leagues"
@@ -778,7 +780,7 @@
             "name": "Goalie_Chris"
         },
         {
-            "name": "FiveOClockFridays_Suarez"
+            "name": "FiveDollarFridays_Suarez"
         },
         {
             "name": "GU19r_Melton"
@@ -989,8 +991,10 @@
                 "1730": "lakeU"
             }
         },
-        "FiveOClockFridays_Suarez": {
+        "FiveDollarFridays_Suarez": {
             "fr": {
+                "1600": "lakeU",
+                "1630": "lakeU",
                 "1700": "lakeU",
                 "1730": "lakeU"
             }
