@@ -137,13 +137,18 @@
         { "we":[1730,1830] }
       ]
     },
-    "GU8r_Diller": {
+    "GU8r_DillerXthu": {
       "fpref": ["adaW"],
       "dem": 2,
       "req": [
-        { "th":[1500,1600] },
-        { "th":[1600,1700] },
         { "th":[1700,1800] }
+      ]
+    },
+    "GU8r_DillerXmon": {
+      "fpref": ["berkS"],
+      "dem": 2,
+      "req": [
+        { "mo":[1630,1800] }
       ]
     },
     "BU8r_Davis": {
