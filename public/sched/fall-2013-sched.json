@@ -43,16 +43,13 @@
                     "GU9_Reza"
                 ],
                 "1630": [
-                    "GU9_Reza",
-                    "GU8r_DillerXmon"
+                    "GU9_Reza"
                 ],
                 "1700": [
-                    "BU8_Reza",
-                    "GU8r_DillerXmon"
+                    "BU8_Reza"
                 ],
                 "1730": [
-                    "BU8_Reza",
-                    "GU8r_DillerXmon"
+                    "BU8_Reza"
                 ],
                 "1800": [
                     "BU8_Reza"
@@ -686,9 +683,11 @@
             },
             "th": {
                 "1500": [
+                    "GU8r_Diller",
                     "Micro_Bates"
                 ],
                 "1530": [
+                    "GU8r_Diller",
                     "Micro_Bates"
                 ],
                 "1600": [
@@ -698,12 +697,6 @@
                 "1630": [
                     "GU8r_Thielman",
                     "BU8r_Schnick"
-                ],
-                "1700": [
-                    "GU8r_DillerXthu"
-                ],
-                "1730": [
-                    "GU8r_DillerXthu"
                 ]
             },
             "tu": {
@@ -795,10 +788,7 @@
             "name": "GU8r_Thielman"
         },
         {
-            "name": "GU8r_DillerXthu"
-        },
-        {
-            "name": "GU8r_DillerXmon"
+            "name": "GU8r_Diller"
         },
         {
             "name": "BU8r_Davis"
@@ -1035,17 +1025,10 @@
                 "1630": "adaW"
             }
         },
-        "GU8r_DillerXthu": {
+        "GU8r_Diller": {
             "th": {
-                "1700": "adaW",
-                "1730": "adaW"
-            }
-        },
-        "GU8r_DillerXmon": {
-            "mo": {
-                "1630": "berkS",
-                "1700": "berkS",
-                "1730": "berkS"
+                "1500": "adaW",
+                "1530": "adaW"
             }
         },
         "BU8r_Davis": {

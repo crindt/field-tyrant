@@ -229,6 +229,7 @@ async.waterfall([
     _.each(ts.teamsched, function(s,tmr) {
       var tm = tmr.replace(/_/," ")
       var tm2 = tm.replace(/([GB]U\d+)r/,"$1")
+      tm2 = tm2.replace(/X.*$/,"")
       var sarr = convert_sched(s)
       
       if ( !tm.match(/(Warner|Encinitas|Softball|Rugby|Lacrosse)/) ) {
