@@ -117,11 +117,7 @@
                 ]
             },
             "th": {
-                "1500": [
-                    "BU8r_Brewer"
-                ],
                 "1530": [
-                    "BU8r_Brewer",
                     "BU10r_Cherewick"
                 ],
                 "1600": [
@@ -1055,10 +1051,6 @@
         },
         "BU8r_Brewer": {
             "tu": {
-                "1500": "berkS",
-                "1530": "berkS"
-            },
-            "th": {
                 "1500": "berkS",
                 "1530": "berkS"
             }
