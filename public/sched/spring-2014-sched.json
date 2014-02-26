@@ -1,0 +1,526 @@
+{
+    "times": [
+        1500,
+        1530,
+        1600,
+        1630,
+        1700,
+        1730,
+        1800,
+        1830
+    ],
+    "days": [
+        "mo",
+        "tu",
+        "we",
+        "th",
+        "fr",
+        "sa",
+        "su"
+    ],
+    "sched": {
+        "berkS": {
+            "mo": {
+                "1500": [
+                    "BU10_Serrano",
+                    "BU10_Chiles"
+                ],
+                "1530": [
+                    "BU10_Serrano",
+                    "BU10_Chiles"
+                ],
+                "1600": [
+                    "BU10_Serrano",
+                    "BU10_Chiles"
+                ],
+                "1630": [
+                    "BU8_Suarez",
+                    "GU10_Reza"
+                ],
+                "1700": [
+                    "BU8_Suarez",
+                    "GU10_Reza"
+                ],
+                "1730": [
+                    "BU8_Suarez",
+                    "GU10_Reza"
+                ],
+                "1800": [
+                    "BU9_Reza",
+                    "GU9_Suarez"
+                ],
+                "1830": [
+                    "BU9_Reza",
+                    "GU9_Suarez"
+                ],
+                "1900": [
+                    "BU9_Reza",
+                    "GU9_Suarez"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "BU10_Serrano",
+                    "BU10_Chiles"
+                ],
+                "1530": [
+                    "BU10_Serrano",
+                    "BU10_Chiles"
+                ],
+                "1600": [
+                    "BU10_Serrano",
+                    "BU10_Chiles"
+                ],
+                "1630": [
+                    "BU8_Suarez",
+                    "GU10_Reza"
+                ],
+                "1700": [
+                    "BU8_Suarez",
+                    "GU10_Reza"
+                ],
+                "1730": [
+                    "BU8_Suarez",
+                    "GU10_Reza"
+                ],
+                "1800": [
+                    "BU9_Reza",
+                    "GU9_Suarez"
+                ],
+                "1830": [
+                    "BU9_Reza",
+                    "GU9_Suarez"
+                ],
+                "1900": [
+                    "BU9_Reza",
+                    "GU9_Suarez"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "GU12_Marybeth"
+                ],
+                "1530": [
+                    "GU12_Marybeth"
+                ],
+                "1600": [
+                    "GU12_Marybeth"
+                ],
+                "1630": [
+                    "BU11_Reza"
+                ],
+                "1700": [
+                    "BU11_Reza"
+                ],
+                "1730": [
+                    "BU11_Reza"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "GU12_Marybeth"
+                ],
+                "1530": [
+                    "GU12_Marybeth"
+                ],
+                "1600": [
+                    "GU12_Marybeth"
+                ],
+                "1630": [
+                    "BU11_Reza"
+                ],
+                "1700": [
+                    "BU11_Reza"
+                ],
+                "1730": [
+                    "BU11_Reza"
+                ]
+            }
+        },
+        "adaE": {
+            "tu": {
+                "1500": [
+                    "BU15_Midho",
+                    "GU14_Chiles"
+                ],
+                "1530": [
+                    "BU15_Midho",
+                    "GU14_Chiles"
+                ],
+                "1600": [
+                    "BU15_Midho",
+                    "GU14_Chiles"
+                ],
+                "1630": [
+                    "BU12_Chiles",
+                    "GU12_Cardinale"
+                ],
+                "1700": [
+                    "BU12_Chiles",
+                    "GU12_Cardinale"
+                ],
+                "1730": [
+                    "BU12_Chiles",
+                    "GU12_Cardinale"
+                ],
+                "1800": [
+                    "BU12_b",
+                    "BU13_Martin"
+                ],
+                "1830": [
+                    "BU12_b",
+                    "BU13_Martin"
+                ],
+                "1900": [
+                    "BU12_b",
+                    "BU13_Martin"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "BU15_Midho",
+                    "GU14_Chiles"
+                ],
+                "1530": [
+                    "BU15_Midho",
+                    "GU14_Chiles"
+                ],
+                "1600": [
+                    "BU15_Midho",
+                    "GU14_Chiles"
+                ],
+                "1630": [
+                    "BU12_Chiles",
+                    "GU12_Cardinale"
+                ],
+                "1700": [
+                    "BU12_Chiles",
+                    "GU12_Cardinale"
+                ],
+                "1730": [
+                    "BU12_Chiles",
+                    "GU12_Cardinale"
+                ],
+                "1800": [
+                    "BU12_b",
+                    "BU13_Martin"
+                ],
+                "1830": [
+                    "BU12_b",
+                    "BU13_Martin"
+                ],
+                "1900": [
+                    "BU12_b",
+                    "BU13_Martin"
+                ]
+            }
+        }
+    },
+    "teams": [
+        {
+            "name": "BU8_Suarez"
+        },
+        {
+            "name": "BU9_Reza"
+        },
+        {
+            "name": "BU10_Serrano"
+        },
+        {
+            "name": "BU10_Chiles"
+        },
+        {
+            "name": "BU11_Reza"
+        },
+        {
+            "name": "BU12_Chiles"
+        },
+        {
+            "name": "BU12_b"
+        },
+        {
+            "name": "BU13_Martin"
+        },
+        {
+            "name": "BU15_Midho"
+        },
+        {
+            "name": "GU9_Suarez"
+        },
+        {
+            "name": "GU10_Reza"
+        },
+        {
+            "name": "GU12_Marybeth"
+        },
+        {
+            "name": "GU12_Cardinale"
+        },
+        {
+            "name": "GU14_Chiles"
+        }
+    ],
+    "teamsched": {
+        "BU8_Suarez": {
+            "mo": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "we": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "BU9_Reza": {
+            "mo": {
+                "1800": "berkS",
+                "1830": "berkS",
+                "1900": "berkS"
+            },
+            "we": {
+                "1800": "berkS",
+                "1830": "berkS",
+                "1900": "berkS"
+            }
+        },
+        "BU10_Serrano": {
+            "mo": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            },
+            "we": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            }
+        },
+        "BU10_Chiles": {
+            "mo": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            },
+            "we": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            }
+        },
+        "BU11_Reza": {
+            "tu": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "th": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "BU12_Chiles": {
+            "tu": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            },
+            "th": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            }
+        },
+        "BU12_b": {
+            "tu": {
+                "1800": "adaE",
+                "1830": "adaE",
+                "1900": "adaE"
+            },
+            "th": {
+                "1800": "adaE",
+                "1830": "adaE",
+                "1900": "adaE"
+            }
+        },
+        "BU13_Martin": {
+            "tu": {
+                "1800": "adaE",
+                "1830": "adaE",
+                "1900": "adaE"
+            },
+            "th": {
+                "1800": "adaE",
+                "1830": "adaE",
+                "1900": "adaE"
+            }
+        },
+        "BU15_Midho": {
+            "tu": {
+                "1500": "adaE",
+                "1530": "adaE",
+                "1600": "adaE"
+            },
+            "th": {
+                "1500": "adaE",
+                "1530": "adaE",
+                "1600": "adaE"
+            }
+        },
+        "GU9_Suarez": {
+            "mo": {
+                "1800": "berkS",
+                "1830": "berkS",
+                "1900": "berkS"
+            },
+            "we": {
+                "1800": "berkS",
+                "1830": "berkS",
+                "1900": "berkS"
+            }
+        },
+        "GU10_Reza": {
+            "mo": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "we": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "GU12_Marybeth": {
+            "tu": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            },
+            "th": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            }
+        },
+        "GU12_Cardinale": {
+            "tu": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            },
+            "th": {
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
+            }
+        },
+        "GU14_Chiles": {
+            "tu": {
+                "1500": "adaE",
+                "1530": "adaE",
+                "1600": "adaE"
+            },
+            "th": {
+                "1500": "adaE",
+                "1530": "adaE",
+                "1600": "adaE"
+            }
+        }
+    },
+    "fields": {
+        "adaE": {
+            "pretty": "Ada Harris (East)",
+            "cap": 4,
+            "slots": {
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ]
+            }
+        },
+        "berkS": {
+            "pretty": "Berkich (South)",
+            "cap": 4,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900
+                ]
+            }
+        }
+    },
+    "unallocated": {},
+    "timestep": 30
+}

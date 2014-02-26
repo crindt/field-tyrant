@@ -232,11 +232,18 @@
 	{"fr":[1700,1800]}
       ]
     },
-    "BU10r_Murphy": {
+    "BU10r_MurphyXtueXthu": {
       "fpref": ["lakeU","lakeL"],
       "dem": 2,
       "req": [
         {"tu":[1530,1630],"th":[1530,1630]}
+      ]
+    },
+    "BU10r_MurphyXmon": {
+      "fpref": ["berkS"],
+      "dem": 2,
+      "req": [
+        {"mo":[1530,1700]}
       ]
     },
     "BU10r_Cherewick": {

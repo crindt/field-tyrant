@@ -1,7 +1,7 @@
 var SS = require('edit-google-spreadsheet')
 var async = require('async')
 
-var ts = require('./public/sched/fall-2013-sched.json')
+var ts = require('./public/sched/spring-2014-sched.json')
 var _ = require('underscore')
 
 function pad(num, size){ return ('000000000' + num).substr(-size); }
@@ -20,6 +20,7 @@ var longF = {
   lakeU: "Lake (Upper)"
   ,lakeL: "Lake (Lower)"
   ,ada: "Ada"
+  ,adaE: "Ada (East)"
   ,adaW: "Ada (West)"
   ,berkS: "Berkich (South)"
   ,berkN: "Berkich (North)"
@@ -38,8 +39,8 @@ async.waterfall([
         SS.create({
           debug: true,
           username: 'crindt',
-          password: 'caT0996Feet',
-          spreadsheetName: 'Cardiff Soccer Fall Practice Schedule',
+          password: 'atavatvthjydmcah',
+          spreadsheetName: 'Cardiff Soccer Spring Practice Schedule',
           worksheetName: f,
           callback: sheetReady
         });
@@ -128,7 +129,7 @@ async.waterfall([
                 }
                 console.log(tm,i,c,cmax)
                 _.each(_.range(c,cmax+1), function(cc) {
-                  v[r][cc] = tm.replace(/_/g,rtnstr).replace(/X/g,"/")
+                  v[r][cc] = tm.replace(/_/g,rtnstr).replace(/X(mon|tue|wed|thu|fri)/g,"").replace(/X/g,"/")
                 })
                   console.log(JSON.stringify(v))
                 ss.add(v)
@@ -156,7 +157,7 @@ async.waterfall([
     SS.create({
       debug: true,
       username: 'crindt',
-      password: 'caT0996Feet',
+      password: 'atavatvthjydmcah',
       spreadsheetName: 'Copy of Cardiff Soccer 2013 Coaches as of 20130710',
       worksheetName: 'Sheet4',
       callback: sheetReady2
@@ -186,7 +187,7 @@ async.waterfall([
     SS.create({
       debug: true,
       username: 'crindt',
-      password: 'caT0996Feet',
+      password: 'atavatvthjydmcah',
       spreadsheetName: 'Mustangs Competitive Coaches and Managers',
       worksheetName: 'Sheet1',
       callback: sheetReady2b
@@ -225,21 +226,25 @@ async.waterfall([
     }
     
     var data = []
+    var tdata = {}
     
     _.each(ts.teamsched, function(s,tmr) {
       var tm = tmr.replace(/_/," ")
       var tm2 = tm.replace(/([GB]U\d+)r/,"$1")
-      tm2 = tm2.replace(/X.*$/,"")
+      tm2 = tm2.replace(/X(mon|tue|wed|thu|fri)/g,"")
       var sarr = convert_sched(s)
-      
+
       if ( !tm.match(/(Warner|Encinitas|Softball|Rugby|Lacrosse)/) ) {
-        
-        data.push(_.flatten([tm,tc[tm2] ? tc[tm2].email : "TEAM NOT FOUND IN CONTACTS",sarr]))
-        console.log(tm,':',tc[tm2] ? tc[tm2].email : "TEAM NOT FOUND IN CONTACTS",'==>',sarr.join("; "))
+
+        if ( !tdata[tm2] ) {
+          tdata[tm2] = _.flatten([tm2,tc[tm2] ? tc[tm2].email : "TEAM NOT FOUND IN CONTACTS",sarr]);
+          console.log(tm,':',tc[tm2] ? tc[tm2].email : "TEAM NOT FOUND IN CONTACTS",'==>',sarr.join("; "))
+        } else
+          tdata[tm2].push(_.flatten(sarr))
       }
     });
 
-    data = _.sortBy(data,function(it) { 
+    data = _.sortBy(_.values(tdata),function(it) { 
       if ( it[0].match(/micro/i) ) return "00"+it[0];
       if ( it[0].match(/Five/i) ) return "ZZZZ"+it[0];
       if ( it[0].match(/Goalie/i) ) return "ZZZZ"+it[0];
@@ -257,8 +262,8 @@ async.waterfall([
     SS.create({
       debug: true,
       username: 'crindt',
-      password: 'caT0996Feet',
-      spreadsheetName: 'Cardiff Soccer Fall Practice Schedule',
+      password: 'atavatvthjydmcah',
+      spreadsheetName: 'Cardiff Soccer Spring Practice Schedule',
       worksheetName: 'Summary',
       callback: sheetReady3
     });
@@ -273,6 +278,8 @@ async.waterfall([
           ss.add( vv );
         });
       });
+
+      console.log(data)
 
       _.each(data, function(d,i) {
         var vv = {}

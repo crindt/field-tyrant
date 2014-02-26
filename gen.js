@@ -18,12 +18,21 @@ prog
   .option('-o, --output <file>',"File to output results to",null)
   .option('-t, --timestep <int>',"Size of time block size to us [30 minutes]",30)
   .option('-e, --echo', "Echo the program and results to stdout [false]",false)
-  .option('-b, --bvarweight <float>', "Weight to apply to the sum of binary variables in the objective [0.00001]", 0.00001)
+  .option('-b, --bvarweight <float>', "Weight to apply to the sum of binary variables in the objective [10000]", 10000)
+  .option('-i, --ivarweight <float>', "Weight to apply to the sum of binary variables in the objective [0.00001]", 0.001)
+  .option('-u, --usedsumweight <float>', "Weight to apply to the sum of binary variables in the objective [9999]", 9999)
+  .option('-s, --prioritizespread', "Make spreading teams more important than individual priority [true]", true)
   .option('-x, --force <string>', "Comma separated list of variables to force to be 1", null)
   .option('-a, --always-feasible', "Set up dummy options to always admit feasibility", true)
   .option('-p, --limit-to-prefs', "Limit allocations only to preferred fields",false)
   .option('-c, --prefer-comp', "Give comp teams slightly more importance",false)
+  .option('-d, --dusk <n>', "Dusk time [2100]",1800)
   .parse(process.argv)
+
+if ( prog.prioritizespread && !prog.bvarweight && !prog.ivarweight ) {
+  prog.bvarweight = prog.bvarweight / 10000000.0;
+  prog.usedsumweight = prog.usedsumweight / 10000000.0;
+}
 
 var outstream = process.stdout
 if ( prog.output ) outstream = fs.createWriteStream(prog.output)
@@ -125,7 +134,8 @@ function fill_times(arro) {
     // arro is array of time ranges, recursively expand these
     return _.flatten(_.union(_.map(arro,function(a) { return fill_times(a); })))
   }
-  tarr = _.map(arro,function(t) { return t === 'dusk' ? 2100 : t; }) // convert dusk keyword to late
+  tarr = _.map(arro,function(t) { return t === 'dusk' ? parseInt(prog.dusk) : t; }) // convert dusk keyword to late
+  tarr = _.map(tarr,function(t) { return t === 'close' ? 2100 : t; }) // convert dusk keyword to late
   var ltime = _.min(tarr)
   var htime = _.max(tarr)
   var ttimes = [];
@@ -465,6 +475,13 @@ function bvar() {
   return v;
 }
 
+function rawbvar () {
+  var args = _.values(arguments)
+  var v = args.join("_");
+  bvars[v] = 1;
+  return v;
+}
+
 // return a integer variable, store the name for later def in the program
 function ivar() {
   var args = _.values(arguments)
@@ -492,7 +509,7 @@ function emit(str) {
 }
 
 // emit objective
-emit("min: 0.00001 bvarsum\n");
+emit("min: "+prog.bvarweight+" bvarsum - "+(prog.usedsumweight)+" usedsum\n");
 _.each(teams,function(tmo,tm) {
   var pri = 1;
   _.each(_.keys(tmo.req), function(o) {
@@ -602,8 +619,33 @@ if ( prog.limitToPrefs ) {
   });
 }
 
+emit("\n\n/* MINIMIZE IDLE FIELD SLOTS (MAXIMIZE SPREAD) */\n")
+_.each(_.keys(fields), function(f) {
+  _.each(_.keys(fields[f].slots), function(d) {
+    _.each(fields[f].slots[d], function(t) {
+      emit(rawbvar("used",f,d,t) + " < " + _.map( _.keys(teams), function(tm) { return bvar(tm,f,d,t)} ).join( " + " ) + ";\n")
+    });
+  });
+});
+
+emit("\n\n/* CREATE used SUM */\n")
+emit("usedsum = 0")
+_.each(_.keys(fields), function(f) {
+  _.each(_.keys(fields[f].slots), function(d) {
+    _.each(fields[f].slots[d], function(t) {
+      emit(" + "+rawbvar("used",f,d,t))
+    });
+  });
+});
+emit(";\n")
+
 emit("\n\n/* CREATE BVAR SUM */\n")
-emit("bvarsum = " + _.map(_.keys(bvars),function(v) { return bvars[v]+" "+v; }).join( " + " ) + ";")
+emit("bvarsum = " + _.map(
+  _.filter(_.keys(bvars),function(k) { return !k.match(/^used/) } ), /* omit "used" variables" */
+  function(v) { return bvars[v]+" "+v; }).join( " + " ) + ";")
+
+//emit("\n\n/* CREATE IVAR SUM */\n")
+//emit("ivarsum = " + _.map(_.keys(ivars),function(v) { return ivars[v]+" "+v; }).join( " + " ) + ";")
 
 if ( invalid.length ) {
   emit( "\n\n/* ZERO THE DISALLOWED TIMES */\n" );
