@@ -58,6 +58,7 @@ var week = _.union(workweek,weekend);
 var conf = JSON.parse(fs.readFileSync(prog.input || '/dev/stdin','utf8').toString());
 
 var teams = conf.teams;
+var coaches = {}
 var fields = conf.fields;
 
 // automatically create nested assoc array if keys don't yet exist...ala perl
@@ -455,6 +456,7 @@ process.on('uncaughtException', function(err) {
 // hashes to store variable names
 var bvars = {};
 var ivars = {}
+var vars = {}
 
 // return a binary variable, store the name for later def in the program
 function bvar() {
@@ -479,6 +481,13 @@ function rawbvar () {
   var args = _.values(arguments)
   var v = args.join("_");
   bvars[v] = 1;
+  return v;
+}
+
+function rawvar () {
+  var args = _.values(arguments)
+  var v = args.join("_");
+  vars[v] = 1;
   return v;
 }
 
@@ -508,6 +517,15 @@ function emit(str) {
   child.stdin.write(str);
 }
 
+// get unique coaches ( assume teams are "([GB]U\d+) ([^\s]+)" where $2 is the coach name
+_.each(_.keys(teams), function(tm) {
+  var m = /([GB]U\d+)_([^\s]+)/.exec(tm);
+  if ( m && m[2] ) {
+    if ( !coaches[m[2]] ) coaches[m[2]] = { teams: [] }
+    coaches[m[2]].teams.push(tm);
+  }
+})
+
 // emit objective
 emit("min: "+prog.bvarweight+" bvarsum - "+(prog.usedsumweight)+" usedsum\n");
 _.each(teams,function(tmo,tm) {
@@ -517,7 +535,7 @@ _.each(teams,function(tmo,tm) {
     // the last request ( the dummy ) will have a high cost
     var mult = 1;
     var tpri = pri
-    if ( prog.alwaysFeasible && tpri === tmo.req.length ) mult = _.keys(teams).length*100;  // last option is dummy
+    if ( prog.alwaysFeasible && tpri === tmo.req.length ) mult = _.keys(teams).length*1000000;  // last option is dummy
     //else if ( tpri > 1 ) 
       //tpri = 1+tpri/100
 
@@ -530,7 +548,7 @@ _.each(teams,function(tmo,tm) {
       var fpri 
       if ( (fpri = tmo.fpref.indexOf(f)) < 0 ) fpri = tmo.fpref.length
       fpri++
-      return (((tpri-1)*10)+fpri) + " " + bvar(tm,"o"+pri,f)
+      return mult*(((tpri-1)*10)+fpri) + " " + bvar(tm,"o"+pri,f)
     }).join("+"))
 
     pri++
@@ -623,17 +641,39 @@ emit("\n\n/* MINIMIZE IDLE FIELD SLOTS (MAXIMIZE SPREAD) */\n")
 _.each(_.keys(fields), function(f) {
   _.each(_.keys(fields[f].slots), function(d) {
     _.each(fields[f].slots[d], function(t) {
-      emit(rawbvar("used",f,d,t) + " < " + _.map( _.keys(teams), function(tm) { return bvar(tm,f,d,t)} ).join( " + " ) + ";\n")
+      emit(rawvar("used",f,d,t) + " < " + _.map( _.keys(teams), function(tm) { return bvar(tm,f,d,t)} ).join( " + " ) + ";\n")
+      emit(rawvar("used",f,d,t) + " < 1;\n")
     });
   });
 });
+
+emit("\n\n/* DISALLOW COACH CONFLICTS */\n")
+_.each(coaches, function(co,c) {
+  emit("/* COACH "+c+" */\n");
+  if ( co.teams.length > 1 ) {
+    var ttimes = fill_times([0,2400]);
+    _.each(ttimes, function ( t ) {
+      _.each(["mo", "tu", "we", "th", "fr"], function(d) {
+        var vvs = []
+        _.each(fields, function(fo,f) {             // loop over all fields
+          if ( field_is_avail( f, d, t ) ) {  /* Only need this constraint if field is available */
+            _.each(co.teams, function(tm) {
+              vvs.push(bvar(tm,f,d,t))
+            });
+          }
+        });
+        if ( vvs.length > 0 ) emit(vvs.join(" + ")+" < 1.5; /* "+[d,t]+" */\n");
+      });
+    });
+  }
+})
 
 emit("\n\n/* CREATE used SUM */\n")
 emit("usedsum = 0")
 _.each(_.keys(fields), function(f) {
   _.each(_.keys(fields[f].slots), function(d) {
     _.each(fields[f].slots[d], function(t) {
-      emit(" + "+rawbvar("used",f,d,t))
+      emit(" + "+rawvar("used",f,d,t))
     });
   });
 });
