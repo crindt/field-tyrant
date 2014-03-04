@@ -1,0 +1,164 @@
+{
+  "teams": {
+    "BU8_PerryXReza": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 1,
+      "req": [
+        { "mo": [1700, 1830], "we": [1700, 1830] }
+      ]
+    },
+    "GU9_RezaXFisher": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 1,
+      "req": [
+        { "mo": [1530, 1700], "we": [1530, 1700] }
+      ]
+    },
+    "BU9_Serrano": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "mo": [1600,1800], "we": [1600, 1800] }
+      ]
+    },
+    "BU10_Suarez": {
+      "fpref" : ["berkN","lakeU","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "tu": [1630, 1800], "th": [1630, 1800] }
+      ]
+    },
+    "BU11_Anderson": {
+      "fpref" : ["lakeU","berkN","lakeL","ada"],
+      "dem" : 2,
+      "req": [
+        { "tu": [1500, 1630], "th": [1500, 1630] }
+      ]
+    },
+    "GU11_Cardinale": {
+      "fpref" : ["ada","lakeU","berkN","lakeL"],
+      "dem" : 2,
+      "req":  [
+        { "tu": [1730,1900], "th": [1730,1900] }
+      ]
+    },
+    "BU12_Martin": {
+      "fpref" : ["lakeU","berkN","ada"],
+      "dem" : 2,
+      "req":  [
+        { "tu": [1500, 1630], "th": [1500, 1630] }
+      ]
+    },
+    "BU12_SuarezXChiles": {
+      "fpref" : ["lakeU", "ada"],
+      "dem" : 1,
+      "req":  [
+        { "tu": [1600, 1730], "th": [1600, 1730]}
+      ]
+    },
+    "GU14_ChilesXFisher": {
+      "fpref" : ["lakeU","ada","berkN","lakeL"],
+      "dem" : 2,
+      "req": [
+        { "mo": [1500, 1630], "we": [1500, 1630] },
+        { "mo": [1600, 1730], "we": [1600, 1730] },
+        { "mo": [1700, 1830], "we": [1700, 1830] }
+      ]
+    },
+    "BU14_Suarez": {
+      "fpref" : ["lakeU","ada","berkN","lakeL"],
+      "dem" : 2,
+      "req":  [
+        { "mo": [1600, 1730], "we": [1600, 1730] },
+        { "mo": [1730, 1900], "we": [1730, 1900] },
+        { "su": [1500, 1630] }
+      ]
+    },
+    "Goalie_Chris": {
+      "fpref" : ["lakeU","ada"],
+      "dem" : 1,
+      "req" : [
+        { "fr": [1600, 1800] }
+      ]
+    }
+  },
+  "fields": {
+    "ada": {
+      "pretty": "Ada Harris",
+      "cap" : 4,
+      "slots": {
+        "mo": [ 1500, "dusk" ],
+        "tu": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ],
+        "sa": [ 1400, "dusk" ]
+      }
+    },
+    "berkN": {
+      "pretty": "Berkich (North)",
+      "cap" : 3,
+      "slots": {
+        "mo": [ 1500, "dusk" ],
+        "tu": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ],
+        "sa": [ 900, "dusk" ]
+      }
+    },
+    "lakeU": {
+      "pretty": "Lake (Upper)",
+      "cap": 6,
+      "slots": {
+        "mo": [1500, 1730],
+        "tu": [1500, 1730],
+        "we": [1500, 1730],
+        "th": [1500, 1730],
+        "fr": [1500, 1730],
+        "su": [ 900, "dusk" ]
+      }
+    },
+    "lakeL": {
+      "pretty": "Lake (Lower)",
+      "cap": 4,
+      "slots": {
+        "mo": [1500, 1730],
+        "fr": [1500, 2200],
+        "su": [ 900, "dusk" ]
+      }
+    }
+  },
+  "others": {
+    "City": {
+      "lakeU": {
+        "mo": [ [ 800, 1500], [1730, 2200] ],
+        "tu": [ [ 800, 1500], [1730, 2200] ],
+        "we": [ [ 800, 1500], [1730, 2200] ],
+        "th": [ [ 800, 1500], [1730, 2200] ],
+        "fr": [ [ 800, 1500], [1730, 2200] ]
+      },
+      "lakeL": {
+        "mo": [ [ 800, 1500], [1730, 2200] ],
+        "tu": [ [ 800, 1500] ],
+        "we": [ [ 800, 1500] ],
+        "th": [ [ 800, 1500] ],
+        "fr": [ [ 800, 1500] ]
+      }
+    },
+    "San_Dieguito_Youth_Softball": {
+      "lakeL": {
+        "tu": [ 1500, 2200 ],
+        "th": [ 1500, 2200 ]
+      }
+    },
+    "Coastal_Dragons_Rugby": {
+      "lakeL": {
+        "we": [ 1500, 2200 ]
+      }
+    }
+  },
+  "displays": {
+  }
+}
+

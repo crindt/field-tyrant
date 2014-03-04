@@ -112,15 +112,15 @@ example:
 
 To ensure a solution is always found, a dummy "request" for each team is
 added that contains no slots.  Choosing this option carries a penalty in the
-objective function that prevent its section unless it can't otherwise be
+objective function that prevents its selection unless it can't otherwise be
 avoided.  By always reaching some solution, the program can identify where
 the conflicts are for the teams assigned to their dummy request.  This
 information can be useful for resolving the conflicts.
 
-The program is formulated around decision variables *`x`* that represent
+The program is formulated around decision variables `x` that represent
 team-field-time allocations, where time is descretized at some appropriate
 level of resolution (e.g. 30 minutes).  We group the decision variables into
-_options_, *`o`*, representing each team's set of requested field slots.
+_options_, `o`, representing each team's set of requested field slots.
 
 The program takes the general form:
 

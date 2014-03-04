@@ -65,13 +65,17 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
     today.setMinutes(0)
     today.setSeconds(0)
     today.setMilliseconds(0)
+  //today.setMonth(9)
+  //today.setDate(31)
     var mon = angular.copy(today).add(1).day().previous().monday()
+    var fri = angular.copy(today).add(-1).day().next().friday()
     var sun = angular.copy(today).add(-1).day().next().sunday()
 
     $scope.basedate = angular.copy(mon)
 
     $http({method: 'GET', 
-           url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),sun.getMonth()+1,sun.getDate()].join("/")}).
+           //url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),sun.getMonth()+1,sun.getDate()].join("/")}).
+           url: '/api/twilight/'+[mon.getMonth()+1,mon.getDate(),fri.getMonth()+1,fri.getDate()].join("/")}).
         success(function(data, status, headers, config) {
             $scope.twilight = data
         }).
@@ -121,7 +125,8 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
         var tmp = $scope.schedules[$scope.schedules.length-1]
         setTimeout(function() {
             $scope.$apply(function() {
-                $scope.schedfile = 'june-2013-sched.json'
+              //$scope.schedfile = 'aug-2013-sched.json'
+                $scope.schedfile = 'fall-2013-sched.json'
             })
         },500)
 
@@ -136,6 +141,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
 
 
     $scope.loadSchedule = function(sch) {
+      if ( sch === undefined ) return
         Schedule.get({sched:sch},function(data) {
             console.log(data.teamsched)
             $scope.schedule = data;
@@ -147,7 +153,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
                 console.log('ki',k,i)
                 $scope.colors[k] = colors20(i)
 
-                if ( k.match(/(League|Lacrosse|Rugby|^ESL)/ ) ) {
+                if ( k.match(/(League|Lacrosse|Rugby|^ESL|Softball|Adult|City|Warner)/i ) ) {
                     // override leagues
                     var c = 5 + (i%4); // make them shades of gray
                     $scope.colors[k] = "#"+c+c+c;
@@ -166,7 +172,7 @@ function AppCtrl($scope, $http, $dialog, $location, Schedule) {
         return $scope.sched(field,d,t).match(/scheduled/);
     };
 
-    $scope.loadSchedule('april-2013-sched.json')
+  //$scope.loadSchedule('april-2013-sched.json')
         
 }
 MyCtrl1.$inject = ['$scope','$http','$dialog','$dialog','Schedule'];
@@ -205,9 +211,17 @@ function MyCtrl1($scope,$http) {
 MyCtrl1.$inject = ['$scope','$http'];
 
 
-function MyCtrl2() {
+function MyCtrl2($scope,$routeParams) {
+//  $scope.schedfile = $routeParams.sched || 'june-2013-sched.json'
+//  $scope.loadSchedule($scope.schedfile)
 }
-MyCtrl2.$inject = [];
+MyCtrl2.$inject = ['$scope','$routeParams'];
+
+function MyCtrl3($scope,$routeParams) {
+  $scope.schedfile = $routeParams.sched || 'june-2013-sched.json'
+  $scope.loadSchedule($scope.schedfile)
+}
+MyCtrl3.$inject = ['$scope','$routeParams'];
 
 function DocCtrl() {
 }

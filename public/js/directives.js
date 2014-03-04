@@ -10,9 +10,9 @@ var daymap = {
     tu: "Tuesday",
     we: "Wednesday",
     th: "Thursday",
-    fr: "Friday",
-    sa: "Saturday",
-    su: "Sunday"
+    fr: "Friday"
+  //,sa: "Saturday"
+//    ,su: "Sunday"
 }
 function format_day(d) {
     return daymap[d] || d
@@ -22,14 +22,14 @@ function format_team(tm,px) {
     var fullname = tm.split("_").join(" ").split("X").join("/");
     var name = fullname;
 
-    if ( px && px/fullname.length < 5 ) {
+    if (px && px/fullname.length < 5 ) {
         // not much space, let's abbrieviate
         if ( name.match(/^[GB]U/) ) {
-            name = name.split(/\s+/)[0]
+            name = name.split(/\s+/).join("\n")
         } else {
             name = _.map(name.split(/\s+/),
                          function(ss) { return ss[0].toUpperCase() })
-                .join("")
+                .join("\n")
         }
     }
     return name
@@ -68,6 +68,11 @@ function append_textbox(text,width,height,classes) {
         var sw = d3.select(this).append('svg:switch')
             .classed("textswitch",true)
 
+        var pad = (height-14)/2;
+        if (width/text.length < 7.5) {
+          pad = (height - 14*(1+1.5))/2;
+        }
+
         var tt = sw.append('svg:foreignObject')
             .attr('width', width)
             .attr('height', height)
@@ -77,14 +82,17 @@ function append_textbox(text,width,height,classes) {
             .style("font", "14px 'Helvetica Neue'")
             .style("background-color", "transparent")
             .style("margin", 0)
-            .style("padding", 0)
+            .style("padding-left", 0)
+            .style("padding-right", 0)
+            .style("padding-top", pad + "px")
+            .style("padding-bottom", 0)
             .style("text-align", "center")
             .append('div')
             .classed(classes,true)
             .style("height",height+"px")
             .style("min-height",height+"px")
             .style("min-width",width+"px")
-            .style("line-height",height+"px")
+            //.style("line-height",height+"px")
             .style("font-weight","bold")
             .text(text)
 
@@ -131,7 +139,9 @@ angular.module('myApp.directives', []).
                 var padding = parseInt(attrs.chartPadding) || 50;
                 var w = tw - padding*2;
                 var h = th - padding*2;
-                var days = ["mo","tu","we","th","fr","sa","su"]
+                //var days = ["mo","tu","we","th","fr","sa","su"]
+                var days = ["mo","tu","we","th","fr"]
+                var otherleague = /(encinitas_soccer|little_league|rugby|lacrosse|softball|adult|city|warner)/i
 
                 var xScale, tScale // defined in watch statements
 
@@ -270,7 +280,9 @@ angular.module('myApp.directives', []).
                         // set up the time scale
                         //var from = new Date(1970,0,1,8,0,0)
                         var from = angular.copy(scope.basedate)
-                        from.setHours(8)
+                      //from.setHours(8)
+                        from.setHours(14)
+                        from.setMinutes(30)
 
                         var twilight = _.max(scope.twilight, function(t) { 
                             
@@ -328,13 +340,18 @@ angular.module('myApp.directives', []).
                             .attr('width', xScale.rangeBand())
                             .attr('height', function(sl) { 
                                 var lasttime = convert_time(sl.times[sl.times.length-1],scope.timestep)
-                                var mytwilight = new Date(scope.twilight[_.indexOf(days,sl.day)].civil_twilight)
-                                // schedule times specified for monday
-                                mytwilight.setMonth(lasttime.getMonth())
-                                mytwilight.setDate(lasttime.getDate())
-
-                                if ( lasttime > mytwilight ) lasttime = mytwilight
-                                return tScale(lasttime) - tScale(convert_time(sl.times[0]));
+                                var ii = _.indexOf(days,sl.day)  // catch case when day isn't being plotted
+                                if ( ii >= 0 ) {
+                                  var mytwilight = new Date(scope.twilight[ii].civil_twilight)
+                                  // schedule times specified for monday
+                                  mytwilight.setMonth(lasttime.getMonth())
+                                  mytwilight.setDate(lasttime.getDate())
+                                  
+                                  if ( lasttime > mytwilight ) lasttime = mytwilight
+                                  return tScale(lasttime) - tScale(convert_time(sl.times[0]));
+                                } else {
+                                  return 0
+                                }
                             })
                             .on('mousemove', function(d) {
                                 scope.mousecoord = d3.mouse(this)
@@ -361,7 +378,8 @@ angular.module('myApp.directives', []).
 
                         axesg_b // goes in back
                             .selectAll("line.dayticks")
-                            .data(["mo","tu","we","th","fr","sa","su"])
+                            //.data(["mo","tu","we","th","fr","sa","su"])
+                            .data(["mo","tu","we","th","fr"])
                             .enter()
                             .append("svg:line")
                             .classed("dayticks",true)
@@ -429,9 +447,12 @@ angular.module('myApp.directives', []).
                                                    slot: 1
                                                   }
 
+                                        // grab already scheduled slots not representing other leagues
+                                        var avoid = _.filter(data,function(d) { return !d.team.match(otherleague) });
+
                                         // determine if slot overlaps with already scheduled
                                         // slots and shift it over accordingly
-                                        while( slot_clashes( nsl, data ) ) {
+                                        while( slot_clashes( nsl, avoid ) ) {
                                             nsl.slot++;
                                         }
                                         if ( daywidth[d] == undefined || daywidth[d] < nsl.slot ) daywidth[d] = nsl.slot
@@ -486,7 +507,7 @@ angular.module('myApp.directives', []).
                                         var xx = xScale(slot.day)+slotbor+(slot.slot-1)*slotw;
                                         // adjust for other leagues schedules to fill
                                         // the whole column
-                                        if ( team.team.match(/(encinitas_soccer|little_league|rugby|lacrosse)/i) ) {
+                                        if ( team.team.match(otherleague) ) {
                                             xx = xScale(slot.day)
                                             slotw = rb
                                         }
@@ -508,7 +529,7 @@ angular.module('myApp.directives', []).
 
                                         if ( true ) {
                                             var tn = format_team(team.team,sloth);
-                                            if ( tn.match(/^[GB]/) ) tn = tn.split(" ")[0]
+                                            //if ( tn.match(/^[GB]/) ) tn = tn.split(" ")[0]
                                             tgg.each(append_textbox(tn,sloth,slotw,'teamname'))
                                         } else {
                                         // per http://stackoverflow.com/questions/12975717/using-switch-with-foreignobject-in-svg
@@ -524,14 +545,14 @@ angular.module('myApp.directives', []).
                                             .style("font", "14px 'Helvetica Neue'")
                                             .style("background-color", "transparent")
                                             .style("margin", 0)
-                                            .style("padding", 0)
+                                            .style("padding-top", slotw/(daywidth[slot.day]*8))
                                             .style("text-align", "center")
                                             .append('div')
                                             .classed("teamname",true)
-                                            .style("height",slotw+"px")
-                                            .style("min-height",slotw+"px")
+                                            .style("height",slotw/(daywidth[slot.day]*4)+"px")
+                                          //.style("min-height",slotw/(daywidth[slot.day]*2)+"px")
                                             .style("min-width",sloth+"px")
-                                            .style("line-height",slotw+"px")
+                                            //.style("line-height",slotw/(daywidth[slot.day]*2)+"px")
                                             .style("font-weight","bold")
                                             .text(format_team(team.team,sloth))
 

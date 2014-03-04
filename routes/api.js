@@ -102,7 +102,9 @@ exports.twilight = function(req, res, next) {
     console.log(startDate)
     console.log(endDate)
     for (var d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
-        var ddd = moment(d).toDate()
+        var ddd = moment(d)
+        ddd = ddd.toDate()
+
         var o ={ date: new Date(d) }
         var dt = ddd.getTimezoneOffset();
         console.log(DST,nonDST,dt)
@@ -113,7 +115,9 @@ exports.twilight = function(req, res, next) {
         var tt = twi[d.getMonth()][d.getDate()]
         var hh = parseInt(tt.slice(0,2),10)+(isDST?1:0);
         var mn = parseInt(tt.slice(2,4),10)
-        var dd = new Date(o.date)
+        var dd = moment(o.date)
+        dd.zone(-7)
+        dd = dd.toDate()
         dd.setHours(hh);
         dd.setMinutes(mn);
         o.civil_twilight = dd;

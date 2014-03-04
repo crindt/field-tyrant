@@ -1,71 +1,71 @@
 {
     "teams": {
         "BU8_PerryXReza": {
-            "fpref" : ["berkS","ada"],
+            "fpref" : ["berkS","adaE"],
             "dem" : 1,
             "req": [
                 { "mo": [1700, 1830], "we": [1700, 1830] }
             ]
         },
         "GU9_RezaXFisher": {
-            "fpref" : ["berkS","ada"],
+            "fpref" : ["berkS","adaE"],
             "dem" : 1,
             "req": [
                 { "mo": [1530, 1700], "we": [1530, 1700] }
             ]
         },
         "BU9_Serrano": {
-            "fpref" : ["berkS","ada"],
+            "fpref" : ["berkS","adaE"],
             "dem" : 1,
             "req": [
-                { "mo": [1530,1700], "we": [1530, 1700] }
+                { "we": [1530, 1700] }
             ]
         },
         "BU10_Suarez": {
-            "fpref" : ["berkS","ada"],
+            "fpref" : ["berkS","adaE"],
             "dem" : 2,
             "req": [
                 { "fr": [1600, 1730] }
             ]
         },
         "BU11_Anderson": {
-            "fpref" : ["berkS","ada"],
+            "fpref" : ["berkS","adaE"],
             "dem" : 2,
             "req": [
                 { "tu": [1630, 1800], "th": [1630, 1800] }
             ]
         },
         "GU11_Cardinale": {
-            "fpref" : ["ada","berkS"],
+            "fpref" : ["adaE","berkS"],
             "dem" : 1,
             "req":  [
-                { "tu": [1730,1900], "th": [1730,1900] }
+                { "tu": [1630, 1800], "th": [1630, 1800] }
             ]
         },
         "BU12_Martin": {
-            "fpref" : ["berkN","ada"],
+            "fpref" : ["berkS","adaE"],
             "dem" : 2,
             "req":  [
                 { "tu": [1630, 1800], "th": [1630, 1800] }
             ]
         },
         "BU12_SuarezXChiles": {
-            "fpref" : ["ada"],
-            "dem" : 1,
+            "fpref" : ["adaE","berkS"],
+            "dem" : 2,
             "req":  [
-                { "we": [1530, 1700] }
+                { "su": [1630, 1800] }
             ]
         },
         "GU13_ChilesXFisher": {
-            "fpref" : ["ada","berkS"],
-            "dem" : 1,
+            "fpref" : ["adaE","berkS"],
+            "dem" : 2,
             "req": [
                 { "mo": [1600, 1730], "we": [1600, 1730] },
                 { "mo": [1700, 1830], "we": [1700, 1830] }
             ]
         },
         "BU14_Suarez": {
-            "fpref" : ["berkS","ada"],
+            "fpref" : ["berkS","adaE"],
             "dem" : 2,
             "req":  [
                 { "su": [1500, 1630] }
@@ -78,74 +78,46 @@
                 { "fr": [1600, 1800] }
             ]
         },
-        "ESLGU12_NEWMAN": {
+        "ESLGU14_POLTL": {
             "fpref" : ["ada"],
             "dem"   : 1,
             "req"   : [
-                { "mo" : [1600, 1730], "th" : [1600,1730] }
+                { "mo" : [1730, 1900], "we": [1730, 1900] }
             ]
         },
-        "ESLBU12_ELENZMARTIN": {
+        "ESLGU14_EYRE": {
             "fpref" : ["ada"],
             "dem"   : 1,
             "req"   : [
-                { "mo" : [1730, 1900] }
+                { "mo" : [1730, 1900], "we": [1730, 1900] }
             ]
         },
-        "ESLBU14_PALAFOX": {
+        "ESLBU15_NEWMAN": {
             "fpref" : ["ada"],
             "dem"   : 1,
             "req"   : [
-                { "we" : [1730, 1900] }
+                { "mo" : [1730, 1900], "th" : [1730, 1900] }
             ]
         },
-        "ESLGU11_YAMAZAKI": {
+        "ESLBU14_BERTH": {
             "fpref" : ["ada"],
             "dem"   : 1,
             "req"   : [
-                { "tu" : [1600, 1730] }
+                { "tu" : [1600, 1730], "fr": [1600, 1730] }
             ]
         },
-        "ESLBU13_DEAN": {
+        "ESLGU17_POLTL": {
             "fpref" : ["ada"],
             "dem"   : 1,
             "req"   : [
-                { "tu" : [1600, 1730] }
+                { "tu" : [1730, 1900], "th": [1730, 1900] }
             ]
         },
-        "ESLGU12_YAMAZAKI": {
+        "ESLGU15_GONZALES": {
             "fpref" : ["ada"],
             "dem"   : 1,
             "req"   : [
-                { "tu" : [1730,1900] }
-            ]
-        },
-        "ESLBU14_WATSON": {
-            "fpref" : ["ada"],
-            "dem"   : 1,
-            "req"   : [
-                { "tu" : [1600, 1730] }
-            ]
-        },
-        "ESLGU10_EYRE": {
-            "fpref" : ["ada"],
-            "dem"   : 1,
-            "req"   : [
-                { "th" : [1600, 1730] }
-            ]
-        },
-        "ESLBU13_PALAFOX": {
-            "fpref" : ["ada"],
-            "dem"   : 1,
-            "req"   : [
-                { "th" : [1730,1900] }
-            ]
-        },
-        "ESLGU13_EYRE": {
-            "fpref" : ["ada"],
-            "dem"   : 1,
-            "req"   : [
-                { "th" : [1730,1900] }
+                { "tu" : [1730, 1900], "th": [1730, 1900] }
             ]
         }
     },
@@ -185,6 +157,12 @@
         }
     },
     "others": {
+        "Coastal_Dragons_Rugby": {
+            "ada": {
+                "we": [ 1500, "dusk" ],
+                "sa": [ 900, 1400 ]
+            }
+        },
         "Encinitas_Little_League": {
             "berkN": {
                 "mo": [ 1500, "dusk" ],
