@@ -2,7 +2,10 @@ var SS = require('edit-google-spreadsheet')
 var async = require('async')
 
 var ts = require('./public/sched/spring-2014-sched.json')
+var req = require('./data/spring-2014.json')
 var _ = require('underscore')
+
+var others = /(Warner|Encinitas|Softball|Rugby|Lacrosse|Closed)/;
 
 function pad(num, size){ return ('000000000' + num).substr(-size); }
 
@@ -112,7 +115,7 @@ async.waterfall([
               var minc = _.max(_.map(s,function(tm) { return col[tm] || 0 }))+1
 
               _.each(s, function(tm,i) {
-                var isExt = tm.match(/(Warner|Encinitas|Softball|Rugby|Lacrosse)/) 
+                var isExt = tm.match(others) 
                 var v = {}
                 if (!isExt) {
                   c = c0 + slot[tm]-1
@@ -188,7 +191,7 @@ async.waterfall([
       debug: true,
       username: 'crindt',
       password: 'atavatvthjydmcah',
-      spreadsheetName: 'Mustangs Competitive Coaches and Managers',
+      spreadsheetName: 'Mustangs Competitive Coaches and Managers 2014',
       worksheetName: 'Sheet1',
       callback: sheetReady2b
     });
@@ -234,7 +237,10 @@ async.waterfall([
       tm2 = tm2.replace(/X(mon|tue|wed|thu|fri)/g,"")
       var sarr = convert_sched(s)
 
-      if ( !tm.match(/(Warner|Encinitas|Softball|Rugby|Lacrosse)/) ) {
+      // pad to three assigned practices because we push requests onto the back of the array
+      while (sarr.length < 3) sarr.push("");
+
+      if ( !tm.match(others) ) {
 
         if ( !tdata[tm2] ) {
           tdata[tm2] = _.flatten([tm2,tc[tm2] ? tc[tm2].email : "TEAM NOT FOUND IN CONTACTS",sarr]);
@@ -243,6 +249,16 @@ async.waterfall([
           tdata[tm2].push(_.flatten(sarr))
       }
     });
+
+    /* Push team requests onto the back of the array */
+    _.each(req.teams, function( tmo, tm ) {
+      var tm1 = tm.replace(/_/," ")
+      var tm2 = tm1.replace(/([GB]U\d+)r/,"$1")
+      tm2 = tm2.replace(/X(mon|tue|wed|thu|fri)/g,"")
+      _.each(tmo.req, function(r) {
+        tdata[tm2].push(_.map(r, function( tarr, day ) { return day+": "+tarr[0]+"-"+tarr[tarr.length-1]; }).join(","+rtnstr))
+      })
+    })
 
     data = _.sortBy(_.values(tdata),function(it) { 
       if ( it[0].match(/micro/i) ) return "00"+it[0];
@@ -271,7 +287,7 @@ async.waterfall([
     function sheetReady3(err,ss) {
       //clear
       _.each(_.range(2,50),function(r) {
-        _.each(_.range(2,10),function(c) {
+        _.each(_.range(2,20),function(c) {
           var vv = {}
           vv[r] = {}
           vv[r][c] = ""
