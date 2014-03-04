@@ -1,0 +1,463 @@
+{
+    "times": [
+        800,
+        830,
+        900,
+        930,
+        1000,
+        1030,
+        1100,
+        1130,
+        1200,
+        1230,
+        1300,
+        1330,
+        1400,
+        1430,
+        1500,
+        1530,
+        1600,
+        1630,
+        1700,
+        1730,
+        1800,
+        1830,
+        1900,
+        1930,
+        2000
+    ],
+    "days": [
+        "mo",
+        "tu",
+        "we",
+        "th",
+        "fr",
+        "sa",
+        "su"
+    ],
+    "sched": {
+        "lakeU": {
+            "we": {
+                "1500": [
+                    "GU9_RezaXFisher",
+                    "GU13_ChilesXFisher"
+                ],
+                "1530": [
+                    "GU9_RezaXFisher",
+                    "GU13_ChilesXFisher"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano",
+                    "GU13_ChilesXFisher"
+                ],
+                "1630": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "BU14_Suarez"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "BU14_Suarez"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "BU14_Suarez"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "GU9_RezaXFisher",
+                    "GU13_ChilesXFisher"
+                ],
+                "1530": [
+                    "GU9_RezaXFisher",
+                    "GU13_ChilesXFisher"
+                ],
+                "1600": [
+                    "GU9_RezaXFisher",
+                    "BU9_Serrano",
+                    "GU13_ChilesXFisher",
+                    "Goalie_Chris"
+                ],
+                "1630": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "BU14_Suarez",
+                    "Goalie_Chris"
+                ],
+                "1700": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "BU14_Suarez",
+                    "Goalie_Chris"
+                ],
+                "1730": [
+                    "BU8_PerryXReza",
+                    "BU9_Serrano",
+                    "BU14_Suarez",
+                    "Goalie_Chris"
+                ]
+            },
+            "tu": {
+                "1530": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1600": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1630": [
+                    "BU10_SuarezXGardner",
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU10_SuarezXGardner"
+                ],
+                "1730": [
+                    "BU10_SuarezXGardner"
+                ]
+            },
+            "th": {
+                "1530": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1600": [
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1630": [
+                    "BU10_SuarezXGardner",
+                    "BU11_Anderson",
+                    "BU12_Martin"
+                ],
+                "1700": [
+                    "BU10_SuarezXGardner"
+                ],
+                "1730": [
+                    "BU10_SuarezXGardner"
+                ]
+            }
+        },
+        "ada": {
+            "tu": {
+                "1700": [
+                    "BU12_SuarezXChiles"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1800": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1830": [
+                    "GU11_Cardinale"
+                ]
+            },
+            "th": {
+                "1700": [
+                    "BU12_SuarezXChiles"
+                ],
+                "1730": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1800": [
+                    "GU11_Cardinale",
+                    "BU12_SuarezXChiles"
+                ],
+                "1830": [
+                    "GU11_Cardinale"
+                ]
+            }
+        }
+    },
+    "teams": [
+        {
+            "name": "BU8_PerryXReza"
+        },
+        {
+            "name": "GU9_RezaXFisher"
+        },
+        {
+            "name": "BU9_Serrano"
+        },
+        {
+            "name": "BU10_SuarezXGardner"
+        },
+        {
+            "name": "BU11_Anderson"
+        },
+        {
+            "name": "GU11_Cardinale"
+        },
+        {
+            "name": "BU12_Martin"
+        },
+        {
+            "name": "BU12_SuarezXChiles"
+        },
+        {
+            "name": "GU13_ChilesXFisher"
+        },
+        {
+            "name": "BU14_Suarez"
+        },
+        {
+            "name": "Goalie_Chris"
+        }
+    ],
+    "teamsched": {
+        "BU8_PerryXReza": {
+            "we": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "fr": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "GU9_RezaXFisher": {
+            "we": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "fr": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            }
+        },
+        "BU9_Serrano": {
+            "we": {
+                "1600": "lakeU",
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "fr": {
+                "1600": "lakeU",
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "BU10_SuarezXGardner": {
+            "tu": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "th": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "BU11_Anderson": {
+            "tu": {
+                "1530": "lakeU",
+                "1600": "lakeU",
+                "1630": "lakeU"
+            },
+            "th": {
+                "1530": "lakeU",
+                "1600": "lakeU",
+                "1630": "lakeU"
+            }
+        },
+        "GU11_Cardinale": {
+            "tu": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            },
+            "th": {
+                "1730": "ada",
+                "1800": "ada",
+                "1830": "ada"
+            }
+        },
+        "BU12_Martin": {
+            "tu": {
+                "1530": "lakeU",
+                "1600": "lakeU",
+                "1630": "lakeU"
+            },
+            "th": {
+                "1530": "lakeU",
+                "1600": "lakeU",
+                "1630": "lakeU"
+            }
+        },
+        "BU12_SuarezXChiles": {
+            "tu": {
+                "1700": "ada",
+                "1730": "ada",
+                "1800": "ada"
+            },
+            "th": {
+                "1700": "ada",
+                "1730": "ada",
+                "1800": "ada"
+            }
+        },
+        "GU13_ChilesXFisher": {
+            "we": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "fr": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            }
+        },
+        "BU14_Suarez": {
+            "we": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "fr": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "Goalie_Chris": {
+            "fr": {
+                "1600": "lakeU",
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        }
+    },
+    "fields": {
+        "ada": {
+            "pretty": "Ada Harris",
+            "cap": 4,
+            "slots": {
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        },
+        "berkN": {
+            "pretty": "Berkich (North)",
+            "cap": 3,
+            "slots": {}
+        },
+        "lakeU": {
+            "pretty": "Lake (Upper)",
+            "cap": 6,
+            "slots": {
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "sa": [
+                    800,
+                    830,
+                    900,
+                    930,
+                    1000,
+                    1030,
+                    1100,
+                    1130,
+                    1200,
+                    1230,
+                    1300,
+                    1330,
+                    1400,
+                    1430,
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        },
+        "lakeL": {
+            "pretty": "Lake (Lower)",
+            "cap": 4,
+            "slots": {}
+        }
+    },
+    "unallocated": {},
+    "timestep": 30
+}
