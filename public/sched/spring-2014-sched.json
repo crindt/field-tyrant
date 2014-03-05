@@ -23,117 +23,117 @@
     ],
     "sched": {
         "berkS": {
-            "mo": {
-                "1500": [
-                    "BU8_Suarez",
-                    "GU10_Reza"
-                ],
-                "1530": [
-                    "BU8_Suarez",
-                    "GU10_Reza"
-                ],
-                "1600": [
-                    "BU8_Suarez",
-                    "GU10_Reza"
-                ],
-                "1630": [
-                    "BU9_Reza"
-                ],
-                "1700": [
-                    "BU9_Reza"
-                ],
-                "1730": [
-                    "BU9_Reza"
-                ],
-                "1800": [
-                    "BU15_Midho"
-                ],
-                "1830": [
-                    "BU15_Midho"
-                ],
-                "1900": [
-                    "BU15_Midho"
-                ]
-            },
-            "we": {
-                "1500": [
-                    "BU8_Suarez",
-                    "GU10_Reza"
-                ],
-                "1530": [
-                    "BU8_Suarez",
-                    "GU10_Reza"
-                ],
-                "1600": [
-                    "BU8_Suarez",
-                    "GU10_Reza"
-                ],
-                "1630": [
-                    "BU9_Reza",
-                    "BU10_Serrano"
-                ],
-                "1700": [
-                    "BU9_Reza",
-                    "BU10_Serrano"
-                ],
-                "1730": [
-                    "BU9_Reza",
-                    "BU10_Serrano"
-                ],
-                "1800": [
-                    "BU15_Midho"
-                ],
-                "1830": [
-                    "BU15_Midho"
-                ],
-                "1900": [
-                    "BU15_Midho"
-                ]
-            },
             "tu": {
                 "1500": [
-                    "BU11_Reza",
-                    "GU9_Suarez"
+                    "BU11_Reza"
                 ],
                 "1530": [
-                    "BU11_Reza",
-                    "GU9_Suarez"
+                    "BU11_Reza"
                 ],
                 "1600": [
-                    "BU11_Reza",
-                    "GU9_Suarez"
+                    "BU11_Reza"
                 ],
                 "1630": [
-                    "GU11_Marybeth"
+                    "BU8_Suarez",
+                    "BU9_Reza"
                 ],
                 "1700": [
-                    "GU11_Marybeth"
+                    "BU8_Suarez",
+                    "BU9_Reza"
                 ],
                 "1730": [
-                    "GU11_Marybeth"
+                    "BU8_Suarez",
+                    "BU9_Reza"
                 ]
             },
             "th": {
                 "1500": [
-                    "BU11_Reza",
-                    "GU9_Suarez"
+                    "BU11_Reza"
                 ],
                 "1530": [
-                    "BU11_Reza",
-                    "GU9_Suarez"
+                    "BU11_Reza"
                 ],
                 "1600": [
-                    "BU11_Reza",
-                    "GU9_Suarez"
+                    "BU11_Reza"
                 ],
                 "1630": [
-                    "GU11_Marybeth"
+                    "BU8_Suarez",
+                    "BU9_Reza"
                 ],
                 "1700": [
-                    "GU11_Marybeth"
+                    "BU8_Suarez",
+                    "BU9_Reza"
                 ],
                 "1730": [
-                    "GU11_Marybeth"
+                    "BU8_Suarez",
+                    "BU9_Reza"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "BU12_Chiles",
+                    "GU10_Reza"
+                ],
+                "1530": [
+                    "BU12_Chiles",
+                    "GU10_Reza"
+                ],
+                "1600": [
+                    "BU12_Chiles",
+                    "GU10_Reza"
+                ],
+                "1630": [
+                    "BU10_Serrano",
+                    "GU14_Chiles"
+                ],
+                "1700": [
+                    "BU10_Serrano",
+                    "GU14_Chiles"
+                ],
+                "1730": [
+                    "BU10_Serrano",
+                    "GU14_Chiles"
+                ],
+                "1800": [
+                    "BU15_Midho"
+                ],
+                "1830": [
+                    "BU15_Midho"
+                ],
+                "1900": [
+                    "BU15_Midho"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "BU12_Chiles",
+                    "GU10_Reza"
+                ],
+                "1530": [
+                    "BU12_Chiles",
+                    "GU10_Reza"
+                ],
+                "1600": [
+                    "BU12_Chiles",
+                    "GU10_Reza"
+                ],
+                "1630": [
+                    "GU14_Chiles"
+                ],
+                "1700": [
+                    "GU14_Chiles"
+                ],
+                "1730": [
+                    "GU14_Chiles"
+                ],
+                "1800": [
+                    "BU15_Midho"
+                ],
+                "1830": [
+                    "BU15_Midho"
+                ],
+                "1900": [
+                    "BU15_Midho"
                 ]
             }
         },
@@ -152,28 +152,25 @@
                     "BU12_b"
                 ],
                 "1630": [
-                    "BU12_Chiles",
-                    "BU13_Martin"
+                    "BU13_Martin",
+                    "GU11_Marybeth"
                 ],
                 "1700": [
-                    "BU12_Chiles",
-                    "BU13_Martin"
+                    "BU13_Martin",
+                    "GU11_Marybeth"
                 ],
                 "1730": [
-                    "BU12_Chiles",
-                    "BU13_Martin"
+                    "BU13_Martin",
+                    "GU11_Marybeth"
                 ],
                 "1800": [
-                    "GU12_Cardinale",
-                    "GU14_Chiles"
+                    "GU12_Cardinale"
                 ],
                 "1830": [
-                    "GU12_Cardinale",
-                    "GU14_Chiles"
+                    "GU12_Cardinale"
                 ],
                 "1900": [
-                    "GU12_Cardinale",
-                    "GU14_Chiles"
+                    "GU12_Cardinale"
                 ]
             },
             "th": {
@@ -190,28 +187,25 @@
                     "BU12_b"
                 ],
                 "1630": [
-                    "BU12_Chiles",
-                    "BU13_Martin"
+                    "BU13_Martin",
+                    "GU11_Marybeth"
                 ],
                 "1700": [
-                    "BU12_Chiles",
-                    "BU13_Martin"
+                    "BU13_Martin",
+                    "GU11_Marybeth"
                 ],
                 "1730": [
-                    "BU12_Chiles",
-                    "BU13_Martin"
+                    "BU13_Martin",
+                    "GU11_Marybeth"
                 ],
                 "1800": [
-                    "GU12_Cardinale",
-                    "GU14_Chiles"
+                    "GU12_Cardinale"
                 ],
                 "1830": [
-                    "GU12_Cardinale",
-                    "GU14_Chiles"
+                    "GU12_Cardinale"
                 ],
                 "1900": [
-                    "GU12_Cardinale",
-                    "GU14_Chiles"
+                    "GU12_Cardinale"
                 ]
             },
             "mo": {
@@ -1127,9 +1121,6 @@
             "name": "BU15_Midho"
         },
         {
-            "name": "GU9_Suarez"
-        },
-        {
             "name": "GU10_Reza"
         },
         {
@@ -1144,24 +1135,24 @@
     ],
     "teamsched": {
         "BU8_Suarez": {
-            "mo": {
-                "1500": "berkS",
-                "1530": "berkS",
-                "1600": "berkS"
-            },
-            "we": {
-                "1500": "berkS",
-                "1530": "berkS",
-                "1600": "berkS"
-            }
-        },
-        "BU9_Reza": {
-            "mo": {
+            "tu": {
                 "1630": "berkS",
                 "1700": "berkS",
                 "1730": "berkS"
             },
-            "we": {
+            "th": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "BU9_Reza": {
+            "tu": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "th": {
                 "1630": "berkS",
                 "1700": "berkS",
                 "1730": "berkS"
@@ -1199,15 +1190,15 @@
             }
         },
         "BU12_Chiles": {
-            "tu": {
-                "1630": "adaE",
-                "1700": "adaE",
-                "1730": "adaE"
+            "mo": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
             },
-            "th": {
-                "1630": "adaE",
-                "1700": "adaE",
-                "1730": "adaE"
+            "we": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
             }
         },
         "BU12_b": {
@@ -1246,18 +1237,6 @@
                 "1900": "berkS"
             }
         },
-        "GU9_Suarez": {
-            "tu": {
-                "1500": "berkS",
-                "1530": "berkS",
-                "1600": "berkS"
-            },
-            "th": {
-                "1500": "berkS",
-                "1530": "berkS",
-                "1600": "berkS"
-            }
-        },
         "GU10_Reza": {
             "mo": {
                 "1500": "berkS",
@@ -1272,14 +1251,14 @@
         },
         "GU11_Marybeth": {
             "tu": {
-                "1630": "berkS",
-                "1700": "berkS",
-                "1730": "berkS"
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
             },
             "th": {
-                "1630": "berkS",
-                "1700": "berkS",
-                "1730": "berkS"
+                "1630": "adaE",
+                "1700": "adaE",
+                "1730": "adaE"
             }
         },
         "GU12_Cardinale": {
@@ -1295,15 +1274,15 @@
             }
         },
         "GU14_Chiles": {
-            "tu": {
-                "1800": "adaE",
-                "1830": "adaE",
-                "1900": "adaE"
+            "mo": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
             },
-            "th": {
-                "1800": "adaE",
-                "1830": "adaE",
-                "1900": "adaE"
+            "we": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
             }
         },
         "Lacrosse": {
@@ -1986,7 +1965,7 @@
     "fields": {
         "adaE": {
             "pretty": "Ada Harris (East)",
-            "cap": 4,
+            "cap": 5,
             "slots": {
                 "tu": [
                     1500,

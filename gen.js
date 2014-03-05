@@ -250,6 +250,10 @@ function parseResults(data) {
     if ( prog.echo ) console.log(line)
     var m
     if ( m = line.match(/^\s*$/)) {}
+    else if ( m = line.match(/infeasible/i) ) {
+      console.log("INFEASIBLE!");
+      process.exit(1);
+    }
     else if ( m = line.match(/Value of the objective function:/) ) {}
     else if ( m = line.match(/Actual values/) ) {}
     else if ( m = line.match(/(\w+)\s+(\d+)/) ) {

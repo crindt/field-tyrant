@@ -256,7 +256,9 @@ async.waterfall([
       var tm2 = tm1.replace(/([GB]U\d+)r/,"$1")
       tm2 = tm2.replace(/X(mon|tue|wed|thu|fri)/g,"")
       _.each(tmo.req, function(r) {
-        tdata[tm2].push(_.map(r, function( tarr, day ) { return day+": "+tarr[0]+"-"+tarr[tarr.length-1]; }).join(","+rtnstr))
+        if ( tdata[tm2] ) {
+          tdata[tm2].push(_.map(r, function( tarr, day ) { return day+": "+tarr[0]+"-"+tarr[tarr.length-1]; }).join(","+rtnstr))
+        }
       })
     })
 
