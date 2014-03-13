@@ -57,8 +57,8 @@ async.waterfall([
           console.log(ff,'bcols',bcols)
 
           //clear
-          _.each(_.range(3,20),function(r) {
-            _.each(_.range(2,2+bcols*5),function(c) {
+          _.each(_.range(3,14),function(r) {
+            _.each(_.range(2,1+bcols*5),function(c) {
               var vv = {}
               vv[r] = {}
               vv[r][c] = ""
@@ -288,8 +288,8 @@ async.waterfall([
     
     function sheetReady3(err,ss) {
       //clear
-      _.each(_.range(2,50),function(r) {
-        _.each(_.range(2,20),function(c) {
+      _.each(_.range(2,15),function(r) {
+        _.each(_.range(2,12),function(c) {
           var vv = {}
           vv[r] = {}
           vv[r][c] = ""
