@@ -164,13 +164,13 @@
                     "GU12_Cardinale"
                 ],
                 "1800": [
-                    "BU12_b"
+                    "BU13_McNeill"
                 ],
                 "1830": [
-                    "BU12_b"
+                    "BU13_McNeill"
                 ],
                 "1900": [
-                    "BU12_b"
+                    "BU13_McNeill"
                 ]
             },
             "th": {
@@ -199,13 +199,13 @@
                     "GU12_Cardinale"
                 ],
                 "1800": [
-                    "BU12_b"
+                    "BU13_McNeill"
                 ],
                 "1830": [
-                    "BU12_b"
+                    "BU13_McNeill"
                 ],
                 "1900": [
-                    "BU12_b"
+                    "BU13_McNeill"
                 ]
             },
             "mo": {
@@ -1112,7 +1112,7 @@
             "name": "BU12_Chiles"
         },
         {
-            "name": "BU12_b"
+            "name": "BU13_McNeill"
         },
         {
             "name": "BU13_Martin"
@@ -1201,7 +1201,7 @@
                 "1600": "berkS"
             }
         },
-        "BU12_b": {
+        "BU13_McNeill": {
             "tu": {
                 "1800": "adaE",
                 "1830": "adaE",

@@ -1,9 +1,14 @@
+var prog = require('commander');
 var SS = require('edit-google-spreadsheet')
 var async = require('async')
 
 var ts = require('./public/sched/spring-2014-sched.json')
 var req = require('./data/spring-2014.json')
 var _ = require('underscore')
+
+prog.version('0.0.1')
+  .option('-s, --sheet <name>', 'Sheet name to copy to', 'Cardiff Soccer Spring Practice Schedule')
+  .parse(process.argv)
 
 var others = /(Warner|Encinitas|Softball|Rugby|Lacrosse|Closed)/;
 
@@ -43,7 +48,7 @@ async.waterfall([
           debug: true,
           username: 'crindt',
           password: 'atavatvthjydmcah',
-          spreadsheetName: 'Cardiff Soccer Spring Practice Schedule',
+          spreadsheetName: prog.sheet,
           worksheetName: f,
           callback: sheetReady
         });
@@ -281,7 +286,7 @@ async.waterfall([
       debug: true,
       username: 'crindt',
       password: 'atavatvthjydmcah',
-      spreadsheetName: 'Cardiff Soccer Spring Practice Schedule',
+      spreadsheetName: prog.sheet,
       worksheetName: 'Summary',
       callback: sheetReady3
     });
