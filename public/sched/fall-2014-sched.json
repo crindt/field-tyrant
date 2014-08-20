@@ -1,0 +1,2376 @@
+{
+    "times": [
+        1500,
+        1530,
+        1600,
+        1630,
+        1700,
+        1730,
+        1800,
+        1830,
+        1900,
+        1930,
+        2000
+    ],
+    "days": [
+        "mo",
+        "tu",
+        "we",
+        "th",
+        "fr",
+        "sa",
+        "su"
+    ],
+    "sched": {
+        "berkS": {
+            "tu": {
+                "1500": [
+                    "BU8_Suarez"
+                ],
+                "1530": [
+                    "BU8_Suarez",
+                    "GU10r_Mercer"
+                ],
+                "1600": [
+                    "BU8_Suarez",
+                    "GU10r_Mercer"
+                ],
+                "1630": [
+                    "BU10_Chiles",
+                    "GU10r_Mercer"
+                ],
+                "1700": [
+                    "BU10_Chiles",
+                    "BU8r_Davis"
+                ],
+                "1730": [
+                    "BU10_Chiles",
+                    "BU8r_Davis"
+                ],
+                "1800": [
+                    "BU8r_Davis"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "BU8_Suarez"
+                ],
+                "1530": [
+                    "BU8_Suarez"
+                ],
+                "1600": [
+                    "BU8_Suarez",
+                    "GU8r_Thielman"
+                ],
+                "1630": [
+                    "BU10_Chiles",
+                    "GU8r_Thielman"
+                ],
+                "1700": [
+                    "BU10_Chiles",
+                    "BU10r_Casas"
+                ],
+                "1730": [
+                    "BU10_Chiles",
+                    "BU10r_Casas"
+                ],
+                "1800": [
+                    "BU10r_Casas"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "GU10_Reza"
+                ],
+                "1530": [
+                    "GU10_Reza"
+                ],
+                "1600": [
+                    "GU10_Reza"
+                ],
+                "1700": [
+                    "Micro_Drohan"
+                ],
+                "1730": [
+                    "Micro_Drohan"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "GU10_Reza"
+                ],
+                "1530": [
+                    "GU10_Reza"
+                ],
+                "1600": [
+                    "GU10_Reza",
+                    "Micro_Levy"
+                ],
+                "1630": [
+                    "Micro_Levy"
+                ],
+                "1700": [
+                    "GU10r_Diller",
+                    "Micro_Egan"
+                ],
+                "1730": [
+                    "GU10r_Diller",
+                    "Micro_Egan"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "fr": {
+                "1600": [
+                    "GU8r_Nesbit",
+                    "BU8r_Lilie"
+                ],
+                "1630": [
+                    "GU8r_Nesbit",
+                    "BU8r_Lilie"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            }
+        },
+        "lakeU": {
+            "tu": {
+                "1500": [
+                    "BU11_Reza"
+                ],
+                "1530": [
+                    "BU11_Reza"
+                ],
+                "1600": [
+                    "BU11_Reza"
+                ],
+                "1630": [
+                    "BU9_Reza",
+                    "BU13_Martin",
+                    "GU11_Marybeth",
+                    "GU12_Cardinale"
+                ],
+                "1700": [
+                    "BU9_Reza",
+                    "BU13_Martin",
+                    "GU11_Marybeth",
+                    "GU12_Cardinale"
+                ],
+                "1730": [
+                    "BU9_Reza",
+                    "BU13_Martin",
+                    "GU11_Marybeth",
+                    "GU12_Cardinale"
+                ],
+                "1800": [
+                    "City"
+                ],
+                "1830": [
+                    "City"
+                ],
+                "1900": [
+                    "City"
+                ],
+                "1930": [
+                    "City"
+                ],
+                "2000": [
+                    "City"
+                ],
+                "2030": [
+                    "City"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "BU11_Reza"
+                ],
+                "1530": [
+                    "BU11_Reza",
+                    "GU8r_Bates",
+                    "BU10r_Cherewick"
+                ],
+                "1600": [
+                    "BU11_Reza",
+                    "GU8r_Bates",
+                    "BU10r_Cherewick"
+                ],
+                "1630": [
+                    "BU9_Reza",
+                    "BU13_Martin",
+                    "GU11_Marybeth",
+                    "GU12_Cardinale"
+                ],
+                "1700": [
+                    "BU9_Reza",
+                    "BU13_Martin",
+                    "GU11_Marybeth",
+                    "GU12_Cardinale"
+                ],
+                "1730": [
+                    "BU9_Reza",
+                    "BU13_Martin",
+                    "GU11_Marybeth",
+                    "GU12_Cardinale"
+                ],
+                "1800": [
+                    "City"
+                ],
+                "1830": [
+                    "City"
+                ],
+                "1900": [
+                    "City"
+                ],
+                "1930": [
+                    "City"
+                ],
+                "2000": [
+                    "City"
+                ],
+                "2030": [
+                    "City"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "BU12_Chiles"
+                ],
+                "1530": [
+                    "BU12_Chiles",
+                    "BU10r_Cherewick"
+                ],
+                "1600": [
+                    "BU12_Chiles",
+                    "BU10r_Cherewick",
+                    "BU12r_Demarest"
+                ],
+                "1630": [
+                    "BU10_Serrano",
+                    "GU14_Chiles",
+                    "BU12r_Demarest"
+                ],
+                "1700": [
+                    "BU10_Serrano",
+                    "GU14_Chiles",
+                    "GU12r_Monahan",
+                    "BU12r_Demarest"
+                ],
+                "1730": [
+                    "BU10_Serrano",
+                    "GU14_Chiles",
+                    "GU12r_Monahan"
+                ],
+                "1800": [
+                    "City"
+                ],
+                "1830": [
+                    "City"
+                ],
+                "1900": [
+                    "City"
+                ],
+                "1930": [
+                    "City"
+                ],
+                "2000": [
+                    "City"
+                ],
+                "2030": [
+                    "City"
+                ]
+            },
+            "fr": {
+                "1600": [
+                    "BU12r_Frumovitz"
+                ],
+                "1630": [
+                    "BU10_Serrano",
+                    "BU12r_Frumovitz"
+                ],
+                "1700": [
+                    "BU10_Serrano",
+                    "BU12r_Frumovitz"
+                ],
+                "1730": [
+                    "BU10_Serrano"
+                ]
+            },
+            "mo": {
+                "1500": [
+                    "BU12_Chiles"
+                ],
+                "1530": [
+                    "BU12_Chiles"
+                ],
+                "1600": [
+                    "BU12_Chiles",
+                    "BU12r_Demarest"
+                ],
+                "1630": [
+                    "GU14_Chiles",
+                    "BU12r_Demarest"
+                ],
+                "1700": [
+                    "GU14_Chiles",
+                    "GU12r_Monahan",
+                    "BU12r_Demarest"
+                ],
+                "1730": [
+                    "BU13_McNeillXmon",
+                    "GU14_Chiles",
+                    "GU12r_Monahan"
+                ],
+                "1800": [
+                    "BU13_McNeillXmon",
+                    "BU15_MidhoXmon",
+                    "City"
+                ],
+                "1830": [
+                    "BU13_McNeillXmon",
+                    "BU15_MidhoXmon",
+                    "City"
+                ],
+                "1900": [
+                    "BU15_MidhoXmon",
+                    "City"
+                ],
+                "1930": [
+                    "City"
+                ],
+                "2000": [
+                    "City"
+                ],
+                "2030": [
+                    "City"
+                ]
+            }
+        },
+        "lakeL": {
+            "we": {
+                "1700": [
+                    "BU10r_Hertz"
+                ],
+                "1730": [
+                    "BU13_McNeillXwed",
+                    "BU10r_Hertz"
+                ],
+                "1800": [
+                    "BU13_McNeillXwed",
+                    "BU15_MidhoXwed"
+                ],
+                "1830": [
+                    "BU13_McNeillXwed",
+                    "BU15_MidhoXwed"
+                ],
+                "1900": [
+                    "BU15_MidhoXwed"
+                ],
+                "1930": [
+                    "BU15_MidhoXwed"
+                ]
+            },
+            "mo": {
+                "1700": [
+                    "BU10r_Hertz"
+                ],
+                "1730": [
+                    "BU10r_Hertz"
+                ],
+                "1800": [
+                    "City"
+                ],
+                "1830": [
+                    "City"
+                ],
+                "1900": [
+                    "City"
+                ],
+                "1930": [
+                    "City"
+                ],
+                "2000": [
+                    "City"
+                ],
+                "2030": [
+                    "City"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "Pop Warner Football"
+                ],
+                "1530": [
+                    "Pop Warner Football"
+                ],
+                "1600": [
+                    "Pop Warner Football"
+                ],
+                "1630": [
+                    "Pop Warner Football"
+                ],
+                "1700": [
+                    "Pop Warner Football"
+                ],
+                "1730": [
+                    "Pop Warner Football"
+                ],
+                "1800": [
+                    "Pop Warner Football"
+                ],
+                "1830": [
+                    "Pop Warner Football"
+                ],
+                "1900": [
+                    "Pop Warner Football"
+                ],
+                "1930": [
+                    "Pop Warner Football"
+                ],
+                "2000": [
+                    "Pop Warner Football"
+                ],
+                "2030": [
+                    "Pop Warner Football"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Pop Warner Football"
+                ],
+                "1530": [
+                    "Pop Warner Football"
+                ],
+                "1600": [
+                    "Pop Warner Football"
+                ],
+                "1630": [
+                    "Pop Warner Football"
+                ],
+                "1700": [
+                    "Pop Warner Football"
+                ],
+                "1730": [
+                    "Pop Warner Football"
+                ],
+                "1800": [
+                    "Pop Warner Football"
+                ],
+                "1830": [
+                    "Pop Warner Football"
+                ],
+                "1900": [
+                    "Pop Warner Football"
+                ],
+                "1930": [
+                    "Pop Warner Football"
+                ],
+                "2000": [
+                    "Pop Warner Football"
+                ],
+                "2030": [
+                    "Pop Warner Football"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Softball"
+                ],
+                "1530": [
+                    "Softball"
+                ],
+                "1600": [
+                    "Softball"
+                ],
+                "1630": [
+                    "Softball"
+                ],
+                "1700": [
+                    "Softball"
+                ],
+                "1730": [
+                    "Softball"
+                ],
+                "1800": [
+                    "Softball"
+                ],
+                "1830": [
+                    "Softball"
+                ],
+                "1900": [
+                    "Softball"
+                ],
+                "1930": [
+                    "Softball"
+                ],
+                "2000": [
+                    "Softball"
+                ],
+                "2030": [
+                    "Softball"
+                ]
+            }
+        },
+        "berkN": {
+            "we": {
+                "1600": [
+                    "BU8r_Manning",
+                    "Micro_Delport"
+                ],
+                "1630": [
+                    "BU8r_Manning",
+                    "Micro_Delport"
+                ],
+                "1700": [
+                    "GU8r_Avis",
+                    "BU8r_Burke"
+                ],
+                "1730": [
+                    "GU8r_Avis",
+                    "BU8r_Burke"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "mo": {
+                "1600": [
+                    "BU8r_Sanchez"
+                ],
+                "1630": [
+                    "BU8r_Sanchez"
+                ],
+                "1700": [
+                    "Micro_Pani"
+                ],
+                "1730": [
+                    "Micro_Pani"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "Pop Warner Football"
+                ],
+                "1530": [
+                    "Pop Warner Football"
+                ],
+                "1600": [
+                    "Pop Warner Football"
+                ],
+                "1630": [
+                    "Pop Warner Football"
+                ],
+                "1700": [
+                    "Pop Warner Football"
+                ],
+                "1730": [
+                    "Pop Warner Football"
+                ],
+                "1800": [
+                    "Pop Warner Football"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Pop Warner Football"
+                ],
+                "1530": [
+                    "Pop Warner Football"
+                ],
+                "1600": [
+                    "Pop Warner Football"
+                ],
+                "1630": [
+                    "Pop Warner Football"
+                ],
+                "1700": [
+                    "Pop Warner Football"
+                ],
+                "1730": [
+                    "Pop Warner Football"
+                ],
+                "1800": [
+                    "Pop Warner Football"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Pop Warner Football"
+                ],
+                "1530": [
+                    "Pop Warner Football"
+                ],
+                "1600": [
+                    "Pop Warner Football"
+                ],
+                "1630": [
+                    "Pop Warner Football"
+                ],
+                "1700": [
+                    "Pop Warner Football"
+                ],
+                "1730": [
+                    "Pop Warner Football"
+                ],
+                "1800": [
+                    "Pop Warner Football"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            }
+        },
+        "adaW": {
+            "mo": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            }
+        },
+        "adaE": {
+            "mo": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "Closed"
+                ],
+                "1530": [
+                    "Closed"
+                ],
+                "1600": [
+                    "Closed"
+                ],
+                "1630": [
+                    "Closed"
+                ],
+                "1700": [
+                    "Closed"
+                ],
+                "1730": [
+                    "Closed"
+                ],
+                "1800": [
+                    "Closed"
+                ],
+                "1830": [
+                    "Closed"
+                ],
+                "1900": [
+                    "Closed"
+                ],
+                "1930": [
+                    "Closed"
+                ],
+                "2000": [
+                    "Closed"
+                ],
+                "2030": [
+                    "Closed"
+                ]
+            }
+        },
+        "arena": {}
+    },
+    "teams": [
+        {
+            "name": "BU8_Suarez"
+        },
+        {
+            "name": "BU11_Reza"
+        },
+        {
+            "name": "BU10_Serrano"
+        },
+        {
+            "name": "BU10_Chiles"
+        },
+        {
+            "name": "BU9_Reza"
+        },
+        {
+            "name": "BU12_Chiles"
+        },
+        {
+            "name": "BU13_McNeillXmon"
+        },
+        {
+            "name": "BU13_McNeillXwed"
+        },
+        {
+            "name": "BU13_Martin"
+        },
+        {
+            "name": "BU15_MidhoXmon"
+        },
+        {
+            "name": "BU15_MidhoXwed"
+        },
+        {
+            "name": "GU10_Reza"
+        },
+        {
+            "name": "GU11_Marybeth"
+        },
+        {
+            "name": "GU12_Cardinale"
+        },
+        {
+            "name": "GU14_Chiles"
+        },
+        {
+            "name": "GU8r_Nesbit"
+        },
+        {
+            "name": "GU8r_Bates"
+        },
+        {
+            "name": "GU8r_Avis"
+        },
+        {
+            "name": "GU8r_Thielman"
+        },
+        {
+            "name": "GU10r_Diller"
+        },
+        {
+            "name": "GU10r_Mercer"
+        },
+        {
+            "name": "GU12r_Monahan"
+        },
+        {
+            "name": "BU8r_Manning"
+        },
+        {
+            "name": "BU8r_Burke"
+        },
+        {
+            "name": "BU8r_Sanchez"
+        },
+        {
+            "name": "BU8r_Lilie"
+        },
+        {
+            "name": "BU8r_Davis"
+        },
+        {
+            "name": "BU10r_Cherewick"
+        },
+        {
+            "name": "BU10r_Hertz"
+        },
+        {
+            "name": "BU10r_Casas"
+        },
+        {
+            "name": "BU12r_Frumovitz"
+        },
+        {
+            "name": "BU12r_Demarest"
+        },
+        {
+            "name": "Micro_Levy"
+        },
+        {
+            "name": "Micro_Drohan"
+        },
+        {
+            "name": "Micro_Egan"
+        },
+        {
+            "name": "Micro_Delport"
+        },
+        {
+            "name": "Micro_Team3"
+        },
+        {
+            "name": "Micro_Pani"
+        },
+        {
+            "name": "Keepers_Toth"
+        }
+    ],
+    "teamsched": {
+        "BU8_Suarez": {
+            "tu": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            },
+            "th": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            }
+        },
+        "BU11_Reza": {
+            "tu": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "th": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            }
+        },
+        "BU10_Serrano": {
+            "we": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "fr": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "BU10_Chiles": {
+            "tu": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            },
+            "th": {
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "BU9_Reza": {
+            "tu": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "th": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "BU12_Chiles": {
+            "mo": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "we": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            }
+        },
+        "BU13_McNeillXmon": {
+            "mo": {
+                "1730": "lakeU",
+                "1800": "lakeU",
+                "1830": "lakeU"
+            }
+        },
+        "BU13_McNeillXwed": {
+            "we": {
+                "1730": "lakeL",
+                "1800": "lakeL",
+                "1830": "lakeL"
+            }
+        },
+        "BU13_Martin": {
+            "tu": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "th": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "BU15_MidhoXmon": {
+            "mo": {
+                "1800": "lakeU",
+                "1830": "lakeU",
+                "1900": "lakeU"
+            }
+        },
+        "BU15_MidhoXwed": {
+            "we": {
+                "1800": "lakeL",
+                "1830": "lakeL",
+                "1900": "lakeL",
+                "1930": "lakeL"
+            }
+        },
+        "GU10_Reza": {
+            "mo": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            },
+            "we": {
+                "1500": "berkS",
+                "1530": "berkS",
+                "1600": "berkS"
+            }
+        },
+        "GU11_Marybeth": {
+            "tu": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "th": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "GU12_Cardinale": {
+            "tu": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "th": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "GU14_Chiles": {
+            "mo": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "we": {
+                "1630": "lakeU",
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "GU8r_Nesbit": {
+            "fr": {
+                "1600": "berkS",
+                "1630": "berkS"
+            }
+        },
+        "GU8r_Bates": {
+            "th": {
+                "1530": "lakeU",
+                "1600": "lakeU"
+            }
+        },
+        "GU8r_Avis": {
+            "we": {
+                "1700": "berkN",
+                "1730": "berkN"
+            }
+        },
+        "GU8r_Thielman": {
+            "th": {
+                "1600": "berkS",
+                "1630": "berkS"
+            }
+        },
+        "GU10r_Diller": {
+            "we": {
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "GU10r_Mercer": {
+            "tu": {
+                "1530": "berkS",
+                "1600": "berkS",
+                "1630": "berkS"
+            }
+        },
+        "GU12r_Monahan": {
+            "mo": {
+                "1700": "lakeU",
+                "1730": "lakeU"
+            },
+            "we": {
+                "1700": "lakeU",
+                "1730": "lakeU"
+            }
+        },
+        "BU8r_Manning": {
+            "we": {
+                "1600": "berkN",
+                "1630": "berkN"
+            }
+        },
+        "BU8r_Burke": {
+            "we": {
+                "1700": "berkN",
+                "1730": "berkN"
+            }
+        },
+        "BU8r_Sanchez": {
+            "mo": {
+                "1600": "berkN",
+                "1630": "berkN"
+            }
+        },
+        "BU8r_Lilie": {
+            "fr": {
+                "1600": "berkS",
+                "1630": "berkS"
+            }
+        },
+        "BU8r_Davis": {
+            "tu": {
+                "1700": "berkS",
+                "1730": "berkS",
+                "1800": "berkS"
+            }
+        },
+        "BU10r_Cherewick": {
+            "we": {
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "th": {
+                "1530": "lakeU",
+                "1600": "lakeU"
+            }
+        },
+        "BU10r_Hertz": {
+            "mo": {
+                "1700": "lakeL",
+                "1730": "lakeL"
+            },
+            "we": {
+                "1700": "lakeL",
+                "1730": "lakeL"
+            }
+        },
+        "BU10r_Casas": {
+            "th": {
+                "1700": "berkS",
+                "1730": "berkS",
+                "1800": "berkS"
+            }
+        },
+        "BU12r_Frumovitz": {
+            "fr": {
+                "1600": "lakeU",
+                "1630": "lakeU",
+                "1700": "lakeU"
+            }
+        },
+        "BU12r_Demarest": {
+            "mo": {
+                "1600": "lakeU",
+                "1630": "lakeU",
+                "1700": "lakeU"
+            },
+            "we": {
+                "1600": "lakeU",
+                "1630": "lakeU",
+                "1700": "lakeU"
+            }
+        },
+        "Micro_Levy": {
+            "we": {
+                "1600": "berkS",
+                "1630": "berkS"
+            }
+        },
+        "Micro_Drohan": {
+            "mo": {
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "Micro_Egan": {
+            "we": {
+                "1700": "berkS",
+                "1730": "berkS"
+            }
+        },
+        "Micro_Delport": {
+            "we": {
+                "1600": "berkN",
+                "1630": "berkN"
+            }
+        },
+        "Micro_Pani": {
+            "mo": {
+                "1700": "berkN",
+                "1730": "berkN"
+            }
+        },
+        "Pop Warner Football": {
+            "tu": {
+                "1500": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1530": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1600": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1630": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1700": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1730": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1800": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1830": [
+                    "lakeL"
+                ],
+                "1900": [
+                    "lakeL"
+                ],
+                "1930": [
+                    "lakeL"
+                ],
+                "2000": [
+                    "lakeL"
+                ],
+                "2030": [
+                    "lakeL"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1530": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1600": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1630": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1700": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1730": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1800": [
+                    "berkN",
+                    "lakeL"
+                ],
+                "1830": [
+                    "lakeL"
+                ],
+                "1900": [
+                    "lakeL"
+                ],
+                "1930": [
+                    "lakeL"
+                ],
+                "2000": [
+                    "lakeL"
+                ],
+                "2030": [
+                    "lakeL"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "berkN"
+                ],
+                "1530": [
+                    "berkN"
+                ],
+                "1600": [
+                    "berkN"
+                ],
+                "1630": [
+                    "berkN"
+                ],
+                "1700": [
+                    "berkN"
+                ],
+                "1730": [
+                    "berkN"
+                ],
+                "1800": [
+                    "berkN"
+                ]
+            }
+        },
+        "Softball": {
+            "fr": {
+                "1500": [
+                    "lakeL"
+                ],
+                "1530": [
+                    "lakeL"
+                ],
+                "1600": [
+                    "lakeL"
+                ],
+                "1630": [
+                    "lakeL"
+                ],
+                "1700": [
+                    "lakeL"
+                ],
+                "1730": [
+                    "lakeL"
+                ],
+                "1800": [
+                    "lakeL"
+                ],
+                "1830": [
+                    "lakeL"
+                ],
+                "1900": [
+                    "lakeL"
+                ],
+                "1930": [
+                    "lakeL"
+                ],
+                "2000": [
+                    "lakeL"
+                ],
+                "2030": [
+                    "lakeL"
+                ]
+            }
+        },
+        "City": {
+            "mo": {
+                "1800": [
+                    "lakeU",
+                    "lakeL"
+                ],
+                "1830": [
+                    "lakeU",
+                    "lakeL"
+                ],
+                "1900": [
+                    "lakeU",
+                    "lakeL"
+                ],
+                "1930": [
+                    "lakeU",
+                    "lakeL"
+                ],
+                "2000": [
+                    "lakeU",
+                    "lakeL"
+                ],
+                "2030": [
+                    "lakeU",
+                    "lakeL"
+                ]
+            },
+            "tu": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ]
+            },
+            "we": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ]
+            },
+            "th": {
+                "1800": [
+                    "lakeU"
+                ],
+                "1830": [
+                    "lakeU"
+                ],
+                "1900": [
+                    "lakeU"
+                ],
+                "1930": [
+                    "lakeU"
+                ],
+                "2000": [
+                    "lakeU"
+                ],
+                "2030": [
+                    "lakeU"
+                ]
+            }
+        },
+        "Closed": {
+            "mo": {
+                "1500": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1530": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1600": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1630": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1700": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1730": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1800": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1830": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1900": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1930": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2000": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2030": [
+                    "adaW",
+                    "adaE"
+                ]
+            },
+            "tu": {
+                "1500": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1530": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1600": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1630": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1700": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1730": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1800": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1830": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1900": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1930": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2000": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2030": [
+                    "adaW",
+                    "adaE"
+                ]
+            },
+            "we": {
+                "1500": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1530": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1600": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1630": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1700": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1730": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1800": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1830": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1900": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1930": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2000": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2030": [
+                    "adaW",
+                    "adaE"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1530": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1600": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1630": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1700": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1730": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1800": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1830": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1900": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1930": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2000": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2030": [
+                    "adaW",
+                    "adaE"
+                ]
+            },
+            "fr": {
+                "1500": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1530": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1600": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1630": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1700": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1730": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1800": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1830": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1900": [
+                    "adaW",
+                    "adaE"
+                ],
+                "1930": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2000": [
+                    "adaW",
+                    "adaE"
+                ],
+                "2030": [
+                    "adaW",
+                    "adaE"
+                ]
+            }
+        },
+        "Dark": {
+            "mo": {
+                "1830": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1900": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1930": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2000": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2030": [
+                    "berkS",
+                    "berkN"
+                ]
+            },
+            "tu": {
+                "1830": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1900": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1930": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2000": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2030": [
+                    "berkS",
+                    "berkN"
+                ]
+            },
+            "we": {
+                "1830": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1900": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1930": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2000": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2030": [
+                    "berkS",
+                    "berkN"
+                ]
+            },
+            "th": {
+                "1830": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1900": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1930": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2000": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2030": [
+                    "berkS",
+                    "berkN"
+                ]
+            },
+            "fr": {
+                "1830": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1900": [
+                    "berkS",
+                    "berkN"
+                ],
+                "1930": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2000": [
+                    "berkS",
+                    "berkN"
+                ],
+                "2030": [
+                    "berkS",
+                    "berkN"
+                ]
+            }
+        }
+    },
+    "fields": {
+        "adaW": {
+            "pretty": "Ada Harris (West)",
+            "cap": 5,
+            "slots": {}
+        },
+        "berkN": {
+            "pretty": "Berkich (North)",
+            "cap": 4,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
+                ]
+            }
+        },
+        "berkS": {
+            "pretty": "Berkich (South)",
+            "cap": 4,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
+                ],
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
+                ]
+            }
+        },
+        "lakeU": {
+            "pretty": "Lake (Upper)",
+            "cap": 9,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ],
+                "tu": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "fr": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        },
+        "lakeL": {
+            "pretty": "Lake (Lower)",
+            "cap": 6,
+            "slots": {
+                "mo": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730
+                ],
+                "we": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800,
+                    1830,
+                    1900,
+                    1930,
+                    2000,
+                    2030
+                ]
+            }
+        },
+        "arena": {
+            "pretty": "Arena",
+            "cap": 6,
+            "slots": {}
+        }
+    },
+    "unallocated": {
+        "Micro_Team3": {
+            "name": "Micro_Team3",
+            "conflicts": []
+        },
+        "Keepers_Toth": {
+            "name": "Keepers_Toth",
+            "conflicts": []
+        }
+    },
+    "timestep": 30
+}
