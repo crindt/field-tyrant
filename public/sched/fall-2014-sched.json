@@ -118,7 +118,11 @@
                 "1600": [
                     "GU10_Reza"
                 ],
+                "1630": [
+                    "GU8r_Nesbit"
+                ],
                 "1700": [
+                    "GU8r_Nesbit",
                     "Micro_Drohan"
                 ],
                 "1730": [
@@ -180,11 +184,9 @@
             },
             "fr": {
                 "1600": [
-                    "GU8r_Nesbit",
                     "BU8r_Lilie"
                 ],
                 "1630": [
-                    "GU8r_Nesbit",
                     "BU8r_Lilie"
                 ],
                 "1830": [
@@ -1428,9 +1430,9 @@
             }
         },
         "GU8r_Nesbit": {
-            "fr": {
-                "1600": "berkS",
-                "1630": "berkS"
+            "mo": {
+                "1630": "berkS",
+                "1700": "berkS"
             }
         },
         "GU8r_Bates": {
