@@ -26,7 +26,7 @@ prog
   .option('-a, --always-feasible', "Set up dummy options to always admit feasibility", true)
   .option('-p, --limit-to-prefs', "Limit allocations only to preferred fields",false)
   .option('-c, --prefer-comp', "Give comp teams slightly more importance",false)
-  .option('-d, --dusk <n>', "Dusk time [2100]",1800)
+  .option('-d, --dusk <n>', "Dusk time [2100]",2100)
   .parse(process.argv)
 
 if ( prog.prioritizespread && !prog.bvarweight && !prog.ivarweight ) {
@@ -420,6 +420,9 @@ function parseResults(data) {
     tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
     var stimes = _.map(_.keys(times), function(t) { return parseInt(t); });
     ttimes = fill_times(stimes);
+    // force fields
+    _.each(_.keys(conf.fields),
+           function(f) { if ( !sched[f] ) sched[f] = {} });
     outstream.write(JSON.stringify(
       {times:ttimes, 
        days:week, sched:sched,

@@ -2,15 +2,25 @@ var prog = require('commander');
 var SS = require('edit-google-spreadsheet')
 var async = require('async')
 
-var ts = require('./public/sched/spring-2014-sched.json')
-var req = require('./data/spring-2014.json')
 var _ = require('underscore')
 
 prog.version('0.0.1')
   .option('-s, --sheet <name>', 'Sheet name to copy to', 'Cardiff Soccer Spring Practice Schedule')
+  .option('-d, --sched <root>', 'Name of schedule to read (required)' )
+  .option('-b, --begin <hour>', 'Hour of the day the schedule should start')
   .parse(process.argv)
 
-var others = /(Warner|Encinitas|Softball|Rugby|Lacrosse|Closed)/;
+if ( prog.sched === undefined ) 
+  prog.help()
+
+var ts = require('./public/sched/'+prog.sched+'-sched.json')
+var req = require('./data/'+prog.sched+'.json')
+var begin = prog.begin ? parseInt(prog.begin) : 15
+
+console.log("BEGIN IS",begin)
+
+
+var others = /(Warner|Encinitas|Softball|Rugby|Lacrosse|Closed|City|Dusk|Dark)/;
 
 function pad(num, size){ return ('000000000' + num).substr(-size); }
 
@@ -32,6 +42,7 @@ var longF = {
   ,adaW: "Ada (West)"
   ,berkS: "Berkich (South)"
   ,berkN: "Berkich (North)"
+  ,arena: "Arena"
 }
 
 async.waterfall([
@@ -58,12 +69,12 @@ async.waterfall([
 
 
           var bcols = 3
-          if ( ff.match(/lakeU/i) ) bcols = 5
+          if ( ff.match(/(lakeU|arena)/i) ) bcols = 5
           console.log(ff,'bcols',bcols)
 
           //clear
-          _.each(_.range(3,14),function(r) {
-            _.each(_.range(2,1+bcols*5),function(c) {
+          _.each(_.range(3,15),function(r) {
+            _.each(_.range(2,1+bcols*5+1),function(c) {
               var vv = {}
               vv[r] = {}
               vv[r][c] = ""
@@ -80,7 +91,7 @@ async.waterfall([
             _.each(ts.sched[ff][d],function(s,t) {
               _.each(s, function(tm) {
                 var ti = parseInt( t.substring(0,2) ) + parseInt( t.substring(2) )/60;
-                var r = ti*2-30+3
+                var r = ti*2-begin*2+3
                 if ( starts[tm] === undefined ) starts[tm] = r
                 ends[tm] = r
               });
@@ -109,7 +120,7 @@ async.waterfall([
             _.each(ts.sched[ff][d],function(s,t) {
               var ti = parseInt( t.substring(0,2) ) + parseInt( t.substring(2) )/60;
               
-              var r = ti*2-30+3
+              var r = ti*2-begin*2+3
               
               var bcols = 3
               if ( ff.match(/lakeU/i) ) bcols = 5
@@ -121,6 +132,7 @@ async.waterfall([
 
               _.each(s, function(tm,i) {
                 var isExt = tm.match(others) 
+                console.log(tm,isExt?"is":"is not","External")
                 var v = {}
                 if (!isExt) {
                   c = c0 + slot[tm]-1
@@ -162,16 +174,18 @@ async.waterfall([
 
   function getRecContacts(cb) {
     
+      console.log("GETTING REC CONTACTS")
     SS.create({
       debug: true,
       username: 'crindt',
       password: 'atavatvthjydmcah',
-      spreadsheetName: 'Copy of Cardiff Soccer 2013 Coaches as of 20130710',
-      worksheetName: 'Sheet4',
+      spreadsheetName: 'Legacy Coach List 2014',
+      worksheetName: 'Sheet2',
       callback: sheetReady2
     });
 
     function sheetReady2(err,ss2) {
+      console.log("GOT SHEET")
       if ( err ) throw new Error(err)
 
       ss2.receive(function(err, rows, info) {
@@ -179,9 +193,12 @@ async.waterfall([
 
         var tc = {}
         _.each(rows, function(r,i) {
-          if ( r[12] !== undefined && !r[12].match(/REGEX/)) {
-            tm = r[12].replace(/\//," ")
-            tc[tm] = { team: tm, email: r[11] }
+          if ( r[2] !== undefined && !r[2].match(/REGEX/)) {
+            tm = r[2].replace(/\//," ")
+            ccs = [];
+            ccs.push("<" + r[8] + ">");
+            if ( !r[12].match(/^\s*$/) ) ccs.push(r[12]);
+            tc[tm] = { team: tm, email: [r[3], r[4], ccs.join(", ")].join(" ")}
           }
         });
         
@@ -242,9 +259,6 @@ async.waterfall([
       tm2 = tm2.replace(/X(mon|tue|wed|thu|fri)/g,"")
       var sarr = convert_sched(s)
 
-      // pad to three assigned practices because we push requests onto the back of the array
-      while (sarr.length < 3) sarr.push("");
-
       if ( !tm.match(others) ) {
 
         if ( !tdata[tm2] ) {
@@ -259,7 +273,13 @@ async.waterfall([
     _.each(req.teams, function( tmo, tm ) {
       var tm1 = tm.replace(/_/," ")
       var tm2 = tm1.replace(/([GB]U\d+)r/,"$1")
+      var tm3 = tm2;
       tm2 = tm2.replace(/X(mon|tue|wed|thu|fri)/g,"")
+      console.log("SMASHING "+tm3+" into "+tm2);
+
+      // pad to three assigned practices because we push requests onto the back of the array
+      if ( tdata[tm2] ) while ( tdata[tm2].length < 5) tdata[tm2].push("");
+
       _.each(tmo.req, function(r) {
         if ( tdata[tm2] ) {
           tdata[tm2].push(_.map(r, function( tarr, day ) { return day+": "+tarr[0]+"-"+tarr[tarr.length-1]; }).join(","+rtnstr))
@@ -293,7 +313,8 @@ async.waterfall([
     
     function sheetReady3(err,ss) {
       //clear
-      _.each(_.range(2,15),function(r) {
+      console.log("CLEARING "+JSON.stringify(ss));
+      _.each(_.range(2,20),function(r) {
         _.each(_.range(2,12),function(c) {
           var vv = {}
           vv[r] = {}
