@@ -68,10 +68,12 @@
             },
             "th": {
                 "1500": [
-                    "BU8_Suarez"
+                    "BU8_Suarez",
+                    "BU10r_Cherewick"
                 ],
                 "1530": [
-                    "BU8_Suarez"
+                    "BU8_Suarez",
+                    "BU10r_Cherewick"
                 ],
                 "1600": [
                     "BU8_Suarez",
@@ -146,10 +148,12 @@
             },
             "we": {
                 "1500": [
-                    "GU10_Reza"
+                    "GU10_Reza",
+                    "BU10r_Cherewick"
                 ],
                 "1530": [
-                    "GU10_Reza"
+                    "GU10_Reza",
+                    "BU10r_Cherewick"
                 ],
                 "1600": [
                     "GU10_Reza",
@@ -260,13 +264,11 @@
                 ],
                 "1530": [
                     "BU11_Reza",
-                    "GU8r_Bates",
-                    "BU10r_Cherewick"
+                    "GU8r_Bates"
                 ],
                 "1600": [
                     "BU11_Reza",
-                    "GU8r_Bates",
-                    "BU10r_Cherewick"
+                    "GU8r_Bates"
                 ],
                 "1630": [
                     "BU9_Reza",
@@ -310,12 +312,10 @@
                     "BU12_Chiles"
                 ],
                 "1530": [
-                    "BU12_Chiles",
-                    "BU10r_Cherewick"
+                    "BU12_Chiles"
                 ],
                 "1600": [
                     "BU12_Chiles",
-                    "BU10r_Cherewick",
                     "BU12r_Demarest"
                 ],
                 "1630": [
@@ -1509,12 +1509,12 @@
         },
         "BU10r_Cherewick": {
             "we": {
-                "1530": "lakeU",
-                "1600": "lakeU"
+                "1500": "berkS",
+                "1530": "berkS"
             },
             "th": {
-                "1530": "lakeU",
-                "1600": "lakeU"
+                "1500": "berkS",
+                "1530": "berkS"
             }
         },
         "BU10r_Hertz": {

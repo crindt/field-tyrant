@@ -198,9 +198,10 @@
     },
 
     "BU10r_Cherewick": {
-      "fpref": ["lakeU"],
+      "fpref": ["berkS","berkN","lakeU"],
       "dem": 2,
       "req": [
+        { "we": [1500,1600], "th": [1500, 1600] },
         { "we": [1530,1630], "th": [1530, 1630] }
       ]
     },
