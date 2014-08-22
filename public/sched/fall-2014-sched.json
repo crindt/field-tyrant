@@ -111,15 +111,6 @@
                 ]
             },
             "mo": {
-                "1500": [
-                    "GU10_Reza"
-                ],
-                "1530": [
-                    "GU10_Reza"
-                ],
-                "1600": [
-                    "GU10_Reza"
-                ],
                 "1630": [
                     "GU8r_Nesbit"
                 ],
@@ -148,27 +139,28 @@
             },
             "we": {
                 "1500": [
-                    "GU10_Reza",
                     "BU10r_Cherewick"
                 ],
                 "1530": [
-                    "GU10_Reza",
                     "BU10r_Cherewick"
                 ],
                 "1600": [
-                    "GU10_Reza",
                     "Micro_Levy"
                 ],
                 "1630": [
+                    "BU8r_Manning",
                     "Micro_Levy"
                 ],
                 "1700": [
-                    "GU10r_Diller",
+                    "BU8r_Manning",
                     "Micro_Egan"
                 ],
                 "1730": [
-                    "GU10r_Diller",
+                    "BU8r_Manning",
                     "Micro_Egan"
+                ],
+                "1800": [
+                    "BU8r_Manning"
                 ],
                 "1830": [
                     "Dark"
@@ -212,9 +204,6 @@
         },
         "lakeU": {
             "tu": {
-                "1500": [
-                    "BU11_Reza"
-                ],
                 "1530": [
                     "BU11_Reza"
                 ],
@@ -222,19 +211,17 @@
                     "BU11_Reza"
                 ],
                 "1630": [
-                    "BU9_Reza",
+                    "BU11_Reza",
                     "BU13_Martin",
                     "GU11_Marybeth",
                     "GU12_Cardinale"
                 ],
                 "1700": [
-                    "BU9_Reza",
                     "BU13_Martin",
                     "GU11_Marybeth",
                     "GU12_Cardinale"
                 ],
                 "1730": [
-                    "BU9_Reza",
                     "BU13_Martin",
                     "GU11_Marybeth",
                     "GU12_Cardinale"
@@ -259,9 +246,6 @@
                 ]
             },
             "th": {
-                "1500": [
-                    "BU11_Reza"
-                ],
                 "1530": [
                     "BU11_Reza",
                     "GU8r_Bates"
@@ -271,19 +255,17 @@
                     "GU8r_Bates"
                 ],
                 "1630": [
-                    "BU9_Reza",
+                    "BU11_Reza",
                     "BU13_Martin",
                     "GU11_Marybeth",
                     "GU12_Cardinale"
                 ],
                 "1700": [
-                    "BU9_Reza",
                     "BU13_Martin",
                     "GU11_Marybeth",
                     "GU12_Cardinale"
                 ],
                 "1730": [
-                    "BU9_Reza",
                     "BU13_Martin",
                     "GU11_Marybeth",
                     "GU12_Cardinale"
@@ -309,28 +291,31 @@
             },
             "we": {
                 "1500": [
-                    "BU12_Chiles"
+                    "BU12_Chiles",
+                    "GU10_Reza"
                 ],
                 "1530": [
-                    "BU12_Chiles"
+                    "BU12_Chiles",
+                    "GU10_Reza"
                 ],
                 "1600": [
                     "BU12_Chiles",
-                    "BU12r_Demarest"
+                    "GU10_Reza"
                 ],
                 "1630": [
                     "BU10_Serrano",
-                    "GU14_Chiles",
-                    "BU12r_Demarest"
+                    "BU9_Reza",
+                    "GU14_Chiles"
                 ],
                 "1700": [
                     "BU10_Serrano",
+                    "BU9_Reza",
                     "GU14_Chiles",
-                    "GU12r_Monahan",
-                    "BU12r_Demarest"
+                    "GU12r_Monahan"
                 ],
                 "1730": [
                     "BU10_Serrano",
+                    "BU9_Reza",
                     "GU14_Chiles",
                     "GU12r_Monahan"
                 ],
@@ -371,25 +356,28 @@
             },
             "mo": {
                 "1500": [
-                    "BU12_Chiles"
+                    "BU12_Chiles",
+                    "GU10_Reza"
                 ],
                 "1530": [
-                    "BU12_Chiles"
+                    "BU12_Chiles",
+                    "GU10_Reza"
                 ],
                 "1600": [
                     "BU12_Chiles",
-                    "BU12r_Demarest"
+                    "GU10_Reza"
                 ],
                 "1630": [
-                    "GU14_Chiles",
-                    "BU12r_Demarest"
+                    "BU9_Reza",
+                    "GU14_Chiles"
                 ],
                 "1700": [
+                    "BU9_Reza",
                     "GU14_Chiles",
-                    "GU12r_Monahan",
-                    "BU12r_Demarest"
+                    "GU12r_Monahan"
                 ],
                 "1730": [
+                    "BU9_Reza",
                     "BU13_McNeillXmon",
                     "GU14_Chiles",
                     "GU12r_Monahan"
@@ -421,8 +409,20 @@
         },
         "lakeL": {
             "we": {
+                "1530": [
+                    "GU10r_Diller"
+                ],
+                "1600": [
+                    "GU10r_Diller",
+                    "BU12r_Demarest"
+                ],
+                "1630": [
+                    "GU10r_Diller",
+                    "BU12r_Demarest"
+                ],
                 "1700": [
-                    "BU10r_Hertz"
+                    "BU10r_Hertz",
+                    "BU12r_Demarest"
                 ],
                 "1730": [
                     "BU13_McNeillXwed",
@@ -444,8 +444,15 @@
                 ]
             },
             "mo": {
+                "1600": [
+                    "BU12r_Demarest"
+                ],
+                "1630": [
+                    "BU12r_Demarest"
+                ],
                 "1700": [
-                    "BU10r_Hertz"
+                    "BU10r_Hertz",
+                    "BU12r_Demarest"
                 ],
                 "1730": [
                     "BU10r_Hertz"
@@ -587,11 +594,9 @@
         "berkN": {
             "we": {
                 "1600": [
-                    "BU8r_Manning",
                     "Micro_Delport"
                 ],
                 "1630": [
-                    "BU8r_Manning",
                     "Micro_Delport"
                 ],
                 "1700": [
@@ -626,9 +631,11 @@
                     "BU8r_Sanchez"
                 ],
                 "1700": [
+                    "BU8r_Burke",
                     "Micro_Pani"
                 ],
                 "1730": [
+                    "BU8r_Burke",
                     "Micro_Pani"
                 ],
                 "1830": [
@@ -1282,14 +1289,14 @@
         },
         "BU11_Reza": {
             "tu": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU"
             },
             "th": {
-                "1500": "lakeU",
                 "1530": "lakeU",
-                "1600": "lakeU"
+                "1600": "lakeU",
+                "1630": "lakeU"
             }
         },
         "BU10_Serrano": {
@@ -1317,12 +1324,12 @@
             }
         },
         "BU9_Reza": {
-            "tu": {
+            "mo": {
                 "1630": "lakeU",
                 "1700": "lakeU",
                 "1730": "lakeU"
             },
-            "th": {
+            "we": {
                 "1630": "lakeU",
                 "1700": "lakeU",
                 "1730": "lakeU"
@@ -1383,14 +1390,14 @@
         },
         "GU10_Reza": {
             "mo": {
-                "1500": "berkS",
-                "1530": "berkS",
-                "1600": "berkS"
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
             },
             "we": {
-                "1500": "berkS",
-                "1530": "berkS",
-                "1600": "berkS"
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
             }
         },
         "GU11_Marybeth": {
@@ -1455,8 +1462,9 @@
         },
         "GU10r_Diller": {
             "we": {
-                "1700": "berkS",
-                "1730": "berkS"
+                "1530": "lakeL",
+                "1600": "lakeL",
+                "1630": "lakeL"
             }
         },
         "GU10r_Mercer": {
@@ -1478,11 +1486,17 @@
         },
         "BU8r_Manning": {
             "we": {
-                "1600": "berkN",
-                "1630": "berkN"
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS",
+                "1800": "berkS"
             }
         },
         "BU8r_Burke": {
+            "mo": {
+                "1700": "berkN",
+                "1730": "berkN"
+            },
             "we": {
                 "1700": "berkN",
                 "1730": "berkN"
@@ -1543,14 +1557,14 @@
         },
         "BU12r_Demarest": {
             "mo": {
-                "1600": "lakeU",
-                "1630": "lakeU",
-                "1700": "lakeU"
+                "1600": "lakeL",
+                "1630": "lakeL",
+                "1700": "lakeL"
             },
             "we": {
-                "1600": "lakeU",
-                "1630": "lakeU",
-                "1700": "lakeU"
+                "1600": "lakeL",
+                "1630": "lakeL",
+                "1700": "lakeL"
             }
         },
         "Micro_Levy": {
