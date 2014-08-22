@@ -41,14 +41,11 @@
                 ],
                 "1700": [
                     "BU10_Chiles",
-                    "BU8r_Davis"
+                    "Micro_Pani"
                 ],
                 "1730": [
                     "BU10_Chiles",
-                    "BU8r_Davis"
-                ],
-                "1800": [
-                    "BU8r_Davis"
+                    "Micro_Pani"
                 ],
                 "1830": [
                     "Dark"
@@ -205,10 +202,12 @@
         "lakeU": {
             "tu": {
                 "1530": [
-                    "BU11_Reza"
+                    "BU11_Reza",
+                    "BU8r_Davis"
                 ],
                 "1600": [
-                    "BU11_Reza"
+                    "BU11_Reza",
+                    "BU8r_Davis"
                 ],
                 "1630": [
                     "BU11_Reza",
@@ -248,11 +247,13 @@
             "th": {
                 "1530": [
                     "BU11_Reza",
-                    "GU8r_Bates"
+                    "GU8r_Bates",
+                    "BU8r_Davis"
                 ],
                 "1600": [
                     "BU11_Reza",
-                    "GU8r_Bates"
+                    "GU8r_Bates",
+                    "BU8r_Davis"
                 ],
                 "1630": [
                     "BU11_Reza",
@@ -631,12 +632,10 @@
                     "BU8r_Sanchez"
                 ],
                 "1700": [
-                    "BU8r_Burke",
-                    "Micro_Pani"
+                    "BU8r_Burke"
                 ],
                 "1730": [
-                    "BU8r_Burke",
-                    "Micro_Pani"
+                    "BU8r_Burke"
                 ],
                 "1830": [
                     "Dark"
@@ -1516,9 +1515,12 @@
         },
         "BU8r_Davis": {
             "tu": {
-                "1700": "berkS",
-                "1730": "berkS",
-                "1800": "berkS"
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "th": {
+                "1530": "lakeU",
+                "1600": "lakeU"
             }
         },
         "BU10r_Cherewick": {
@@ -1592,9 +1594,9 @@
             }
         },
         "Micro_Pani": {
-            "mo": {
-                "1700": "berkN",
-                "1730": "berkN"
+            "tu": {
+                "1700": "berkS",
+                "1730": "berkS"
             }
         },
         "Pop Warner Football": {
