@@ -653,27 +653,12 @@
                     "Dark"
                 ]
             },
-            "tu": {
-                "1500": [
-                    "Pop Warner Football"
-                ],
-                "1530": [
-                    "Pop Warner Football"
-                ],
+            "th": {
                 "1600": [
-                    "Pop Warner Football"
+                    "Micro_Nesbit"
                 ],
                 "1630": [
-                    "Pop Warner Football"
-                ],
-                "1700": [
-                    "Pop Warner Football"
-                ],
-                "1730": [
-                    "Pop Warner Football"
-                ],
-                "1800": [
-                    "Pop Warner Football"
+                    "Micro_Nesbit"
                 ],
                 "1830": [
                     "Dark"
@@ -691,7 +676,7 @@
                     "Dark"
                 ]
             },
-            "th": {
+            "tu": {
                 "1500": [
                     "Pop Warner Football"
                 ],
@@ -1264,7 +1249,7 @@
             "name": "Micro_Delport"
         },
         {
-            "name": "Micro_Team3"
+            "name": "Micro_Nesbit"
         },
         {
             "name": "Micro_Pani"
@@ -1593,6 +1578,12 @@
                 "1630": "berkN"
             }
         },
+        "Micro_Nesbit": {
+            "th": {
+                "1600": "berkN",
+                "1630": "berkN"
+            }
+        },
         "Micro_Pani": {
             "tu": {
                 "1700": "berkS",
@@ -1601,51 +1592,6 @@
         },
         "Pop Warner Football": {
             "tu": {
-                "1500": [
-                    "berkN",
-                    "lakeL"
-                ],
-                "1530": [
-                    "berkN",
-                    "lakeL"
-                ],
-                "1600": [
-                    "berkN",
-                    "lakeL"
-                ],
-                "1630": [
-                    "berkN",
-                    "lakeL"
-                ],
-                "1700": [
-                    "berkN",
-                    "lakeL"
-                ],
-                "1730": [
-                    "berkN",
-                    "lakeL"
-                ],
-                "1800": [
-                    "berkN",
-                    "lakeL"
-                ],
-                "1830": [
-                    "lakeL"
-                ],
-                "1900": [
-                    "lakeL"
-                ],
-                "1930": [
-                    "lakeL"
-                ],
-                "2000": [
-                    "lakeL"
-                ],
-                "2030": [
-                    "lakeL"
-                ]
-            },
-            "th": {
                 "1500": [
                     "berkN",
                     "lakeL"
@@ -1711,6 +1657,44 @@
                 ],
                 "1800": [
                     "berkN"
+                ]
+            },
+            "th": {
+                "1500": [
+                    "lakeL"
+                ],
+                "1530": [
+                    "lakeL"
+                ],
+                "1600": [
+                    "lakeL"
+                ],
+                "1630": [
+                    "lakeL"
+                ],
+                "1700": [
+                    "lakeL"
+                ],
+                "1730": [
+                    "lakeL"
+                ],
+                "1800": [
+                    "lakeL"
+                ],
+                "1830": [
+                    "lakeL"
+                ],
+                "1900": [
+                    "lakeL"
+                ],
+                "1930": [
+                    "lakeL"
+                ],
+                "2000": [
+                    "lakeL"
+                ],
+                "2030": [
+                    "lakeL"
                 ]
             }
         },
@@ -2234,6 +2218,15 @@
                     1700,
                     1730,
                     1800
+                ],
+                "th": [
+                    1500,
+                    1530,
+                    1600,
+                    1630,
+                    1700,
+                    1730,
+                    1800
                 ]
             }
         },
@@ -2381,10 +2374,6 @@
         }
     },
     "unallocated": {
-        "Micro_Team3": {
-            "name": "Micro_Team3",
-            "conflicts": []
-        },
         "Keepers_Toth": {
             "name": "Keepers_Toth",
             "conflicts": []

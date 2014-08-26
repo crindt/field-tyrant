@@ -259,10 +259,11 @@
         { "we": [ 1600, 1700 ] }
       ]
     },
-    "Micro_Team3": {
-      "fpref": ["berkS","berkN"],
+    "Micro_Nesbit": {
+      "fpref": ["berkN"],
       "dem": 1,
       "req": [
+        { "th": [ 1600, 1700 ] }
       ]
     },
     "Micro_Pani": {
@@ -293,7 +294,8 @@
       "cap" : 4,
       "slots": {
         "mo": [ 1500, "dusk" ],
-        "we": [ 1500, "dusk" ]
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ]
       }
     },
     "berkS": {
@@ -359,7 +361,6 @@
     "Pop Warner Football": {
       "berkN": {
         "tu": [1500,"dusk"],
-        "th": [1500,"dusk"],
         "fr": [1500,"dusk"]
       },
       "lakeU": {
@@ -466,7 +467,6 @@
     "Pop_Warner_Football": {
       "berkN": {
         "tu": [1500,"dusk"],
-        "th": [1500,"dusk"],
         "fr": [1500,"dusk"]
       },
       "lakeL": {
