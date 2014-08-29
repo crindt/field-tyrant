@@ -14,11 +14,18 @@
         { "tu": [1530,1700], "th": [1530,1700] }
       ]
     },
-    "BU10_Serrano": {
+    "BU10_SerranoXwed": {
       "fpref" : ["lakeU"],
       "dem" : 1,
       "req": [
-        { "we": [1630,1800], "fr": [1630,1800] }
+        { "we": [1630,1800] }
+      ]
+    },
+    "BU10_SerranoXfri": {
+      "fpref" : ["berkS"],
+      "dem" : 1,
+      "req": [
+        { "fr": [1630,1800] }
       ]
     },
     "BU10_Chiles": {

@@ -107,6 +107,36 @@
                     "Dark"
                 ]
             },
+            "fr": {
+                "1600": [
+                    "BU8r_Lilie"
+                ],
+                "1630": [
+                    "BU10_SerranoXfri",
+                    "BU8r_Lilie"
+                ],
+                "1700": [
+                    "BU10_SerranoXfri"
+                ],
+                "1730": [
+                    "BU10_SerranoXfri"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
             "mo": {
                 "1630": [
                     "GU8r_Nesbit"
@@ -158,29 +188,6 @@
                 ],
                 "1800": [
                     "BU8r_Manning"
-                ],
-                "1830": [
-                    "Dark"
-                ],
-                "1900": [
-                    "Dark"
-                ],
-                "1930": [
-                    "Dark"
-                ],
-                "2000": [
-                    "Dark"
-                ],
-                "2030": [
-                    "Dark"
-                ]
-            },
-            "fr": {
-                "1600": [
-                    "BU8r_Lilie"
-                ],
-                "1630": [
-                    "BU8r_Lilie"
                 ],
                 "1830": [
                     "Dark"
@@ -304,18 +311,18 @@
                     "GU10_Reza"
                 ],
                 "1630": [
-                    "BU10_Serrano",
+                    "BU10_SerranoXwed",
                     "BU9_Reza",
                     "GU14_Chiles"
                 ],
                 "1700": [
-                    "BU10_Serrano",
+                    "BU10_SerranoXwed",
                     "BU9_Reza",
                     "GU14_Chiles",
                     "GU12r_Monahan"
                 ],
                 "1730": [
-                    "BU10_Serrano",
+                    "BU10_SerranoXwed",
                     "BU9_Reza",
                     "GU14_Chiles",
                     "GU12r_Monahan"
@@ -337,22 +344,6 @@
                 ],
                 "2030": [
                     "City"
-                ]
-            },
-            "fr": {
-                "1600": [
-                    "BU12r_Frumovitz"
-                ],
-                "1630": [
-                    "BU10_Serrano",
-                    "BU12r_Frumovitz"
-                ],
-                "1700": [
-                    "BU10_Serrano",
-                    "BU12r_Frumovitz"
-                ],
-                "1730": [
-                    "BU10_Serrano"
                 ]
             },
             "mo": {
@@ -405,6 +396,17 @@
                 ],
                 "2030": [
                     "City"
+                ]
+            },
+            "fr": {
+                "1600": [
+                    "BU12r_Frumovitz"
+                ],
+                "1630": [
+                    "BU12r_Frumovitz"
+                ],
+                "1700": [
+                    "BU12r_Frumovitz"
                 ]
             }
         },
@@ -1147,7 +1149,10 @@
             "name": "BU11_Reza"
         },
         {
-            "name": "BU10_Serrano"
+            "name": "BU10_SerranoXwed"
+        },
+        {
+            "name": "BU10_SerranoXfri"
         },
         {
             "name": "BU10_Chiles"
@@ -1283,16 +1288,18 @@
                 "1630": "lakeU"
             }
         },
-        "BU10_Serrano": {
+        "BU10_SerranoXwed": {
             "we": {
                 "1630": "lakeU",
                 "1700": "lakeU",
                 "1730": "lakeU"
-            },
+            }
+        },
+        "BU10_SerranoXfri": {
             "fr": {
-                "1630": "lakeU",
-                "1700": "lakeU",
-                "1730": "lakeU"
+                "1630": "berkS",
+                "1700": "berkS",
+                "1730": "berkS"
             }
         },
         "BU10_Chiles": {

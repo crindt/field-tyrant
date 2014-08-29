@@ -48,10 +48,23 @@ var dayarr = {
 }
 
 var fieldmap = {
-    berkS: "Berkich (South)",
-    berkN: "Berkich (North)",
-    ada: "Ada Harris"
+    berkS: "CSL Berkich South",
+    berkN: "CSL Berkich North",
+    adaE: "CSL Ada East",
+    adaW: "CSL Ada West",
+    lakeU: "CSL Lake Upper",
+    adaW: "CSL Lake Lower",
 }
+
+var testfieldmap = {
+    berkS: "Test Berkich South",
+    berkN: "Test Berkich North",
+    adaE: "Test Ada East",
+    adaW: "Test Ada West",
+    lakeU: "Test Lake Upper",
+    adaW: "Test Lake Lower",
+}
+
 
 var app = express();
 
