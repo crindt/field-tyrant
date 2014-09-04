@@ -283,9 +283,10 @@
     
 
     "Keepers_Toth": {
-      "fpref" : ["adaE"],
+      "fpref" : ["lakeU"],
       "dem" : 1,
       "req": [
+        { "th": [ 1500, 1630 ], "fr": [ 1500, 1630 ] }
       ]
     }
   },

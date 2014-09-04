@@ -252,15 +252,20 @@
                 ]
             },
             "th": {
+                "1500": [
+                    "Keepers_Toth"
+                ],
                 "1530": [
                     "BU11_Reza",
                     "GU8r_Bates",
-                    "BU8r_Davis"
+                    "BU8r_Davis",
+                    "Keepers_Toth"
                 ],
                 "1600": [
                     "BU11_Reza",
                     "GU8r_Bates",
-                    "BU8r_Davis"
+                    "BU8r_Davis",
+                    "Keepers_Toth"
                 ],
                 "1630": [
                     "BU11_Reza",
@@ -399,8 +404,15 @@
                 ]
             },
             "fr": {
+                "1500": [
+                    "Keepers_Toth"
+                ],
+                "1530": [
+                    "Keepers_Toth"
+                ],
                 "1600": [
-                    "BU12r_Frumovitz"
+                    "BU12r_Frumovitz",
+                    "Keepers_Toth"
                 ],
                 "1630": [
                     "BU12r_Frumovitz"
@@ -1597,6 +1609,18 @@
                 "1730": "berkS"
             }
         },
+        "Keepers_Toth": {
+            "th": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            },
+            "fr": {
+                "1500": "lakeU",
+                "1530": "lakeU",
+                "1600": "lakeU"
+            }
+        },
         "Pop Warner Football": {
             "tu": {
                 "1500": [
@@ -2380,11 +2404,6 @@
             "slots": {}
         }
     },
-    "unallocated": {
-        "Keepers_Toth": {
-            "name": "Keepers_Toth",
-            "conflicts": []
-        }
-    },
+    "unallocated": {},
     "timestep": 30
 }
