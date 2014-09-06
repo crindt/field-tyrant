@@ -74,11 +74,11 @@
                 ],
                 "1600": [
                     "BU8_Suarez",
-                    "GU8r_Thielman"
+                    "BU10r_Cherewick"
                 ],
                 "1630": [
                     "BU10_Chiles",
-                    "GU8r_Thielman"
+                    "BU10r_Cherewick"
                 ],
                 "1700": [
                     "BU10_Chiles",
@@ -172,19 +172,21 @@
                     "BU10r_Cherewick"
                 ],
                 "1600": [
-                    "Micro_Levy"
+                    "BU10r_Cherewick"
                 ],
                 "1630": [
                     "BU8r_Manning",
-                    "Micro_Levy"
+                    "BU10r_Cherewick"
                 ],
                 "1700": [
                     "BU8r_Manning",
-                    "Micro_Egan"
+                    "Micro_Egan",
+                    "Micro_Mullen"
                 ],
                 "1730": [
                     "BU8r_Manning",
-                    "Micro_Egan"
+                    "Micro_Egan",
+                    "Micro_Mullen"
                 ],
                 "1800": [
                     "BU8r_Manning"
@@ -436,12 +438,12 @@
                     "BU12r_Demarest"
                 ],
                 "1700": [
-                    "BU10r_Hertz",
+                    "GU8r_Avis",
                     "BU12r_Demarest"
                 ],
                 "1730": [
                     "BU13_McNeillXwed",
-                    "BU10r_Hertz"
+                    "GU8r_Avis"
                 ],
                 "1800": [
                     "BU13_McNeillXwed",
@@ -466,11 +468,7 @@
                     "BU12r_Demarest"
                 ],
                 "1700": [
-                    "BU10r_Hertz",
                     "BU12r_Demarest"
-                ],
-                "1730": [
-                    "BU10r_Hertz"
                 ],
                 "1800": [
                     "City"
@@ -607,20 +605,14 @@
             }
         },
         "berkN": {
-            "we": {
+            "th": {
                 "1600": [
-                    "Micro_Delport"
+                    "GU8r_Thielman",
+                    "Micro_Nesbit"
                 ],
                 "1630": [
-                    "Micro_Delport"
-                ],
-                "1700": [
-                    "GU8r_Avis",
-                    "BU8r_Burke"
-                ],
-                "1730": [
-                    "GU8r_Avis",
-                    "BU8r_Burke"
+                    "GU8r_Thielman",
+                    "Micro_Nesbit"
                 ],
                 "1830": [
                     "Dark"
@@ -646,10 +638,12 @@
                     "BU8r_Sanchez"
                 ],
                 "1700": [
-                    "BU8r_Burke"
+                    "BU8r_Burke",
+                    "BU10r_Hertz"
                 ],
                 "1730": [
-                    "BU8r_Burke"
+                    "BU8r_Burke",
+                    "BU10r_Hertz"
                 ],
                 "1830": [
                     "Dark"
@@ -667,12 +661,20 @@
                     "Dark"
                 ]
             },
-            "th": {
+            "we": {
                 "1600": [
-                    "Micro_Nesbit"
+                    "Micro_Levy"
                 ],
                 "1630": [
-                    "Micro_Nesbit"
+                    "Micro_Levy"
+                ],
+                "1700": [
+                    "BU8r_Burke",
+                    "BU10r_Hertz"
+                ],
+                "1730": [
+                    "BU8r_Burke",
+                    "BU10r_Hertz"
                 ],
                 "1830": [
                     "Dark"
@@ -1263,7 +1265,7 @@
             "name": "Micro_Egan"
         },
         {
-            "name": "Micro_Delport"
+            "name": "Micro_Mullen"
         },
         {
             "name": "Micro_Nesbit"
@@ -1453,14 +1455,14 @@
         },
         "GU8r_Avis": {
             "we": {
-                "1700": "berkN",
-                "1730": "berkN"
+                "1700": "lakeL",
+                "1730": "lakeL"
             }
         },
         "GU8r_Thielman": {
             "th": {
-                "1600": "berkS",
-                "1630": "berkS"
+                "1600": "berkN",
+                "1630": "berkN"
             }
         },
         "GU10r_Diller": {
@@ -1530,21 +1532,25 @@
         "BU10r_Cherewick": {
             "we": {
                 "1500": "berkS",
-                "1530": "berkS"
+                "1530": "berkS",
+                "1600": "berkS",
+                "1630": "berkS"
             },
             "th": {
                 "1500": "berkS",
-                "1530": "berkS"
+                "1530": "berkS",
+                "1600": "berkS",
+                "1630": "berkS"
             }
         },
         "BU10r_Hertz": {
             "mo": {
-                "1700": "lakeL",
-                "1730": "lakeL"
+                "1700": "berkN",
+                "1730": "berkN"
             },
             "we": {
-                "1700": "lakeL",
-                "1730": "lakeL"
+                "1700": "berkN",
+                "1730": "berkN"
             }
         },
         "BU10r_Casas": {
@@ -1575,8 +1581,8 @@
         },
         "Micro_Levy": {
             "we": {
-                "1600": "berkS",
-                "1630": "berkS"
+                "1600": "berkN",
+                "1630": "berkN"
             }
         },
         "Micro_Drohan": {
@@ -1591,10 +1597,10 @@
                 "1730": "berkS"
             }
         },
-        "Micro_Delport": {
+        "Micro_Mullen": {
             "we": {
-                "1600": "berkN",
-                "1630": "berkN"
+                "1700": "berkS",
+                "1730": "berkS"
             }
         },
         "Micro_Nesbit": {

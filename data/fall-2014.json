@@ -32,7 +32,7 @@
       "fpref" : ["berkS"],
       "dem" : 2,
       "req": [
-        { "tu": [1630,1800], "th": [1630,1800] }
+        { "tu":  [1630,1800], "th": [1630,1800] }
       ]
     },
     "BU9_Reza": {
@@ -128,14 +128,14 @@
       ]
     },
     "GU8r_Avis": {
-      "fpref": ["berkN"],
+      "fpref": ["lakeL"],
       "dem": 2,
       "req": [
         {"we": [1700,1800] }
       ]
     },
     "GU8r_Thielman": {
-      "fpref": ["berkS"],
+      "fpref": ["berkN"],
       "dem": 2,
       "req": [
         {"th": [1600,1700] }
@@ -203,14 +203,14 @@
     },
 
     "BU10r_Cherewick": {
-      "fpref": ["berkS","berkN","lakeU"],
+      "fpref": ["berkS"],
       "dem": 2,
       "req": [
-        { "we": [1500,1600], "th": [1500, 1600] }
+        { "we": [1500,1700], "th": [1500, 1700] }
       ]
     },
     "BU10r_Hertz": {
-      "fpref": ["lakeL"],
+      "fpref": ["berkN"],
       "dem": 2,
       "req": [
         {"mo": [1700, 1800], "we": [1700, 1800] }
@@ -239,7 +239,7 @@
     },
 
     "Micro_Levy": {
-      "fpref": ["berkS"],
+      "fpref": ["berkN"],
       "dem": 1,
       "req": [
         { "we": [1600, 1700] }
@@ -259,11 +259,11 @@
         {"we": [1700, 1800] }
       ]
     },
-    "Micro_Delport": {
-      "fpref": ["berkN"],
+    "Micro_Mullen": {
+      "fpref": ["berkS"],
       "dem": 1,
       "req": [
-        { "we": [ 1600, 1700 ] }
+        { "we": [ 1700, 1800 ] }
       ]
     },
     "Micro_Nesbit": {
