@@ -1,0 +1,417 @@
+{
+  "teams": {
+
+    "GU8r_Nesbit": {
+      "fpref": ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        { "fr": [1600,1700] }
+      ]
+    },
+    "GU8r_Bates": {
+      "fpref": ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        { "th": [1530,1630] }
+      ]
+    },
+    "GU8r_Avis": {
+      "fpref": ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        {"we": [1700,1800] }
+      ]
+    },
+    "GU8r_Thielman": {
+      "fpref": ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        {"th": [1600,1700] }
+      ]
+    },
+
+    "GU10r_Diller": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        { "we": [1700, 1800 ] }
+      ]
+    },
+    "GU10r_Mercer": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        {"tu": [1530,1630] },
+        {"tu": [1600,1700] }
+      ]
+    },
+
+    "GU12r_Monahan": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        {"mo": [1700, 1800] },
+        {"we": [ 1700,1800] }
+      ]
+    },
+
+
+    "BU8r_Manning": {
+      "fpref": ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        {"we": [1600, 1700] }
+      ]
+    },
+    "BU8r_Burke": {
+      "fpref" : ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        { "we": [ 1700,1800 ], "th": [1700, 1800] },
+        { "we": [ 1700,1800 ] },
+        { "tu": [ 1700,1830 ] }
+      ]
+    },
+    "BU8r_Sanchez": {
+      "fpref" : ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        { "mo": [ 1600, 1700 ] }
+      ]
+    },
+    "BU8r_Lilie" : {
+      "fpref" : ["berkN","berkS"],
+      "dem": 2,
+      "req": [
+        { "fr": [ 1600, 1700 ] }
+      ]
+    },
+    "BU8r_Davis": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        { "tu": [1700, 1800] },
+        { "tu": [1730, 1830] } 
+      ]
+    },
+
+    "BU10r_Cherewick": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        { "we": [1530,1630] },
+        { "th": [1530, 1630] }
+      ]
+    },
+    "BU10r_Hertz": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        {"mo": [1700, 1800] },
+        {"we": [1700, 1800] }
+      ]
+    },
+    "BU10r_Casas": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        { "th": [1700, 1800] },
+        { "th": [1730, 1830] }
+      ]
+    },
+    "BU12r_Frumovitz": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        {"fr": [1700, 1800]}
+      ]
+    },
+    "BU12r_Demarest": {
+      "fpref": ["berkS","berkN"],
+      "dem": 2,
+      "req": [
+        {"mo": [1600, 1700 ] },
+        {"mo": [1630, 1730 ] },
+        {"we": [1600, 1700 ] },
+        {"we": [1630, 1730 ] }
+      ]
+    },
+
+    "Micro_Levy": {
+      "fpref": ["berkS","berkN"],
+      "dem": 1,
+      "req": [
+        { "we": [1600, 1700] }
+      ]
+    },
+    "Micro_Drohan": {
+      "fpref": ["berkS","berkN"],
+      "dem": 1,
+      "req": [
+        {"mo": [1700, 1800] }
+      ]
+    },
+    "Micro_Egan": {
+      "fpref": ["berkS","berkN"],
+      "dem": 1,
+      "req": [
+        {"we": [1700, 1800] }
+      ]
+    },
+    "Micro_Delport": {
+      "fpref": ["berkN","berkS"],
+      "dem": 1,
+      "req": [
+        { "we": [ 1600, 1700 ] }
+      ]
+    },
+    "Micro_Team3": {
+      "fpref": ["berkS","berkN"],
+      "dem": 1,
+      "req": [
+      ]
+    },
+    "Micro_Pani": {
+      "fpref": ["berkN","berkS"],
+      "dem": 1,
+      "req": [
+        { "mo": [ 1700, 1800 ] }
+      ]
+    },
+    
+
+    "Keepers_Toth": {
+      "fpref" : ["adaE"],
+      "dem" : 1,
+      "req": [
+      ]
+    }
+  },
+  "fields": {
+    "adaW": {
+      "pretty": "Ada Harris (West)",
+      "cap" : 5,
+      "slots": {
+      }
+    },
+    "berkN": {
+      "pretty": "Berkich (North)",
+      "cap" : 3,
+      "slots": {
+        "mo": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ]
+      }
+    },
+    "berkS": {
+      "pretty": "Berkich (South)",
+      "cap" : 5,
+      "slots": {
+        "mo": [ 1500, "dusk" ],
+        "tu": [ 1500, "dusk" ],
+        "we": [ 1500, "dusk" ],
+        "th": [ 1500, "dusk" ],
+        "fr": [ 1500, "dusk" ]
+      }
+    },
+    "lakeU": {
+      "pretty": "Lake (Upper)",
+      "cap": 9,
+      "slots": {
+        "mo": [1500, 2100],
+        "tu": [1500, 1800],
+        "we": [1500, 1800],
+        "th": [1500, 1800],
+        "fr": [1500, 2100]
+      }
+    },
+    "lakeL": {
+      "pretty": "Lake (Lower)",
+      "cap": 6,
+      "slots": {
+        "mo": [1500, 1800],
+        "we": [1500, 2100]
+      }
+    },
+    "arena": {
+      "pretty": "Arena",
+      "cap": 6,
+      "slots": {
+      }
+    }
+  },
+  "others": {
+    "Lacrosse": {
+      "adaW": {
+      },
+      "adaE": {
+      },
+      "berkN": {
+      }
+    },
+    "Rugby": {
+      "adaW": {
+      },
+      "adaE": {
+      }
+    },
+    "Encinitas Express": {
+      "lakeU": {
+      }
+    },
+    "Encinitas_Little_League": {
+      "berkN": {
+      }
+    },
+    "Pop Warner Football": {
+      "berkN": {
+        "tu": [1500,"dusk"],
+        "th": [1500,"dusk"],
+        "fr": [1500,"dusk"]
+      },
+      "lakeU": {
+      },
+      "lakeL": {
+        "tu": [1500,2100],
+        "th": [1500,2100]
+      }
+    },
+    "Softball": {
+      "lakeU": {
+      },
+      "lakeL": {
+        "fr": [1500,2100]
+      }
+
+    },
+    "City": {
+      "lakeU": {
+        "mo": [1800,2100],
+        "tu": [1800,2100],
+        "we": [1800,2100],
+        "th": [1800,2100]
+      },
+      "lakeL": {
+        "mo": [1800,2100]
+      }
+    },
+    "Closed": {
+      "adaW": {
+        "mo": [1500,2100],
+        "tu": [1500,2100],
+        "we": [1500,2100],
+        "th": [1500,2100],
+        "fr": [1500,2100]
+      },
+      "adaE": {
+        "mo": [1500,2100],
+        "tu": [1500,2100],
+        "we": [1500,2100],
+        "th": [1500,2100],
+        "fr": [1500,2100]
+      }
+    },
+    "Dark": {
+      "berkS": {
+        "mo": [1830,2100],
+        "tu": [1830,2100],
+        "we": [1830,2100],
+        "th": [1830,2100],
+        "fr": [1830,2100]
+      },
+      "berkN": {
+        "mo": [1830,2100],
+        "tu": [1830,2100],
+        "we": [1830,2100],
+        "th": [1830,2100],
+        "fr": [1830,2100]
+      }
+    }
+  },
+  "displays": {
+    "Lacrosse": {
+      "adaW": {
+      },
+      "adaE": {
+      },
+      "berkN": {
+      }
+    },
+    "Rugby": {
+      "adaW": {
+      },
+      "adaE": {
+      }
+    },
+    "Encinitas Express": {
+      "adaW": {
+      },
+      "adaE": {
+      }
+    },
+    "Encinitas_Little_League": {
+      "berkN": {
+      }
+    },
+    "Softball": {
+      "lakeU": {
+      },
+      "lakeL": {
+      }
+    },
+    "City": {
+      "lakeU": {
+        "mo": [1800,2100],
+        "tu": [1800,2100],
+        "we": [1800,2100],
+        "th": [1800,2100]
+      },
+      "lakeL": {
+        "mo": [1800,2100]
+      }
+    },
+    "Pop_Warner_Football": {
+      "berkN": {
+        "tu": [1500,"dusk"],
+        "th": [1500,"dusk"],
+        "fr": [1500,"dusk"]
+      },
+      "lakeL": {
+        "tu": [1500,2100],
+        "th": [1500,2100]
+      }
+    },
+    "Closed": {
+      "adaW": {
+        "mo": [1500,2100],
+        "tu": [1500,2100],
+        "we": [1500,2100],
+        "th": [1500,2100],
+        "fr": [1500,2100]
+      },
+      "adaE": {
+        "mo": [1500,2100],
+        "tu": [1500,2100],
+        "we": [1500,2100],
+        "th": [1500,2100],
+        "fr": [1500,2100]
+      }
+    },
+    "Dark": {
+      "berkS": {
+        "mo": [1830,2100],
+        "tu": [1830,2100],
+        "we": [1830,2100],
+        "th": [1830,2100],
+        "fr": [1830,2100]
+      },
+      "berkN": {
+        "mo": [1830,2100],
+        "tu": [1830,2100],
+        "we": [1830,2100],
+        "th": [1830,2100],
+        "fr": [1830,2100]
+      }
+    }
+  }
+}
+

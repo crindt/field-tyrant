@@ -26,7 +26,7 @@ prog
   .option('-a, --always-feasible', "Set up dummy options to always admit feasibility", true)
   .option('-p, --limit-to-prefs', "Limit allocations only to preferred fields",false)
   .option('-c, --prefer-comp', "Give comp teams slightly more importance",false)
-  .option('-d, --dusk <n>', "Dusk time [2100]",1800)
+  .option('-d, --dusk <n>', "Dusk time [2100]",2100)
   .parse(process.argv)
 
 if ( prog.prioritizespread && !prog.bvarweight && !prog.ivarweight ) {
@@ -250,6 +250,10 @@ function parseResults(data) {
     if ( prog.echo ) console.log(line)
     var m
     if ( m = line.match(/^\s*$/)) {}
+    else if ( m = line.match(/infeasible/i) ) {
+      console.log("INFEASIBLE!");
+      process.exit(1);
+    }
     else if ( m = line.match(/Value of the objective function:/) ) {}
     else if ( m = line.match(/Actual values/) ) {}
     else if ( m = line.match(/(\w+)\s+(\d+)/) ) {
@@ -390,8 +394,13 @@ function parseResults(data) {
     outstream.write("TEAM SCHEDULES\n")
 
     // each team
+    var last_tmn;
     _.each(teams,function(tmo,tm) {
-      outstream.write(sprintf("\t%s: choice %s\n",format_team(tm),choices[tm]))
+      tmn = format_team(tm)
+      tmnarr = tmn.split(/\//)
+      tmn = tmnarr[0]
+      choice_day = tmnarr[1]
+      outstream.write(sprintf("\t%s: %schoice %s\n",tmn,choice_day ? choice_day + " " : "", choices[tm]))
 
       // each day
       _.each(_.sortBy(_.keys(teams[tm]),function(k) { return dorder[k] }), function(d) {
@@ -409,6 +418,7 @@ function parseResults(data) {
           }
         }
       });
+      last_tmn = tmn
     });
 
   } else if ( prog.format === "json" ) {
@@ -416,6 +426,9 @@ function parseResults(data) {
     tt = _.map(_.keys(conf.teams), function(tm) { return {name:tm, color:colors[ccnt++]} });
     var stimes = _.map(_.keys(times), function(t) { return parseInt(t); });
     ttimes = fill_times(stimes);
+    // force fields
+    _.each(_.keys(conf.fields),
+           function(f) { if ( !sched[f] ) sched[f] = {} });
     outstream.write(JSON.stringify(
       {times:ttimes, 
        days:week, sched:sched,
