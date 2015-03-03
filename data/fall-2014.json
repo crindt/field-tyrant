@@ -28,11 +28,18 @@
         { "fr": [1630,1800] }
       ]
     },
-    "BU10_Chiles": {
+    "BU10_ChilesXmon": {
+      "fpref" : ["berkS"],
+      "dem" : 1,
+      "req": [
+        { "mo": [1630,1800] }
+      ]
+    },
+    "BU10_ChilesXthu": {
       "fpref" : ["berkS"],
       "dem" : 2,
       "req": [
-        { "tu":  [1630,1800], "th": [1630,1800] }
+        { "th": [1630,1800] }
       ]
     },
     "BU9_Reza": {
@@ -128,10 +135,10 @@
       ]
     },
     "GU8r_Avis": {
-      "fpref": ["lakeL"],
+      "fpref": ["berkN"],
       "dem": 2,
       "req": [
-        {"we": [1700,1800] }
+        {"we": [1600,1700] }
       ]
     },
     "GU8r_Thielman": {
@@ -223,7 +230,14 @@
         { "th": [1700, 1830] }
       ]
     },
-    "BU12r_Frumovitz": {
+    "BU12r_FrumovitzXmon": {
+      "fpref": ["lakeL"],
+      "dem": 2,
+      "req": [
+        {"mo": [1600,1700]}
+      ]
+    },
+    "BU12r_FrumovitzXfri": {
       "fpref": ["lakeU"],
       "dem": 2,
       "req": [
@@ -249,7 +263,7 @@
       "fpref": ["berkS"],
       "dem": 1,
       "req": [
-        {"mo": [1700, 1800] }
+        {"tu": [1700, 1800] }
       ]
     },
     "Micro_Egan": {

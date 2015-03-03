@@ -36,15 +36,14 @@
                     "GU10r_Mercer"
                 ],
                 "1630": [
-                    "BU10_Chiles",
                     "GU10r_Mercer"
                 ],
                 "1700": [
-                    "BU10_Chiles",
+                    "Micro_Drohan",
                     "Micro_Pani"
                 ],
                 "1730": [
-                    "BU10_Chiles",
+                    "Micro_Drohan",
                     "Micro_Pani"
                 ],
                 "1830": [
@@ -77,15 +76,15 @@
                     "BU10r_Cherewick"
                 ],
                 "1630": [
-                    "BU10_Chiles",
+                    "BU10_ChilesXthu",
                     "BU10r_Cherewick"
                 ],
                 "1700": [
-                    "BU10_Chiles",
+                    "BU10_ChilesXthu",
                     "BU10r_Casas"
                 ],
                 "1730": [
-                    "BU10_Chiles",
+                    "BU10_ChilesXthu",
                     "BU10r_Casas"
                 ],
                 "1800": [
@@ -139,14 +138,15 @@
             },
             "mo": {
                 "1630": [
+                    "BU10_ChilesXmon",
                     "GU8r_Nesbit"
                 ],
                 "1700": [
-                    "GU8r_Nesbit",
-                    "Micro_Drohan"
+                    "BU10_ChilesXmon",
+                    "GU8r_Nesbit"
                 ],
                 "1730": [
-                    "Micro_Drohan"
+                    "BU10_ChilesXmon"
                 ],
                 "1830": [
                     "Dark"
@@ -413,14 +413,14 @@
                     "Keepers_Toth"
                 ],
                 "1600": [
-                    "BU12r_Frumovitz",
+                    "BU12r_FrumovitzXfri",
                     "Keepers_Toth"
                 ],
                 "1630": [
-                    "BU12r_Frumovitz"
+                    "BU12r_FrumovitzXfri"
                 ],
                 "1700": [
-                    "BU12r_Frumovitz"
+                    "BU12r_FrumovitzXfri"
                 ]
             }
         },
@@ -438,12 +438,10 @@
                     "BU12r_Demarest"
                 ],
                 "1700": [
-                    "GU8r_Avis",
                     "BU12r_Demarest"
                 ],
                 "1730": [
-                    "BU13_McNeillXwed",
-                    "GU8r_Avis"
+                    "BU13_McNeillXwed"
                 ],
                 "1800": [
                     "BU13_McNeillXwed",
@@ -462,9 +460,11 @@
             },
             "mo": {
                 "1600": [
+                    "BU12r_FrumovitzXmon",
                     "BU12r_Demarest"
                 ],
                 "1630": [
+                    "BU12r_FrumovitzXmon",
                     "BU12r_Demarest"
                 ],
                 "1700": [
@@ -605,6 +605,39 @@
             }
         },
         "berkN": {
+            "we": {
+                "1600": [
+                    "GU8r_Avis",
+                    "Micro_Levy"
+                ],
+                "1630": [
+                    "GU8r_Avis",
+                    "Micro_Levy"
+                ],
+                "1700": [
+                    "BU8r_Burke",
+                    "BU10r_Hertz"
+                ],
+                "1730": [
+                    "BU8r_Burke",
+                    "BU10r_Hertz"
+                ],
+                "1830": [
+                    "Dark"
+                ],
+                "1900": [
+                    "Dark"
+                ],
+                "1930": [
+                    "Dark"
+                ],
+                "2000": [
+                    "Dark"
+                ],
+                "2030": [
+                    "Dark"
+                ]
+            },
             "th": {
                 "1600": [
                     "GU8r_Thielman",
@@ -636,37 +669,6 @@
                 ],
                 "1630": [
                     "BU8r_Sanchez"
-                ],
-                "1700": [
-                    "BU8r_Burke",
-                    "BU10r_Hertz"
-                ],
-                "1730": [
-                    "BU8r_Burke",
-                    "BU10r_Hertz"
-                ],
-                "1830": [
-                    "Dark"
-                ],
-                "1900": [
-                    "Dark"
-                ],
-                "1930": [
-                    "Dark"
-                ],
-                "2000": [
-                    "Dark"
-                ],
-                "2030": [
-                    "Dark"
-                ]
-            },
-            "we": {
-                "1600": [
-                    "Micro_Levy"
-                ],
-                "1630": [
-                    "Micro_Levy"
                 ],
                 "1700": [
                     "BU8r_Burke",
@@ -1169,7 +1171,10 @@
             "name": "BU10_SerranoXfri"
         },
         {
-            "name": "BU10_Chiles"
+            "name": "BU10_ChilesXmon"
+        },
+        {
+            "name": "BU10_ChilesXthu"
         },
         {
             "name": "BU9_Reza"
@@ -1250,7 +1255,10 @@
             "name": "BU10r_Casas"
         },
         {
-            "name": "BU12r_Frumovitz"
+            "name": "BU12r_FrumovitzXmon"
+        },
+        {
+            "name": "BU12r_FrumovitzXfri"
         },
         {
             "name": "BU12r_Demarest"
@@ -1316,12 +1324,14 @@
                 "1730": "berkS"
             }
         },
-        "BU10_Chiles": {
-            "tu": {
+        "BU10_ChilesXmon": {
+            "mo": {
                 "1630": "berkS",
                 "1700": "berkS",
                 "1730": "berkS"
-            },
+            }
+        },
+        "BU10_ChilesXthu": {
             "th": {
                 "1630": "berkS",
                 "1700": "berkS",
@@ -1455,8 +1465,8 @@
         },
         "GU8r_Avis": {
             "we": {
-                "1700": "lakeL",
-                "1730": "lakeL"
+                "1600": "berkN",
+                "1630": "berkN"
             }
         },
         "GU8r_Thielman": {
@@ -1560,7 +1570,13 @@
                 "1800": "berkS"
             }
         },
-        "BU12r_Frumovitz": {
+        "BU12r_FrumovitzXmon": {
+            "mo": {
+                "1600": "lakeL",
+                "1630": "lakeL"
+            }
+        },
+        "BU12r_FrumovitzXfri": {
             "fr": {
                 "1600": "lakeU",
                 "1630": "lakeU",
@@ -1586,7 +1602,7 @@
             }
         },
         "Micro_Drohan": {
-            "mo": {
+            "tu": {
                 "1700": "berkS",
                 "1730": "berkS"
             }

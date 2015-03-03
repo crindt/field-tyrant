@@ -394,8 +394,13 @@ function parseResults(data) {
     outstream.write("TEAM SCHEDULES\n")
 
     // each team
+    var last_tmn;
     _.each(teams,function(tmo,tm) {
-      outstream.write(sprintf("\t%s: choice %s\n",format_team(tm),choices[tm]))
+      tmn = format_team(tm)
+      tmnarr = tmn.split(/\//)
+      tmn = tmnarr[0]
+      choice_day = tmnarr[1]
+      outstream.write(sprintf("\t%s: %schoice %s\n",tmn,choice_day ? choice_day + " " : "", choices[tm]))
 
       // each day
       _.each(_.sortBy(_.keys(teams[tm]),function(k) { return dorder[k] }), function(d) {
@@ -413,6 +418,7 @@ function parseResults(data) {
           }
         }
       });
+      last_tmn = tmn
     });
 
   } else if ( prog.format === "json" ) {
